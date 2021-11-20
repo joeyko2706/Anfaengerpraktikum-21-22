@@ -13,11 +13,16 @@ Die magnetische Feldstärke lässt sich zum Beispiel mit dem Biot-Savartschen Ge
 
 \begin{equation}
     equation = \vec B = \frac{\mu_0\cdot I}{4\pi}\int_{\text{Leiter}}\frac{d\vec s\times\vec l}{r^3}.
+    \label{eqn:biotsavart}
 \end{equation}
 
 %Mit dem durch den Leiter fließenden Strom I und dem infinitesimalen Leiterstück $d\vec l$ lässt sich som
 
-Durch $\vec B=\mu\cdot\vec H$ (2) folgt somit auch ein Zusammenhang für die magnetische Flussdichte.
+Durch 
+\begin{equation}
+    \vec B=\mu\cdot\vec H
+\end{equation} 
+(2) folgt somit auch ein Zusammenhang für die magnetische Flussdichte.
 
 Aus der Untersuchung von Stoffmagnetismus, wie es in diesem Versuch auch an durchgeführt wurde, folgt eine
 Klassifizierung verschiedener Stofftypen in Para-, Dia- und Ferromagnetismus.Da die relative Permeabilität $\mu_r$ in allen drei Typen konstant ist,
@@ -52,6 +57,39 @@ negativer Sättigungswert.
 Durch erhöhen des äußeren Magnetfeldes, bildet sich eine parallele Kurve, wie auch bei der Erhöhung des Gegenfeldes. Sie erreicht den
 ursprünglichen, positiven Sättigungswert. Eine Hysteresekurve hat je nach Stoff eine unterschiedliche Form.
 
+Mithilfe des Biot-Savartschen Gesetzes \eqref{eqn:biotsavart} folgt ein Zusammenhang zu dem Magnetfeld einer mit dem Strom $I$ durchflossenen 
+Leiterschleife mit Radius $R$ auf der durch den Kreismittelpunkt gehenden Symmetrieachse:
+
+\begin{equation}
+    \lvert\symbf{B}_\text{Ring}(x)\rvert = B_\text{Ring}(x) = \frac{\symup{\mu_0 I}}{2} \frac{R^2}{(R^2 + x^2)^{\frac{3}{2}}}.
+    \label{eqn:ring}
+\end{equation}
+,wobei $x$ im Kreismittelpunkt Null sei.
+
+Aus dem Superpostionsprinzip folgt für einen symmetrischen Aufbau aus zwei Leiterschleifen bei $x=\pm d / 2 $:
+
+\begin{equation}
+    B_d(x)=B_\text{Ring}(x-\frac{d}{2}) + B_\text{Ring}(x+\frac{d}{2})
+    \label{eqn:2ringe}
+\end{equation}
+
+Innerhalb einer Spule, bei der der Radius sehr viel kleiner als die Länge ist, liegt ein homogenes Magnetfeld vor, dass durch folgende
+Relation beschrieben werden kann:
+
+\begin{equation}
+    B_\text{Sp} = \mu_r \symup{\mu_0} \frac{n}{l} I
+    \label{eqn:langespule}
+\end{equation}
+, wobei $n$ die Windungszahl und $l$ die Länge der beschriebenen Spule darstellt.
+
+Biegt man eine lange Spule soweit, dass die beiden Enden zusammengefügt werden, entsteht eine Toroidspule, dessen äußeres Magnetfeld Null ist und die
+Randeffekte verschwinden. Die Länge $l$ in Gleichung \eqref{eqn:langespule} wird durch den Umfang des Toroides mit Radius
+$r_T$ ersetzt und es folgt:
+
+\begin{equation}
+    B_T=\mu_r \symup{\mu_0} \frac{n}{2 \symup{\pi} r_T} I
+    \label{eqn:toroid}
+\end{equation}
 
 
 \cite{sample}
