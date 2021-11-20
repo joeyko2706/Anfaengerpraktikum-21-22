@@ -1,4 +1,57 @@
+\usepackage{unicode-math}\usepackage{siunitx}
+
 \section{Theorie}
 \label{sec:Theorie}
+Theoretische Grundlagen für diesen Versuch sind das Biot-Savartsche Gesetz, Stoffmagnetismus mit besonderer Rücksicht auf Ferrmagnetismus,
+der Hall-Effekt (und Magnetfelder in Materie).
+
+Bewegte elektrische Ladungsträger erzeugen magnetische Felder, die durch die beiden Größen $\vec H$ und $\vec B$ beschrieben werden können.
+Dabei entspricht $\vec H$ der magnetischen Feldstärke, die Betrag und Richtung des Magnetfeldes beschreibt, und $\vec B$ die magnetische Flussdichte,
+die zusätzlich noch die Permeabilität $\mu=\mu_0 \cdot\mu_r$ berücksichtigt. Dabei ist $\mu_0=4\pi 10^{-7} [\frac{\text{Vs}}\text{{Am}}]$ die
+magnetische Feldkonstante und $\mu_r$ die vom Material abhängige Permeabilität. 
+Die magnetische Feldstärke lässt sich zum Beispiel mit dem Biot-Savartschen Gesetz (1) quantifizieren:
+
+\begin{equation}
+    equation = \vec B = \frac{\mu_0\cdot I}{4\pi}\int_{\text{Leiter}}\frac{d\vec s\times\vec l}{r^3}.
+\end{equation}
+
+%Mit dem durch den Leiter fließenden Strom I und dem infinitesimalen Leiterstück $d\vec l$ lässt sich som
+
+Durch $\vec B=\mu\cdot\vec H$ (2) folgt somit auch ein Zusammenhang für die magnetische Flussdichte.
+
+Aus der Untersuchung von Stoffmagnetismus, wie es in diesem Versuch auch an durchgeführt wurde, folgt eine
+Klassifizierung verschiedener Stofftypen in Para-, Dia- und Ferromagnetismus.Da die relative Permeabilität $\mu_r$ in allen drei Typen konstant ist,
+folgt zur Unterteilung eine davon abgeleitete Klassifizierung, die Magnetisierung $\vec M=\chi\cdot\vec H$ mit der magnetischen Suszeptibilität
+$\chi=\mu_r -1$.
+
+Bei Diamegneten gilt $\chi <0\; ; \;|\chi|\ll 1$. In einem angelegten B-Feld ist die Magnetisierung $\vec M$ dem B-Feld entgegengerichtet, wodurch es
+eine abschwächende Wirkung hat. Diamegneten bewegen sich aus Bereichen mit hoher FEldstärke zu Bereichen mit kleinerer.
+Paramagnetische Stoffe hingegen haben $\chi > 0\; ; \;|\chi|\ll 1$. Die Magnetisierung richtet sich parallel zu einem äußeren B-Feld aus,
+wodurch sie eine verstärkende Wirkung hat. Paramagneten werden zu Bereichen hoher Feldstärke angezogen.
+Bei Stoffen des Ferrmagnetismus gilt der Zusammenhang (2) nicht mehr, da die relative Permeabilität $\mu_r$ sehr hoch ist. Es gilt damit
+$\chi > 0\; ; \;|\chi|\gg 1$. Ferromagneten richten sich, analog zu Paramagneten, parallel zum angelgten Magnetfeld aus udn verstärken dieses
+stark. 
+Bei Ferromagneten ist die stoffabhängige Permeabilität allerdings nicht konstant, sondern davon abhängig in welchem Zustand es bereits
+einem Magnetfeld mit dessen Magnetfeldstärke asugesetzt worden war. Es ist dadurch zustandsabhängig.
+Eine Hysteresekurve, die die Magnetisierung auf das äußere Magnetfeld aufträgt, beschreibt das Verhalten von Ferromagneten in
+angelegten Magnetfeldern und wird im folgenden beschrieben. Die magnetischen Dipolmomente von Ferromagneten sind in einem angelegten
+Magnetfeld parallel zu diesem. In einzelnen Bereichen,die man Weiß'sche Bezirke nennt, richten sich diese Dipolmomente parallel zueinander aus.
+Im unmagnetisierten Zustand sind die Dipole, aufgrund der thermischen Bewegungen, statistisch verteilt.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%HIER VIELLEICHT HYSTERESEKURVE EINFÜGEN
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Wenn ein äußeres Magnetfeld angelegt wird, in dem sich der zu untersuchende Stoff befindet, dann steigt die Magnetisierung der Probe bis
+auf einen Sättigungswert an. Drosselt man das Magnetfeld nun, sinkt auch die Magnetisierung des Stoffes. Bei einem abgeschalteten Magnetfeld jedoch,
+ist sie nicht null ($\vec M(\vec B = 0)\neq0$) und es bleibt eine Remanenz.
+Diese kann durch bilden eines Gegenfeldes, der Koerzitivkraft, wieder aufgehoben werden. Erhöht man das Gegenfeld weiter, so bildet sich ein 
+negativer Sättigungswert.
+Durch erhöhen des äußeren Magnetfeldes, bildet sich eine parallele Kurve, wie auch bei der Erhöhung des Gegenfeldes. Sie erreicht den
+ursprünglichen, positiven Sättigungswert. Eine Hysteresekurve hat je nach Stoff eine unterschiedliche Form.
+
+
 
 \cite{sample}
