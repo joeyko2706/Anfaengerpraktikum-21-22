@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.13.2 (TeX Live 2021)  (format=lualatex 2021.10.4)  22 NOV 2021 16:16
+This is LuaHBTeX, Version 1.13.2 (TeX Live 2021)  (format=lualatex 2021.10.4)  22 NOV 2021 16:25
  restricted system commands enabled.
 **v308.tex
 (./v308.tex
@@ -1687,67 +1687,93 @@ Type  H <return>  for immediate help.
                                                   
 l.1 \usepackage{unicode-math}\usepackage
                                       {siunitx}
-? 
+? r
+OK, entering \nonstopmode...
 ! Argument of \text@ has an extra }.
 <inserted text> 
 \par 
 l.10 ...t $\mu_0=4\pi 10^{-7} [\frac{\text{Vs}}\text
                                                   {{Am}}]$ die
-? 
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
 Runaway argument?
 ! Paragraph ended before \text@ was complete.
 <to be read again> 
 \par 
 l.10 ...t $\mu_0=4\pi 10^{-7} [\frac{\text{Vs}}\text
                                                   {{Am}}]$ die
-? 
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
 ! Missing $ inserted.
 <inserted text> 
 $
 l.10 ...t $\mu_0=4\pi 10^{-7} [\frac{\text{Vs}}\text
                                                   {{Am}}]$ die
-? 
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
 ! Missing } inserted.
 <inserted text> 
 }
 l.10 ...t $\mu_0=4\pi 10^{-7} [\frac{\text{Vs}}\text
                                                   {{Am}}]$ die
-? 
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
 ! Missing } inserted.
 <inserted text> 
 }
 l.10 ...t $\mu_0=4\pi 10^{-7} [\frac{\text{Vs}}\text
                                                   {{Am}}]$ die
-? 
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
 ! Too many }'s.
 <recently read> }
  
 l.10 ...t $\mu_0=4\pi 10^{-7} [\frac{\text{Vs}}\text
                                                   {{Am}}]$ die
-? 
+You've closed more groups than you opened.
+Such booboos are generally harmless, so keep going.
+
 ! Too many }'s.
 \frac  ...ck {\begingroup #1\endgroup \@@over #2}}
                                                   
 l.10 ...t $\mu_0=4\pi 10^{-7} [\frac{\text{Vs}}\text
                                                   {{Am}}]$ die
-? 
+You've closed more groups than you opened.
+Such booboos are generally harmless, so keep going.
+
 ! Missing $ inserted.
 <inserted text> 
 $
 l.11 magnetische Feldkonstante und $\mu_
                                       r$ die vom Material abhängige Permeab...
-? 
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
 [3
 Missing character: There is no 𝜇 (U+1D707) in font [lmroman10-regular]:+tlig;
 !
 ]
 
-LaTeX Warning: Reference `eqn:biotsavart' on page 4 undefined on input line 60.
+LaTeX Warning: Reference `biotsavart' on page 4 undefined on input line 60.
 
 
-
-LaTeX Warning: Reference `eqn:langespule' on page 4 undefined on input line 86.
-
+LaTeX Warning: Reference `langespule' on page 4 undefined on input line 86.
 
 
 LaTeX Warning: Citation 'sample' on page 4 undefined on input line 95.
@@ -1765,16 +1791,14 @@ Type  H <return>  for immediate help.
                                                   
 l.6   \includegraphics{plot.pdf}
                               
-? 
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: TU).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-[4]
-
-LaTeX Warning: Reference `fig:plot' on page 5 undefined on input line 12.
-
-) (./diskussion.tex) (./anhang.tex)
+[4]) (./diskussion.tex) (./anhang.tex)
 
 LaTeX Warning: Empty bibliography on input line 27.
 
@@ -1783,20 +1807,13 @@ LaTeX Warning: Empty bibliography on input line 27.
 Package rerunfilecheck Warning: File `v308.aux' has changed. Rerun.
 
 Package rerunfilecheck Info: Checksums for `v308.aux':
-(rerunfilecheck)             Before: 85EEDE1E9F7DF9B67A6F98B7A09FFDCD;1242
-(rerunfilecheck)             After:  0315C6E9843EAE0FBAE96486D402712C;4263.
+(rerunfilecheck)             Before: 0315C6E9843EAE0FBAE96486D402712C;4263
+(rerunfilecheck)             After:  812A1C61E92438C7AEE9CF9DDC6B9479;4328.
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `v308.toc' has changed. Rerun.
-
-Package rerunfilecheck Info: Checksums for `v308.toc':
-(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E;0
-(rerunfilecheck)             After:  F86C8B8F0AEC1350C008DF00C4F9CCA8;739.
+Package rerunfilecheck Info: File `v308.toc' has not changed.
+(rerunfilecheck)             Checksum: F86C8B8F0AEC1350C008DF00C4F9CCA8;739.
 
 Package biblatex Warning: Please (re)run Biber on the file:
 (biblatex)                v308
@@ -1808,14 +1825,14 @@ Package logreq Info: Writing requests to 'v308.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 36686 strings out of 478112
+ 36693 strings out of 478112
  100000,1977958 words of node,token memory allocated
- 691 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 5 glue, 4 kern, 1 glyph, 34 attribute, 71 glue_spec
+ 701 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 5 glue, 4 kern, 1 glyph, 34 attribute, 73 glue_spec
 , 19 attribute_list, 1 write nodes
-   avail lists: 1:1,2:585,3:126,4:68,5:486,6:29,7:6995,8:51,9:369,10:29,11:840
- 55883 multiletter control sequences out of 65536+600000
- 93 fonts using 34789111 bytes
+   avail lists: 1:1,2:585,3:126,4:68,5:482,6:29,7:6963,8:51,9:369,10:29,11:840
+ 55890 multiletter control sequences out of 65536+600000
+ 93 fonts using 34788967 bytes
  113i,7n,117p,10617b,2933s stack positions out of 5000i,500n,10000p,200000b,80000s
 </home/joeyko2706/.local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmmono
 10-regular.otf></home/joeyko2706/.local/texlive/2021/texmf-dist/fonts/opentype/p
@@ -1830,10 +1847,10 @@ mf-dist/fonts/opentype/public/lm/lmroman12-regular.otf></home/joeyko2706/.local/
 texlive/2021/texmf-dist/fonts/opentype/public/lm/lmsans10-bold.otf></home/joeyko
 2706/.local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman12-bold.otf>
 
-Output written on v308.pdf (5 pages, 50559 bytes).
+Output written on v308.pdf (5 pages, 50945 bytes).
 
-PDF statistics: 131 PDF objects out of 1000 (max. 8388607)
- 93 compressed objects within 1 object stream
+PDF statistics: 140 PDF objects out of 1000 (max. 8388607)
+ 101 compressed objects within 2 object streams
  19 named destinations out of 1000 (max. 131072)
  41 words of extra memory for PDF output out of 10000 (max. 100000000)
 
