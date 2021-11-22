@@ -17,6 +17,6 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4}Auswertung}{6}{section.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5}Diskussion}{6}{section.5}%
+\contentsline {section}{\numberline {5}Diskussion}{14}{section.5}%
 \defcounter {refsection}{0}\relax 
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

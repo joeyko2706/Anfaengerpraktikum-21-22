@@ -32,7 +32,7 @@ z = np.linspace(-50,250)
 plt.xlabel('Abstand $x$ / mm')
 plt.ylabel('$B$ / mT')
 plt.plot(x1, B1, 'r.', label = 'Messwerte')
-plt.plot(z,10**8*faktor*(R*R + (z-0.5*d1)**2)**(-1.5) + 10**8*faktor*(R*R + (z+0.5*d1)**2)**(-1.5),label='Theoriekurve')
+
 
 
 plt.legend(loc='lower left')
@@ -49,7 +49,7 @@ z = np.linspace(20,240)
 plt.xlabel('Abstand $x$ / mm')
 plt.ylabel('$B$ / mT')
 plt.plot(x, B, 'g.', label = 'Messwerte')
-plt.plot(z,10**8*faktor*(R*R + (z-0.5*d2)**2)**(-1.5) + 10**8*faktor*(R*R + (z+0.5*d2)**2)**(-1.5),label='Theoriekurve')
+
 
 plt.legend()
 plt.savefig('Spulenpaar2.pdf')
@@ -66,7 +66,6 @@ z = np.linspace(15,170)
 plt.xlabel('Abstand $x$ / mm')
 plt.ylabel('$B$ / mT')
 plt.plot(x, B, 'm.', label = 'Messwerte')
-plt.plot(z,10**8*faktor*(R*R + (z-0.5*d3)**2)**(-1.5) + 10**8*faktor*(R*R + (z+0.5*d3)**2)**(-1.5),label='Theoriekurve')
 
 plt.legend()
 plt.savefig('Spulenpaar3.pdf')

@@ -1,6 +1,6 @@
-This is LuaHBTeX, Version 1.13.2 (TeX Live 2021)  (format=lualatex 2021.10.4)  22 NOV 2021 18:27
+This is LuaHBTeX, Version 1.13.2 (TeX Live 2021)  (format=lualatex 2021.10.4)  22 NOV 2021 19:59
  restricted system commands enabled.
-**v308.tex
+**v308.tex -r
 (./v308.tex
 LaTeX2e <2021-06-01> patch level 1
 Lua module: luaotfload 2021-05-21 3.18 Lua based OpenType font support
@@ -1724,86 +1724,132 @@ Underfull \hbox (badness 10000) in paragraph at lines 61--69
  []
 
 ) (./durchfuehrung.tex [4] [5]) (./auswertung.tex
+<hysterese.pdf, id=64, 462.528pt x 346.896pt>
+File: hysterese.pdf Graphic file (type pdf)
+<use hysterese.pdf>
+Package luatex.def Info: hysterese.pdf  used on input line 7.
+(luatex.def)             Requested size: 462.52686pt x 346.89514pt.
 
-LaTeX Warning: File `plot.pdf' not found on input line 6.
+Overfull \hbox (44.2713pt too wide) in paragraph at lines 7--8
+ [][] 
+ []
+
+<langeSpule.pdf, id=65, 462.528pt x 346.896pt>
+File: langeSpule.pdf Graphic file (type pdf)
+<use langeSpule.pdf>
+Package luatex.def Info: langeSpule.pdf  used on input line 16.
+(luatex.def)             Requested size: 462.52686pt x 346.89514pt.
+
+Overfull \hbox (44.2713pt too wide) in paragraph at lines 16--17
+ [][] 
+ []
+
+<Spulenpaar1.pdf, id=66, 417.7206pt x 258.0049pt>
+File: Spulenpaar1.pdf Graphic file (type pdf)
+<use Spulenpaar1.pdf>
+Package luatex.def Info: Spulenpaar1.pdf  used on input line 25.
+(luatex.def)             Requested size: 417.71957pt x 258.00426pt.
+<Spulenpaar2.pdf, id=67, 417.7206pt x 258.0049pt>
+File: Spulenpaar2.pdf Graphic file (type pdf)
+<use Spulenpaar2.pdf>
+Package luatex.def Info: Spulenpaar2.pdf  used on input line 35.
+(luatex.def)             Requested size: 417.71957pt x 258.00426pt.
+<Spulenpaar3.pdf, id=68, 417.7206pt x 258.0049pt>
+File: Spulenpaar3.pdf Graphic file (type pdf)
+<use Spulenpaar3.pdf>
+Package luatex.def Info: Spulenpaar3.pdf  used on input line 44.
+(luatex.def)             Requested size: 417.71957pt x 258.00426pt.
+<daten1.pdf, id=69, 614.295pt x 794.97pt>
+File: daten1.pdf Graphic file (type pdf)
+<use daten1.pdf>
+Package luatex.def Info: daten1.pdf  used on input line 52.
+(luatex.def)             Requested size: 614.29349pt x 794.96806pt.
+
+Overfull \hbox (196.03793pt too wide) in paragraph at lines 52--53
+ [][] 
+ []
 
 
-! Package luatex.def Error: File `plot.pdf' not found: using draft setting.
+LaTeX Warning: Float too large for page by 221.1678pt on input line 55.
 
-See the luatex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.6   \includegraphics{plot.pdf}
-                              
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+<daten2.pdf, id=70, 614.295pt x 794.97pt>
+File: daten2.pdf Graphic file (type pdf)
+<use daten2.pdf>
+Package luatex.def Info: daten2.pdf  used on input line 59.
+(luatex.def)             Requested size: 614.29349pt x 794.96806pt.
 
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `lmtt' (encoding: TU).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
-) (./diskussion.tex) (./anhang.tex)
+Overfull \hbox (196.03793pt too wide) in paragraph at lines 59--60
+ [][] 
+ []
+
+
+LaTeX Warning: Float too large for page by 221.1678pt on input line 62.
+
+<daten3.pdf, id=71, 614.295pt x 794.97pt>
+File: daten3.pdf Graphic file (type pdf)
+<use daten3.pdf>
+Package luatex.def Info: daten3.pdf  used on input line 66.
+(luatex.def)             Requested size: 614.29349pt x 794.96806pt.
+
+Overfull \hbox (196.03793pt too wide) in paragraph at lines 66--67
+ [][] 
+ []
+
+
+LaTeX Warning: Float too large for page by 221.1678pt on input line 69.
+
+
+LaTeX Warning: Reference `fig:plot' on page 6 undefined on input line 72.
+
+) (./diskussion.tex [6] [7<./hysterese.pdf>] [8<./langeSpule.pdf>] [9<./Spulenpa
+ar1.pdf><./Spulenpaar2.pdf>] [10<./Spulenpaar3.pdf>] [11<./daten1.pdf>]
+[12<./daten2.pdf>] [13<./daten3.pdf>]) (./anhang.tex)
 
 LaTeX Warning: Empty bibliography on input line 27.
 
-[6] (./v308.aux)
+[14
 
-Package rerunfilecheck Warning: File `v308.aux' has changed. Rerun.
+] (./v308.aux)
+Package rerunfilecheck Info: File `v308.aux' has not changed.
+(rerunfilecheck)             Checksum: 66CCD5328DCBF9E954BE338824C9FD20;8563.
 
-Package rerunfilecheck Info: Checksums for `v308.aux':
-(rerunfilecheck)             Before: 6274704BD2F3D4E7544199A525C41E89;4278
-(rerunfilecheck)             After:  917AC094CA03673AC45A7B0DF3C13E80;6177.
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `v308.toc' has changed. Rerun.
-
-Package rerunfilecheck Info: Checksums for `v308.toc':
-(rerunfilecheck)             Before: F86C8B8F0AEC1350C008DF00C4F9CCA8;739
-(rerunfilecheck)             After:  D5F7BCC27138762CA5ABEA6F3C9DF835;1208.
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                v308
-(biblatex)                and rerun LaTeX afterwards.
-
+Package rerunfilecheck Info: File `v308.toc' has not changed.
+(rerunfilecheck)             Checksum: 7311599993170577859542500510C5A7;1209.
 Package logreq Info: Writing requests to 'v308.run.xml'.
 
 \openout1 = v308.run.xml
 )
 
 Here is how much of LuaTeX's memory you used:
- 36535 strings out of 478112
+ 36565 strings out of 478112
  100000,1977958 words of node,token memory allocated
- 706 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 5 glue, 4 kern, 1 glyph, 34 attribute, 74 glue_spec
-, 19 attribute_list, 1 write nodes
-   avail lists: 1:1,2:454,3:127,4:77,5:444,6:28,7:6645,8:51,9:343,10:23,11:765
- 55727 multiletter control sequences out of 65536+600000
- 95 fonts using 35052487 bytes
- 113i,8n,117p,10617b,2933s stack positions out of 5000i,500n,10000p,200000b,80000s
-</home/joeyko2706/.local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmmono
-10-regular.otf></home/joeyko2706/.local/texlive/2021/texmf-dist/fonts/opentype/p
-ublic/lm/lmroman10-bold.otf></home/joeyko2706/.local/texlive/2021/texmf-dist/fon
-ts/opentype/public/lm-math/latinmodern-math.otf></home/joeyko2706/.local/texlive
-/2021/texmf-dist/fonts/opentype/public/lm/lmroman10-italic.otf></home/joeyko2706
-/.local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman8-regular.otf></
-home/joeyko2706/.local/texlive/2021/texmf-dist/fonts/opentype/public/lm-math/lat
-inmodern-math.otf></home/joeyko2706/.local/texlive/2021/texmf-dist/fonts/opentyp
-e/public/lm-math/latinmodern-math.otf></home/joeyko2706/.local/texlive/2021/texm
-f-dist/fonts/opentype/public/lm/lmroman10-regular.otf></home/joeyko2706/.local/t
-exlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman12-regular.otf></home/joe
-yko2706/.local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmsans10-bold.ot
-f></home/joeyko2706/.local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmro
-man12-bold.otf>
-Output written on v308.pdf (6 pages, 57134 bytes).
+ 717 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 5 glue, 4 kern, 1 glyph, 36 attribute, 75 glue_spec
+, 20 attribute_list, 1 write nodes
+   avail lists: 1:1,2:918,3:169,4:77,5:444,6:36,7:6645,8:51,9:343,10:23,11:765
+ 55746 multiletter control sequences out of 65536+600000
+ 94 fonts using 34926399 bytes
+ 113i,8n,117p,10620b,2933s stack positions out of 5000i,500n,10000p,200000b,80000s
+</home/joeyko2706/.local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroma
+n10-bold.otf></home/joeyko2706/.local/texlive/2021/texmf-dist/fonts/opentype/pub
+lic/lm-math/latinmodern-math.otf></home/joeyko2706/.local/texlive/2021/texmf-dis
+t/fonts/opentype/public/lm/lmroman10-italic.otf></home/joeyko2706/.local/texlive
+/2021/texmf-dist/fonts/opentype/public/lm/lmroman8-regular.otf></home/joeyko2706
+/.local/texlive/2021/texmf-dist/fonts/opentype/public/lm-math/latinmodern-math.o
+tf></home/joeyko2706/.local/texlive/2021/texmf-dist/fonts/opentype/public/lm-mat
+h/latinmodern-math.otf></home/joeyko2706/.local/texlive/2021/texmf-dist/fonts/op
+entype/public/lm/lmroman10-regular.otf></home/joeyko2706/.local/texlive/2021/tex
+mf-dist/fonts/opentype/public/lm/lmroman12-regular.otf></home/joeyko2706/.local/
+texlive/2021/texmf-dist/fonts/opentype/public/lm/lmsans10-bold.otf></home/joeyko
+2706/.local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman12-bold.otf>
 
-PDF statistics: 167 PDF objects out of 1000 (max. 8388607)
- 124 compressed objects within 2 object streams
- 24 named destinations out of 1000 (max. 131072)
+Output written on v308.pdf (14 pages, 7302984 bytes).
+
+PDF statistics: 411 PDF objects out of 1000 (max. 8388607)
+ 283 compressed objects within 3 object streams
+ 39 named destinations out of 1000 (max. 131072)
  73 words of extra memory for PDF output out of 10000 (max. 100000000)
 
