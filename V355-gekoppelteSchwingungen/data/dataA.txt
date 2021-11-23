@@ -1,0 +1,9 @@
+Resonanzfrequenz des linken Schaltkreises: 30.61 kHz
+Schwingungsmaxima   Kopplungskapazität in nF +-0.3%
+13  9.99
+11  8.00
+10  6.47
+8   5.02
+7   4.00
+6   3.00
+4   2.03
