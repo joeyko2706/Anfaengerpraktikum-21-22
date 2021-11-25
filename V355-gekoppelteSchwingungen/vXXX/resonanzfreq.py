@@ -33,7 +33,7 @@ plt.plot(x, v_1, 'r.', label = 'Spannung')
 plt.legend()
 plt.xlabel(r'$C_K /$ nF')
 plt.ylabel(r'$f_{1,\text{max}}, $V / mV')
-plt.savefig('freq1.pdf')
+plt.savefig('build/freq1.pdf')
 
 
 plt.clf()
@@ -43,7 +43,7 @@ plt.plot(x, v_2 , 'r.', label = 'Spannung')
 plt.legend()
 plt.xlabel(r'$C_K /$ nF')
 plt.ylabel(r'$f_{2,\text{max}}, V /$ mV')
-plt.savefig('freq2.pdf')
+plt.savefig('build/freq2.pdf')
 
 
 #Ich bin mir über die Einheit der y-Achse noch nicht ganz sicher.
