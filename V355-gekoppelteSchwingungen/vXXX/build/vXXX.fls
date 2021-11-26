@@ -478,6 +478,9 @@ INPUT ./content/anhang.tex
 INPUT ../plots/Lissajour-Gerade.jpeg
 INPUT ../plots/Lissajour-Gerade.jpeg
 INPUT ../plots/Lissajour-Gerade.jpeg
+INPUT ../plots/Schaltung2.png
+INPUT ../plots/Schaltung2.png
+INPUT ../plots/Schaltung2.png
 INPUT ../plots/Schaltung0.png
 INPUT ../plots/Schaltung0.png
 INPUT ../plots/Schaltung0.png

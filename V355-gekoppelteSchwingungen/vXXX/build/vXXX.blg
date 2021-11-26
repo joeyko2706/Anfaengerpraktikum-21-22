@@ -1,20 +1,20 @@
 [0] Config.pm:311> INFO - This is Biber 2.16
 [1] Config.pm:314> INFO - Logfile is 'build/vXXX.blg'
-[174] biber:340> INFO - === Fri Nov 26, 2021, 12:47:13
-[220] Biber.pm:415> INFO - Reading 'build/vXXX.bcf'
-[357] Biber.pm:952> INFO - Found 2 citekeys in bib section 0
-[390] Biber.pm:4340> INFO - Processing section 0
-[422] Biber.pm:4531> INFO - Looking for bibtex format file 'lit.bib' for section 0
-[681] bibtex.pm:1689> INFO - LaTeX decoding ...
-[691] bibtex.pm:1494> INFO - Found BibTeX data source '../lit.bib'
-[761] Biber.pm:4531> INFO - Looking for bibtex format file 'programme.bib' for section 0
-[1045] bibtex.pm:1689> INFO - LaTeX decoding ...
-[1063] bibtex.pm:1494> INFO - Found BibTeX data source '../programme.bib'
-[1067] Utils.pm:395> WARN - I didn't find a database entry for 'sample' (section 0)
-[1103] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
-[1104] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[1104] Biber.pm:4168> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'de-DE'
-[1105] Biber.pm:4174> INFO - No sort tailoring available for locale 'de-DE'
-[1114] bbl.pm:654> INFO - Writing 'build/vXXX.bbl' with encoding 'UTF-8'
-[1118] bbl.pm:757> INFO - Output to build/vXXX.bbl
-[1120] Biber.pm:128> INFO - WARNINGS: 1
+[158] biber:340> INFO - === Fri Nov 26, 2021, 16:53:10
+[197] Biber.pm:415> INFO - Reading 'build/vXXX.bcf'
+[318] Biber.pm:952> INFO - Found 2 citekeys in bib section 0
+[346] Biber.pm:4340> INFO - Processing section 0
+[373] Biber.pm:4531> INFO - Looking for bibtex format file 'lit.bib' for section 0
+[617] bibtex.pm:1689> INFO - LaTeX decoding ...
+[626] bibtex.pm:1494> INFO - Found BibTeX data source '../lit.bib'
+[685] Biber.pm:4531> INFO - Looking for bibtex format file 'programme.bib' for section 0
+[925] bibtex.pm:1689> INFO - LaTeX decoding ...
+[940] bibtex.pm:1494> INFO - Found BibTeX data source '../programme.bib'
+[945] Utils.pm:395> WARN - I didn't find a database entry for 'sample' (section 0)
+[970] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[971] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[973] Biber.pm:4168> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'de-DE'
+[974] Biber.pm:4174> INFO - No sort tailoring available for locale 'de-DE'
+[978] bbl.pm:654> INFO - Writing 'build/vXXX.bbl' with encoding 'UTF-8'
+[980] bbl.pm:757> INFO - Output to build/vXXX.bbl
+[982] Biber.pm:128> INFO - WARNINGS: 1
