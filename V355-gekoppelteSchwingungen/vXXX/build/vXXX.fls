@@ -478,6 +478,12 @@ INPUT ./content/anhang.tex
 INPUT ../plots/Lissajour-Gerade.jpeg
 INPUT ../plots/Lissajour-Gerade.jpeg
 INPUT ../plots/Lissajour-Gerade.jpeg
+INPUT ../plots/Schaltung0.png
+INPUT ../plots/Schaltung0.png
+INPUT ../plots/Schaltung0.png
+INPUT ../plots/Schaltung1.png
+INPUT ../plots/Schaltung1.png
+INPUT ../plots/Schaltung1.png
 INPUT /home/joeyko2706/.local/texlive/2021/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-italic.luc
 INPUT build/vXXX.aux
 INPUT build/vXXX.aux
