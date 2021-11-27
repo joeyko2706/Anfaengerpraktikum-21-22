@@ -5,10 +5,35 @@
 Bei der Vorbereitung wurde beim linken Schwingkreis eine Eigenfrequenz von $f_{\text{eigen}}=30.61 \si{\kilo\hertz}$ bei einer
 Phasendifferenz von $\SI{0}{\degree}$ gemessen. 
 Der verstellbare Kondensator wird so eingestellt, dass der rechte Schwingkreis die gleiche Eigenfrequenz hat, wie der linke.
-Die Referenzwerte der Bauteile sind $C=\SI{0.8015}{\nano\farad}$ und $L=\SI{32.351}{\milli\henry}$.
+Die Referenzwerte der Bauteile des benutzten Schltkastens sind in \autoref{tab:kasten_links} und \autoref{tab:kasten_rechts}.
 Die Anzahl der Maxima, beziehungsweise Minima, sind in \autoref{tab:schwing_maxima} aufgeführt. Außerdem ist die 
 Dauer einer Schwebung aufgetragen.
 
+\begin{table}
+  \centering
+  \caption{Werte des linken Schaltkreises.}
+  \label{tab:kasten_links}
+  \begin{tabular}{c c c}
+      \toprule
+      {$L \:/\: \si{\milli\henry} $} & $C \:/\: \si{\nano\farad} $ & $C_{\text{Spule}}\:/\: \si{\nano\farad}$ \\
+      \midrule
+      32.351 & 0.8015 & 0.037 \\
+      \bottomrule
+  \end{tabular}
+\end{table}
+
+\begin{table}
+  \centering
+  \caption{Werte des rechten Schaltkreises.}
+  \label{tab:kasten_rechts}
+  \begin{tabular}{c c c}
+      \toprule
+      {$L \:/\: \si{\milli\henry} $} & $C \:/\: \si{\nano\farad} $ & $C_{\text{Spule}}\:/\: \si{\nano\farad}$ \\
+      \midrule
+      23.954 & 0.7932 & 0.028 \\
+      \bottomrule
+  \end{tabular}
+\end{table}
 
 \begin{table}
   \centering
@@ -38,18 +63,18 @@ bestimmt.
   \centering
   \caption{Fundamentalschwingungen}
   \label{tab:aufgabeC}
-  \begin{tabular}{c c c c c}
+  \begin{tabular}{c c c c c c}
       \toprule
-      {Maxima 1 $\;/ \si{\kilo\hertz}$} & {Maxima 2 $\;/ \si{\kilo\hertz}$} & {$V_1 \:/\: \si{\milli\volt}$} & {$V_2 \:/\: \si{\milli\volt}$} & {$C_K \:/\: \si{\nano\farad}$} \\
+      {$f_+\;/ \si{\kilo\hertz}$} & {$f_-\;/ \si{\kilo\hertz}$} & {$V_1 \:/\: \si{\milli\volt}$} & {$V_2 \:/\: \si{\milli\volt}$} & {$C_K \:/\: \si{\nano\farad}$} & $I_2 \:/\:\si{\milli\ampere}$ \\
       \midrule
-      38 & 49 & 60 & 110 & 9.99 \\
-      40 & 50 & 55 & 110 & 8.00 \\
-      40 & 50 & 55 & 110 & 6.47 \\
-      38 & 55 & 50 & 110 & 5.02 \\
-      40 & 58 & 50 & 105 & 4.00 \\
-      40 & 62 & 50 & 105 & 3.00 \\
-      40 & 73 & 50 & 100 & 2.03 \\
-      40 & 76 & 55 & 95 & 1.01 \\
+      38 & 49 & 60 & 110 & 9.99 & 1.22 \\
+      40 & 50 & 55 & 110 & 8.00 & 1.51 \\
+      40 & 50 & 55 & 110 & 6.47 & 1.87 \\
+      38 & 55 & 50 & 110 & 5.02 & 2.42 \\
+      40 & 58 & 50 & 105 & 4.00 & 2.90 \\
+      40 & 62 & 50 & 105 & 3.00 & 3.86 \\
+      40 & 73 & 50 & 100 & 2.03 & 5.44 \\
+      40 & 76 & 55 & 95 & 1.01 & 10.39 \\
       \bottomrule
   \end{tabular}
 \end{table}
@@ -70,8 +95,39 @@ bestimmt.
 \end{figure}
 
 
+% \I_2  = \frac{U}{R\sqrt{4 + \frac{R^2C_K^2}{LC}(1 + \frac{C}{C_K}})}
+Der Strom $I_2$ wird mithilfe des Widerstandes $R=48\Omega$ berechnet.
+Die Frequenz der ersten Fundamentalschwingung berechnet sich durch %Formel in Theorie angeben und dann nur zitieren?
+$f_+ = \frac{1}{2\pi\sqrt{LC}}$ 
 
+und die der zweiten Fundamentalschwingung durch 
+$f_- = \frac{1}{2\pi\sqrt{L\frac{CC_K}{2C+C_K}}}$. 
 
+Es werden die geringen Kapazitäten der beiden Spulen ebenfalls berücksichtigt, wodurch sich die Frequenzen ergeben zu
+$f_+ = \frac{1}{2\pi\sqrt{L(C + C_\text{Sp})}}$ und $f_- = \frac{1}{2\pi\sqrt{L\Bigl(\dfrac{CC_K}{2C+C_K} + C_\text{Sp}\Bigr)}}$. 
 
-%Siehe \autoref{fig:plot}! Ich weiß nicht, was das hier überhaupt sein soll. Das mach ein Siehe Abbildung ! in das Protokoll.
-% Aber wofür ist das gut?
+Der theoretisch zu erwartende Wert für den Strom $I_2$ berechnet sich durch EINE FORMEL. 
+
+%Ich weiß nicht genau, was die Formel von I_2aussagt, ich warte einfach auf deine Theorie
+
+\begin{table}
+  \centering
+  \caption{Die erwarteten Theoriewerte.}
+  \label{tab:theorietabelle}
+  \begin{tabular}{c c c c c c c}
+      \toprule
+      $f_+ \:/\: \si{\kilo\hertz}$ & $f_{+, \text{theo}} \:/\: \si{\kilo\hertz}$ & $f_- \:/\: \si{\kilo\hertz}$ & $f_{-, \text{theo}} \:/\: \si{\kilo\hertz}$ & $C_K \:/\: \si{\nano\farad}$ & $I_2 \:/\: \si{\milli\ampere}$ & $I_{2,\text{theo}} \:/\: \si{\milli\ampere}$ \\
+      \midrule
+      33.1 & 30.5 & 81.3 & 47.6 & 1.0  &  38.125 & 38.124 \\  
+      33.1 & 30.5 & 61.1 & 39.5 & 2.2  &  40.833 & 40.830 \\
+      33.1 & 30.5 & 57.1 & 38.0 & 2.7  &  39.229 & 39.225 \\
+      33.1 & 30.5 & 48.7 & 35.1 & 4.7  &  42.708 & 42.696 \\
+      33.1 & 30.5 & 44.7 & 33.7 & 6.8  &  45.000 & 44.974 \\
+      33.1 & 30.5 & 42.8 & 33.2 & 8.2  &  38.125 & 38.093 \\
+      33.1 & 30.5 & 41.4 & 32.8 & 10.0 &  42.291 & 42.241 \\
+      33.1 & 30.5 & 40.2 & 32.4 & 12.0 &  41.666 & 41.595 \\
+      \bottomrule
+  \end{tabular}
+\end{table}
+
+\pagebreak

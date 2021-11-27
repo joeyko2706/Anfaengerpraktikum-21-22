@@ -21,10 +21,10 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.2}Fundamentalschwingung}{4}{subsection.4.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5}Diskussion}{6}{section.5}%
+\contentsline {section}{\numberline {5}Diskussion}{7}{section.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6}Anhang}{7}{section.6}%
+\contentsline {section}{\numberline {6}Anhang}{8}{section.6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\nonumberline Literatur}{9}{section*.11}%
+\contentsline {section}{\nonumberline Literatur}{10}{section*.14}%
 \defcounter {refsection}{0}\relax 
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
