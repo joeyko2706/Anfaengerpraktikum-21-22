@@ -4,32 +4,29 @@
 \subsection{Schwingungsgleichungen für kapazitiv gekoppelte Schwingkreise}
 Es werden im Folgenden zwei baugleiche elektrische Schwingkreise, mit jeweils den gleichen Induktivitäten L und Kapazitäten C betrachtet. Die Schwingkreise werden mit 
 einem Kondensator mit variabler Kapazität $ C_k $ gekoppelt. (siehe Abbildung 1)
-\begin{figure}
-    \centering
-    \includegraphics{Schaltung2.PNG}
-    \caption{Prinzipschaltbild zweier gekoppelter Schwingkreise}
-    \label{fig:DatenLangeSpule}
-  \end{figure}
+
+
+
 Mit Hilfe der Kirchhoffschen Knotenregel lässt sich für den Verzweigungspunkt A die Beziehung
 \begin{equation}
     I_\text{k} = I_1 - I_2
     \label{eqn:Knotenregel}
-  \end{equation}
-  aufstellen.
+\end{equation}
+aufstellen.
 
 Die Kirchhoffsche Maschenregel liefert zusätzlich jeweils für die beiden Leiterkreise 1 und 2 die Beziehung
 \begin{equation}
     U_\text{C} + U_L + U_k = 0
     \label{eqn:Maschenregel}
-  \end{equation}
+\end{equation}
 Außerdem gilt
 \begin{equation}
     U_\text{C} = \frac{1}{C} \int I \, \symup{d}t
-  \end{equation}
+\end{equation}
   und
-  \begin{equation}
+\begin{equation}
     U_\text{L} = L \dot{I}
-  \end{equation}
+\end{equation}
 Setzt man diese Beziehung in (1) ein erhält man 
 \begin{equation}
     \frac{1}{C} \int I_1 \, \symup{d}t + L \dot{I_1} + \frac{1}{C_k} \int I_1 - I_2 \, \symup{d}t = 0
@@ -100,7 +97,7 @@ nimmt man an, dass sich die Frequenzen $ v^{+} $ und $ v^{-} $ nur gering vonein
 die Frequenz des Einzeloszillators $ v^{+} $ ungefähr gleich.
 
 Ebenso kann man an (9) und (10) ablesen, dass die Amplitude mit der Frequenz $ v^{-} - v^{+} $ zwischen Null und $ I_{1_0} $ oszilliert. Diese Frequenz nannt man Schwebungsfrequenz.
-\\
+
 \subsection{Berechnung des Stromes in Abhängigkeit der Frequenz}
 Regt man den in Abbildung 2 dargestellten Schwingkreis durch eine Sinusspannung zu einer erzwungenen Schwingung an,
 
@@ -121,17 +118,16 @@ und
     0 = I_2 (z_C + z_L + z_{C_K} + z_R) - z_{C_K} I_1
     \label{eqn:Zwoelf}
 \end{equation}
-\\
-mit \begin{CenterStrip} 
-        $z_C = -j \frac{1}{wC}$,$z_L = jwL$,   $z_{C_K} = -j \frac{1}{wC_K}$  und  $z_C = R$
-    \end{CenterStrip}
-\\
 
-    Für $I_2$ folgt nach Elimination von $I_1$
+mit $z_C = -j \frac{1}{wC}$,$z_L = jwL$, $z_{C_K} = -j \frac{1}{wC_K}$  und  $z_C = R$
+
+
+
+Für $I_2$ folgt nach Elimination von $I_1$
 \begin{equation}
     I_2 = U \frac{-j\frac{1}{wC_k}}{(jwL - j(\frac{1}{wc} + \frac{1}{wC_k})+R)^2 + \frac{1}{w^2 {C_k}^2}}
 \end{equation}
-\\
+
 \begin{equation}
     \implies I_2 = U \frac{ -2wC_kRZ(w) + j(- \frac{1}{wC_k} + wC_kZ^2(w) - wR^2C_k) }{ 4w^2C_k^2R^2Z^2(w) + ( \frac{1}{wC_k} - wC_kZ^2(w) + wR^2C_k )^2 }
 \end{equation} 
@@ -139,12 +135,12 @@ mit
 \begin{equation}
     Z(w) \coloneq wL - \frac{1}{w} (\frac{1}{C} + \frac{1}{C_k})
 \end{equation}
-\\
+
 Für den Betrag ergibt sich dann
 \begin{equation}
     \lvert I_2\rvert = \lvert U\rvert \frac{1}{ 4w^2C_k^2R^2Z^2(w) + ( \frac{1}{wC_k} - wC_kZ^2(w) + wR^2C_k )^2 }
 \end{equation}
-\\
+
 Bei den Fundamentalfrequenzen erreicht der Strom seine Maxima
 \begin{equation}
     \lvert I(w^{+})\rvert = \frac{1}{ R\sqrt{4 + \frac{R^2C_k^2}{LC}}}
@@ -153,7 +149,7 @@ und
 \begin{equation}
     \lvert I(w^{-})\rvert = \frac{1}{ R\sqrt{4 + \frac{R^2C_k^2}{LC}(1+\frac{C}{C_k})}}
 \end{equation}
-\\
+
 Diese Maxima können durch 
 \begin{equation}
     \lvert I(w^{+})\rvert \approx \lvert I(w^{-})\rvert \approx \frac{1}{2R}

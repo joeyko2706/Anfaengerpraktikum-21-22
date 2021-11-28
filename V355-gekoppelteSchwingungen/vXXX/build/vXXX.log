@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.13.2 (TeX Live 2021)  (format=lualatex 2021.10.4)  27 NOV 2021 15:52
+This is LuaHBTeX, Version 1.13.2 (TeX Live 2021)  (format=lualatex 2021.10.4)  28 NOV 2021 19:50
  restricted system commands enabled.
 **vXXX.tex
 (./vXXX.tex
@@ -1302,15 +1302,7 @@ Package: blx-case-expl3 2020/12/31 v3.16 expl3 case changing code for biblatex
 
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'vXXX.bbl' found.
- (./build/vXXX.bbl
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                sample
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-)
+ (./build/vXXX.bbl)
 Package biblatex Info: Reference section=0 on input line 11.
 Package biblatex Info: Reference segment=0 on input line 11.
 Package hyperref Info: Link coloring OFF on input line 11.
@@ -1365,62 +1357,67 @@ Package tocbasic Info: character protrusion at toc deactivated on input line 15.
 \openout4 = vXXX.toc
  [2
 
-] (./content/einleitung.tex) (./content/theorie.tex) (./content/durchfuehrung.tex [3]) (./content/auswertung.tex
-<freq1.pdf, id=67, 417.7206pt x 258.0049pt>
+] (./content/einleitung.tex) (./content/theorie.tex [3] [4] [5]) (./content/durchfuehrung.tex) (./content/auswertung.tex [6] [7]
+<freq1.pdf, id=117, 417.7206pt x 258.0049pt>
 File: freq1.pdf Graphic file (type pdf)
 <use freq1.pdf>
 Package luatex.def Info: freq1.pdf  used on input line 85.
 (luatex.def)             Requested size: 417.71957pt x 258.00426pt.
-<freq2.pdf, id=68, 417.7206pt x 258.0049pt>
+<freq2.pdf, id=118, 417.7206pt x 258.0049pt>
 File: freq2.pdf Graphic file (type pdf)
 <use freq2.pdf>
 Package luatex.def Info: freq2.pdf  used on input line 92.
 (luatex.def)             Requested size: 417.71957pt x 258.00426pt.
- [4] [5<build/freq1.pdf>]) [6<build/freq2.pdf>] (./content/diskussion.tex) (./content/anhang.tex [7]
-<plots/Lissajour-Gerade.jpeg, id=159, 5685.24pt x 2762.32pt>
+ [8<build/freq1.pdf>]) [9<build/freq2.pdf>] (./content/diskussion.tex) (./content/anhang.tex [10]
+<plots/Lissajour-Gerade.jpeg, id=199, 5685.24pt x 2762.32pt>
 File: plots/Lissajour-Gerade.jpeg Graphic file (type jpg)
 <use plots/Lissajour-Gerade.jpeg>
 Package luatex.def Info: plots/Lissajour-Gerade.jpeg  used on input line 7.
 (luatex.def)             Requested size: 313.69167pt x 152.41278pt.
-<plots/Schaltung2.png, id=160, 520.19344pt x 320.69812pt>
+<plots/Schaltung3.png, id=200, 535.2497pt x 296.60812pt>
+File: plots/Schaltung3.png Graphic file (type png)
+<use plots/Schaltung3.png>
+Package luatex.def Info: plots/Schaltung3.png  used on input line 14.
+(luatex.def)             Requested size: 313.69167pt x 173.83864pt.
+<plots/Schaltung2.png, id=203, 520.19344pt x 320.69812pt>
 File: plots/Schaltung2.png Graphic file (type png)
 <use plots/Schaltung2.png>
-Package luatex.def Info: plots/Schaltung2.png  used on input line 15.
+Package luatex.def Info: plots/Schaltung2.png  used on input line 22.
 (luatex.def)             Requested size: 313.69167pt x 193.38925pt.
-<plots/Schaltung0.png, id=163, 410.2828pt x 422.32782pt>
+<plots/Schaltung0.png, id=206, 410.2828pt x 422.32782pt>
 File: plots/Schaltung0.png Graphic file (type png)
 <use plots/Schaltung0.png>
-Package luatex.def Info: plots/Schaltung0.png  used on input line 23.
+Package luatex.def Info: plots/Schaltung0.png  used on input line 30.
 (luatex.def)             Requested size: 313.69167pt x 322.89929pt.
-<plots/Schaltung1.png, id=166, 665.48625pt x 347.04657pt>
+<plots/Schaltung1.png, id=209, 665.48625pt x 347.04657pt>
 File: plots/Schaltung1.png Graphic file (type png)
 <use plots/Schaltung1.png>
-Package luatex.def Info: plots/Schaltung1.png  used on input line 30.
+Package luatex.def Info: plots/Schaltung1.png  used on input line 37.
 (luatex.def)             Requested size: 313.69167pt x 163.5885pt.
-) [8<../plots/Lissajour-Gerade.jpeg>] [9<../plots/Schaltung2.png><../plots/Schaltung0.png>] [10<../plots/Schaltung1.png>] (./build/vXXX.aux)
+) [11<../plots/Lissajour-Gerade.jpeg>] [12<../plots/Schaltung3.png><../plots/Schaltung2.png>] [13<../plots/Schaltung0.png><../plots/Schaltung1.png>] [14] (./build/vXXX.aux)
 Package rerunfilecheck Info: File `vXXX.aux' has not changed.
-(rerunfilecheck)             Checksum: 4F22007E2FF79D2B4DD8ED6F8A190A54;12086.
+(rerunfilecheck)             Checksum: D0522CED44D43F27B166F417662A950C;15745.
 Package rerunfilecheck Info: File `vXXX.toc' has not changed.
-(rerunfilecheck)             Checksum: ED19698C45C5902BDA50F14CC7999662;1671.
+(rerunfilecheck)             Checksum: 408D67B6B0E5E396F38EA9C8002F49AA;1989.
 Package logreq Info: Writing requests to 'vXXX.run.xml'.
 
 \openout1 = vXXX.run.xml
 )
 
 Here is how much of LuaTeX's memory you used:
- 36777 strings out of 478112
+ 36833 strings out of 478112
  100000,1977958 words of node,token memory allocated
- 662 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 5 glue, 4 kern, 1 glyph, 16 attribute, 76 glue_spec, 10 attribute_list, 1 write nodes
-   avail lists: 1:2,2:1616,3:235,4:106,5:356,6:52,7:6407,8:31,9:471,10:12,11:755
- 55942 multiletter control sequences out of 65536+600000
+ 943 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 5 glue, 4 kern, 1 glyph, 108 attribute, 77 glue_spec, 56 attribute_list, 1 write nodes
+   avail lists: 1:2,2:1360,3:220,4:102,5:418,6:56,7:5898,8:80,9:738,10:12,11:676
+ 55962 multiletter control sequences out of 65536+600000
  94 fonts using 34926399 bytes
  113i,13n,117p,10617b,2933s stack positions out of 5000i,500n,10000p,200000b,80000s
-</home/joeyko2706/.local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman10-italic.otf></home/joeyko2706/.local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman5-regular.otf></home/joeyko2706/.local/texlive/2021/texmf-dist/fonts/opentype/public/lm-math/latinmodern-math.otf></home/joeyko2706/.local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman8-regular.otf></home/joeyko2706/.local/texlive/2021/texmf-dist/fonts/opentype/public/lm-math/latinmodern-math.otf></home/joeyko2706/.local/texlive/2021/texmf-dist/fonts/opentype/public/lm-math/latinmodern-math.otf></home/joeyko2706/.local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.otf></home/joeyko2706/.local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf></home/joeyko2706/.local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman12-regular.otf></home/joeyko2706/.local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmsans10-bold.otf></home/joeyko2706/.local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman12-bold.otf>
-Output written on vXXX.pdf (10 pages, 3124468 bytes).
+</home/joeyko2706/.local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman10-italic.otf></home/joeyko2706/.local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman5-regular.otf></home/joeyko2706/.local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.otf></home/joeyko2706/.local/texlive/2021/texmf-dist/fonts/opentype/public/lm-math/latinmodern-math.otf></home/joeyko2706/.local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman8-regular.otf></home/joeyko2706/.local/texlive/2021/texmf-dist/fonts/opentype/public/lm-math/latinmodern-math.otf></home/joeyko2706/.local/texlive/2021/texmf-dist/fonts/opentype/public/lm-math/latinmodern-math.otf></home/joeyko2706/.local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf></home/joeyko2706/.local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman12-regular.otf></home/joeyko2706/.local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmsans10-bold.otf></home/joeyko2706/.local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman12-bold.otf>
+Output written on vXXX.pdf (14 pages, 3160967 bytes).
 
-PDF statistics: 302 PDF objects out of 1000 (max. 8388607)
- 218 compressed objects within 3 object streams
- 38 named destinations out of 1000 (max. 131072)
- 105 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 360 PDF objects out of 1000 (max. 8388607)
+ 269 compressed objects within 3 object streams
+ 68 named destinations out of 1000 (max. 131072)
+ 121 words of extra memory for PDF output out of 10000 (max. 100000000)
 

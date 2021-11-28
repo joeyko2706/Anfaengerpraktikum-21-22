@@ -2346,13 +2346,14 @@
   </bcf:bibdata>
   <bcf:section number="0">
     <bcf:citekey order="1">Versuchsanleitung</bcf:citekey>
-    <bcf:citekey order="2">sample</bcf:citekey>
+    <bcf:citekey order="2">Versuchsanleitung</bcf:citekey>
     <bcf:citekey order="3">Versuchsanleitung</bcf:citekey>
     <bcf:citekey order="4">Versuchsanleitung</bcf:citekey>
     <bcf:citekey order="5">Versuchsanleitung</bcf:citekey>
     <bcf:citekey order="6">Versuchsanleitung</bcf:citekey>
     <bcf:citekey order="7">Versuchsanleitung</bcf:citekey>
     <bcf:citekey order="8">Versuchsanleitung</bcf:citekey>
+    <bcf:citekey order="9">Versuchsanleitung</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">

@@ -459,12 +459,12 @@ INPUT ./content/einleitung.tex
 INPUT ./content/einleitung.tex
 INPUT ./content/theorie.tex
 INPUT ./content/theorie.tex
-INPUT ./content/durchfuehrung.tex
-INPUT ./content/durchfuehrung.tex
-INPUT ./content/auswertung.tex
-INPUT ./content/auswertung.tex
 INPUT /home/joeyko2706/.local/texlive/2021/texmf-var/luatex-cache/generic/fonts/otl/lmroman8-regular.luc
 INPUT /home/joeyko2706/.local/texlive/2021/texmf-var/luatex-cache/generic/fonts/otl/lmroman5-regular.luc
+INPUT ./content/durchfuehrung.tex
+INPUT ./content/durchfuehrung.tex
+INPUT ./content/auswertung.tex
+INPUT ./content/auswertung.tex
 INPUT build/freq1.pdf
 INPUT build/freq1.pdf
 INPUT build/freq1.pdf
@@ -478,6 +478,9 @@ INPUT ./content/anhang.tex
 INPUT ../plots/Lissajour-Gerade.jpeg
 INPUT ../plots/Lissajour-Gerade.jpeg
 INPUT ../plots/Lissajour-Gerade.jpeg
+INPUT ../plots/Schaltung3.png
+INPUT ../plots/Schaltung3.png
+INPUT ../plots/Schaltung3.png
 INPUT ../plots/Schaltung2.png
 INPUT ../plots/Schaltung2.png
 INPUT ../plots/Schaltung2.png
