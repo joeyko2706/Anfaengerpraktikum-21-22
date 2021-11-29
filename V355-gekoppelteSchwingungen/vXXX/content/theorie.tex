@@ -27,7 +27,7 @@ Außerdem gilt
 \begin{equation}
     U_\text{L} = L \dot{I}
 \end{equation}
-Setzt man diese Beziehung in (1) ein erhält man 
+Setzt man diese Beziehung in \ref {eqn:Knotenregel} ein erhält man 
 \begin{equation}
     \frac{1}{C} \int I_1 \, \symup{d}t + L \dot{I_1} + \frac{1}{C_k} \int I_1 - I_2 \, \symup{d}t = 0
 \end{equation}
@@ -35,68 +35,69 @@ und
 \begin{equation}
     \frac{1}{C} \int I_2 \, \symup{d}t + L \dot{I_2} - \frac{1}{C_k} \int I_1 - I_2 \, \symup{d}t = 0
 \end{equation}
-Wenn man diese Gleichungen nun ein mal nach der Zeit differenziert und anschließend addiert(3) und subtrahiert(4) erhält man
+Wenn man diese Gleichungen nun ein mal nach der Zeit differenziert und anschließend addiert \ref {eqn:Sieben} und subtrahiert \ref {eqn:Acht} erhält man
 \begin{equation}
     L \frac{d^2}{dt^2}(I_1 + I_2) + \frac{1}{C}(I_1 +I_2) = 0
-    \label{eqn:Drei}
+    \label{eqn:Sieben}
 \end{equation}
 und
 \begin{equation}
     L \frac{d^2}{dt^2}(I_1 - I_2) + ( \frac{1}{C} + \frac{2}{C_k} ) (I_1 - I_2) = 0
-    \label{eqn:Vier}
+    \label{eqn:Acht}
 \end{equation}
 Damit hat man zwei unabhänig voneinader lösbare Differentialgleichungen, die als neue Variablen die Summe und Differenz der Ströme $ I_1 $ und $ I_2 $ haben.
 
-Aus den Lösungen der Differentialgleichungen (3) und (4) ergeben sich die Frequenzen
+Aus den Lösungen der Differentialgleichungen \ref {eqn:Sieben} und \ref {eqn:Acht} ergeben sich die Frequenzen
 \begin{equation}
     v^{+} = \frac{1}{ 2\symup{\pi} \sqrt{L C}}
-    \label{eqn:Fuenf}
+    \label{eqn:Neun}
 \end{equation}
 und
 \begin{equation}
     v^{-} = \frac{1}{ 2\symup{\pi} \sqrt{L (\frac{1}{C} + \frac{1}{C_k})^{-1}}}
-    \label{eqn:Sechs}
+    \label{eqn:Zehn}
 \end{equation}
 
-Betrachtet man nun zwei Spezialfälle des Systems der gekoppelten Oszillatoren, so werden die Bedeutungen der Schwingungen (5) und (6) deutlich.
+Betrachtet man nun zwei Spezialfälle des Systems der gekoppelten Oszillatoren, so werden die Bedeutungen der Frequenzen \ref {eqn:Neun} und \ref {eqn:Zehn} deutlich.
 
-Nimmt man an, dass die Oszillation in beiden Schwingkreisen mit gleicher Amplitude und in Phase beginnt, also $ I_1 = I_2 $ gilt, dann wird die Differenzschwingung $ v^{-} $ (6)
-Null und beide Oszillatoren schwingen gleichphasig mit der Frequenz $ v^{+} $ (5), die der des Einzeloszillators entspricht. Da sich die Ströme $ I_1 $ und $ I_2 $ konsequent
+Nimmt man an, dass die Oszillation in beiden Schwingkreisen mit gleicher Amplitude und in Phase beginnt, also $ I_1 = I_2 $ gilt, dann wird die Differenzschwingung $ v^{-} $ \ref {eqn:Zehn}
+Null und beide Oszillatoren schwingen gleichphasig mit der Frequenz $ v^{+} $ \ref {eqn:Neun}, die der des Einzeloszillators entspricht. Da sich die Ströme $ I_1 $ und $ I_2 $ konsequent
 aufheben, liegt hierbei zu keinem Zeitpunkt Spannung am Kondensator $ C_k $ an.
 
 Im zweiten Spezialfall wird angenommen, dass die Oszillatoren wieder mit gleicher Amplitude, jedoch entgegengesetzter Phase ($ I_1 = -I_2 $) beginnen zu schwingen. In diesem Fall
-wird die Summenschwingung $ v^{+} $ (5) Null und die beiden Oszillatoren schwingen gegenphasig mit der höheren Frequenz $ v^{-} $.
+wird die Summenschwingung $ v^{+} $ \ref {eqn:Neun} Null und die beiden Oszillatoren schwingen gegenphasig mit der höheren Frequenz $ v^{-} $.
 
 Diese beiden Spezialfälle und die zugehörigen Frequenzen bezeichnet man als Fundamentalschwingungen.
 \\
 Regt man das System der gekoppelten Oszillatoren so an, dass nur ein Oszillator zu Beginn eine von Null verschiedene Amplitude besitzt, so ergeben sich vollkommen andere Ergebnisse.
 
-Addiert man die Loesungen der Differentialgleichungen (3) und (4) zusammen und betrachtet sie unter den gennanten Anfangsbedingungen $ I_1 = 0 $ und $ I_2 \neq 0 $ so erhält man
+Addiert man die Lösungen der Differentialgleichungen \ref {eqn:Sieben} und \ref {eqn:Acht} zusammen und betrachtet sie unter den gennanten
+Anfangsbedingungen $ I_1 = 0 $ und $ I_2 \neq 0 $ so erhält man
 \begin{equation}
     I_1(t) = \frac{1}{2} I_{1_0} (\cos v^{+} t + \cos v^{-} t )
-    \label{eqn:Sieben}
+    \label{eqn:Elf}
 \end{equation}
 und
 \begin{equation}
     I_2(t) = \frac{1}{2} I_{1_0} (\cos v^{+} t - \cos v^{-} t )
-    \label{eqn:Acht}
+    \label{eqn:Zwoelf}
 \end{equation}
-Mit Hilfe von Additionstheoremen kann man (7) und (8) umschreiben zu
+Mit Hilfe von Additionstheoremen kann man \ref {eqn:Elf} und \ref {eqn:Zwoelf} umschreiben zu
 \begin{equation}
     I_1(t) = I_{1_0} \cos \frac{1}{2} (v^{+} + v^{-}) t \cos \frac{1}{2} (v^{+} - v^{-}) t
-    \label{eqn:Neun}
+    \label{eqn:Dreizehn}
 \end{equation}
 und
 \begin{equation}
     I_2(t) = I_{1_0} \cos \frac{1}{2} (v^{+} + v^{-}) t \cos \frac{1}{2} (v^{+} - v^{-}) t
-    \label{eqn:Zehn}
+    \label{eqn:Vierzehn}
 \end{equation}
 
-An (9) und (10) kann man ablesen, dass das System nun mit einer Frequenz von $ \frac{1}{2} (v^{+} + v^{-}) $ oszilliert. Für diese Art von Oszillationen, die man Schwebungen nennt,
+An \ref {eqn:Dreizehn} und \ref {eqn:Vierzehn} kann man ablesen, dass das System nun mit einer Frequenz von $ \frac{1}{2} (v^{+} + v^{-}) $ oszilliert. Für diese Art von Oszillationen, die man Schwebungen nennt,
 nimmt man an, dass sich die Frequenzen $ v^{+} $ und $ v^{-} $ nur gering voneinander unterscheiden. Demnach sind die Frequenz $ \frac{1}{2} (v^{+} + v^{-}) $ und
 die Frequenz des Einzeloszillators $ v^{+} $ ungefähr gleich.
 
-Ebenso kann man an (9) und (10) ablesen, dass die Amplitude mit der Frequenz $ v^{-} - v^{+} $ zwischen Null und $ I_{1_0} $ oszilliert. Diese Frequenz nannt man Schwebungsfrequenz.
+Ebenso kann man an \ref {eqn:Dreizehn} und \ref {eqn:Vierzehn} ablesen, dass die Amplitude mit der Frequenz $ v^{-} - v^{+} $ zwischen Null und $ I_{1_0} $ oszilliert. Diese Frequenz nennt man Schwebungsfrequenz.
 
 \subsection{Berechnung des Stromes in Abhängigkeit der Frequenz}
 Regt man den in Abbildung 2 dargestellten Schwingkreis durch eine Sinusspannung zu einer erzwungenen Schwingung an, siehe \autoref{fig:schaltung3}   
@@ -113,12 +114,12 @@ so erhält man mit der Kirchhoffschen Maschenregel:
 
 \begin{equation}
     U = I_1 (z_C + z_L + z_{C_K} + z_R) - z_{C_K} I_2
-    \label{eqn:Elf}
+    \label{eqn:Fuenfzehn}
 \end{equation}
 und
 \begin{equation}
     0 = I_2 (z_C + z_L + z_{C_K} + z_R) - z_{C_K} I_1
-    \label{eqn:Zwoelf}
+    \label{eqn:Sechzehn}
 \end{equation}
 
 mit $z_C = -j \frac{1}{wC}$,$z_L = jwL$, $z_{C_K} = -j \frac{1}{wC_K}$  und  $z_C = R$
@@ -128,34 +129,42 @@ mit $z_C = -j \frac{1}{wC}$,$z_L = jwL$, $z_{C_K} = -j \frac{1}{wC_K}$  und  $z_
 Für $I_2$ folgt nach Elimination von $I_1$
 \begin{equation}
     I_2 = U \frac{-j\frac{1}{wC_k}}{(jwL - j(\frac{1}{wc} + \frac{1}{wC_k})+R)^2 + \frac{1}{w^2 {C_k}^2}}
+    \label{eqn:Siebzehn}
 \end{equation}
 
 \begin{equation}
     \implies I_2 = U \frac{ -2wC_kRZ(w) + j(- \frac{1}{wC_k} + wC_kZ^2(w) - wR^2C_k) }{ 4w^2C_k^2R^2Z^2(w) + ( \frac{1}{wC_k} - wC_kZ^2(w) + wR^2C_k )^2 }
+    \label{eqn:Achtzehn}
 \end{equation} 
 mit
 \begin{equation}
     Z(w) \coloneq wL - \frac{1}{w} (\frac{1}{C} + \frac{1}{C_k})
+    \label{eqn:Neunzehn}
 \end{equation}
 
 Für den Betrag ergibt sich dann
 \begin{equation}
     \lvert I_2\rvert = \lvert U\rvert \frac{1}{ 4w^2C_k^2R^2Z^2(w) + ( \frac{1}{wC_k} - wC_kZ^2(w) + wR^2C_k )^2 }
+    \label{eqn:Zwanzig}
 \end{equation}
 
 Bei den Fundamentalfrequenzen erreicht der Strom seine Maxima
 \begin{equation}
     \lvert I(w^{+})\rvert = \frac{1}{ R\sqrt{4 + \frac{R^2C_k^2}{LC}}}
+    \label{eqn:Einundzwandzig}
 \end{equation}
 und
 \begin{equation}
     \lvert I(w^{-})\rvert = \frac{1}{ R\sqrt{4 + \frac{R^2C_k^2}{LC}(1+\frac{C}{C_k})}}
+    \label{eqn:Zweiundzwandzig}
 \end{equation}
 
 Diese Maxima können durch 
 \begin{equation}
     \lvert I(w^{+})\rvert \approx \lvert I(w^{-})\rvert \approx \frac{1}{2R}
+    \label{eqn:Dreiundzwandzig}
 \end{equation}
+genähert werden.
 
 
 % \\ braucht man anscheinend garnicht, weil das Dokument, soweit ich erkennen kann, auch so gut formatiert ist
