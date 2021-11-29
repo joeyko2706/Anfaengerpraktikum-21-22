@@ -1,11 +1,11 @@
 # Fdb version 3
-["biber build/vXXX"] 1638125415 "build/vXXX.bcf" "build/vXXX.bbl" "build/vXXX" 1638197978
+["biber build/vXXX"] 1638125415 "build/vXXX.bcf" "build/vXXX.bbl" "build/vXXX" 1638209444
   "../lit.bib" 1637693184 124 ed75918447392e13f0bb835aa908dd3a ""
-  "build/vXXX.bcf" 1638197977 107477 eec6b85583ff76df2c214c6de6e6fbb9 "lualatex"
+  "build/vXXX.bcf" 1638209443 107477 eec6b85583ff76df2c214c6de6e6fbb9 "lualatex"
   (generated)
   "build/vXXX.blg"
   "build/vXXX.bbl"
-["lualatex"] 1638197968 "vXXX.tex" "build/vXXX.pdf" "vXXX" 1638197978
+["lualatex"] 1638209434 "vXXX.tex" "build/vXXX.pdf" "vXXX" 1638209444
   "../header.tex" 1637689068 3532 ecd2f1cd7deabc487771b015238895de ""
   "../plots/Lissajour-Gerade.jpeg" 1637862533 2978085 14dd4d73c14397c548c7db1e9edd94b9 ""
   "../plots/Schaltung0.png" 1637926581 24155 43909eff1d22727c718de7e9c40ddbcd ""
@@ -229,14 +229,14 @@
   "/home/joeyko2706/.local/texlive/2021/texmf-var/luatex-cache/generic/names/luaotfload-names.luc" 1633522651 1210844 26e45c9907dd377a148343f7c02beb8d ""
   "/home/joeyko2706/.local/texlive/2021/texmf-var/tex/generic/config/language.dat" 1633360271 6672 1ed23f3e819d50e9eabee6207a41d925 ""
   "/home/joeyko2706/.local/texlive/2021/texmf-var/web2c/luahbtex/lualatex.fmt" 1633360366 3360666 b65586b05508b2b52397a63383e02f21 ""
-  "build/freq1.pdf" 1638197963 12483 60b4b3d7e703d48c0c07d1670f7ec2cb ""
-  "build/freq2.pdf" 1638197967 12238 bf3a7d7e7d982fb8666b9ee29e89e2ec ""
-  "build/vXXX.aux" 1638197977 15747 b0b84f3e3ada6b3efcf9aba04d68a6b7 "lualatex"
+  "build/freq1.pdf" 1638209430 12483 25f8b6d3fed67322ec97e33eeb17028a ""
+  "build/freq2.pdf" 1638209434 12238 d38b9a4517a0e90144f8ffc942e52231 ""
+  "build/vXXX.aux" 1638209443 15747 b0b84f3e3ada6b3efcf9aba04d68a6b7 "lualatex"
   "build/vXXX.bbl" 1638125418 1445 271b77d7191526570e5cc09116eb82a6 "biber build/vXXX"
-  "build/vXXX.run.xml" 1638197977 2396 13f55f0f4af380a580b3504a55d8b3b1 "lualatex"
-  "build/vXXX.toc" 1638197977 1989 cba36722149c1f313ec34f8cb83d5e1c "lualatex"
+  "build/vXXX.run.xml" 1638209443 2396 13f55f0f4af380a580b3504a55d8b3b1 "lualatex"
+  "build/vXXX.toc" 1638209443 1989 cba36722149c1f313ec34f8cb83d5e1c "lualatex"
   "content/anhang.tex" 1638125387 1153 de23a116b4a3074c07d2a8708a21a288 ""
-  "content/auswertung.tex" 1638024725 4805 18229c3b4e7a6a1c532ec0a0733b786b ""
+  "content/auswertung.tex" 1638209203 4724 ec5b3170ae7533a9a9990197cd50cdbb ""
   "content/diskussion.tex" 1637774062 44 402cc6c9751419c0f1a455b2d4ed1f51 ""
   "content/durchfuehrung.tex" 1637942113 2867 768e70e3ae23384d40b54868aa5f399b ""
   "content/einleitung.tex" 1637693570 854 e7533dd02520521eefa8a1469d96d230 ""
@@ -244,8 +244,8 @@
   "vXXX.tex" 1637863329 442 7336610e5e33796216a340d3bf0c357d ""
   (generated)
   "build/vXXX.toc"
-  "build/vXXX.log"
   "build/vXXX.bcf"
-  "build/vXXX.aux"
+  "build/vXXX.log"
   "build/vXXX.run.xml"
+  "build/vXXX.aux"
   "build/vXXX.pdf"
