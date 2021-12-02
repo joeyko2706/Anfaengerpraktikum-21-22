@@ -1,12 +1,275 @@
 \section{Auswertung}
 \label{sec:Auswertung}
 
-\begin{figure}
+Im folgenden werden die Mittelwerte mit
+\begin{equation}
+  \label{eqn:mittelwert}
+  \bar x = \frac 1n \sum_i^n x_i
+\end{equation}
+und die Standardabweichung mit
+\begin{equation}
+  \label{eqn:stdabweichung}
+  \Delta\bar x = \frac{1}{n(n-1)}\sum_i^n (x_i- \bar x)^2
+\end{equation}
+berechnet.
+Aus Werten mit Unsicherheiten lassen sich mithilfe der Gauß'schen Fehlerfortpflanzung, die daraus abgeleiteten Größen berechnen, die
+folgendermaßen definiert ist:
+\begin{equation}
+  \label{eqn:gauß}
+  \Delta f= \sqrt{\sum_i^n \Big(\frac{\partial f}{\partial x_i}\cdot x_i \Big)^2}
+\end{equation}
+
+
+\subsection{Apparatekonstante}
+\label{sec:Apparatekonstante}
+Die Berechnung der Winkelrichtgröße $D$ berechnet sich über (\autoref{eqn:winkelrichtgr}) mit dem konstanten Abstand 
+$a= 10\si{\centi\meter}$ zu den folgenden Werten.
+
+\begin{table}
   \centering
-  \includegraphics{plot.pdf}
-  \caption{Plot.}
-  \label{fig:plot}
-\end{figure}
+  \caption{Winkelrichtgröße $D$}
+  \label{tab:winkelrichtgroesse}
+  \begin{tabular}{c c c}
+      \toprule
+      Auslenkung $ \varphi \;/\; \text{DEG}$ & $F \;/\; \si{\newton}$ & $D \;/\; \si{\milli\newton\meter}$\\
+      \midrule
+      70 & 0.20 & 0.286 \\
+      80 & 0,24 & 0.300 \\
+      90 & 0,28 & 0.311 \\
+      100 & 0,33 & 0.330 \\
+      110 & 0,35 & 0.318 \\
+      120 & 0,39 & 0.325 \\ 
+      130 & 0,41 & 0.315 \\
+      140 & 0,47 & 0.336 \\
+      150 & 0,49 & 0.327 \\
+      160 & 0,52 & 0.325 \\
+      170 & 0,55 & 0.324 \\
+      \bottomrule
+  \end{tabular}
+\end{table}
+
+Woraus sich der Mittelwert für die Winkelrichtgröße ergibt.
+
+\begin{equation}
+  \bar D = (0.288\pm) \si{\milli\newton\meter}
+\end{equation}
+
+Das Trägheitsmoment der Drillachse ergibt sich mit zwei Gewichten.
+Sie haben ein zylinderförmiges Gewicht von $m_1 = (223.2 \pm 0.1) \text{g}$ und $m_2 = (222.8 \pm 0.1) \text{g}$ und jeweils eine
+Höhe $h=30\si{\milli\meter}$ und einen Durchmesser $d=35\si{\milli\meter}$.
+
+\begin{table}
+  \centering
+   \caption{Messwerte zum Eigenträgheitsmoment $I_D$}
+   \label{tab:eigentraegheitmess}
+   \begin{tabular}{c c}
+       \toprule
+       Schwingungsdauer $ T \;/\; \si{\second}$ & Abstand $a \;/\; \si{\milli\meter}$ \\
+       \midrule
+       3,08 & 60 \\
+       3,40 & 80 \\
+       4,32 & 100 \\
+       4,83 & 120 \\
+       4,32 & 140 \\
+       4,83 & 160 \\
+       5,37 & 180 \\
+       5,76 & 200 \\
+       6,28 & 220 \\
+       7,36 & 240 \\
+       \bottomrule
+   \end{tabular}
+\end{table}
 
 
-Siehe \autoref{fig:plot}!
+%Die Trägheitsmomente der beiden Gewichte lassen sich mithilfe (\autoref{eqn:steiner}) vereinfachen zu 
+%\begin{equation}
+%  I_1 = I_{\text{Zylinder}} + m_1a^2 = 1\si{\kilogram\meter^2}
+%\end{equation}
+%\begin{equation}
+%  I_2 = I_{\text{Zylinder}} + m_2a^2 = 1\si{\kilogram\meter^2}
+%\end{equation}
+
+
+%Trägheitsmomente der Drillachse wird mit linearer Regression berechnet.
+
+Die Trägheitsmomente der beiden Gewichte lassen sich mithilfe (\autoref{eqn:steiner}) vereinfachen. Zur Berechnung
+des Trägheitsmomentes der Drillachse $I_D$, wird eine lineare Regression verwendet.
+
+\begin{equation}
+  \label{eqn:linReg}
+  T^2 = ba^2+c
+\end{equation}
+
+Die Messwerte und die Regression sind in Abbildung (HIER ABBILDUNG EINFÜGEN) aufgetragen. Die Trägheitsmomente werden mit
+\begin{center}
+  $I_{\text{Stab}} = \frac{1}{12} ml^2 $ \\
+  $I_{\text{Zylinder}} = m (\frac{r^2}{4} +\frac{h^2}{12}) $ \\
+\end{center}
+berechnet (\cite{Anleitung}). 
+
+\subsection{Trägheitsmomente einfacher Körper}
+\label{sec:Trägheitsmomente einfacher Körper}
+
+Untersucht werden ein Zylinder und eine Kugel, dessen Rotationsachse je die Schwerpunktsachse der beiden Körper ist.
+Die Trägheitsmomente des Zylinders berechnet sich, analog zu oben, durch
+
+\begin{equation}
+  I_{\text{Zylinder}} = \frac{1}{2} mR^2
+\end{equation}
+
+und das der Kugel durch
+
+\begin{equation}
+  I_{\text{Kugel}} = \frac{2}{5} mR^2 \, .
+\end{equation}
+Dabei ist $R$ der Radius und $m$ die Gesamtmasse der jeweiligen Körper.
+
+Die Werte der beiden Körper sind:
+\begin{center}
+  $m_{\text{Kugel}} = (810.9 \pm 0.1)\si{\gram}$ \\
+  $d_{\text{Kugel}} = 12.7\si{\centi\meter}$ \\
+  $m_{\text{Zylinder}} = (367.8\pm 0.1)\si{\gram}$ \\
+  $h = 9.00 \si{\centi\meter}$ \\
+  $d_{\text{Zylinder}} = 8.72 \si{\centi\meter}$ \\
+\end{center}
+
+Damit ergeben sich die Theoriewerte der Trägheitsmomente für den Zylinder und für die Kugel.
+
+\begin{center}
+  $I_{\text{Kugel,Theorie}} = 1.306 *10^(-3) \si{\kilogram\meter^2}$ \\
+  $I_{\text{Zylinder,Theorie}} = 0.349 *10^(-3) \si{\kilogram\meter^2}$ \\
+\end{center}
+
+Die gemessenen Schwingungsdauern wurden in $...$ aufgeführt. Die gemittelten Periodendauern wurden dazu benutzt
+durch die Gleichung (\autoref{eqn:periode}) die Trägheitsmomente der Körper zu berechnen.
+
+\begin{table}
+  \centering
+   \caption{gemessene Periodendauer}
+   \label{tab:traegheitsmomente}
+   \begin{tabular}{c c}
+      \toprule
+      $ T_{\text{Zylinder}} \;/\; \si{\second}$ & $ T_{\text{Kugel}} \;/\; \si{\second}$ \\
+      \midrule
+      0,876 & 1,706 \\
+      0,856 & 1,724 \\
+      0,828 & 1,708 \\
+      0,848 & 1,692 \\
+      0,843 & 1,691 \\
+      0,847 & 1,699 \\
+      0,804 & 1,684 \\
+      0,822 & 1,677 \\
+      0,862 & 1,697 \\
+      0,828 & 1,687 \\
+      \bottomrule
+   \end{tabular}
+\end{table}
+
+Damit ergeben sich die Mittelwerte zu HIER MITTELWERTE EINFÜGEN.
+
+Und damit die Trägheitsmomente zu HIER WERTE EINFÜGEN.
+
+Die Abweichung der Messwerte von den Theoriewerten entspricht HIER WERTE EINFÜGEN.
+
+\subsection{Trägheitsmoment einer Modellpuppe}
+\label{sec:Trägheitsmoment einer Modellpuppe}
+
+Zur Bestimmung des Trägheitsmomentes der Modellpuppe wird die Puppe in einzelne Teile unterteilt. Dabei wird angenommen,
+dass sich die einzelnen Gliedmaßen durch Zylinder approximieren lassen können und eine homogene Massenverteilung besitzt. Die
+Volumina der Einzelteile werden durch
+
+\begin{equation}
+  V = \pi r^2h
+\end{equation}
+bestimmt. Danach werden die Massenanteile der Einzelteile bestimmt. Die Gesamtmasse der Puppe beträgt 
+
+\begin{center}
+  $m_{ges} = (166.8\pm 0.1)\si{\gram}$.
+\end{center}
+
+Die Abmaße der Körperteile werden jeweils, über die gesamte Länge verteilt, fünf mal gemessen. Somit wird auf die unterschiedlichen
+Radien der Glieder Rücksicht genommen (zum Beispiel ist beim Arm der Oberarm dicker, als der Unterarm). Die Mittelwerte werden dazu genutzt die
+Trägheitsmomente auszurechnen.
+
+\begin{table}
+  \centering
+    \caption{Durchmesser der Körperteile}
+    \label{tab:durchmesser}
+    \begin{tabular}{c c c c}
+    \toprule
+    $D_\text{Arm} \;/\; \si{\centi\meter}$ & $D_\text{Kopf} \;/\; \si{\centi\meter}$ & $D_\text{Bein} \;/\; \si{\centi\meter}$ & $D_\text{Torso} \;/\; \si{\centi\meter}$ \\
+    \midrule
+    13,3 & 17,6 & 13,4 & 40,0 \\
+    16,1 & 19,0 & 16,5 & 33,4 \\
+    14,0 & 21,7 & 17,2 & 28,1 \\
+    16,8 & 30,6 & 16,0 & 36,4 \\
+    11,2 & 32,2 & 20,9 & 36,5 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+Es werden die Trägheitsmomente für zwei unterschiedliche Stellungen der Puppe berechnet. Abbilder der Stellungen der Puppe sind im folgenden
+dargestellt unter \autoref{fig:stellung1} und unter \autoref{fig:stellung2}. 
+Als erster wurde das Trägheitsmoment in der Stellung 1 und danach in der Stellung2 gemessen.
+
+%HIER WAREN URSPRÜNGLICH DIE BEIDEN BILDER DER PUPPE
+
+%--------------
+
+Die Abstände der Körperteile zur Drehachse sind im folgenden aufgelistet.
+
+\begin{center}
+  HIER HÄTTEN DIE ABSTÄNDE ZUR DREHACHSE HINGEMUSST
+\end{center}
+
+Damit ergeben sich die Trägheitsmomente folgendermaßen.
+\begin{center}
+  HIER TRÄGHEITSMOMENTE EINTRAGEN
+\end{center}
+
+Die Trägheitsmomente wurden analog zu denen der Kugel und des Zylinders berechnet. Dabei sind die Schwingungsdauern im folgenden
+aufgelistet:
+
+$T_1$ entspricht der Stellung 1 unter Auslenkung um $90°$, $T_2$ der Stellung 1 unter Auslenkung um $120°$.
+Analog dazu sind $T_3$ und $T_4$ für die Stellung 2. Gemäß Gleichung (\autoref{eqn:periode}) folgt für die Puppe
+
+%$T_3$ entspricht der Stellung 2 unter Auslenkum um $90°$.
+%$T_4$ entspricht der Stellung 2 unter Auslenkum um $120°$.
+
+\begin{equation}
+  I_{\text{Puppe}} = \frac{T^2D}{4\pi} - I_D
+\end{equation}
+
+\begin{table}
+    \centering
+        \caption{Schwingungsdauer}
+        \label{tab:schwingdauer}
+        \begin{tabular}{c c c c}
+        \toprule
+        $T_1 \;/\; \si{\second}$ & $T_2 \;/\; \si{\second}$ & $T_3 \;/\; \si{\second}$ & $T_4 \;/\; \si{\second}$ \\
+        \midrule
+        0,792 & 0,790 & 1,094 & 1,070 \\
+        0,816 & 0,906 & 1,148 & 1,098 \\
+        0,840 & 0,784 & 1,096 & 1,096 \\
+        0,798 & 0,784 & 1,058 & 1,084 \\
+        0,816 & 0,812 & 1,144 & 1,198 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+Als Mittelwert ergeben sich
+\begin{center}
+  HIER MITTELWERTE FÜR SCHWINGUNGSDAUERN EINTRAGEN
+\end{center}
+
+woraus die Trägheitsmomente folgen
+\begin{center}
+  HIER TRÄGHEITSMOMENTE EINTRAGEN
+\end{center}
+
+Das entspricht einer Abwertung des experimentellen Wertes von dem Theoriewert um:
+\begin{center}
+  HIER ABWEICHUNGEN EINTRAGEN
+\end{center}
+
+%Wahrscheinlich müssen die Bilder in den Anhang, weil der die Bilder nur da einfügt, wo es passt und nicht da, wo es soll.
