@@ -51,7 +51,7 @@ $a= 10\si{\centi\meter}$ zu den folgenden Werten.
 Woraus sich der Mittelwert für die Winkelrichtgröße ergibt.
 
 \begin{equation}
-  \bar D = (0.288\pm) \si{\milli\newton\meter}
+  \bar D = (0.288\pm) *10^(-3)\si{\newton\meter}
 \end{equation}
 
 Das Trägheitsmoment der Drillachse ergibt sich mit zwei Gewichten.
@@ -197,26 +197,33 @@ Trägheitsmomente auszurechnen.
     \label{tab:durchmesser}
     \begin{tabular}{c c c c}
     \toprule
-    $D_\text{Arm} \;/\; \si{\centi\meter}$ & $D_\text{Kopf} \;/\; \si{\centi\meter}$ & $D_\text{Bein} \;/\; \si{\centi\meter}$ & $D_\text{Torso} \;/\; \si{\centi\meter}$ \\
+    $D_\text{Arm} \;/\; \si{\meter}$ & $D_\text{Kopf} \;/\; \si{\meter}$ & $D_\text{Bein} \;/\; \si{\meter}$ & $D_\text{Torso} \;/\; \si{\meter}$ \\
     \midrule
-    13.3 & 17.6 & 13.4 & 40.0 \\
-    16.1 & 19.0 & 16.5 & 33.4 \\
-    14.0 & 21.7 & 17.2 & 28.1 \\
-    16.8 & 30.6 & 16.0 & 36.4 \\
-    11.2 & 32.2 & 20.9 & 36.5 \\
+    0.133 & 0.176 & 0.134 & 0.400 \\
+    0.161 & 0.190 & 0.165 & 0.334 \\
+    0.140 & 0.217 & 0.172 & 0.281 \\
+    0.168 & 0.306 & 0.160 & 0.364 \\
+    0.112 & 0.322 & 0.209 & 0.365 \\
     \bottomrule
   \end{tabular}
 \end{table}
 
-Die Längen der Körperteile sind folgendermaßen:
+Die Längen der Körperteile sind folgendermaßen %,wobei die Länge des Kopfes auf 20% der Länge des Gesamten Torsos angenommen wurden.
 \begin{center}
   $l_{\text{Arm}} = 0.0870 \si{\meter}$ \\
-  $l_{\text{Unterarm}} = 0.0410 \si{\meter}$ \\
   $l_{\text{Bein}} = 0.1244 \si{\meter}$ \\
   $l_{\text{Torso}} = 0.06576 \si{\meter}$ \\
-  $l_{\text{Unterarm}} = 0.01644 \si{\meter}$ \\
+  $l_{\text{Kopf}} = 0.01644 \si{\meter}$ \\
 \end{center}
 
+
+Mit den Volumina der einzelnen Körperteile.
+\begin{center}
+  $V_{\text{Arm}} = \si{\meter^3}$ \\
+  $V_{\text{Bein}} = \si{\meter^3}$ \\
+  $V_{\text{Torso}} = \si{\meter^3}$ \\
+  $V_{\text{Kopf}} = \si{\meter^3}$ \\
+\end{center}
 
 Es werden die Trägheitsmomente für zwei unterschiedliche Stellungen der Puppe berechnet. Abbilder der Stellungen der Puppe sind im folgenden
 dargestellt unter \autoref{fig:stellung1} und unter \autoref{fig:stellung2}. 
