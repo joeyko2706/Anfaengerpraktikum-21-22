@@ -455,6 +455,8 @@ INPUT build/vXXX.toc
 INPUT build/vXXX.toc
 INPUT build/vXXX.toc
 OUTPUT build/vXXX.toc
+INPUT ./content/einleitung.tex
+INPUT ./content/einleitung.tex
 INPUT ./content/theorie.tex
 INPUT ./content/theorie.tex
 INPUT /home/joeyko2706/.local/texlive/2021/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-italic.luc
@@ -468,6 +470,9 @@ INPUT /home/joeyko2706/.local/texlive/2021/texmf-var/luatex-cache/generic/fonts/
 INPUT /home/joeyko2706/.local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmmi5.tfm
 INPUT /home/joeyko2706/.local/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm
 INPUT /home/joeyko2706/.local/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
+INPUT build/plot.pdf
+INPUT build/plot.pdf
+INPUT build/plot.pdf
 INPUT ./content/diskussion.tex
 INPUT ./content/diskussion.tex
 INPUT ./content/daten.tex

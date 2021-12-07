@@ -1,0 +1,8 @@
+Die Rechenwege für die Trägheitsmomente sind bei mir auf dem iPad in Goodnotes unter untitled.
+Bei den Trägheitsmomenten fehlt jeweils die Standardabweichung und die Gauß'sche Fehlerfortpflanzung.
+Die berechneten Werte sind zum Teil massiv unterschiedlich voneinander (Theorie und Experi). Ich habe bei den Beinen bei der Puppe
+in Stellung 1 nicht den Satz von Steiner verwendet, obwohl die Beine eigentlich am äußeren Rand des Torsos sind.
+Bei der zweiten Stellung habe ich die Beiner mit dem Satz von Steiner so berechnet, als wäern sie vor dem Torso und nicht dadrunter.
+
+Die Mittelwerte für die Periodendauern bei der Puppe habe ich händisch berechnet und auch keine Standardabweichung mit einbezogen.
+Wahrscheinlich ist bei der Berechung der Priodendauern ein Fehler unterlaufen (?), was die massive Abweichung erklären könnte.
