@@ -32,7 +32,7 @@ plt.plot(x , dreisatz1 , 'b.', label = 'Frequenz')
 plt.plot(x, v_1, 'r.', label = 'Spannung')
 plt.legend()
 plt.xlabel(r'$C_K /$ nF')
-plt.ylabel(r'$f_{1,\text{max}}, $V / mV')
+plt.ylabel(r'$f_{\text{max}}, $V / mV')
 plt.savefig('build/freq1.pdf')
 
 
@@ -42,7 +42,7 @@ plt.plot(x, dreisatz2 , 'b.', label = 'Frequenz')
 plt.plot(x, v_2 , 'r.', label = 'Spannung')
 plt.legend()
 plt.xlabel(r'$C_K /$ nF')
-plt.ylabel(r'$f_{2,\text{max}}, V /$ mV')
+plt.ylabel(r'$f_{\text{min}}, V /$ mV')
 plt.savefig('build/freq2.pdf')
 
 

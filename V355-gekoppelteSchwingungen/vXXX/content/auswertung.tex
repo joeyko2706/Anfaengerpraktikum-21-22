@@ -5,12 +5,12 @@
 Bei der Vorbereitung wurde beim linken Schwingkreis eine Eigenfrequenz von $f_{\text{eigen}}=30.61 \si{\kilo\hertz}$ bei einer
 Phasendifferenz von $\SI{0}{\degree}$ gemessen. 
 Der verstellbare Kondensator wird so eingestellt, dass der rechte Schwingkreis die gleiche Eigenfrequenz hat, wie der linke.
-Die Referenzwerte der Bauteile des benutzten Schaltkastens sind in \autoref{tab:kasten_links} und \autoref{tab:kasten_rechts}.
+Die Referenzwerte der Bauteile des benutzten Schaltkastens sind in \autoref{tab:kasten_links}.
 
 %Die Anzahl der Maxima, beziehungsweise Minima, sind in \autoref{tab:schwing_maxima} aufgeführt. Außerdem ist die 
 %Dauer einer Schwebung aufgetragen.
 
-\begin{table}
+\begin{table}[H]
   \centering
   \caption{Werte des Schaltkastens.}
   \label{tab:kasten_links}
@@ -24,79 +24,80 @@ Die Referenzwerte der Bauteile des benutzten Schaltkastens sind in \autoref{tab:
 \end{table}
 
 
-\begin{table}
+\subsection{Schwebungsfrequenz}
+In \autoref{tab:schwing_maxima} ist die Anzahl der Schwingungsaxima innerhalb einer Schwebungsperiode aufgelistet.
+Das geforderte Frequenzverhältnis ist ebenfalls in \autoref{tab:schwing_maxima} aufgelistet und durch $V_M  = 1/(2A) $, wobei A die Anzahl
+der Schwingungen innerhalb einer Frequenz ist.
+
+\begin{table}[H]
   \centering
   \caption{Anzahl Maxima der Schwebung.}
   \label{tab:schwing_maxima}
   \begin{tabular}{c c c}
       \toprule
-      {$C_K \:/\: \si{\nano\farad}$} & Schwingungsmaxima & $\Delta t\:/\: \si{\micro\second}$ \\
+      {$C_K \:/\: \si{\nano\farad}$} & Schwingungsmaxima & $\Delta t\:/\: \si{\micro\second}$ & $V_M  = 1/(2A) $ \\
       \midrule
-      9.99  & 13 & 235 \\ 
-      8.00  & 11 & 195 \\ 
-      6.47  & 10 & 155 \\ 
-      5.02 & 8 & 125 \\ 
-      4.00 & 7 & 100 \\
-      3.00 & 6 & 75 \\
-      2.03 & 4 & 50\\ 
+      9.99 & 13 & 235 & 0.039 \\ 
+      8.00 & 11 & 195 & 0.046 \\ 
+      6.47 & 10 & 155 & 0.050 \\ 
+      5.02 & 8 & 125 & 0.063 \\ 
+      4.00 & 7 & 100 & 0.071 \\
+      3.00 & 6 & 75 & 0.083 \\
+      2.03 & 4 & 50 & 0.125 \\ 
       \bottomrule
   \end{tabular}
 \end{table}
 
 \subsection{Fundamentalschwingung}
-Im Folgenden werden die beiden Fundamentalschwingungen in Abhängigkeit der Kopplungskapazität $C_{\text{K}}$ des Kopplungskondensators
-bestimmt. 
+%Im Folgenden werden die beiden Fundamentalschwingungen in Abhängigkeit der Kopplungskapazität $C_{\text{K}}$ des Kopplungskondensators
+%bestimmt.
+Im folgenden sind die Messwerte der beiden Fundamentalschwingungen in Abhängigkeit der Kopplungskapazität $C_{\text{K}}$ des Kopplungskondensators
+aufgelistet. Der Strom $I_2$ berechnet sich über
+\begin{equation}
+  I_2  = \frac{U}{R\sqrt{4 + \frac{R^2C_K^2}{LC}(1 + \frac{C}{C_K}})}.
+\end{equation}
 
-
-\begin{table}
+\begin{table}[H]
   \centering
   \caption{Fundamentalschwingungen}
   \label{tab:aufgabeC}
   \begin{tabular}{c c c c c c}
       \toprule
-      {$f_+\;/ \si{\kilo\hertz}$} & {$f_-\;/ \si{\kilo\hertz}$} & {$V_1 \:/\: \si{\milli\volt}$} & {$V_2 \:/\: \si{\milli\volt}$} & {$C_K \:/\: \si{\nano\farad}$} & $I_2 \:/\:\si{\milli\ampere}$ \\
+      {$C_K \:/\: \si{\nano\farad}$} & {$f_+\;/ \si{\kilo\hertz}$} & {$f_-\;/ \si{\kilo\hertz}$} & {$V_1 \:/\: \si{\milli\volt}$} & {$V_2 \:/\: \si{\milli\volt}$} & $I_2 \:/\:\si{\milli\ampere}$ \\
       \midrule
-      38 & 49 & 60 & 110 & 9.99 & 1.22 \\
-      40 & 50 & 55 & 110 & 8.00 & 1.51 \\
-      40 & 50 & 55 & 110 & 6.47 & 1.87 \\
-      38 & 55 & 50 & 110 & 5.02 & 2.42 \\
-      40 & 58 & 50 & 105 & 4.00 & 2.90 \\
-      40 & 62 & 50 & 105 & 3.00 & 3.86 \\
-      40 & 73 & 50 & 100 & 2.03 & 5.44 \\
-      40 & 76 & 55 & 95 & 1.01 & 10.39 \\
+      9.99 & 38 & 49 & 60 & 110 & 1.22 \\
+      8.00 & 40 & 50 & 55 & 110 & 1.51 \\
+      6.47 & 40 & 50 & 55 & 110 & 1.87 \\
+      5.02 & 38 & 55 & 50 & 110 & 2.42 \\
+      4.00 & 40 & 58 & 50 & 105 & 2.90 \\
+      3.00 & 40 & 62 & 50 & 105 & 3.86 \\
+      2.03 & 40 & 73 & 50 & 100 & 5.44 \\
+      1.01 & 40 & 76 & 55 & 95 & 10.39 \\
       \bottomrule
   \end{tabular}
 \end{table}
 
 
-\begin{figure}
+\begin{figure}[H]
   \centering
   \includegraphics{freq1.pdf}
-  \caption{Die aufgenommenen Messwerte}
+  \caption{Die aufgenommenen Messwerte.}
   \label{fig:freq1}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[H]
   \centering
   \includegraphics{freq2.pdf}
-  \caption{Die aufgenommenen Messwerte}
+  \caption{Messwerte zu c).}
   \label{fig:freq2}
 \end{figure}
 
 
 % \I_2  = \frac{U}{R\sqrt{4 + \frac{R^2C_K^2}{LC}(1 + \frac{C}{C_K}})}
-Der Strom $I_2$ wird mithilfe des Widerstandes $R=48\Omega$ berechnet.
-Die Frequenz der ersten Fundamentalschwingung berechnet sich durch %Formel in Theorie angeben und dann nur zitieren?
-\begin{equation}
-  f_+ = \frac{1}{2\pi\sqrt{LC}}
-\end{equation}
+Der Strom $I_2$ wird mithilfe des Widerstandes $R=\si{48}{\ohm}$ durch die Formel $U=RI$ berechnet.
+Die Frequenzen der beiden Fundamentalschwingungen berechnen sich durch folgende Relationen, wobei %Formel in Theorie angeben und dann nur zitieren?
+die geringen Kapazitäten der beiden Spulen ebenfalls berücksichtigt werden.
 
-und die der zweiten Fundamentalschwingung durch 
-\begin{equation}
-  f_- = \frac{1}{2\pi\sqrt{L\frac{CC_K}{2C+C_K}}} 
-\end{equation}.
-
-Es werden die geringen Kapazitäten der beiden Spulen ebenfalls berücksichtigt, wodurch sich die Frequenzen ergeben zu \newline
 \begin{equation}
   f_+ = \frac{1}{2\pi\sqrt{L(C + C_\text{Sp})}}
 \end{equation} 
@@ -105,24 +106,23 @@ und \newline
   f_- = \frac{1}{2\pi\sqrt{L\Bigl(\dfrac{CC_K}{2C+C_K} + C_\text{Sp}\Bigr)}}
 \end{equation}.  
 
-%Ich weiß nicht genau, was die Formel von I_2aussagt, ich warte einfach auf deine Theorie
 
-\begin{table}
+\begin{table}[H]
   \centering
   \caption{Die erwarteten Theoriewerte.}
   \label{tab:theorietabelle}
   \begin{tabular}{c c c c c c c}
       \toprule
-      $f_+ \:/\: \si{\kilo\hertz}$ & $f_{+, \text{theo}} \:/\: \si{\kilo\hertz}$ & $f_- \:/\: \si{\kilo\hertz}$ & $f_{-, \text{theo}} \:/\: \si{\kilo\hertz}$ & $C_K \:/\: \si{\nano\farad}$ & $I_2 \:/\: \si{\milli\ampere}$ & $I_{2,\text{theo}} \:/\: \si{\milli\ampere}$ \\
+      $C_K \:/\: \si{\nano\farad}$ & $f_+ \:/\: \si{\kilo\hertz}$ & $f_{+, \text{theo}} \:/\: \si{\kilo\hertz}$ & $f_- \:/\: \si{\kilo\hertz}$ & $f_{-, \text{theo}} \:/\: \si{\kilo\hertz}$ & $I_2 \:/\: \si{\milli\ampere}$ & $I_{2,\text{theo}} \:/\: \si{\milli\ampere}$ \\
       \midrule
-      38 & 35.32 & 49 & 32.80 & 9.99 & 1.22 & 2.292 \\
-      40 & 35.32 & 50 & 33.33 & 8.00 & 1.51 & 2.292 \\
-      40 & 35.32 & 50 & 33.95 & 6.47 & 1.87 & 2.292 \\
-      38 & 35.32 & 55 & 34.85 & 5.02 & 2.42 & 2.292 \\
-      40 & 35.32 & 58 & 35.85 & 4.00 & 2.90 & 2.188 \\
-      40 & 35.32 & 62 & 37.41 & 3.00 & 3.86 & 2.188 \\
-      40 & 35.32 & 73 & 40.19 & 2.03 & 5.44 & 2.083 \\
-      40 & 35.32 & 76 & 47.52 & 1.01 & 10.39 & 1.979 \\
+      9.99 & 38 & 35.32 & 49 & 32.80 & 1.22 & 2.292 \\
+      8.00 & 40 & 35.32 & 50 & 33.33 & 1.51 & 2.292 \\
+      6.47 & 40 & 35.32 & 50 & 33.95 & 1.87 & 2.292 \\
+      5.02 & 38 & 35.32 & 55 & 34.85 & 2.42 & 2.292 \\
+      4.00 & 40 & 35.32 & 58 & 35.85 & 2.90 & 2.188 \\
+      3.00 & 40 & 35.32 & 62 & 37.41 & 3.86 & 2.188 \\
+      2.03 & 40 & 35.32 & 73 & 40.19 & 5.44 & 2.083 \\
+      1.01 & 40 & 35.32 & 76 & 47.52 & 10.39 & 1.979 \\
       \bottomrule
   \end{tabular}
 \end{table}
