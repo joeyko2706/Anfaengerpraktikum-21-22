@@ -2352,8 +2352,6 @@
     <bcf:citekey order="5">Versuchsanleitung</bcf:citekey>
     <bcf:citekey order="6">Versuchsanleitung</bcf:citekey>
     <bcf:citekey order="7">Versuchsanleitung</bcf:citekey>
-    <bcf:citekey order="8">Versuchsanleitung</bcf:citekey>
-    <bcf:citekey order="9">Versuchsanleitung</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">

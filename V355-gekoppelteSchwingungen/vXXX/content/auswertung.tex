@@ -33,9 +33,9 @@ der Schwingungen innerhalb einer Frequenz ist.
   \centering
   \caption{Anzahl Maxima der Schwebung.}
   \label{tab:schwing_maxima}
-  \begin{tabular}{c c c}
+  \begin{tabular}{c c c c}
       \toprule
-      {$C_K \:/\: \si{\nano\farad}$} & Schwingungsmaxima & $\Delta t\:/\: \si{\micro\second}$ & $V_M  = 1/(2A) $ \\
+      {$C_{\text{K}} \:/\: \si{\nano\farad}$} & Schwingungsmaxima & $\Delta t\:/\: \si{\micro\second}$ & $V_M$ \\
       \midrule
       9.99 & 13 & 235 & 0.039 \\ 
       8.00 & 11 & 195 & 0.046 \\ 
@@ -54,7 +54,7 @@ der Schwingungen innerhalb einer Frequenz ist.
 Im folgenden sind die Messwerte der beiden Fundamentalschwingungen in Abhängigkeit der Kopplungskapazität $C_{\text{K}}$ des Kopplungskondensators
 aufgelistet. Der Strom $I_2$ berechnet sich über
 \begin{equation}
-  I_2  = \frac{U}{R\sqrt{4 + \frac{R^2C_K^2}{LC}(1 + \frac{C}{C_K}})}.
+  I_2  = \frac{U}{R\sqrt{4 + \frac{R^2C_{\text{K}}^2}{LC}(1 + \frac{C}{C_{\text{K}}}})}.
 \end{equation}
 
 \begin{table}[H]
@@ -63,7 +63,7 @@ aufgelistet. Der Strom $I_2$ berechnet sich über
   \label{tab:aufgabeC}
   \begin{tabular}{c c c c c c}
       \toprule
-      {$C_K \:/\: \si{\nano\farad}$} & {$f_+\;/ \si{\kilo\hertz}$} & {$f_-\;/ \si{\kilo\hertz}$} & {$V_1 \:/\: \si{\milli\volt}$} & {$V_2 \:/\: \si{\milli\volt}$} & $I_2 \:/\:\si{\milli\ampere}$ \\
+      {$C_{\text{K}} \:/\: \si{\nano\farad}$} & {$f_+\;/ \si{\kilo\hertz}$} & {$f_-\;/ \si{\kilo\hertz}$} & {$V_1 \:/\: \si{\milli\volt}$} & {$V_2 \:/\: \si{\milli\volt}$} & $I_2 \:/\:\si{\milli\ampere}$ \\
       \midrule
       9.99 & 38 & 49 & 60 & 110 & 1.22 \\
       8.00 & 40 & 50 & 55 & 110 & 1.51 \\
@@ -92,18 +92,16 @@ aufgelistet. Der Strom $I_2$ berechnet sich über
   \label{fig:freq2}
 \end{figure}
 
-
-% \I_2  = \frac{U}{R\sqrt{4 + \frac{R^2C_K^2}{LC}(1 + \frac{C}{C_K}})}
-Der Strom $I_2$ wird mithilfe des Widerstandes $R=\si{48}{\ohm}$ durch die Formel $U=RI$ berechnet.
-Die Frequenzen der beiden Fundamentalschwingungen berechnen sich durch folgende Relationen, wobei %Formel in Theorie angeben und dann nur zitieren?
+\noindent Der Strom $I_2$ wird mithilfe des Widerstandes $R= 48 \,\upOmega$ durch die Formel $U=RI$ berechnet.Die Frequenzen der 
+beiden Fundamentalschwingungen berechnen sich durch folgende Relationen, wobei %Formel in Theorie angeben und dann nur zitieren?
 die geringen Kapazitäten der beiden Spulen ebenfalls berücksichtigt werden.
-
+% \I_2  = \frac{U}{R\sqrt{4 + \frac{R^2C_K^2}{LC}(1 + \frac{C}{C_K}})}
 \begin{equation}
   f_+ = \frac{1}{2\pi\sqrt{L(C + C_\text{Sp})}}
 \end{equation} 
 und \newline 
 \begin{equation}
-  f_- = \frac{1}{2\pi\sqrt{L\Bigl(\dfrac{CC_K}{2C+C_K} + C_\text{Sp}\Bigr)}}
+  f_- = \frac{1}{2\pi\sqrt{L\Bigl(\dfrac{CC_\text{K}}{2C+C_\text{K}} + C_\text{Sp}\Bigr)}}
 \end{equation}.  
 
 
@@ -113,7 +111,7 @@ und \newline
   \label{tab:theorietabelle}
   \begin{tabular}{c c c c c c c}
       \toprule
-      $C_K \:/\: \si{\nano\farad}$ & $f_+ \:/\: \si{\kilo\hertz}$ & $f_{+, \text{theo}} \:/\: \si{\kilo\hertz}$ & $f_- \:/\: \si{\kilo\hertz}$ & $f_{-, \text{theo}} \:/\: \si{\kilo\hertz}$ & $I_2 \:/\: \si{\milli\ampere}$ & $I_{2,\text{theo}} \:/\: \si{\milli\ampere}$ \\
+      $C_{\text{K}} \:/\: \si{\nano\farad}$ & $f_+ \:/\: \si{\kilo\hertz}$ & $f_{+, \text{theo}} \:/\: \si{\kilo\hertz}$ & $f_- \:/\: \si{\kilo\hertz}$ & $f_{-, \text{theo}} \:/\: \si{\kilo\hertz}$ & $I_2 \:/\: \si{\milli\ampere}$ & $I_{2,\text{theo}} \:/\: \si{\milli\ampere}$ \\
       \midrule
       9.99 & 38 & 35.32 & 49 & 32.80 & 1.22 & 2.292 \\
       8.00 & 40 & 35.32 & 50 & 33.33 & 1.51 & 2.292 \\

@@ -461,11 +461,11 @@ INPUT ./content/theorie.tex
 INPUT ./content/theorie.tex
 INPUT ./content/durchfuehrung.tex
 INPUT ./content/durchfuehrung.tex
+INPUT ../daten/aufbau1.png
+INPUT ../daten/aufbau1.png
+INPUT ../daten/aufbau1.png
 INPUT /home/joeyko2706/.local/texlive/2021/texmf-var/luatex-cache/generic/fonts/otl/lmroman8-regular.luc
 INPUT /home/joeyko2706/.local/texlive/2021/texmf-var/luatex-cache/generic/fonts/otl/lmroman5-regular.luc
-INPUT ../daten/aufbau1.png
-INPUT ../daten/aufbau1.png
-INPUT ../daten/aufbau1.png
 INPUT ../daten/aufbau2.png
 INPUT ../daten/aufbau2.png
 INPUT ../daten/aufbau2.png

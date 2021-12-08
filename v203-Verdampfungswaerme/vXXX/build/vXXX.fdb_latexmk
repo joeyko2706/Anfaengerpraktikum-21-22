@@ -1,12 +1,12 @@
 # Fdb version 3
-["biber build/vXXX"] 1638898444 "build/vXXX.bcf" "build/vXXX.bbl" "build/vXXX" 1638899227
+["biber build/vXXX"] 1638898444 "build/vXXX.bcf" "build/vXXX.bbl" "build/vXXX" 1638987581
   "../lit.bib" 1638896460 151 2883efa713cd0b51cf6bf0b6d0b24a8b ""
   "../programme.bib" 1590412732 1042 681836d224c758e678e4f1a862d141da ""
-  "build/vXXX.bcf" 1638899226 107198 5ff39ab22821dba4286f67bd19812190 "lualatex"
+  "build/vXXX.bcf" 1638987580 107198 5ff39ab22821dba4286f67bd19812190 "lualatex"
   (generated)
-  "build/vXXX.blg"
   "build/vXXX.bbl"
-["lualatex"] 1638899214 "vXXX.tex" "build/vXXX.pdf" "vXXX" 1638899227
+  "build/vXXX.blg"
+["lualatex"] 1638987570 "vXXX.tex" "build/vXXX.pdf" "vXXX" 1638987581
   "../daten/aufbau1.png" 1638897576 56605 6be84c6bcffefa9d78ffccd2885c757b ""
   "../daten/aufbau2.png" 1638897640 48044 6a67a9f129aa0d89a59a0b9f81c3788f ""
   "../daten/daten1.jpg" 1638886120 1197159 7499710071cfb7e51dfe83b2d48bbfc1 ""
@@ -228,21 +228,21 @@
   "/home/joeyko2706/.local/texlive/2021/texmf-var/luatex-cache/generic/names/luaotfload-names.luc" 1633522651 1210844 26e45c9907dd377a148343f7c02beb8d ""
   "/home/joeyko2706/.local/texlive/2021/texmf-var/tex/generic/config/language.dat" 1633360271 6672 1ed23f3e819d50e9eabee6207a41d925 ""
   "/home/joeyko2706/.local/texlive/2021/texmf-var/web2c/luahbtex/lualatex.fmt" 1633360366 3360666 b65586b05508b2b52397a63383e02f21 ""
-  "build/vXXX.aux" 1638899226 7895 a940ca073f40c885a470b8c5929f02c2 "lualatex"
+  "build/vXXX.aux" 1638987580 7895 3f1378186817eef6af2588471b70a77d "lualatex"
   "build/vXXX.bbl" 1638899042 927 e8078c7bbaa81a8addfb7a71ccd184a3 "biber build/vXXX"
-  "build/vXXX.run.xml" 1638899226 2396 13f55f0f4af380a580b3504a55d8b3b1 "lualatex"
-  "build/vXXX.toc" 1638899226 1181 431b48831f5e63f7f6ffcbaf219ee07c "lualatex"
+  "build/vXXX.run.xml" 1638987580 2396 13f55f0f4af380a580b3504a55d8b3b1 "lualatex"
+  "build/vXXX.toc" 1638987580 1181 644a11bdc99ea3388f61a2113b8b4e2f "lualatex"
   "content/anhang.tex" 1638897036 555 000435f3a00ab486f4d1ff89781100e2 ""
   "content/auswertung.tex" 1638898824 743 a9c24b603cb821ac59bc49a97a4f1a32 ""
   "content/diskussion.tex" 1621426550 44 402cc6c9751419c0f1a455b2d4ed1f51 ""
-  "content/durchfuehrung.tex" 1638899212 1864 015e3ab5a570f38ca51cbcabb5af2ae8 ""
+  "content/durchfuehrung.tex" 1638987548 1870 79fdc3ed6c75899e51a4c4e8e9dfb7c4 ""
   "content/theorie.tex" 1621426550 53 c390c8e878df566d7f19d269547c91b4 ""
   "content/ziel.tex" 1638896410 368 c69345ee5bc3bd7de427129065ddb18f ""
   "vXXX.tex" 1638896937 450 358c05cb3a6a38d8354a81ac340926bd ""
   (generated)
-  "build/vXXX.bcf"
   "build/vXXX.log"
+  "build/vXXX.toc"
   "build/vXXX.aux"
   "build/vXXX.run.xml"
+  "build/vXXX.bcf"
   "build/vXXX.pdf"
-  "build/vXXX.toc"

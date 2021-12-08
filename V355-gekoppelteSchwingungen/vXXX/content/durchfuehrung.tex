@@ -2,23 +2,50 @@
 \label{sec:Durchführung}
 
 \subsection{Vorbereitende Maßnahmen}
-Bevor der Versuch durchgeführt werden kann, müssen zunächst die Resonanzfrequenzen der Maschen, beziehungsweise der beiden Schwingkreise,
+Alle Versuche werden mit dem in abgebildeten Schaltkasten durchgeführt.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\textwidth]{plots/GekoppelterSchwingkreisVersuch.pdf}
+    \caption{Verwendeter Schaltkasten}
+    \label{fig:kasten}
+\end{figure}
+
+\noindent Bevor der Versuch durchgeführt werden kann, müssen zunächst die Resonanzfrequenzen der Maschen, beziehungsweise der beiden Schwingkreise,
 herausgefunden werden.
 Bei der linken Maschen wird die Resonanzfrequenz mit fester Kapazität und variabler Spannungsfrequenz %umbedingt besseren Ausdruck finden
 gemessen. Die Resonanzfrequenz der rechten Masche wird mit einer festen Spannungsfrequenz und variabler Kapazität  gemessen.
 Die Schaltung wird gemäß \autoref{fig:schaltung0} aufgebaut.
-\\
-Mithilfe eines Generators wird eine Rechteckspannung angelegt, die  für die Kreisfrequenz $\omega$ im linken Schwingkreis sorgt. 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\textwidth]{plots/Schaltung0.png}
+    \caption{Schaltung zur Einstellung der Resonanzfrequenz \cite{Versuchsanleitung}}
+    \label{fig:schaltung0}
+\end{figure}
+
+\noindent Mithilfe eines Generators wird eine Rechteckspannung angelegt, die  für die Kreisfrequenz $\omega$ im linken Schwingkreis sorgt. 
 Über Lissajous-Figuren, die man über den XY-Betrieb am Oszilloskop erstellt, kann die Phasenverschiebung von dem Generator und 
 dem Schwingkreis auf null gesetzt werden. Ist die Lissajous-Figur eine Gerade, dann sind die beiden eingehenden Signale, hier der
 Generator und der Schwingkreis, in Phase. Ein Beispiel dafür ist die \autoref{fig:Lissajous}.
-\\
-Es wird die Resonanzfrequenz der linken Masche festgehalten und auch für die rechte Masche ingestellt, indem die Variable Kapazität
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\textwidth, angle=-90]{plots/Lissajour-Gerade.jpeg}
+    \caption{Lissajous-Figur der Justierung.}
+    \label{fig:Lissajous}
+\end{figure}
+
+\noindent Es wird die Resonanzfrequenz der linken Masche festgehalten und auch für die rechte Masche ingestellt, indem die Variable Kapazität
 $C_{\text{K}}$ in dieser Masche verstellt wird.
 Dabei wird die verstellbare Kapazität an dem Schaltkasten so eingestellt, dass die Lissajous-Figur Phasengleichheit angibt.
 
 \subsection{Austausch der Schwingungsenergie}
-Der Versuch wird mit einem Rechtecksignal mitt $300$ bis $500 \si{\hertz}$ am Signalgenerator durchgeführt.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\textwidth]{plots/Schaltung1.png}
+    \caption{Schaltung für den Austausch der Schwingungsenergie \cite{Versuchsanleitung}}
+    \label{fig:schaltung1}
+\end{figure}
+
+\noindent Der Versuch wird mit einem Rechtecksignal mitt $300$ bis $500 \si{\hertz}$ am Signalgenerator durchgeführt.
 Zunächst wird der Schaltplan gemäß \autoref{fig:schaltung1} aufgebaut. Nun werden in Abhängigkeit der verstellbaren Kopplungskapazität $C_{\text{K}}$ die 
 Schwingungsmaxima einer Schwebung gezählt. Es wird außerdem die Zeit einer Schwebungsperiode gemessen.
 Der Vorgang wird für alle möglichen Kopplungskapazitäten auf dem Schaltkasten wiederholt.
