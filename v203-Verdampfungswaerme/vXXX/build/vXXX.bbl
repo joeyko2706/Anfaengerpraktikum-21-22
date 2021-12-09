@@ -19,6 +19,31 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global}
+    \entry{gerthsen}{book}{}
+      \name{author}{1}{}{%
+        {{hash=8fe294dd7320c681ff6f5a57199d37d2}{%
+           family={Meschede},
+           familyi={M\bibinitperiod},
+           given={Dieter},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{8fe294dd7320c681ff6f5a57199d37d2}
+      \strng{fullhash}{8fe294dd7320c681ff6f5a57199d37d2}
+      \strng{bibnamehash}{8fe294dd7320c681ff6f5a57199d37d2}
+      \strng{authorbibnamehash}{8fe294dd7320c681ff6f5a57199d37d2}
+      \strng{authornamehash}{8fe294dd7320c681ff6f5a57199d37d2}
+      \strng{authorfullhash}{8fe294dd7320c681ff6f5a57199d37d2}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{25}
+      \field{title}{Gerthsen Physik}
+      \field{year}{2015}
+    \endentry
     \entry{anleitung}{manual}{}
       \list{organization}{1}{%
         {TU Dortmund, Fakultät Physik}%
@@ -30,7 +55,6 @@
       \field{year}{2021}
     \endentry
   \enddatalist
-  \missing{sample}
 \endrefsection
 \endinput
 
