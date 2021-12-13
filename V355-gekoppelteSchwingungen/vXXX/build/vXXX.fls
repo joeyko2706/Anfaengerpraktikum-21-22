@@ -461,14 +461,14 @@ INPUT ./content/theorie.tex
 INPUT ./content/theorie.tex
 INPUT /home/joeyko2706/.local/texlive/2021/texmf-var/luatex-cache/generic/fonts/otl/lmroman8-regular.luc
 INPUT /home/joeyko2706/.local/texlive/2021/texmf-var/luatex-cache/generic/fonts/otl/lmroman5-regular.luc
+INPUT ../plots/Schwebung.png
+INPUT ../plots/Schwebung.png
+INPUT ../plots/Schwebung.png
 INPUT ../plots/Schaltung3.png
 INPUT ../plots/Schaltung3.png
 INPUT ../plots/Schaltung3.png
 INPUT ./content/durchfuehrung.tex
 INPUT ./content/durchfuehrung.tex
-INPUT ../plots/GekoppelterSchwingkreisVersuch.pdf
-INPUT ../plots/GekoppelterSchwingkreisVersuch.pdf
-INPUT ../plots/GekoppelterSchwingkreisVersuch.pdf
 INPUT ../plots/Schaltung0.png
 INPUT ../plots/Schaltung0.png
 INPUT ../plots/Schaltung0.png

@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.13.2 (TeX Live 2021)  (format=lualatex 2021.10.4)  9 DEC 2021 18:44
+This is LuaHBTeX, Version 1.13.2 (TeX Live 2021)  (format=lualatex 2021.10.4)  10 DEC 2021 12:28
  restricted system commands enabled.
 **vXXX.tex
 (./vXXX.tex
@@ -1367,13 +1367,13 @@ Package siunitx Warning: Unit macro \bar has been deprecated in this release.
 (siunitx)                
 (siunitx)                \DeclareSIUnit\bar{bar}
 
-<daten/Zustandsdiagramm.png, id=42, 493.845pt x 330.48468pt>
+<daten/Zustandsdiagramm.png, id=43, 493.845pt x 330.48468pt>
 File: daten/Zustandsdiagramm.png Graphic file (type png)
 <use daten/Zustandsdiagramm.png>
 Package luatex.def Info: daten/Zustandsdiagramm.png  used on input line 16.
 (luatex.def)             Requested size: 313.69167pt x 209.92099pt.
 [3<../daten/Zustandsdiagramm.png>]
-<daten/Dampfdruckkurve.png, id=59, 447.92343pt x 259.7203pt>
+<daten/Dampfdruckkurve.png, id=60, 447.92343pt x 259.7203pt>
 File: daten/Dampfdruckkurve.png Graphic file (type png)
 <use daten/Dampfdruckkurve.png>
 Package luatex.def Info: daten/Dampfdruckkurve.png  used on input line 47.
@@ -1384,36 +1384,36 @@ Underfull \hbox (badness 10000) in paragraph at lines 52--58
  []
 
 [4<../daten/Dampfdruckkurve.png>]) (./content/durchfuehrung.tex
-<daten/aufbau1.png, id=79, 405.76593pt x 447.92343pt>
+<daten/aufbau1.png, id=80, 405.76593pt x 447.92343pt>
 File: daten/aufbau1.png Graphic file (type png)
 <use daten/aufbau1.png>
 Package luatex.def Info: daten/aufbau1.png  used on input line 14.
 (luatex.def)             Requested size: 313.69167pt x 346.28955pt.
  [5]
-<daten/aufbau2.png, id=92, 593.96906pt x 360.59718pt>
+<daten/aufbau2.png, id=93, 593.96906pt x 360.59718pt>
 File: daten/aufbau2.png Graphic file (type png)
 <use daten/aufbau2.png>
 Package luatex.def Info: daten/aufbau2.png  used on input line 30.
 (luatex.def)             Requested size: 313.69167pt x 190.44981pt.
 ) (./content/auswertung.tex [6<../daten/aufbau1.png>]) (./content/diskussion.tex) (./content/anhang.tex [7<../daten/aufbau2.png>]
-<daten/daten1.jpg, id=109, 2252.415pt x 2914.89pt>
+<daten/daten1.jpg, id=110, 2252.415pt x 2914.89pt>
 File: daten/daten1.jpg Graphic file (type jpg)
 <use daten/daten1.jpg>
 Package luatex.def Info: daten/daten1.jpg  used on input line 7.
 (luatex.def)             Requested size: 313.69167pt x 405.9469pt.
-<daten/daten2.jpg, id=110, 2252.415pt x 2914.89pt>
+<daten/daten2.jpg, id=111, 2252.415pt x 2914.89pt>
 File: daten/daten2.jpg Graphic file (type jpg)
 <use daten/daten2.jpg>
 Package luatex.def Info: daten/daten2.jpg  used on input line 14.
 (luatex.def)             Requested size: 313.69167pt x 405.9469pt.
-<daten/daten3.jpg, id=111, 2252.415pt x 2914.89pt>
+<daten/daten3.jpg, id=112, 2252.415pt x 2914.89pt>
 File: daten/daten3.jpg Graphic file (type jpg)
 <use daten/daten3.jpg>
 Package luatex.def Info: daten/daten3.jpg  used on input line 21.
 (luatex.def)             Requested size: 313.69167pt x 405.9469pt.
 ) [8<../daten/daten1.jpg>] [9<../daten/daten2.jpg>] [10<../daten/daten3.jpg>] [11] (./build/vXXX.aux)
 Package rerunfilecheck Info: File `vXXX.aux' has not changed.
-(rerunfilecheck)             Checksum: 7825013AFF253AFDB1110181EC5AA5C7;9196.
+(rerunfilecheck)             Checksum: 545AB0BA5E806A9A78EAF34909B0ED0E;9250.
 Package rerunfilecheck Info: File `vXXX.toc' has not changed.
 (rerunfilecheck)             Checksum: 3F29546B52566D2100B23D20F9E34E5A;1183.
 Package logreq Info: Writing requests to 'vXXX.run.xml'.
@@ -1426,15 +1426,15 @@ Here is how much of LuaTeX's memory you used:
  100000,1977958 words of node,token memory allocated
  630 words of node memory still in use:
    7 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 11 attribute, 77 glue_spec, 7 attribute_list, 1 write nodes
-   avail lists: 1:2,2:684,3:147,4:86,5:364,6:30,7:4890,8:40,9:367,10:18,11:547
+   avail lists: 1:2,2:684,3:147,4:86,5:364,6:30,7:4927,8:40,9:367,10:18,11:546
  55951 multiletter control sequences out of 65536+600000
  94 fonts using 34926543 bytes
  113i,11n,117p,10617b,2933s stack positions out of 5000i,500n,10000p,200000b,80000s
 </home/joeyko2706/.local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman8-regular.otf></home/joeyko2706/.local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.otf></home/joeyko2706/.local/texlive/2021/texmf-dist/fonts/opentype/public/lm-math/latinmodern-math.otf></home/joeyko2706/.local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman10-italic.otf></home/joeyko2706/.local/texlive/2021/texmf-dist/fonts/opentype/public/lm-math/latinmodern-math.otf></home/joeyko2706/.local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf></home/joeyko2706/.local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman12-regular.otf></home/joeyko2706/.local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmsans10-bold.otf></home/joeyko2706/.local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman12-bold.otf>
-Output written on vXXX.pdf (11 pages, 3877547 bytes).
+Output written on vXXX.pdf (11 pages, 3877579 bytes).
 
-PDF statistics: 223 PDF objects out of 1000 (max. 8388607)
- 166 compressed objects within 2 object streams
+PDF statistics: 224 PDF objects out of 1000 (max. 8388607)
+ 167 compressed objects within 2 object streams
  38 named destinations out of 1000 (max. 131072)
  73 words of extra memory for PDF output out of 10000 (max. 100000000)
 

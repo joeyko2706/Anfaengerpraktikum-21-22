@@ -51,28 +51,28 @@ der Schwingungen innerhalb einer Frequenz ist.
 \subsection{Fundamentalschwingung}
 %Im Folgenden werden die beiden Fundamentalschwingungen in Abhängigkeit der Kopplungskapazität $C_{\text{K}}$ des Kopplungskondensators
 %bestimmt.
-%%  Im Folgenden sind die Messwerte der beiden Fundamentalschwingungen in Abhängigkeit der Kopplungskapazität $C_{\text{K}}$ des Kopplungskondensators
-%%  aufgelistet. Der Strom $I_2$ berechnet sich über
-%%  \begin{equation}
-%%    I_2  = \frac{U}{R\sqrt{4 + \frac{R^2C_{\text{K}}^2}{LC}(1 + \frac{C}{C_{\text{K}}}})}.
-%%  \end{equation}
-Im Folgenden sind die Messwerte für den Strom $I_2$ in Abhängigkeit der Kopplungskapazität aufgetragen.
+Im Folgenden sind die Messwerte der beiden Fundamentalschwingungen in Abhängigkeit der Kopplungskapazität $C_{\text{K}}$ des Kopplungskondensators
+aufgelistet. Der Strom $I_2$ berechnet sich über
+\begin{equation}
+  I_2  = \frac{U}{R\sqrt{4 + \frac{R^2C_{\text{K}}^2}{LC}(1 + \frac{C}{C_{\text{K}}}})}.
+\end{equation}
+
 \begin{table}[H]
   \centering
-  \caption{Messwerte der Fundamentalschwingungen}
+  \caption{Messwerte der Fundamentalschwingungen.}
   \label{tab:aufgabeC}
   \begin{tabular}{c c c c c c}
       \toprule
       {$C_{\text{K}} \:/\: \si{\nano\farad}$} & {$f_+\;/ \si{\kilo\hertz}$} & {$f_-\;/ \si{\kilo\hertz}$} & {$V_1 \:/\: \si{\milli\volt}$} & {$V_2 \:/\: \si{\milli\volt}$} & $I_2 \:/\:\si{\milli\ampere}$ \\
       \midrule
-      9.99 & 38 & 49 & 60 & 110 & 1.22 \\
-      8.00 & 40 & 50 & 55 & 110 & 1.51 \\
-      6.47 & 40 & 50 & 55 & 110 & 1.87 \\
-      5.02 & 38 & 55 & 50 & 110 & 2.42 \\
-      4.00 & 40 & 58 & 50 & 105 & 2.90 \\
-      3.00 & 40 & 62 & 50 & 105 & 3.86 \\
-      2.03 & 40 & 73 & 50 & 100 & 5.44 \\
-      1.01 & 40 & 76 & 55 & 95 & 10.39 \\
+      9.99 & 38 & 49 & 60 & 110 & 1.1445 \\
+      8.00 & 40 & 50 & 55 & 110 & 1.1449 \\
+      6.47 & 40 & 50 & 55 & 110 & 1.1452 \\
+      5.02 & 38 & 55 & 50 & 110 & 1.1455 \\
+      4.00 & 40 & 58 & 50 & 105 & 1.0935 \\
+      3.00 & 40 & 62 & 50 & 105 & 1.0936 \\
+      2.03 & 40 & 73 & 50 & 100 & 1.0416 \\
+      1.01 & 40 & 76 & 55 & 95 & 0.9896 \\
       \bottomrule
   \end{tabular}
 \end{table}
@@ -81,26 +81,27 @@ Im Folgenden sind die Messwerte für den Strom $I_2$ in Abhängigkeit der Kopplu
 \begin{figure}[H]
   \centering
   \includegraphics{freq1.pdf}
-  \caption{Die aufgenommenen Messwerte.}
+  \caption{Die aufgenommenen Messwerte zu c).}
   \label{fig:freq1}
 \end{figure}
 
 \begin{figure}[H]
   \centering
   \includegraphics{freq2.pdf}
-  \caption{Messwerte zu c).}
+  \caption{Die aufgenommenen Messwerte zu c).}
   \label{fig:freq2}
 \end{figure}
 
-\noindent Der Strom $I_{2,\text{theo}}$ wird mithilfe des Widerstandes $R= 48 \,\upOmega$ durch die Formel $U=RI$ berechnet. Die Frequenzen der 
-beiden Fundamentalschwingungen berechnen sich durch folgende Relationen, wobei
-die geringen Kapazitäten der beiden Spulen ebenfalls berücksichtigt werden,
-% \I_2  = \frac{U}{R\sqrt{4 + \frac{R^2C_K^2}{LC}(1 + \frac{C}{C_K}})}
+\noindent Die theoretischen Werte des Stromes $I_{2,\text{theo}}$ werden mithilfe des Widerstandes $R= 48 \,\upOmega$ durch die Formel $U=RI$ berechnet. 
+Die Frequenzen der beiden Fundamentalschwingungen berechnen sich durch \autoref{eqn:funda1} und \autoref{eqn:funda2}, wobei die geringen Kapazitäten 
+der beiden Spulen ebenfalls berücksichtigt wurden.
 \begin{equation}
+  \label{eqn:funda1}
   f_+ = \frac{1}{2\pi\sqrt{L(C + C_\text{Sp})}}
 \end{equation} 
-und \newline 
+und \newline
 \begin{equation}
+  \label{eqn:funda2}
   f_- = \frac{1}{2\pi\sqrt{L\Bigl(\dfrac{CC_\text{K}}{2C+C_\text{K}} + C_\text{Sp}\Bigr)}}.
 \end{equation}
 
@@ -113,14 +114,14 @@ und \newline
       \toprule
       $C_{\text{K}} \:/\: \si{\nano\farad}$ & $f_+ \:/\: \si{\kilo\hertz}$ & $f_{+, \text{theo}} \:/\: \si{\kilo\hertz}$ & $f_- \:/\: \si{\kilo\hertz}$ & $f_{-, \text{theo}} \:/\: \si{\kilo\hertz}$ & $I_2 \:/\: \si{\milli\ampere}$ & $I_{2,\text{theo}} \:/\: \si{\milli\ampere}$ \\
       \midrule
-      9.99 & 38 & 35.32 & 49 & 32.80 & 1.22 & 2.292 \\
-      8.00 & 40 & 35.32 & 50 & 33.33 & 1.51 & 2.292 \\
-      6.47 & 40 & 35.32 & 50 & 33.95 & 1.87 & 2.292 \\
-      5.02 & 38 & 35.32 & 55 & 34.85 & 2.42 & 2.292 \\
-      4.00 & 40 & 35.32 & 58 & 35.85 & 2.90 & 2.188 \\
-      3.00 & 40 & 35.32 & 62 & 37.41 & 3.86 & 2.188 \\
-      2.03 & 40 & 35.32 & 73 & 40.19 & 5.44 & 2.083 \\
-      1.01 & 40 & 35.32 & 76 & 47.52 & 10.39 & 1.979 \\
+      9.99 & 38 & 35.32 & 49 & 32.80 & 1.1445 & 2.292 \\
+      8.00 & 40 & 35.32 & 50 & 33.33 & 1.1449 & 2.292 \\
+      6.47 & 40 & 35.32 & 50 & 33.95 & 1.1452 & 2.292 \\
+      5.02 & 38 & 35.32 & 55 & 34.85 & 1.1455 & 2.292 \\
+      4.00 & 40 & 35.32 & 58 & 35.85 & 1.0935 & 2.188 \\
+      3.00 & 40 & 35.32 & 62 & 37.41 & 1.0936 & 2.188 \\
+      2.03 & 40 & 35.32 & 73 & 40.19 & 1.0416 & 2.083 \\
+      1.01 & 40 & 35.32 & 76 & 47.52 & 0.9896 & 1.979 \\
       \bottomrule
   \end{tabular}
 \end{table}

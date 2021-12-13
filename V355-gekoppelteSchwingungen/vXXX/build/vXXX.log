@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.13.2 (TeX Live 2021)  (format=lualatex 2021.10.4)  8 DEC 2021 20:08
+This is LuaHBTeX, Version 1.13.2 (TeX Live 2021)  (format=lualatex 2021.10.4)  13 DEC 2021 17:00
  restricted system commands enabled.
 **vXXX.tex
 (./vXXX.tex
@@ -1358,42 +1358,42 @@ Package tocbasic Info: character protrusion at toc deactivated on input line 15.
  [2
 
 ] (./content/einleitung.tex) (./content/theorie.tex [3]
-<plots/Schaltung3.png, id=84, 535.2497pt x 296.60812pt>
+<plots/Schwebung.png, id=85, 515.67656pt x 243.91125pt>
+File: plots/Schwebung.png Graphic file (type png)
+<use plots/Schwebung.png>
+Package luatex.def Info: plots/Schwebung.png  used on input line 109.
+(luatex.def)             Requested size: 313.69167pt x 148.37624pt.
+ [4]
+<plots/Schaltung3.png, id=99, 535.2497pt x 296.60812pt>
 File: plots/Schaltung3.png Graphic file (type png)
 <use plots/Schaltung3.png>
-Package luatex.def Info: plots/Schaltung3.png  used on input line 110.
+Package luatex.def Info: plots/Schaltung3.png  used on input line 119.
 (luatex.def)             Requested size: 313.69167pt x 173.83864pt.
- [4]) (./content/durchfuehrung.tex
-<plots/GekoppelterSchwingkreisVersuch.pdf, id=98, 475.0789pt x 520.40015pt>
-File: plots/GekoppelterSchwingkreisVersuch.pdf Graphic file (type pdf)
-<use plots/GekoppelterSchwingkreisVersuch.pdf>
-Package luatex.def Info: plots/GekoppelterSchwingkreisVersuch.pdf  used on input line 8.
-(luatex.def)             Requested size: 313.69167pt x 343.62396pt.
- [5<../plots/Schaltung3.png>]
-<plots/Schaltung0.png, id=114, 410.2828pt x 422.32782pt>
+ [5<../plots/Schwebung.png><../plots/Schaltung3.png>]) (./content/durchfuehrung.tex
+<plots/Schaltung0.png, id=115, 410.2828pt x 422.32782pt>
 File: plots/Schaltung0.png Graphic file (type png)
 <use plots/Schaltung0.png>
-Package luatex.def Info: plots/Schaltung0.png  used on input line 20.
+Package luatex.def Info: plots/Schaltung0.png  used on input line 13.
 (luatex.def)             Requested size: 313.69167pt x 322.89929pt.
- [6<../plots/GekoppelterSchwingkreisVersuch.pdf>]
-<plots/Lissajour-Gerade.jpeg, id=133, 5685.24pt x 2762.32pt>
+ [6]
+<plots/Lissajour-Gerade.jpeg, id=129, 5685.24pt x 2762.32pt>
 File: plots/Lissajour-Gerade.jpeg Graphic file (type jpg)
 <use plots/Lissajour-Gerade.jpeg>
-Package luatex.def Info: plots/Lissajour-Gerade.jpeg  used on input line 31.
+Package luatex.def Info: plots/Lissajour-Gerade.jpeg  used on input line 24.
 (luatex.def)             Requested size: 313.69167pt x 152.41278pt.
  [7<../plots/Schaltung0.png>]
-<plots/Schaltung1.png, id=141, 665.48625pt x 347.04657pt>
+<plots/Schaltung1.png, id=137, 665.48625pt x 347.04657pt>
 File: plots/Schaltung1.png Graphic file (type png)
 <use plots/Schaltung1.png>
-Package luatex.def Info: plots/Schaltung1.png  used on input line 43.
+Package luatex.def Info: plots/Schaltung1.png  used on input line 36.
 (luatex.def)             Requested size: 313.69167pt x 163.5885pt.
  [8<../plots/Lissajour-Gerade.jpeg>]) (./content/auswertung.tex [9<../plots/Schaltung1.png>] [10]
-<freq1.pdf, id=168, 417.7206pt x 258.0049pt>
+<freq1.pdf, id=164, 417.7206pt x 258.0049pt>
 File: freq1.pdf Graphic file (type pdf)
 <use freq1.pdf>
 Package luatex.def Info: freq1.pdf  used on input line 83.
 (luatex.def)             Requested size: 417.71957pt x 258.00426pt.
-<freq2.pdf, id=169, 417.7206pt x 258.0049pt>
+<freq2.pdf, id=165, 417.7206pt x 258.0049pt>
 File: freq2.pdf Graphic file (type pdf)
 <use freq2.pdf>
 Package luatex.def Info: freq2.pdf  used on input line 90.
@@ -1405,7 +1405,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 101--103
 
 [12<build/freq2.pdf>]) [13] (./content/diskussion.tex) [14] (./build/vXXX.aux)
 Package rerunfilecheck Info: File `vXXX.aux' has not changed.
-(rerunfilecheck)             Checksum: E8EF53F5E4E92A59523DFEF649B3C069;15683.
+(rerunfilecheck)             Checksum: 38B68BE2C2384798BC12040DF7136629;16112.
 Package rerunfilecheck Info: File `vXXX.toc' has not changed.
 (rerunfilecheck)             Checksum: E18BA717C9D31297CDCD46C484F62BA1;2008.
 Package logreq Info: Writing requests to 'vXXX.run.xml'.
@@ -1414,18 +1414,18 @@ Package logreq Info: Writing requests to 'vXXX.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 36823 strings out of 478112
+ 36825 strings out of 478112
  100000,1977958 words of node,token memory allocated
  955 words of node memory still in use:
    7 hlist, 2 vlist, 2 rule, 5 glue, 4 kern, 1 glyph, 112 attribute, 77 glue_spec, 58 attribute_list, 1 write nodes
-   avail lists: 1:2,2:1283,3:220,4:98,5:414,6:54,7:5163,8:64,9:500,10:13,11:542
- 55964 multiletter control sequences out of 65536+600000
- 94 fonts using 34926399 bytes
+   avail lists: 1:2,2:1283,3:220,4:98,5:422,6:56,7:5708,8:64,9:490,10:13,11:592
+ 55966 multiletter control sequences out of 65536+600000
+ 94 fonts using 34927407 bytes
  113i,13n,117p,10617b,2933s stack positions out of 5000i,500n,10000p,200000b,80000s
 </home/joeyko2706/.local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman10-italic.otf></home/joeyko2706/.local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.otf></home/joeyko2706/.local/texlive/2021/texmf-dist/fonts/opentype/public/lm-math/latinmodern-math.otf></home/joeyko2706/.local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman5-regular.otf></home/joeyko2706/.local/texlive/2021/texmf-dist/fonts/opentype/public/lm-math/latinmodern-math.otf></home/joeyko2706/.local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman8-regular.otf></home/joeyko2706/.local/texlive/2021/texmf-dist/fonts/opentype/public/lm-math/latinmodern-math.otf></home/joeyko2706/.local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf></home/joeyko2706/.local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman12-regular.otf></home/joeyko2706/.local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmsans10-bold.otf></home/joeyko2706/.local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman12-bold.otf>
-Output written on vXXX.pdf (14 pages, 11163463 bytes).
+Output written on vXXX.pdf (14 pages, 3194478 bytes).
 
-PDF statistics: 378 PDF objects out of 1000 (max. 8388607)
+PDF statistics: 377 PDF objects out of 1000 (max. 8388607)
  286 compressed objects within 3 object streams
  65 named destinations out of 1000 (max. 131072)
  121 words of extra memory for PDF output out of 10000 (max. 100000000)
