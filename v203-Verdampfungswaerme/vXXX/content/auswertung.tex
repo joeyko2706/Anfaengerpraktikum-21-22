@@ -4,6 +4,101 @@
 %Die Tabelle zu den Werten der ersten Aufgabe überstieg die Seitenlänge. Ich habe aber die originalen Daten angefügt und wenn wir
 %noch den Plot haben, dann wird das in Ordnung sein.
 
+\subsection{Messung bis 1 bar}
+Um die gemittelten Verdampfungswärme zu berechnen muss zuerst der Logarithmus des Dampfdruckes gegen die reziproke absolute Temperatur dargestellt werden. Die gesuchte
+Verdampfungswärme kann darauf folgend durch eine Ausgleichsrechnung bestimmt werden. Zur Berechnung dieser wird die Relation
+\begin{equation*}
+  \label{eqn:druck3}
+  \ln\left(\frac{p}{p_0}\right)=- \frac{L}{R} \frac{1}{T}
+\end{equation*}
+\newline
+benutzt, wobei hier $p_0$ den zu Beginn gemessenen Außendruck beschreibt. Dieser hat den Betrag
+\begin{equation*}
+  p_0 = 993 \cdot \, \mathrm{10^2 Pa}
+\end{equation*}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics{plot1.pdf}
+  \caption{Ausgleichsgerade für <1 bar}
+  \label{fig:plot1}
+\end{figure}
+%\newline
+\noindent
+Die Ausgleichsgerade hat die Form
+\begin{equation*}
+  y = mx + b
+\end{equation*}
+%\newline
+Die Parameter und ihre Unsicherheiten wurden mit Python berechnet und haben die ungefähren Werte
+\begin{equation*}
+  m \approx (-44.22\pm 0.4924)
+\end{equation*}
+und
+\begin{equation*}
+  b \approx (11.67\pm 0.1525)
+\end{equation*}
+%\newline
+Wird nun die Formel der Ausgleichsgeraden mit Formel(\autoref{eqn:expo}) zusammengeführt, ergibt sich daraus
+\begin{equation*}
+  m=-\frac{L}{R}
+\end{equation*}
+%\newline
+Daraus folgt dann für die Verdampfungswärme L
+\begin{equation*}
+  L = - m \cdot R
+\end{equation*}
+wobei R hier mit $R=8,314 \, J \cdot mol^{-1} \cdot K^{-1}$ als allgemeine Gaskonstante gegeben ist.
+%\newline
+Eingesetzt ergibt sich für L dann
+\begin{equation*}
+  L = 367,66 \mathrm{\frac{J}{mol}}
+\end{equation*}
+
+\noindent
+Die äußere Verdampfungswärme $L_{\text{a}}$ beschreibt hierbei die Energie, die benötigt wird, um das Volumen eines Mols der Flüssigkeit auf das Volumen eines Mols des Gases zu
+erhöhen. Hierfür muss die Volumenarbeit $W = pV$ erbracht werden. Diese wird mit der idealen Gasgleichung gleichgesetzt
+\begin{equation*}
+  W = L_a = p\cdot V = R \cdot T
+\end{equation*}
+woraus für eine Temperatur von T $= 373$K 
+\begin{equation*}
+  L_a = 3,101 \cdot 10^3 \mathrm{\frac{J}{mol}}
+\end{equation*}
+folgt.
+\newline
+Die, um die molekularen Bindungskräfte zu überwinden, benötigte innere Energie $L_{\text{i}}$ ergibt sich daraus zu
+\begin{equation*}
+  L_i = L - L_a = -2.733,34 \mathrm{\frac{J}{mol}}
+\end{equation*}
+%\newline
+Aufgrund dieses, wegen seines Vorzeichens offensichtlich falschen, Wertes wird auf eine division durch die Avogadrokonstante und anschließende Angabe in eV verzichtet.
+
+\subsection{Messung von 1 bis 15 bar}
+Im zweiten Schritt der Auswertung soll nun die Temperaturabhängigkeit der Verdampfungswärme L bestimmt werden. Hierzu wird die Clausius-Clapeyronsche Gleichung nach L umgestellt.
+\begin{equation}
+  L = T(V_D - V_F)\frac{dp}{dT}
+  \label{eqn:verdl}
+\end{equation}
+%\newline
+$V_{\text{F}}$ kann hierzu weiterhin vernachlässigt werden. $V_{\text{D}}$ hingegen kann in diesem Bereich des Drucks nicht mehr über die ideale Gasgleichung bestimmt werden.
+Eine genauere Nährung ist gegeben als 
+\begin{equation*}
+  \left(p+\frac{a}{V^2}\right)V = RT \, \, \mathrm{mit} \, \, a = 0,9 \mathrm{\frac{J \cdot m^3}{Mol^2}} 
+\end{equation*}
+\begin{equation*}
+  \Leftrightarrow V_D = \frac{RT}{2p} \pm \sqrt{\frac{R^2T^2}{4p^2}-\frac{a}{p}}
+\end{equation*}
+%\newline
+Damit wird \autoref{eqn:verdl} zu
+\begin{equation*}
+  L = \frac{T}{p} \left(\frac{RT}{2} \pm \sqrt{\frac{R^2T^2}{4}-ap}\right)\frac{dp}{dT}
+  \label{eqn:verdl2}
+\end{equation*}
+%\newline
+Für die Bestimmung von $\frac{dp}{dT}$ muss ein Ausgleichspolynom 3.Grades für die Messwerte der Temperatur T und des Drucks p erstellt werden. Diese Messwerte sind in folgender
+Tabelle aufgetragen.
+
 \begin{table}[H]
   \centering
   \caption{Gemessene Messwerte der Verdampfungswärme.}
@@ -30,3 +125,24 @@
     \bottomrule
   \end{tabular}
 \end{table}
+
+\begin{figure}
+  \centering
+  \includegraphics{plot2.pdf}
+  \caption{Ausgleichsgerade für >1 bar}
+  \label{fig:plot2}
+\end{figure}
+Das Ausgleichspolynom hat die Form
+\begin{center}
+  $p(T)= A \cdot T^3 + b \cdot T^2 + c \cdot T + d$ \\
+  $\frac{dp}{dT} = 3a \cdot T^2 + 2b \cdot T + c$ \\
+  $a = 1,0540 \cdot 10^{-5}$  \\
+  $b = -1,1760 \cdot 10^{-2}$ \\
+  $c = 4,4246$ \\
+  $d = -5,6107 \cdot 10^2$ \\
+\end{center}
+%\newline
+$p(T)$ und $\frac{dp}{dT}$ werden nun in Formel \autoref{eqn:verdl2} eingesetzt:
+\begin{equation*}
+  L = \frac{3A \cdot T^3 + 2b \cdot T^2 + cT}{A \cdot T^3 + b \cdot T^2 + c \cdot T + d} \left(\frac{RT}{2} \pm \sqrt{\frac{R^2T^2}{4}-a\cdot(A \cdot T^3 + b \cdot T^2 + c \cdot T + d)}\right)
+\end{equation*}
