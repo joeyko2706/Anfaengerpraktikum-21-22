@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
+from uncertainties import ufloat
 
 #x = np.linspace(0, 10, 1000)
 #y = x ** np.sin(x)
@@ -21,7 +22,9 @@ import numpy as np
 
 
 x = np.linspace(60, 240, 10)
-y = [3.08, 3.40, 3.83, 4.32, 4.83, 5.37, 5.76, 6.28, 6.84, 7.36]
+x = (x**2)/1000
+y = np.array([3.08, 3.40, 3.83, 4.32, 4.83, 5.37, 5.76, 6.28, 6.84, 7.36])
+y = y**2
 
 N = len(y)
 Delta = N * np.sum(x**2) - (np.sum(x))**2
@@ -37,14 +40,18 @@ B_error = sigma_y * np.sqrt(np.sum(x**2) / Delta)
 #xn = x*x
 #yn = y**2
 plt.plot(x, y, 'b.', label='Messwerte')
-plt.xlabel(r'Abstand $a$ / mm')
-plt.ylabel(r'$T$ / s')
+plt.xlabel(r'Abstand $a^2$ / $m^2$')
+plt.ylabel(r'$T^2$ / $s^2$')
 
 
 plt.plot(x, A*x + B,'r', label='lineare Regression')
 
 plt.grid()
 plt.legend()
-print(A, A_error, B, B_error)
+#print(A, A_error, B, B_error)
 
 plt.savefig('build/plot.pdf')
+
+q = ufloat(0.3055, 0.03100)
+o = ufloat(0.5669, 0.05034)
+print(q/o)
