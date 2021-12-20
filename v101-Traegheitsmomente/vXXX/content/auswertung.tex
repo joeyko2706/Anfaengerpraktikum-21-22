@@ -53,12 +53,9 @@ Winkelrichtgröße $D$ über \autoref{eqn:winkelrichtgr} mit dem konstanten Abst
 
 %Woraus sich der Mittelwert für die Winkelrichtgröße ergibt.
 Es ergebibt sich der Mittelwert für die Winkelrichtgröße zu
-
 \begin{equation}
   \overline D = (0,01821\pm 0,0008274) \si{\newton\meter}.
 \end{equation}
-
-
 Das Trägheitsmoment der Drillachse ergibt sich mit zwei Gewichten.
 Sie haben ein zylinderförmiges Gewicht von $m_1 = (223.2 \,\pm 0.1) \text{g}$ und $m_2 = (222.8 \,\pm 0.1)\, \text{g}$ und jeweils eine
 Höhe $h=\SI{30}{\milli\meter}$ und einen Durchmesser $d=\SI{35}{\milli\meter}$.
@@ -98,15 +95,13 @@ Höhe $h=\SI{30}{\milli\meter}$ und einen Durchmesser $d=\SI{35}{\milli\meter}$.
 
 %Trägheitsmomente der Drillachse wird mit linearer Regression berechnet.
 
+\sloppy
 Die Trägheitsmomente der beiden Gewichte lassen sich mithilfe \autoref{eqn:steiner} vereinfachen. Zur Berechnung
 des Trägheitsmomentes der Drillachse $I_D$, wird eine lineare Regression der Form
-
 \begin{equation}
   \label{eqn:linReg}
   T^2 = ba^2+c
 \end{equation}
-
-
 verwendet.
 Die Messwerte und die Regression sind in \autoref{fig:Plot} aufgetragen. Die Trägheitsmomente werden mit
 \begin{center}
@@ -115,9 +110,8 @@ Die Messwerte und die Regression sind in \autoref{fig:Plot} aufgetragen. Die Tr�
 \end{center}
 berechnet (\cite{Anleitung}).
 Die abgebildete lineare Regression der Form $ y = ax + b \,$ liefert die folgenden Werte
-
 \begin{center}
-  $ a = 0,828 \pm 0,008254 \frac{si{\s^2}}{\si{\m^2}}$, \\
+  $ a = 0,828 \pm 0,008254 \frac{\si{\s^2}}{\si{\m^2}}$, \\
   $ b = 6,648 \pm 0,2572 \si{\s^2}$. \\
 \end{center}
 
@@ -127,10 +121,7 @@ Die abgebildete lineare Regression der Form $ y = ax + b \,$ liefert die folgend
   \caption{Messwerte und lineare Regression}
   \label{fig:Plot}
 \end{figure}
-
-
 Daraus folgt für das Trägheitsmomentes der Drillachse mit
-
 \begin{equation*}
   I_D = \frac{bD}{4 \pi ^2} - 2m (\frac{r^2}{4} + \frac{h^2}{12})
 \end{equation*}
@@ -138,8 +129,7 @@ und
 \begin{equation*}
   \Delta I_D = \sqrt{(\frac{b}{4 \pi ^2})^2  (\Delta D)^2 + (\frac{D}{4 \pi ^2})^2  (\Delta b)^2}
 \end{equation*}
-
-der Wert $I_D = (2,999 \pm 0,1830) \cdot 10^{-3} \si{\kilogram\meter^2} $.
+der Wert $I_D = (2,999 \pm 0,1830) \cdot 10^{-3} \si{\kilogram\meter^2}$.
 
 \subsection{Trägheitsmomente einfacher Körper}
 \label{sec:Trägheitsmomente einfacher Körper}
@@ -157,8 +147,7 @@ Die Trägheitsmomente des Zylinders und das der Kugel berechnen sich nach \autor
 %  I_{\text{Kugel}} = \frac{2}{5} mR^2 \, .
 %\end{equation}
 
-Die Werte der beiden Körper sind
-
+\sloppy Die Werte der beiden Körper sind
 \begin{align*}
   m_{\text{Kugel}} &= (810,9 \pm 0,1)\:\si{\gram}, \\
   d_{\text{Kugel}} &= \SI{12,7}{\centi\meter}, \\
@@ -166,14 +155,11 @@ Die Werte der beiden Körper sind
   d_{\text{Zylinder}} &=  \SI{8,72}{\centi\meter}, \\
   h &= \SI{9,00}{\centi\meter}. \\
 \end{align*}
-
 Damit ergeben sich die Theoriewerte der Trägheitsmomente für den Zylinder und für die Kugel
-
 \begin{align*}
   I_{\text{Kugel,Theorie}} &= 1.306 \cdot 10^{-3} \si{\kilogram\meter^2}, \\
   I_{\text{Zylinder,Theorie}} &= 0.349 \cdot 10^{-3} \si{\kilogram\meter^2}. \\
 \end{align*}
-
 Die gemessenen Schwingungsdauern wurden in \autoref{tab:traegheitsmomente} aufgeführt. Die gemittelten Periodendauern wurden dazu benutzt
 durch \autoref{eqn:periode} die Trägheitsmomente der Körper zu berechnen.
 
@@ -200,30 +186,23 @@ durch \autoref{eqn:periode} die Trägheitsmomente der Körper zu berechnen.
 \end{table}
 
 Damit ergeben sich die Mittelwerte zu 
-
 \begin{center}
   $T_{\text{Zylinder}} = 0,8414 \pm 0,02012 \si{\second} $
 \end{center}
-
 und
-
 \begin{center}
   $ T_{\text{Kugel}} = 1,6965 \pm 0,01289 \si{\second} $
 \end{center}
-
 Durch die Gauß'scher Fehlerfortpflanzung \ref{eqn:Fehlerfortpflanzung}
 \begin{equation}
   \Delta I = \sqrt{ (\frac{2DT}{4\pi^2})^2  (\Delta T)^2 + (\frac{T^2}{4\pi^2})^2 (\Delta D)^2}
   \label{eqn:Fehlerfortpflanzung}
 \end{equation}
 ergeben sich die Trägheitsmomente zu
-
 \begin{center}
   $ I_{\text{Zylinder}} = (5,685 \pm 0,6501) \cdot 10^{-3} \si{\kilogram\meter^2} $ 
 \end{center}
-
 und
-
 \begin{center}
   $ I_{\text{Kugel}} = (23,110 \pm 2,4260) \cdot 10^{-3} \si{\kilogram\meter^2} $.
 \end{center}
@@ -235,18 +214,14 @@ und
 Zur Bestimmung des Trägheitsmomentes der Modellpuppe wird die Puppe in einzelne Teile unterteilt. Dabei wird angenommen,
 dass sich die einzelnen Gliedmaßen durch Zylinder approximieren lassen können und eine homogene Massenverteilung besitzt. Die
 Volumina der Einzelteile werden durch
-
 \begin{equation}
   V = \pi r^2h
   \label{eqn:Volumen}
 \end{equation}
  bestimmt. Danach werden die Massenanteile der Einzelteile bestimmt. Die Gesamtmasse der Puppe beträgt 
-
 \begin{center}
   $m_{ges} = (166.8\pm 0.1)\si{\gram}$.
 \end{center}
-
-
 Die Abmaße der Körperteile werden jeweils, über die gesamte Länge verteilt, fünf mal gemessen. Somit wird auf die unterschiedlichen
 Radien der Glieder Rücksicht genommen, zum Beispiel ist beim Arm der Oberarm dicker, als der Unterarm. Die Mittelwerte werden dazu genutzt die
 Trägheitsmomente auszurechnen.
@@ -268,7 +243,6 @@ Trägheitsmomente auszurechnen.
   \end{tabular}
 \end{table}
 
-
 \autoref{tab:durchmesser} sind die Messwerte zu den Durchmessern der einzelnen Körperteile zu entnehmen. Als Mittelwerte ergiben sich dadurch
 \begin{align*}
   d_{\text{Arm}} &= (14,28 \pm 2,0094)\: \si{\centi\meter}, \\
@@ -276,7 +250,6 @@ Trägheitsmomente auszurechnen.
   d_{\text{Bein}} &= (16,8 \pm 2,4191)\: \si{\centi\meter}, \\
   d_{\text{Torso}} &= (34,88 \pm 3,9827)\: \si{\centi\meter}. \\ 
 \end{align*}
-
 Die Längen der Körperteile sind
 \begin{align*}
   l_{\text{Arm}} &= \SI{0,0870}{\meter}, \\
@@ -285,44 +258,32 @@ Die Längen der Körperteile sind
   l_{\text{Torso}} &= \SI{0,0657}{\meter}, \\
   l_{\text{Unterarm}} &= \SI{0,0164}{\meter}. \\
 \end{align*}
-
 Das Volumen eines Zylinders ist gegeben durch \autoref{eqn:Volumen} mit Fehlerfortpflanzung
-
 \begin{align*}
   \Delta V = \sqrt{(2 \pi Lr)^2 (\Delta r)^2}
 \end{align*}
-
-
 Daraus folgen die Volumina
-
 \begin{align*}
   V_{\text{Arm}} &= (0,001393 \pm 0,0007843) \si{\meter}^3, \\
   V_{\text{Kopf}} &= (0,007458 \pm 0,001891) \si{\meter}^3, \\
   V_{\text{Bein}} &= (0,002758 \pm 0,001588) \si{\meter}^3 ,\\
   V_{\text{Torso}} &= (0,001156 \pm 0,002870) \si{\meter}^3. \\
 \end{align*}
-
-
 Für das Gesamtvolumen lautet die Fehlerfortpflanzung
-
 \begin{equation}
   \Delta V_{\text{Ges}} = \sqrt{(\Delta V_{\text{Torso}})^2 + 4(\Delta V_{\text{Arm}})^2 + 4(\Delta V_{\text{Bein}})^2 + (\Delta V_{\text{Kopf}})^2}.
 \end{equation}
-
-
 Dadurch ergibt sich als Gesamtvolumen
-
 \begin{center}
   $V_{\text{Ges}} = 0,012765 \pm 0,005387 \si{\meter}^3$ .
 \end{center}
-
 
 Es werden die Trägheitsmomente für zwei unterschiedliche Stellungen der Puppe berechnet. Abbilder der Stellungen der Puppe sind im folgenden
 dargestellt unter \autoref{fig:stellung1} und unter \autoref{fig:stellung2}. 
 Als erster wurde das Trägheitsmoment in der Stellung 1 und danach in der Stellung2 gemessen.
 Die Abstände der Körperteile zur Drehachse ergeben sich über die Radien der Körperteile.
 
-Damit ergeben sich die Trägheitsmomente für die erste Stellung  mit \autoref{eqn:steiner} zu
+Damit ergeben sich die theoretischen Trägheitsmomente für die erste Stellung  mit \autoref{eqn:steiner} zu
 \begin{align*}
   I_{\text{Arm}} &= 0.70351 \si{\kilogram\meter^2}, \\
   I_{\text{Kopf}} &= 0.715769 \si{\kilogram\meter^2}, \\
@@ -330,7 +291,7 @@ Damit ergeben sich die Trägheitsmomente für die erste Stellung  mit \autoref{e
   I_{\text{Torso}} &= 0.229718 \si{\kilogram\meter^2}, \\
   I_{\text{Puppe}} &= 2.60682 \si{\kilogram\meter^2}. \\
 \end{align*}
-Analog ergeben sich die Trägheitsmomente für die zweite Stellung mit \autoref{eqn:steiner} zu
+Analog ergeben sich die theoretischen Trägheitsmomente für die zweite Stellung mit \autoref{eqn:steiner} zu
 \begin{align*}
   I_{\text{Arm}} &= 0.70351 \si{\kilogram\meter^2}, \\
   I_{\text{Kopf}} &= 0.715769 \si{\kilogram\meter^2}, \\
@@ -338,12 +299,15 @@ Analog ergeben sich die Trägheitsmomente für die zweite Stellung mit \autoref{
   I_{\text{Torso}} &= 0.229718 \si{\kilogram\meter^2}, \\
   I_{\text{Puppe}} &= 4.76611 \si{\kilogram\meter^2}. \\
 \end{align*}
-
-
-Die Trägheitsmomente wurden analog zu denen der Kugel und des Zylinders berechnet. Dabei sind die Schwingungsdauern in \autoref{tab:schwingdauer}
-aufgelistet.
+Das Verhältnis der Trägheitsmomente der beiden Stellungen zueinander ist somit
+\begin{align*}
+  \frac{I_{\text{Stellung 1}}}{I_{\text{Stellung 2}}} &= 0,55\pm 0,07.  \\
+\end{align*}
+Die Trägheitsmomente wurden analog zu denen der Kugel und des Zylinders berechnet. 
+Es werden nun die Trägheitsmomente der Puppe gemessen.
+Dabei sind die Schwingungsdauern in \autoref{tab:schwingdauer} aufgelistet.
 $T_1$ entspricht der Stellung 1 unter Auslenkung um $90°$, $T_2$ der Stellung 1 unter Auslenkung um $120°$.
-Analog dazu sind $T_3$ und $T_4$ für die Stellung 2. Gemäß Gleichung \autoref{eqn:periode} folgt für die Puppe
+Analog dazu sind $T_3$ und $T_4$ für die Stellung 2. Gemäß \autoref{eqn:periode} folgt für die Puppe
 
 %$T_3$ entspricht der Stellung 2 unter Auslenkum um $90°$.
 %$T_4$ entspricht der Stellung 2 unter Auslenkum um $120°$.
@@ -370,22 +334,17 @@ Analog dazu sind $T_3$ und $T_4$ für die Stellung 2. Gemäß Gleichung \autoref
 \end{table}
 
 
-Als Mittelwert ergebibt sich dadurch
+Als Mittelwert ergibt sich dadurch
 \begin{align*}
   \overline{T_{\text{Stellung 1}}} &= 0.8138 \si{\second}, \\
   \overline{T_{\text{Stellung 2}}} &= 1.1086 \si{\second}, \\
 \end{align*}
-
-
 woraus die Trägheitsmomente folgen %aus den Messwerten die
 \begin{align*}
   I_{\text{Stellung 1}} &= (0,3055\pm 0,03100) \cdot 10^{-3} \si{\kilogram\meter^2}, \\
   I_{\text{Stellung 2}} &= (0,5669\pm 0,05034) \cdot 10^{-3} \si{\kilogram\meter^2}. \\
 \end{align*}
-
-
 Das Verhältnis der Trägheitsmomente der beiden Stellungen zueinander ist somit
-
 \begin{align*}
   \frac{I_{\text{Stellung 1}}}{I_{\text{Stellung 2}}} &= 0,54\pm 0,07.  \\
 \end{align*}

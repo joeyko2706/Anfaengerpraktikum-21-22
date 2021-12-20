@@ -13,15 +13,66 @@ Periodendauer wurde eine Stoppuhr verwendet, die manuell ausgelöst und gestoppt
 der Reaktionszeit, wurden die Zeiten verfälscht. Es wurde zwar versucht durch eine höhere Anzahl an Messungen dieser Unsicherheit vorzubeugen, jedoch
 spielt sie dennoch in das Endergebnis mit ein. 
 
-Die Abweichung bei der Bestimmung des Trägheitsmomentes der Kugel beträgt $17.6953 \%$ und die bei dem Zylinder $16.2894 \%$. Es lässt sich,
-unter Berücksichtigung der eingegangenen Fehler sagen, dass der Wert der Abweichung dennoch recht groß ist. Eigentlich war zu erwarten, dass sich die
-prozentuale Abweichung auf unter $10 \%$ beläuft. Entweder sind, entgegen den Erwartungen, schlechte Messwerte vorgenommen worden, oder es handelt
-sich um einen systematischen Fehler zum Beispiel von der Messapparatur.
+%Die Abweichung bei der Bestimmung des Trägheitsmomentes der Kugel beträgt $17.6953 \%$ und die bei dem Zylinder $16.2894 \%$. Es lässt sich,
+%unter Berücksichtigung der eingegangenen Fehler sagen, dass der Wert der Abweichung dennoch recht groß ist. Eigentlich war zu erwarten, dass sich die
+%prozentuale Abweichung auf unter $10 \%$ beläuft. Entweder sind, entgegen den Erwartungen, schlechte Messwerte vorgenommen worden, oder es handelt
+%sich um einen systematischen Fehler zum Beispiel von der Messapparatur.
 
-Die Abweichungen bei der Bestimmung der Trägheitsmomente der Puppe in verschiedenen Stellungen ist mit $41.33 \%$ bei der ersten Stellung und mit
-$37.49 \%$ allerdings noch höher. Hier muss man allerdings die Näherungen mit einbeziehen, die für die Puppe getroffen wurden. Es wurden alle
+%Die Abweichungen bei der Bestimmung der Trägheitsmomente der Puppe in verschiedenen Stellungen ist mit $41.33 \%$ bei der ersten Stellung und mit
+%$37.49 \%$ allerdings noch höher. 
+
+Es müssen die Näherungen der Puppe miteinbezogen werden. So wurden alle
 Körperteile, auch der Kopf, auf Zylinder approximiert. Auch wurde für die Gliedmaßen nicht beide einzelne Glieder gemessen und dessen Trägheitsmomente
 berechnet, sondern wurde für ein Glied das Trägheitsmoment exemplarisch bestimmt und in dem Gesamtträgheitsmoment doppelt einbezogen.
+
+Bei den Apparatekonstanten wurde das Trägheitsmoment auf \newline
+$I_{\text{D}} = (2,999 \pm 0,183) \cdot 10^{-3} \si{\kilogram\meter^2}$ und die
+Winkelrichtgröße auf $(0,01821\pm 0,00082) \si{\newton\meter}$ bestimmt.
+Die theoretischen Trägheitsmomente der Kugel und des Zylinders sind
+\begin{align*}
+    I_{\text{Zylinder,Theorie}} &= 0.349 \cdot 10^{-3} \si{\kilogram\meter^2}, \\
+    I_{\text{Kugel,Theorie}} &= 1.306 \cdot 10^{-3} \si{\kilogram\meter^2}. \\
+\end{align*}
+Und die Trägheitsmomente der beiden Körper, die aus den Schwingungsdauern berechnet wurden sind
+\begin{align*}
+    I_{\text{Zylinder}} = (5,685 \pm 0,6501) \cdot 10^{-3} \si{\kilogram\meter^2}, \\
+    I_{\text{Kugel}} = (23,110 \pm 2,4260) \cdot 10^{-3} \si{\kilogram\meter^2}. \\
+\end{align*}
+Dies entspricht einer Abweichung von $1628,94\%$ bei dem Zylinder und $1769.52\%$ bei der Kugel.
+
+Die theoretischen Werte der einzelnen Körperteile und der Modellpuppe selbst, sind für die erste Stellung
+\begin{align*}
+    I_{\text{Arm}} &= 0.70351 \si{\kilogram\meter^2}, \\
+    I_{\text{Kopf}} &= 0.715769 \si{\kilogram\meter^2}, \\
+    I_{\text{Bein}} &= 0.127145 \si{\kilogram\meter^2}, \\
+    I_{\text{Torso}} &= 0.229718 \si{\kilogram\meter^2}, \\
+    I_{\text{Puppe,1}} &= 2.60682 \si{\kilogram\meter^2}. \\
+\end{align*}
+Für die zweite Stellung sind die Werte
+\begin{align*}
+    I_{\text{Arm}} &= 0.70351 \si{\kilogram\meter^2}, \\
+    I_{\text{Kopf}} &= 0.715769 \si{\kilogram\meter^2}, \\
+    I_{\text{Bein}} &= 1.20679 \si{\kilogram\meter^2}, \\ 
+    I_{\text{Torso}} &= 0.229718 \si{\kilogram\meter^2}, \\
+    I_{\text{Puppe,2}} &= 4.76611 \si{\kilogram\meter^2}.
+\end{align*}
+Und die aus den Schwingungsdauern gemessenen Werte sind
+\begin{align*}
+    I_{1} &= (0,3055\pm 0,03100) \cdot 10^{-3} \si{\kilogram\meter^2}, \\
+    I_{2} &= (0,5669\pm 0,05034) \cdot 10^{-3} \si{\kilogram\meter^2}.
+\end{align*}
+Das entspricht einer Abwertung des experimentellen Wertes von dem Theoriewert um $41.33 \%$ für die erste Stellung und
+$37.49 \%$ für die zweite Stellung.
+
+Es ergibt sich ein Verhältnis für den theoretischen Wert der beiden Stellungen zu
+\begin{align}
+    \frac{I_1}{I_2} = &= 0,5469\pm 0,07.
+\end{align}
+Und für den experimentellen Wert
+\begin{align*}
+    \frac{I_1}{I_2} = &= 0,5389\pm 0,07.
+\end{align*}
+Dies entspricht einer Genauigkeit von $1,46\%$.
 
 Da bei der Puppe so viele Approximierungen vorgenommen wurden ist allerdings daon auszugehen, dass der experimentell bestimmte Wert näher am 
 tatsächlichen Wert ist, als der theoretisch bestimmte Wert.
