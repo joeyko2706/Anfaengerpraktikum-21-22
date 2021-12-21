@@ -14,7 +14,7 @@ Verdampfungswärme kann darauf folgend durch eine Ausgleichsrechnung bestimmt we
 \newline
 benutzt, wobei hier $p_0$ den zu Beginn gemessenen Außendruck beschreibt. Dieser hat den Betrag
 \begin{equation*}
-  p_0 = 993 \cdot \, \mathrm{10^2 Pa}
+  p_0 = \SI{993e2}{\pascal}    %993 \cdot \, \mathrm{10^2 Pa}
 \end{equation*}
 
 \begin{figure}[H]
@@ -39,7 +39,7 @@ und
   b \approx (11.67\pm 0.1525)
 \end{equation*}
 %\newline
-Wird nun die Formel der Ausgleichsgeraden mit Formel(\autoref{eqn:expo}) zusammengeführt, ergibt sich daraus
+Wird nun die Formel der Ausgleichsgeraden mit (\ref{eqn:expo}) zusammengeführt, ergibt sich daraus
 \begin{equation*}
   m=-\frac{L}{R}
 \end{equation*}
@@ -48,56 +48,55 @@ Daraus folgt dann für die Verdampfungswärme L
 \begin{equation*}
   L = - m \cdot R
 \end{equation*}
-wobei R hier mit $R=8,314 \, J \cdot mol^{-1} \cdot K^{-1}$ als allgemeine Gaskonstante gegeben ist.
+wobei $R$ hier mit $R=\SI{8,314}{\joule\per\kelvin\mole}$ als allgemeine Gaskonstante gegeben ist.
 %\newline
-Eingesetzt ergibt sich für L dann
+Eingesetzt ergibt sich für $L$ dann
 \begin{equation*}
-  L = 367,66 \mathrm{\frac{J}{mol}}
+  L = \SI{367,66}{\joule\per\mole}
 \end{equation*}
 
 \noindent
 Die äußere Verdampfungswärme $L_{\text{a}}$ beschreibt hierbei die Energie, die benötigt wird, um das Volumen eines Mols der Flüssigkeit auf das Volumen eines Mols des Gases zu
 erhöhen. Hierfür muss die Volumenarbeit $W = pV$ erbracht werden. Diese wird mit der idealen Gasgleichung gleichgesetzt
 \begin{equation*}
-  W = L_a = p\cdot V = R \cdot T
+  W = L_{\text{a}} = p\cdot V = R \cdot T
 \end{equation*}
-woraus für eine Temperatur von T $= 373$K 
+woraus für eine Temperatur von T $= \SI{373}{\kelvin}$ 
 \begin{equation*}
-  L_a = 3,101 \cdot 10^3 \mathrm{\frac{J}{mol}}
+  L_{\text{a}} = \SI{3,101}{\joule\per\mole}  %3,101 \cdot 10^3 \mathrm{\frac{J}{mol}}
 \end{equation*}
 folgt.
 \newline
 Die, um die molekularen Bindungskräfte zu überwinden, benötigte innere Energie $L_{\text{i}}$ ergibt sich daraus zu
 \begin{equation*}
-  L_i = L - L_a = -2.733,34 \mathrm{\frac{J}{mol}}
+  L_{\text{i}} = L - L_{\text{a}} = \SI{-2,733}{\joule\per\mole}  %-2.733,34 \mathrm{\frac{J}{mol}}
 \end{equation*}
 %\newline
 Aufgrund dieses, wegen seines Vorzeichens offensichtlich falschen, Wertes wird auf eine division durch die Avogadrokonstante und anschließende Angabe in eV verzichtet.
 
 \subsection{Messung von 1 bis 15 bar}
-Im zweiten Schritt der Auswertung soll nun die Temperaturabhängigkeit der Verdampfungswärme L bestimmt werden. Hierzu wird die Clausius-Clapeyronsche Gleichung nach L umgestellt.
+Im zweiten Schritt der Auswertung soll nun die Temperaturabhängigkeit der Verdampfungswärme $L$ bestimmt werden. Hierzu wird die Clausius-Clapeyronsche Gleichung nach $L$ umgestellt.
 \begin{equation}
-  L = T(V_D - V_F)\frac{dp}{dT}
+  L = T(V_{\text{D}} - V_{\text{F}})\frac{\mathrm{d}p}{\mathrm{d}T}   %\frac{\mathrm{d}p}{\mathrm{d}T}
   \label{eqn:verdl}
 \end{equation}
 %\newline
 $V_{\text{F}}$ kann hierzu weiterhin vernachlässigt werden. $V_{\text{D}}$ hingegen kann in diesem Bereich des Drucks nicht mehr über die ideale Gasgleichung bestimmt werden.
 Eine genauere Nährung ist gegeben als 
 \begin{equation*}
-  \left(p+\frac{a}{V^2}\right)V = RT \, \, \mathrm{mit} \, \, a = 0,9 \mathrm{\frac{J \cdot m^3}{Mol^2}} 
+  \left(p+\frac{a}{V^2}\right)V = RT \, \, \mathrm{mit} \, \, a =  %0,9 \mathrm{\frac{J \cdot m^3}{Mol^2}} 
 \end{equation*}
 \begin{equation*}
-  \Leftrightarrow V_D = \frac{RT}{2p} \pm \sqrt{\frac{R^2T^2}{4p^2}-\frac{a}{p}}
+  \Leftrightarrow V_{\text{D}} = \frac{RT}{2p} \pm \sqrt{\frac{R^2T^2}{4p^2}-\frac{a}{p}}
 \end{equation*}
 %\newline
-Damit wird \autoref{eqn:verdl} zu
-\begin{equation*}
-  L = \frac{T}{p} \left(\frac{RT}{2} \pm \sqrt{\frac{R^2T^2}{4}-ap}\right)\frac{dp}{dT}
+Damit wird \ref{eqn:verdl} zu
+\begin{equation}
+  L = \frac{T}{p} \left(\frac{RT}{2} \pm \sqrt{\frac{R^2T^2}{4}-ap}\right)\frac{\mathrm{d}p}{\mathrm{d}T}. %\frac{\mathrm{d}p}{\mathrm{d}T}
   \label{eqn:verdl2}
-\end{equation*}
-%\newline
-Für die Bestimmung von $\frac{dp}{dT}$ muss ein Ausgleichspolynom 3.Grades für die Messwerte der Temperatur T und des Drucks p erstellt werden. Diese Messwerte sind in folgender
-Tabelle aufgetragen.
+\end{equation}
+Für die Bestimmung von $\frac{\mathrm{d}p}{\mathrm{d}T}$ muss ein Ausgleichspolynom 3.Grades für die Messwerte der Temperatur $T$ und des Drucks $p$ erstellt werden. 
+Diese Messwerte sind in \autoref{tab:werte1} aufgetragen.
 
 \begin{table}[H]
   \centering
@@ -105,7 +104,7 @@ Tabelle aufgetragen.
   \label{tab:werte1}
   \begin{tabular}{c c}
     \toprule
-    Sättigungsdampfdruck $\,/\,\si{\bar}$ & Temperatur $\,/\, \si{\celsius}$ \\
+    p $\,/\,\si{\bar}$ & t $\,/\, \si{\celsius}$ \\
     \midrule
     1 & 116 \\
     2 & 133 \\
@@ -132,17 +131,18 @@ Tabelle aufgetragen.
   \caption{Ausgleichsgerade für >1 bar}
   \label{fig:plot2}
 \end{figure}
+\newpage
 Das Ausgleichspolynom hat die Form
 \begin{center}
   $p(T)= A \cdot T^3 + b \cdot T^2 + c \cdot T + d$ \\
-  $\frac{dp}{dT} = 3a \cdot T^2 + 2b \cdot T + c$ \\
+  $\frac{\mathrm{d}p}{\mathrm{d}T} = 3a \cdot T^2 + 2b \cdot T + c$ \\
   $a = 1,0540 \cdot 10^{-5}$  \\
   $b = -1,1760 \cdot 10^{-2}$ \\
   $c = 4,4246$ \\
   $d = -5,6107 \cdot 10^2$ \\
 \end{center}
 %\newline
-$p(T)$ und $\frac{dp}{dT}$ werden nun in Formel \autoref{eqn:verdl2} eingesetzt:
+$p(T)$ und $\frac{\mathrm{d}p}{\mathrm{d}T}$ werden nun in Formel (\ref{eqn:verdl2}) eingesetzt:
 \begin{equation*}
   L = \frac{3A \cdot T^3 + 2b \cdot T^2 + cT}{A \cdot T^3 + b \cdot T^2 + c \cdot T + d} \left(\frac{RT}{2} \pm \sqrt{\frac{R^2T^2}{4}-a\cdot(A \cdot T^3 + b \cdot T^2 + c \cdot T + d)}\right)
 \end{equation*}
