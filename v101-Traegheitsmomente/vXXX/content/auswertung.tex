@@ -103,12 +103,8 @@ des Trägheitsmomentes der Drillachse $I_D$, wird eine lineare Regression der Fo
   T^2 = ba^2+c
 \end{equation}
 verwendet.
-Die Messwerte und die Regression sind in \autoref{fig:Plot} aufgetragen. Die Trägheitsmomente werden mit
-\begin{center}
-  $I_{\text{Stab}} = \frac{1}{12} ml^2 $ \\
-  $I_{\text{Zylinder}} = m (\frac{r^2}{4} +\frac{h^2}{12}) $ \\
-\end{center}
-berechnet (\cite{Anleitung}).
+Die Messwerte und die Regression sind in \autoref{fig:Plot} aufgetragen. Die Trägheitsmomente werden mit 
+(\ref{eqn:Istab}) und (\ref{eqn:Izylinder}) berechnet (\cite{Anleitung}).
 Die abgebildete lineare Regression der Form $ y = ax + b \,$ liefert die folgenden Werte
 \begin{center}
   $ a = 0,828 \pm 0,008254 \frac{\si{\s^2}}{\si{\m^2}}$, \\
@@ -193,12 +189,12 @@ und
 \begin{center}
   $ T_{\text{Kugel}} = 1,6965 \pm 0,01289 \si{\second} $
 \end{center}
-Durch die Gauß'scher Fehlerfortpflanzung \ref{eqn:Fehlerfortpflanzung}
+Durch die Gauß'scher Fehlerfortpflanzung %\ref{eqn:Fehlerfortpflanzung}
 \begin{equation}
   \Delta I = \sqrt{ (\frac{2DT}{4\pi^2})^2  (\Delta T)^2 + (\frac{T^2}{4\pi^2})^2 (\Delta D)^2}
   \label{eqn:Fehlerfortpflanzung}
 \end{equation}
-ergeben sich die Trägheitsmomente zu
+ergeben sich die Trägheitsmomente mit (\ref{eqn:periode}) zu
 \begin{center}
   $ I_{\text{Zylinder}} = (5,685 \pm 0,6501) \cdot 10^{-3} \si{\kilogram\meter^2} $ 
 \end{center}
@@ -243,7 +239,7 @@ Trägheitsmomente auszurechnen.
   \end{tabular}
 \end{table}
 
-\autoref{tab:durchmesser} sind die Messwerte zu den Durchmessern der einzelnen Körperteile zu entnehmen. Als Mittelwerte ergiben sich dadurch
+Der \autoref{tab:durchmesser} sind die Messwerte zu den Durchmessern der einzelnen Körperteile zu entnehmen. Als Mittelwerte ergiben sich dadurch
 \begin{align*}
   d_{\text{Arm}} &= (14,28 \pm 2,0094)\: \si{\centi\meter}, \\
   d_{\text{Kopf}} &= (24,24 \pm 6,0566)\: \si{\centi\meter}, \\
@@ -258,7 +254,7 @@ Die Längen der Körperteile sind
   l_{\text{Torso}} &= \SI{0,0657}{\meter}, \\
   l_{\text{Unterarm}} &= \SI{0,0164}{\meter}. \\
 \end{align*}
-Das Volumen eines Zylinders ist gegeben durch \autoref{eqn:Volumen} mit Fehlerfortpflanzung
+Das Volumen eines Zylinders ist gegeben durch \autoref{eqn:Volumen} mit der Fehlerfortpflanzung
 \begin{align*}
   \Delta V = \sqrt{(2 \pi Lr)^2 (\Delta r)^2}
 \end{align*}
@@ -289,7 +285,7 @@ Damit ergeben sich die theoretischen Trägheitsmomente für die erste Stellung  
   I_{\text{Kopf}} &= 0.715769 \si{\kilogram\meter^2}, \\
   I_{\text{Bein}} &= 0.127145 \si{\kilogram\meter^2}, \\
   I_{\text{Torso}} &= 0.229718 \si{\kilogram\meter^2}, \\
-  I_{\text{Puppe}} &= 2.60682 \si{\kilogram\meter^2}. \\
+  I_{\text{Gesamt,1}} &= 2.60682 \si{\kilogram\meter^2}. \\
 \end{align*}
 Analog ergeben sich die theoretischen Trägheitsmomente für die zweite Stellung mit \autoref{eqn:steiner} zu
 \begin{align*}
@@ -297,7 +293,7 @@ Analog ergeben sich die theoretischen Trägheitsmomente für die zweite Stellung
   I_{\text{Kopf}} &= 0.715769 \si{\kilogram\meter^2}, \\
   I_{\text{Bein}} &= 1.20679 \si{\kilogram\meter^2}, \\ 
   I_{\text{Torso}} &= 0.229718 \si{\kilogram\meter^2}, \\
-  I_{\text{Puppe}} &= 4.76611 \si{\kilogram\meter^2}. \\
+  I_{\text{Gesamt,2}} &= 4.76611 \si{\kilogram\meter^2}. \\
 \end{align*}
 Das Verhältnis der Trägheitsmomente der beiden Stellungen zueinander ist somit
 \begin{align*}
@@ -352,18 +348,3 @@ Das Verhältnis der Trägheitsmomente der beiden Stellungen zueinander ist somit
 %Das entspricht einer Abwertung des experimentellen Wertes von dem Theoriewert um $41.33 \%$ für die erste Stellung und
 %$37.49 \%$ für die zweite Stellung.
 
-\newpage
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=0.75\textwidth]{Bilder/daten1.jpg}
-  \caption{Originale Messdaten.}
-  \label{fig:daten1}
-\end{figure}
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=0.75\textwidth]{Bilder/daten2.jpg}
-  \caption{Originale Messdaten.}
-  \label{fig:daten2}
-\end{figure}
