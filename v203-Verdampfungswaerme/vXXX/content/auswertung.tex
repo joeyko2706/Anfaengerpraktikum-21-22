@@ -32,11 +32,11 @@ Die Ausgleichsgerade hat die Form
 %\newline
 Die Parameter und ihre Unsicherheiten wurden mit Python berechnet und haben die ungefähren Werte
 \begin{equation*}
-  m \approx (-44.22\pm 0.4924)
+  m = (-44.22\pm 0.4924) \si{\kelvin}
 \end{equation*}
 und
 \begin{equation*}
-  b \approx (11.67\pm 0.1525)
+  b = (11.67\pm 0.1525).
 \end{equation*}
 %\newline
 Wird nun die Formel der Ausgleichsgeraden mit (\ref{eqn:expo}) zusammengeführt, ergibt sich daraus
@@ -84,7 +84,7 @@ Im zweiten Schritt der Auswertung soll nun die Temperaturabhängigkeit der Verda
 $V_{\text{F}}$ kann hierzu weiterhin vernachlässigt werden. $V_{\text{D}}$ hingegen kann in diesem Bereich des Drucks nicht mehr über die ideale Gasgleichung bestimmt werden.
 Eine genauere Nährung ist gegeben als 
 \begin{equation*}
-  \left(p+\frac{a}{V^2}\right)V = RT \, \, \mathrm{mit} \, \, a =  %0,9 \mathrm{\frac{J \cdot m^3}{Mol^2}} 
+  \left(p+\frac{a}{V^2}\right)V = RT \, \, \mathrm{mit} \, \, a =  0,9 \mathrm{\frac{J \cdot m^3}{Mol^2}} 
 \end{equation*}
 \begin{equation*}
   \Leftrightarrow V_{\text{D}} = \frac{RT}{2p} \pm \sqrt{\frac{R^2T^2}{4p^2}-\frac{a}{p}}
@@ -136,13 +136,30 @@ Das Ausgleichspolynom hat die Form
 \begin{center}
   $p(T)= A \cdot T^3 + b \cdot T^2 + c \cdot T + d$ \\
   $\frac{\mathrm{d}p}{\mathrm{d}T} = 3a \cdot T^2 + 2b \cdot T + c$ \\
-  $a = 1,0540 \cdot 10^{-5}$  \\
-  $b = -1,1760 \cdot 10^{-2}$ \\
-  $c = 4,4246$ \\
-  $d = -5,6107 \cdot 10^2$ \\
+  $A = 1,0540 \cdot 10^{-5} \si{\pascal\per\kelvin^3} $  \\
+  $b = -1,1760 \cdot 10^{-2} \si{\pascal\per\kelvin^2} $ \\
+  $c = 4,4246 \si{\pascal\per\kelvin} $ \\
+  $d = -5,6107 \cdot 10^2 \si{\pascal} $ \\
 \end{center}
 %\newline
 $p(T)$ und $\frac{\mathrm{d}p}{\mathrm{d}T}$ werden nun in Formel (\ref{eqn:verdl2}) eingesetzt:
 \begin{equation*}
   L = \frac{3A \cdot T^3 + 2b \cdot T^2 + cT}{A \cdot T^3 + b \cdot T^2 + c \cdot T + d} \left(\frac{RT}{2} \pm \sqrt{\frac{R^2T^2}{4}-a\cdot(A \cdot T^3 + b \cdot T^2 + c \cdot T + d)}\right)
 \end{equation*}
+
+\noindent
+Der Graph von L ist aufgetrgen in \autoref{fig:plot3} für eine Addition und in \autoref{fig:plot4} für eine Subtraktion der Wurzel.
+
+\begin{figure}
+  \centering
+  \includegraphics{plot3.pdf}
+  \caption{Genäherte Funktion für L mit addierter Wurzel}
+  \label{fig:plot3}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics{plot4.pdf}
+  \caption{Genäherte Funktion für L mit subtrahierter Wurzel}
+  \label{fig:plot4}
+\end{figure}

@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 from scipy.optimize import curve_fit
+import scipy.constants as const
 import numpy as np
 
 #x = np.linspace(0, 10, 1000)
@@ -71,3 +72,33 @@ plt.grid()
 plt.legend()
 plt.savefig('build/plot2.pdf')
 
+
+R = const.gas_constant
+a = 0.9
+ga = 0.000010540
+b = -0.011760
+c = 4.4246
+d = -561.07
+T = T + 273.15
+
+x= np.linspace(T[-1],T[0],1000)
+
+def L(x,ga,b,c,d):
+    return ((((R*x)/2)+np.sqrt(((R**2*x**2)/2)-a*(ga*x**3+b*x**2+c*x+d)))*((3*ga*x**3+2*b*x**2+c*x)/(ga*x**3+b*x**2+c*x+d)))
+
+plt.figure()
+plt.plot(x, L(x,ga,b,c,d), label='Genäherte Funktion für L')
+plt.xlabel("T [K]")
+plt.ylabel("L [J/mol]")
+plt.savefig('build/plot3.pdf')
+
+
+
+def K(x,ga,b,c,d):
+    return ((((R*x)/2)-np.sqrt(((R**2*x**2)/2)-a*(ga*x**3+b*x**2+c*x+d)))*((3*ga*x**3+2*b*x**2+c*x)/(ga*x**3+b*x**2+c*x+d)))
+
+plt.figure()
+plt.plot(x, K(x,ga,b,c,d), label='Genäherte Funktion für L')
+plt.xlabel("T [K]")
+plt.ylabel("L [J/mol]")
+plt.savefig('build/plot4.pdf')
