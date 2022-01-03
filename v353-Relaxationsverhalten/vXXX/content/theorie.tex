@@ -1,4 +1,87 @@
 \section{Theorie}
 \label{sec:Theorie}
 
+\subsection{Allgemeine Relaxationsgleichung}
+Wenn ein System aus seinem Ausgangszustand ausgelenkt und ohne jegliche Oszillation in denselben zurückkehrt, treten Relaxationserscheinungen auf. Diese lassen sich durch
+eine Differentialgleichung der Form
+\begin{equation}
+    \label{eqn:dA/dt}
+    \frac{\symup{d}A}{\symup{d}t} = c[A(t)-A(\infty)],
+\end{equation}
+für die Änderungsgeschwindigkeit einer allgemeinen Größe A beschreiben.
+Durch Umformung folgt daraus
+\begin{equation}
+    \label{eqn:AllgemeineRelaxationsgleichung}
+    A(t)=A(\infty)+[A(t)-A(\infty)]e^{ct}.
+\end{equation}
+
+
+\subsection{Entladekurve eines Kondensators}
+Die Spannung $U_C$, die aufgrund der Ladung $Q$ am Kondensator anliegt, ist durch die Kapazität $C$ bestimmt als
+\begin{equation*}
+    U_C=\frac{Q}{C}.
+\end{equation*}
+Der Strom $I$, der aufgrund der Ladungsdifferenz durch den Widerstand $R$ fließt, ist nach dem Ohm'schen Gesetz gegeben als
+\begin{equation*}
+    I=\frac{U_C}{R}.
+\end{equation*}
+Dadurch ist die zeitliche Änderung der Ladung auf dem Kondensator bestimmt als
+\begin{equation*}
+    \symup{d}Q=-I\symup{d}t
+\end{equation*}
+Aus diesen Bezügen ergibt sich die DGL
+\begin{equation}
+    \label{eqn:dQ/dt}
+    \frac{\symup{d}Q}{\symup{d}t}=-\frac{Q(t)}{RC},
+\end{equation}
+die verglichen mit \autoref{eqn:dA/dt} eine hohe Ähnlichkeit aufweist. Da der Grenzwert $Q(\infty)$ nicht zu erreichen ist, kann er vernachlässigt werden und die Lösung
+der DGL ist somit gegeben durch
+\begin{equation}
+    \label{eqn:Entladung}
+    Q(t)=Q(0)e^{-\frac{t}{RC}}.
+\end{equation}
+
+
+\subsection{Relaxationsverhalten bei angelegten Wechselspannungen}
+Im Allgemeinen ist Wechselspannung definiert durch die Funktion
+\begin{equation*}
+    U(t)=U_0 \cdot cos(\omega t).
+\end{equation*}
+Da eine Phasenverschiebung zwischen der eingehenden Spannung des Sinusgenerators und der verzögerten Spannung des Kondensators entsteht,
+ist die ausgehende Spannung bestimmt als
+\begin{equation*}
+    U_{C}(t)=A(\omega)\cdot cos(\omega t +\varphi),
+\end{equation*}
+wobei $A$ die Kondensatorspannungsamplitude beschreibt.
+Des Weiteren gilt
+\begin{equation}
+    \label{eqn:I(t)}
+    I(t)=\frac{\symup{d}Q}{\symup{d}t}=C\frac{\symup{d}U_C}{\symup{d}t}.
+\end{equation}
+Durch die Kirchhoffschen Gesetzen gilt für den RC-Kreis
+\begin{equation}
+    \label{eqn:Kirchhoff}
+    U(t)=U_{R}(t)+U_{C}(t).
+\end{equation}
+Aus den vorherigen Formeln \autoref{eqn:dQ/dt}, \autoref{eqn:I(t)} und \autoref{eqn:Kirchhoff} erhält man mit weiteren Umformungen
+\begin{equation}
+    \label{eqn:Amplitude}
+    A(\omega)=\frac{U_0}{\sqrt{1+\omega^2 R^2 C^2}}.
+\end{equation}
+
+
+\subsection{Integrationsverhalten des RC-Kreises}
+Ein RC-Kreis kann nur dann als Integrator funktionieren, wenn $\omega >> \frac{1}{RC}$ gilt.
+Hierzu lässt sich Gleichung \autoref{eqn:Kirchhoff} umschreiben zu
+\begin{align*}
+    U(t)&=R \cdot I(t)+U_{C}(t)\\
+        &=RC\cdot \frac{\symup{d}U_{C}(t)}{dt}+U_{C}(t).
+\end{align*}
+Unter Berücksichtigung der Bedingung $\omega >>\frac{1}{RC}$ wird die Gleichung gelöst zu
+\begin{equation}
+    \label{eqn:Kondensatorspannung}
+    U_{C}(t)=\frac{1}{RC}\int_{0}^{t} U(t')\symup{d}t'.
+\end{equation}
+
+
 \cite{sample}
