@@ -1,10 +1,17 @@
 \section{Auswertung}
 \label{sec:Auswertung}
 
-Aus \autoref{tab:wertea} sind die Messwerte zu Aufgabenteil a) zu entnehmen.
+\subsection{Messung der Zeitkonstanten $RC$ über die Entladekurve}
+Die in Aufgabenteil a) verwendete Frequenz beträgt $\SI{420}{\hertz}$. Aus dem Zusammenhang für den Entladevorgang eines Kondenators folgt
+\begin{align}
+    \symup{ln}(\frac{U}{U_{0}}) = -\frac{1}{RC}\cdot t.
+\end{align}
+Mithilfe von numpy \cite{numpy} und matplotlib \cite{matplotlib} werden die Messwerte, die
+\autoref{tab:wertea} zu entnehmen sind, halblogarithmisch geplottet und es wird eine Regressionsgerade erstellt.
+
 \begin{table}[H]
     \centering
-    \caption{Messwerte zur Wheatstone MessbrückeAufgabe a.}
+    \caption{Messwerte zu Aufgabe a).}
     \label{tab:wertea}
     \begin{tabular}{c c}
         \toprule
@@ -46,6 +53,32 @@ Aus \autoref{tab:wertea} sind die Messwerte zu Aufgabenteil a) zu entnehmen.
     \end{tabular}
 \end{table}
 
+\begin{figure}[H]
+    \centering
+    \includegraphics{build/plota.pdf}
+    \caption{Halblogarithmischer Plot zu Aufgabenteil a) mit Ausgleichsgerade.}
+    \label{fig:plot_a}
+  \end{figure}
+
+Die Parameter der Ausgleichsgeraden vom Typ $\symup{ln}(\frac{U}{U_{0}}) = m \cdot t + b$ werden zu
+\begin{align*}
+    m = \SI{-1.4187}{\per\milli\second},
+    b = 1.5456
+\end{align*}
+ermittelt, wodurch sich eine Zeitkonstante $RC$ von 
+\begin{align*}
+    RC = \SI{704.8707}{\per\second}
+\end{align*}
+ergibt.
+
+\subsection{Bestimmen der Zeitkonstanten $RC$ über die Frequenzabhängigkeit der Amplitude}
+
+
+
+
+\begin{align*}
+    RC = \SI{1883.9199}{\per\second}
+\end{align*}
 Aus \autoref{tab:wertebc} sind die Messwerte zu Aufgabenteil b) und c) zu entnehmen.
 \begin{table}[H]
     \centering

@@ -1,6 +1,13 @@
 import matplotlib as mpl
 import matplotlib.pyplot as plt
 import numpy as np
+import uncertainties as unp
+from scipy import stats
+from scipy.optimize import curve_fit
+import uncertainties.unumpy as unp
+from uncertainties.unumpy import (nominal_values as noms,
+                                  std_devs as stds)
+import numpy as np
 mpl.rcParams.update({
 'font.family': 'serif',
 'text.usetex': True,
@@ -9,12 +16,9 @@ mpl.rcParams.update({
 'pgf.preamble': r'\usepackage{unicode-math}\usepackage{siunitx}',
 })
 
+print(r'Plots werden durchgegangen')
+
 daten = np.genfromtxt('../Dateien/Aufgabea.txt', delimiter=';', names=True)
-#print(daten['U'])
-#print(daten['t'])
-#x1 = np.array([0.55, 0.50, 0.44, 0.40, 0.36, 0.32, 0.26, 0.24, 0.18, 0.12, 0.10, 0.04, -0.04, -0.06, -0.10, -0.14, -0.16, -0.18, -0.22, -0.24, -0.28, -0.30, -0.32, -0.34, -0.38, -0.40, -0.42, -0.44, -0.46, -0.48, -0.50])
-#x = np.log(x1)
-#y = np.array([0.00, 0.02, 0.04, 0.05, 0.06, 0.08, 0.10, 0.12, 0.14, 0.16, 0.18, 0.20, 0.24, 0.26, 0.28, 0.30, 0.32, 0.34, 0.36, 0.38, 0.40, 0.42, 0.44, 0.46, 0.48, 0.50, 0.52, 0.54, 0.56, 0.58, 0.60])
 
 x1 = daten['U'] +2.5
 x = np.log(x1)
@@ -25,7 +29,8 @@ Delta = N * np.sum(x**2) - (np.sum(x))**2
 
 A = (N * np.sum(x * y) - np.sum(x) * np.sum(y)) / Delta
 B = (np.sum(x**2) * np.sum(y) - np.sum(x) * np.sum(x * y)) / Delta
-
+#print('Steigung für Aufgabenteil a) beträgt:', A)
+#print('y-Achsenabschnitt für Aufgabenteil a) beträgt:', B)
 
 #plt.plot(daten['U'], daten['t'], 'r.')
 plt.plot(x, y, 'r.', label = 'Messwerte')
@@ -41,65 +46,75 @@ plt.clf()
 #Aufgabe b) und c)
 
 data = np.genfromtxt('../Dateien/Aufgabebc.txt', delimiter=';', names=True)
-#print(data['f'])
-#print(data['A1'])
-#print(data['A2'])
-#print(data['a'])
-#print(data['b'])
+relAmp = data['A2']/data['A1']
+w = 2*np.pi*data['f']
+#print('Relativamplitude beträgt:', relAmp)
 
+def f1(w,c):
+    return 1/(np.sqrt(1+(w**2 * c**2)))
 
+plt.plot(w, relAmp, 'r.', label = 'Messwerte')
+#plt.plot(data['f'], A1*data['f'] + B1, 'b', label='lineare Regression')
 
-#Amplitude A1!
-
-#plt.plot(data['f'], data['A1'], 'r.', label = r'Amplitude $A_1 \:/\:$ V')
-#plt.xlabel(r'$f \:/\:$ kHz')
-#plt.ylabel(r'Amplitude $A_1 \:/\:$ V')
-#plt.tight_layout(pad=0, h_pad=1.08, w_pad=1.08)
-#plt.savefig('build/plotbc1.pdf')
-#plt.clf()
-
-
-#Amplitude A2!
-
-x2 = np.log(data['f'])
-y = np.log(data['A2'])
-N = len(data['A2'])
-Delta = N * np.sum(data['f'] **2) - (np.sum(data['f']))**2
-
-A1 = (N * np.sum(data['f'] * y) - np.sum(data['f']) * np.sum(y)) / Delta
-B1 = (np.sum(data['f']**2) * np.sum(y) - np.sum(data['f']) * np.sum(data['f'] * y)) / Delta
-
-plt.plot(data['f'], y, 'r.', label = 'Messwerte')
-plt.plot(data['f'], A1*data['f'] + B1, 'b', label='lineare Regression')
+parameters, pcov = curve_fit(f1, w , data['A2']/4.2, sigma=None, p0=0)
+RC_B=unp.uarray(parameters,pcov)
+#print(f'RC_b = {RC_B*10**6} [\mu s]')
+#print(f'RC_b = {parameters*10**3} [\mu s]')
+#plt.xscale('log')
+xx = np.linspace(w[0], w[19], 20)
+plt.plot(xx, f1(xx,*parameters), 'b', label='Fit')
 plt.legend()
 plt.xlabel(r'$f \:/\:$ kHz')
-plt.ylabel(r'Amplitude $A_2 \:/\:$ V')
+plt.ylabel(r'$A/U_0$')
 plt.tight_layout(pad=0, h_pad=1.08, w_pad=1.08)
-plt.savefig('build/plotbc2.pdf')
+
+plt.savefig('build/plotb.pdf')
 plt.clf()
 
 
+#Plot zu Aufgabenteil c)
 
-
-phi = 360 * (data['a'] *10**(-3)) / (data['b'] *10**(-3))
-N = len(phi)
-Delta = N * np.sum(data['f'] **2) - (np.sum(data['f']))**2
-A2 = (N * np.sum(data['f'] * phi) - np.sum(data['f']) * np.sum(phi)) / Delta
-B2 = (np.sum(data['f']**2) * np.sum(phi) - np.sum(data['f']) * np.sum(data['f'] * phi)) / Delta
-
-plt.plot(data['f'], phi, 'r.', label = 'Messwerte')
-#plt.plot(data['f'], A2*data['f'] + B2, 'b', label='lineare Regression')
+phi =  data['a']/data['b']
+#print(phi)
+plt.plot(data['f'], phi, '*', color = 'dodgerblue', label = r'Messwerte')
 plt.legend()
 plt.xlabel(r'$f \:/\:$ kHz')
 plt.ylabel(r'$\varphi(f)$')
-#plt.ylabel(r'$a \:/\:$ ms')
 plt.tight_layout(pad=0, h_pad=1.08, w_pad=1.08)
-plt.savefig('build/plotbc3.pdf')
+plt.savefig('build/plotc.pdf')
 plt.clf()
 
-#plt.plot(data['f'], data['b'], 'r.', label = r'$b \:/\:$ ms')
-#plt.xlabel(r'$f \:/\:$ kHz')
-#plt.ylabel(r'$b \:/\:$ ms')
-#plt.tight_layout(pad=0, h_pad=1.08, w_pad=1.08)
-#plt.savefig('build/plotbc4.pdf')
-#plt.clf()
+
+
+#Theorieplot
+x = np.linspace(3,60,200)
+xx = np.linspace((np.e)**5, (np.e)**14, 10000)
+a=0.3
+plt.plot(x, np.arctan(x*a-1.8), label = r'Theoriekurve')
+plt.legend()
+plt.xlabel(r'$f \:/\:$ kHz')
+plt.ylabel(r'$\varphi(f)$')
+plt.savefig('build/Theorieplot.pdf')
+plt.clf()
+
+#Polarplot
+phi2 = np.linspace(0.0, (np.pi)/2.0, 20)
+plt.polar(phi, data['A2'], '*', color = 'darkviolet', label = r'Messwerte')
+plt.polar(phi2, np.cos(phi2), color='navy', label = r'Theoriekurve')
+plt.legend(loc='best')
+plt.tight_layout(pad=0, h_pad=1.08, w_pad=1.08)
+plt.savefig('build/plotd.pdf')
+plt.clf()
+
+
+
+
+#fig = plt.figure()
+#ax1 = plt.subplot(121, projection = 'polar')
+#ax2 = plt.subplot(122, projection='polar')
+#
+#ax1.scatter(phi, data['A2'], '*', color = 'darkviolet', label = r'Messwerte')
+#ax2.scatter(phi2, np.cos(phi2), color='navy', label = r'Theoriekurve')
+#plt.show()
+
+print('Fertig')
