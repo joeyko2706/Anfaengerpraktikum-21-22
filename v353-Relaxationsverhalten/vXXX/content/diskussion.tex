@@ -1,2 +1,28 @@
 \section{Diskussion}
 \label{sec:Diskussion}
+
+Es ist anzumerken, dass der erste Messwert aus \autoref{fig:daten2} nicht übernommen wurde, da er zu sehr von den anderen Messwerten anweicht,
+als dass angenommen werden könnte er sei korrekt gemessen worden.
+Mit den unterschiedlichen Messverfahren ergibt sich die Zeitkonstante $RC$ jeweils zu 
+\begin{align*}
+    RC_1 = \SI{1.4357}{\per\second}, \\
+    RC_2 = \SI{1.8839}{\per\second}. \\
+\end{align*}
+Die beiden Zeitkonstanten weichen dabei nur um $23,79 \:\%$ voneinander ab, was für solch ungenaue Messmethoden sehr gut ist.
+Grund für die Abweichung ist die Messapparatur, welche keine konstante Amplitude anzeigen, oder erzeugen konnte.
+Ein weiterer Grund für die Abweichung ist, dass jeder Wert manuell von einem analogen Oszilloskop abgelesen wird. Durch ein digitales 
+Oszilloskop, welches automatisch die Amplituden ablesen kann, würde die Messwerte verbessern.
+Qualitativ ist die Theorie des Tiefpasses als teilweise verifiziert anzusehen, da der Verlauf der Spannung, wie in der Theorie beschrieben,
+durch die \autoref{fig:plot_} und \autoref{fig:Plotb} dargestellt werden.
+
+Aus den vorhandenen Messwerten war es nicht möglich die Zeitkonstante $RC_3$ zu bestimmen. Grund dafür ist wahrscheinlich ein Defekt
+beim Messgerät. Dies macht es unmöglich Informationen aus den Messwerten zu ziehen. So ist aus der Phasenverschiebung kein deutliches Bild
+abzulesen, sollte nach der Theorie ähnlich \autoref{fig:theoriepl} herauskommen.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\textwidth]{build/Theorieplot.pdf}
+    \caption{Theoriekurve nach (\ref{eqn:phasev}) mit $RC=\SI{1,6}{\per\second}$.}
+    \label{fig:theoriepl}
+\end{figure}
+
+Die Theorie des RC-Kreises als Integrator wird durch \autoref{subsec:integr} ebenfalls verifiziert.

@@ -1,13 +1,14 @@
 \section{Auswertung}
 \label{sec:Auswertung}
 
+\DeclareSIUnit{\rad}{rad}
 \subsection{Messung der Zeitkonstanten $RC$ über die Entladekurve}
 Die in Aufgabenteil a) verwendete Frequenz beträgt $\SI{420}{\hertz}$. Aus dem Zusammenhang für den Entladevorgang eines Kondenators folgt
 \begin{align}
     \symup{ln}(\frac{U}{U_{0}}) = -\frac{1}{RC}\cdot t.
 \end{align}
 Mithilfe von numpy \cite{numpy} und matplotlib \cite{matplotlib} werden die Messwerte, die
-\autoref{tab:wertea} zu entnehmen sind, halblogarithmisch geplottet und es wird eine Regressionsgerade erstellt.
+\autoref{tab:wertea} zu entnehmen sind, halblogarithmisch in \autoref{fig:plot_a} geplottet und es wird eine Regressionsgerade erstellt.
 
 \begin{table}[H]
     \centering
@@ -60,35 +61,29 @@ Mithilfe von numpy \cite{numpy} und matplotlib \cite{matplotlib} werden die Mess
     \label{fig:plot_a}
   \end{figure}
 
-Die Parameter der Ausgleichsgeraden vom Typ $\symup{ln}(\frac{U}{U_{0}}) = m \cdot t + b$ werden zu
+Die Parameter der Ausgleichsgeraden vom Typ $\symup{ln}(\frac{U}{U_{0}}) = m \cdot t + b$ werden zu den folgenden Werten ermittelt
 \begin{align*}
-    m = \SI{-1.4187}{\per\milli\second},
-    b = 1.5456
+    m = \SI{-0.6965}{\per\milli\second}, \\
+    b = 1.0870. \\
 \end{align*}
-ermittelt, wodurch sich eine Zeitkonstante $RC$ von 
+Dadrch ergibt sich eine Zeitkonstante $RC$ von 
 \begin{align*}
-    RC = \SI{704.8707}{\per\second}
+    RC = \SI{1.4357}{\per\second}.
 \end{align*}
-ergibt.
+
+
 
 \subsection{Bestimmen der Zeitkonstanten $RC$ über die Frequenzabhängigkeit der Amplitude}
-
-
-
-
-\begin{align*}
-    RC = \SI{1883.9199}{\per\second}
-\end{align*}
+Im folgenden Versuch wurden die Amplituden in einem Frequenzbereich von $\SI{3}{\kilo\hertz}$ bis $\SI{60}{\kilo\hertz}$ gemessen.
 Aus \autoref{tab:wertebc} sind die Messwerte zu Aufgabenteil b) und c) zu entnehmen.
 \begin{table}[H]
     \centering
-    \caption{Messwerte zu Aufgabe c) und b).}
+    \caption{Messwerte zu Aufgabe b) und c).}
     \label{tab:wertebc}
     \begin{tabular}{c c c c c}
         \toprule
         $f \:/\:\si{\kilo\hertz}$ & $A_1 \:/\: \si{\volt}$ & $A_1 \:/\: \si{\volt}$ & $a \:/\: \si{\milli\second}$ & $b \:/\: \si{\milli\second}$ \\
         \midrule
-        0,2627 & 4,4 & 2,4000 & 0,0350 & 2,5500 \\
         3,085 & 4,2 & 0,1100 & 0,0300 & 0,1800 \\
         6 & 4,2 & 0,0600 & 0,0240 & 0,0680 \\
         9 & 4,2 & 0,0480 & 0,0180 & 0,070 \\
@@ -114,48 +109,82 @@ Aus \autoref{tab:wertebc} sind die Messwerte zu Aufgabenteil b) und c) zu entneh
 \end{table}
 
 
-Aus \autoref{fig:entladekurve} ist eine Abbildung der Entladekurve auf einem Oszilloskop zu entnehmen.
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.75\textwidth]{Dateien/entladekurve.jpeg}
-    \caption{Entladekurve.}
-    \label{fig:entladekurve}
+    \includegraphics[width=0.75\textwidth]{build/plotb.pdf}
+    \caption{Frequenzabhängiges Amplitudenverhältnis.}
+    \label{fig:Plotb}
 \end{figure}
+Aus (\ref{eqn:Amplitude}) ergibt sich ein Zusammenhang für die Ausgleichsrechnung der Zeitkonstanten $RC$
+\begin{align}
+    \frac{A(\omega)}{U_0} = \frac{1}{\sqrt{1+\omega^2R^2C^2}}.
+    \label{eqn:ausgl}
+\end{align}
+Aus \autoref{fig:Plotb} ist die graphische Abbildung der Messwerte aus \autoref{tab:wertebc} zu entnehmen, wodurch mithilfe der Python
+Erweiterungen matplotlib \cite{matplotlib}, numpy \cite{numpy} und scipy \cite{scipy} die Zeitkonstanten $RC$ bestimmt wird.
+Es folgt eine Zeitkonstante von
+\begin{align*}
+    RC = \SI{1.8839}{\per\second}.
+\end{align*}
 
-Aus \autoref{fig:d.1}, \autoref{fig:d.2} und \autoref{fig:d.3} sind die Messwerte zu Aufgabenteil d) zu entnehmen.
+\subsection{Phasenverschiebung des RC-Kreises}
+Ein Zusammenhang zwischen der Phasenverschiebung von $U_{\text{C}}$ und $U_0$ und der Frequenz der Spannungsquelle wird durch
+die folgende Gleichung beschrieben
+\begin{align}
+    \varphi(\omega) = -\arctan{-\omega\cdot RC}.
+    \label{eqn:phasev}
+\end{align}
+Dabei wird die Phase über $\varphi = 2\pi\frac ab$ bestimmt. Die Messwerte sind \autoref{tab:wertebc} zu entnehmen.
+Das Wertepaar $\{f\,[\si{\hertz}], \varphi(\omega)\, [\si{\rad}]\}$ wird in \autoref{fig:plotc} dargestellt.
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.75\textwidth]{Dateien/d.1.jpeg}
-    \caption{Messdaten zu Aufgabenteil d).}
-    \label{fig:d.1}
+    \includegraphics[width=0.75\textwidth]{build/plotc.pdf}
+    \caption{Graphische Darstellung der Phasenverschiebung.}
+    \label{fig:plotc}
 \end{figure}
+Es ist jedoch nicht möglich aus den gemessenen Werten eine Zeitkonstante $RC$ zu bestimmen, worauf näher in \autoref{sec:Diskussion}
+eingegangen wird.
 
+Die Werte werden zusätzlich in einem Polarplot in \autoref{fig:plotd} visualisiert, aus dem sich aus denselben Gründen 
+keine Informationen entnehmen lassen.
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.75\textwidth]{Dateien/d.2.jpeg}
-    \caption{Messdaten zu Aufgabenteil d).}
-    \label{fig:d.2}
+    \includegraphics[width=0.75\textwidth]{build/plotd.pdf}
+    \caption{Polarplot zu der Phasenverschiebung $\varphi$.}
+    \label{fig:plotd}
 \end{figure}
 
+\subsection{RC-Kreis als Integrator}
+\label{subsec:integr}
+Aus \autoref{subsec:int} folgt, dass ein RC-Kreis auch als Integrator dienen kann.
+Für eine Rechteckspannung mit konstanten Spannungsabschnitten ist eine Stammfunktion mit einem linearen Spannungsbild zu erwarten.
+In \autoref{fig:d.3} ist ebendies dargestellt.
+Bei einer angelegten Dreiecksspannung mit linearem Verlauf ist ein quadratischer Spannungsverlauf zu erwarten.
+Durch den zeitlichen Verlauf ergibt sich somit eine sinusförmiger Spannungsverlauf, wie er in \autoref{fig:d.2} dargestellt ist.
+Durch Integration einer Sinusspannung der Form 
+\begin{align*}
+    f(\omega) = \sin{\omega t},
+\end{align*}
+ist eine Cosinunsspannung der Form
+\begin{align*}
+    f(\omega) = \frac{1}{\omega} \cos{\omega t}
+\end{align*}
+zu erwarten, was in \autoref{fig:d.1} abgebildet wird.
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.75\textwidth]{Dateien/d.3.jpeg}
-    \caption{Messdaten zu Aufgabenteil d).}
+    \caption{Angelegte Rechteckspannung am RC-Kreis.}
     \label{fig:d.3}
 \end{figure}
-
-
-%%%     Originale Messwerte
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.75\textwidth]{Dateien/daten1.jpg}
-    \caption{Originale Messdaten zu Aufgabenteil a).}
-    \label{fig:daten1}
+    \includegraphics[width=0.75\textwidth]{Dateien/d.2.jpeg}
+    \caption{Angelegte Dreiecksspannung am RC-Kreis.}
+    \label{fig:d.2}
 \end{figure}
-
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.75\textwidth]{Dateien/daten2.jpg}
-    \caption{Originale Messdaten zu Aufgabenteil b) und c).}
-    \label{fig:daten2}
+    \includegraphics[width=0.75\textwidth]{Dateien/d.1.jpeg}
+    \caption{Angelegte Sinusspannung am RC-Kreis.}
+    \label{fig:d.1}
 \end{figure}
