@@ -8,9 +8,9 @@ Durch die angegebenen relativen Fehler der Bauteile ist die Gauß'sche Fehlerfor
 \end{align*}
 zu
 \begin{align*}
-  \Delta z = \bar{z}\sqrt{(\Delta x)^2 + (\Delta y)^2}    
+  \upDelta z = \bar{z}\sqrt{(\Delta x)^2 + (\upDelta y)^2}    
 \end{align*}
-zu bestimmen, wobei $\bar{z}$ der Mittelwert und $\Delta x$ und $\Delta y$ die relativen Fehler sind.
+zu bestimmen, wobei $\bar{z}$ der Mittelwert und $\upDelta x$ und $\upDelta y$ die relativen Fehler sind.
 
 
 \subsection{Wheatstone'sche Messbrücke}
@@ -77,7 +77,7 @@ mit relativen Fehlern
 In \autoref{tab:wertec} sind die Messwerte zur Induktivitätsmessbrücke aufgetragen.
 \begin{table}[H]
   \centering
-  \caption{Gemessene Messwerte zu Aufgabenteil c).}
+  \caption{Gemessene Messwerte zur Induktivitätsmessbrücke.}
   \label{tab:wertec}
   \begin{tabular}{c c c c c c}
     \toprule
@@ -107,7 +107,7 @@ Diese Größen besitzen die relativen Fehler
 Aus \autoref{tab:werted} sind die Messwerte zur Maxwellbrücke zu entnehmen.
 \begin{table}[H]
   \centering
-  \caption{Gemessene Messwerte zu Aufgabenteil d).}
+  \caption{Gemessene Messwerte zur Maxwellbrücke.}
   \label{tab:werted}
   \begin{tabular}{c c c c c c}
     \toprule
@@ -135,7 +135,7 @@ bestimmt werden.
 \subsection{Wien-Robinson-Brücke}
 % Daten Aufgabenteil e)
 Zur Untersuchung der Frequenzabhängigkeit der Brückenspannung wird der Quotient der effektive Brückenspannung $U_{\text{Br}}$ und der Speisespannung $U_{\text{S}}$
-gegen $\frac{f}{f_0}$ aufgetragen(\autoref{fig:plot}). Zusätzlich wird eine Theoriekurve eingefügt, die sich aus Formel \autoref{eqn:theo} ergibt.
+gegen $\frac{f}{f_0}$ aufgetragen(\autoref{fig:plot}). Zusätzlich wird eine Theoriekurve eingefügt, die sich aus Formel (\ref{eqn:theo}) ergibt.
 
 In \autoref{tab:wertee} sind die Messwerte zur Wien-Robinson-Brücke aufgetragen. Die Bauteile der Schaltung haben die Werte
 \begin{align*}
@@ -147,11 +147,11 @@ In \autoref{tab:wertee} sind die Messwerte zur Wien-Robinson-Brücke aufgetragen
 
 \begin{table}[H]
   \centering
-  \caption{Gemessene Messwerte zu Aufgabenteil e).}
+  \caption{Messwerte der Brückenspannung in Abhängigkeit von der Frequenz.}
   \label{tab:wertee}
   \begin{tabular}{c c}
     \toprule
-    Frequenz $\,/\,\si{\hertz}$ &  $U\,/\, \si{\milli\volt}$ \\
+    Frequenz $\,/\,\si{\hertz}$ &  $U_{\text{Br}}\,/\, \si{\milli\volt}$ \\
     \midrule
     20 & 300 \\
     40 & 280 \\
@@ -170,7 +170,7 @@ In \autoref{tab:wertee} sind die Messwerte zur Wien-Robinson-Brücke aufgetragen
     300 & 45 \\
     320 & 60 \\
     340 & 65 \\
-    640 & 17 \\
+    640 & 175 \\
     1280 & 250 \\
     2560 & 250 \\
     5120 &  250 \\
@@ -184,30 +184,17 @@ In \autoref{tab:wertee} sind die Messwerte zur Wien-Robinson-Brücke aufgetragen
 \begin{figure}[H]
   \centering
   \includegraphics{plot.pdf}
-  \caption{Messdaten und Theoriekurve}
+  \caption{Messdaten und Theoriekurve zur Frequenzabhängigkeit der Brückenspannung.}
   \label{fig:plot}
 \end{figure}
 
-Zur bestimmung des Klirrfaktor werden nun $U_2$ und $U_1$ benötigt. Da $U_1$ als $U_{\text{S}}$ bei $f_0$ gegeben ist, muss lediglich $U_2$ durch
+Zur Bestimmung des Klirrfaktors (\ref{eqn:klirr}) werden nun $U_2$ und $U_1$ benötigt. Da $U_1$ als $U_{\text{S}}$ bei $f_0$ gegeben ist, muss lediglich $U_2$ durch
 \begin{align*}
   U_2 &= 0,32\si{\volt}{\sqrt{\frac{(2^2 - 1)^2}{9((1-2^2)^2 + 9 \cdot 2^2)}}} \\
-  &= 2,1466 \si{\volt}. \\
+  &= \SI{2,1466}{\volt} \\
 \end{align*}
-Der Klirrfaktor ergibt sich somit zu
+berechnet werden.
+Der Klirrfaktor ergibt sich somit nach (\ref{eqn:klirr}) zu
 \begin{align*}
   k = \frac{U_2}{U_1} = 2,1466. \\
 \end{align*}
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=0.75\textwidth]{dateien/daten1.jpg}
-  \caption{Originale Messdaten.}
-  \label{fig:daten1}
-\end{figure}
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=0.75\textwidth]{dateien/daten2.jpg}
-  \caption{Originale Messdaten.}
-  \label{fig:daten2}
-\end{figure}

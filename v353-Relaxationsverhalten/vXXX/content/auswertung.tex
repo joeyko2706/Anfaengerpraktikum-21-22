@@ -1,7 +1,8 @@
 \section{Auswertung}
 \label{sec:Auswertung}
 
-\DeclareSIUnit{\rad}{rad}
+\DeclareSIUnit{\rad}{rad} %Damit "rad" in \SI verwendet werden kann
+
 \subsection{Messung der Zeitkonstanten $RC$ über die Entladekurve}
 Die in Aufgabenteil a) verwendete Frequenz beträgt $\SI{420}{\hertz}$. Aus dem Zusammenhang für den Entladevorgang eines Kondenators folgt
 \begin{align}
@@ -63,12 +64,12 @@ Mithilfe von numpy \cite{numpy} und matplotlib \cite{matplotlib} werden die Mess
 
 Die Parameter der Ausgleichsgeraden vom Typ $\symup{ln}(\frac{U}{U_{0}}) = m \cdot t + b$ werden zu den folgenden Werten ermittelt
 \begin{align*}
-    m = \SI{-0.6965}{\per\milli\second}, \\
-    b = 1.0870. \\
+    m = \SI{-0.697 (0.014)}{\per\milli\second}, \\
+    b = 1.087 \.\pm 0.014. \\
 \end{align*}
 Dadrch ergibt sich eine Zeitkonstante $RC$ von 
 \begin{align*}
-    RC = \SI{1.4357}{\per\second}.
+    RC = \SI{0.705 (0.014)}{\per\second}.
 \end{align*}
 
 
@@ -124,7 +125,7 @@ Aus \autoref{fig:Plotb} ist die graphische Abbildung der Messwerte aus \autoref{
 Erweiterungen matplotlib \cite{matplotlib}, numpy \cite{numpy} und scipy \cite{scipy} die Zeitkonstanten $RC$ bestimmt wird.
 Es folgt eine Zeitkonstante von
 \begin{align*}
-    RC = \SI{1.8839}{\per\second}.
+    RC = \SI{1.8839 (1.5492)}{\per\second}.
 \end{align*}
 
 \subsection{Phasenverschiebung des RC-Kreises}
