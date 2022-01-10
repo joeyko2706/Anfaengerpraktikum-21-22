@@ -34,7 +34,7 @@ Aus diesen Bezügen ergibt sich die DGL
     \label{eqn:dQ/dt}
     \frac{\symup{d}Q}{\symup{d}t}=-\frac{Q(t)}{RC},
 \end{equation}
-die verglichen mit \autoref{eqn:dA/dt} eine hohe Ähnlichkeit aufweist. Da der Grenzwert $Q(\infty)$ nicht zu erreichen ist, kann er vernachlässigt werden und die Lösung
+die verglichen mit Gleichung (\ref{eqn:dA/dt}) eine hohe Ähnlichkeit aufweist. Da der Grenzwert $Q(\infty)$ nicht zu erreichen ist, kann er vernachlässigt werden und die Lösung
 der DGL ist somit gegeben durch
 \begin{equation}
     \label{eqn:Entladung}
@@ -63,7 +63,7 @@ Durch die Kirchhoffschen Gesetzen gilt für den RC-Kreis
     \label{eqn:Kirchhoff}
     U(t)=U_{R}(t)+U_{C}(t).
 \end{equation}
-Aus den vorherigen Formeln \autoref{eqn:dQ/dt}, \autoref{eqn:I(t)} und \autoref{eqn:Kirchhoff} erhält man mit weiteren Umformungen
+Aus den vorherigen Formeln (\ref{eqn:dQ/dt}), (\ref{eqn:I(t)}) und (\ref{eqn:Kirchhoff}) erhält man mit weiteren Umformungen
 \begin{equation}
     \label{eqn:Amplitude}
     A(\omega)=\frac{U_0}{\sqrt{1+\omega^2 R^2 C^2}}.
@@ -73,7 +73,7 @@ Aus den vorherigen Formeln \autoref{eqn:dQ/dt}, \autoref{eqn:I(t)} und \autoref{
 \subsection{Integrationsverhalten des RC-Kreises}
 \label{subsec:int}
 Ein RC-Kreis kann nur dann als Integrator funktionieren, wenn $\omega >> \frac{1}{RC}$ gilt.
-Hierzu lässt sich Gleichung \autoref{eqn:Kirchhoff} umschreiben zu
+Hierzu lässt sich Gleichung (\ref{eqn:Kirchhoff}) umschreiben zu
 \begin{align*}
     U(t)&=R \cdot I(t)+U_{C}(t)\\
         &=RC\cdot \frac{\symup{d}U_{C}(t)}{dt}+U_{C}(t).
