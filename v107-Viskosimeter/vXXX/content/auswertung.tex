@@ -1,43 +1,62 @@
 \section{Auswertung}
 \label{sec:Auswertung}
 
+\subsection{Bestimmung der Apparatenkonstanten}
+Um die Apparatenkonstante zu bestimmen, müssen zunächst die Dichten der Kugeln aus ihren Massen und Radien bestimmt werden. Die zugehörigen Messwerte sind in \autoref{tab:MasseundDichte} zu finden.
+
 \begin{table}[H]
   \centering
-      \caption{Abmaße der kleinen Kugel.}
-      \label{tab:klKugel}
+  \caption{Messdaten der Massen und Radien der beiden Kugeln.}
+  \label{tab:MasseundDichte}
+  \begin{tabular}{c c c c}
+    \toprule
+    $r_{\text{Gr}}/10^{-2}\,\si{\meter}$ & $m_{\text{Gr}}/10^{-3}\,\si{\kilogram}$ & $r_{\text{Kl}}/10^{-2}\,\si{\meter}$ & $m_{\text{Kl}}/10^{-3}\,\si{\kilogram}$ \\
+    \midrule
+    1,59 & 4,91 & 1,56 & 4,44 \\
+    1,59 & 4,91 & 1,56 & 4,44 \\
+    1,59 & 4,91 & 1,57 & 4,44 \\
+    1,58 & 4,91 & 1,57 & 4,44 \\
+    1,59 & 4,91 & 1,56 & 4,44 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+Die Werte für den Radius und die Masse ergeben sich daraus zu
+\begin{align*}
+  r_{\text{Gr}} &= (1,588\pm ) \cdot 10^{-2} \,\si{\meter}, \\
+  m_{\text{Gr}} &= (4,91\pm ) \cdot 10^{-3} \,\si{\kilogram}, \\
+  r_{\text{Kl}} &= (1,564\pm ) \cdot 10^{-2} \,\si{\meter}, \\
+  m_{\text{Kl}} &= (4,44\pm ) \cdot 10^{-3} \,\si{\kilogram}. \\
+\end{align*}
+
+Aus \autoref{eqn:vKugel} folgt somit für die Dichten
+\begin{align*}
+  \rho_{\text{Gr}} &= 520,38\pm  \,\frac{\si{\kg}}{\si{m^3}}, \\
+  \rho_{\text{Kl}} &= 492,56\pm  \,\frac{\si{\kg}}{\si{m^3}}. \\
+\end{align*}
+
+Darüber hinaus werden die Fallzeiten der beiden Kugel im Viskosimeter benötigt. Diese sind für die große Kugel in \autoref{tab:grKugRaum} und für die kleine Kugel in \autoref{tab:klKugRaum} aufgetragen.
+
+\begin{table}[H]
+  \centering
+      \caption{Fallzeiten der großen Kugel bei Raumtemperatur ($\SI{20}{\celsius})$.}
+      \label{tab:grKugRaum}
       \begin{tabular}{c c}
       \toprule
-      $m \:/\: \si{\gram} $ & $r \:/\: \si{\cm}$\\
+      Runter $t\:/\:$ s & Hoch $t\:/\:$ s\\
       \midrule
-      4,44 & 0,78 \\ 
-       & 0,78 \\
-       & 0,785 \\
-       & 0,785 \\
-       & 0,78 \\
+        39,34 & 42,70 \\
+        41,82 & 42,02 \\
+        42,68 & 41,29 \\
+        42,20 & 41,28 \\
+        42,16 & 42,38 \\
       \bottomrule
   \end{tabular}
 \end{table}
 
 \begin{table}[H]
   \centering
-      \caption{Abmaße der großen Kugel.}
-      \label{tab:grKugel}
-      \begin{tabular}{c c}
-      \toprule
-      $m \:/\: \si{\gram} $ & $r \:/\: \si{\cm}$\\
-      \midrule
-        4,91 & 0,795 \\ 
-       & 0,795 \\
-       & 0,795 \\
-       & 0,79 \\
-       & 0,795 \\
-      \bottomrule
-  \end{tabular}
-\end{table}
-
-\begin{table}[H]
-  \centering
-      \caption{Fallzeiten der kleinen Kugel bei Raumtemperatur ($\SI{19}{\celsius})$.}
+      \caption{Fallzeiten der kleinen Kugel bei Raumtemperatur ($\SI{20}{\celsius})$.}
       \label{tab:klKugRaum}
       \begin{tabular}{c c}
       \toprule
@@ -57,19 +76,69 @@
   \end{tabular}
 \end{table}
 
-\begin{table}[H]
+Aus den Messwerten der Fallzeit ergibt sich
+\begin{align*}
+  t_{\text{Gr}} &= 41,787\pm  \,\si{\second}, \\
+  t_{\text{Kl}} &= 12,823\pm  \,\si{\second}. \\
+\end{align*}
+
+Anschließend kann mit Hilfe der Fallzeiten und der angegebenen Konstante der kleinen Kugel $K_{\text{Kl}}$ die Viskosität von Wasser bestimmt werden. Dabei werden
+\begin{align*}
+  K_{\text{Kl}} &= 7,64\cdot 10^{-8} \,\frac{\si{\pascal}\cdot\si{\meter^3}}{\si{\kilogram}} \\
+  \rho_{\text{Fl}} &= 998,2\,\frac{\si{\kilogram}}{\si{\meter^3}} \\
+\end{align*}
+
+verwendet, wobei $\rho_{\text{Fl}}$ die Dichte von Wasser bei Raumtemperatur ist. Daraus folgt für die Viskosität bei Raumtemperatur
+\begin{align*}
+  \eta_{\text{RT}} &= (0,495\pm ) \cdot 10^{-3} \,\si{\pascal}\cdot\si{\second}.
+\end{align*}
+
+Daraus ergibt sich mit Hilfe der umgestellten \autoref{} für die Konstante der großen Kugel
+\begin{align*}
+  K_{\text{Gr}} &= (2,481\pm ) \cdot 10^{-8} \,\frac{\si{\pascal}\cdot\si{\meter^3}}{\si{\kilo\gram}}
+\end{align*}
+
+
+
+\subsection{Temperaturabhängigkeit der Viskosität}
+Mit Hilfe der Apparatenkonstanten der großen Kugel $K_{\text{Gr}}$ kann nun durch \autoref{} die Viskosität des Wassers bei verschiedenen Temperaturen berechnet werden.
+Die Messwerte der Fallzeit der großen Kugel und die verschiedenen Temperaturen mit jeweils zugehöriger Dichte von Wasser sind in \autoref{} dargestellt.
+
+\begin{table}
   \centering
-      \caption{Fallzeiten der großen Kugel bei Raumtemperatur ($\SI{19}{\celsius})$.}
-      \label{tab:grKugRaum}
-      \begin{tabular}{c c}
-      \toprule
-      Runter $t\:/\:$ s & Hoch $t\:/\:$ s\\
-      \midrule
-        39,34 & 42,70 \\
-        41,82 & 42,02 \\
-        42,68 & 41,29 \\
-        42,20 & 41,28 \\
-        42,16 & 42,38 \\
-      \bottomrule
+  \caption{Messdaten zur Bestimmung der Temperaturabhängigkeit der Viskosität.}
+  \label{tab:Temp}
+  \begin{tabular}{c c c c}
+    \toprule
+    $T/\si{\kelvin}$ & $t/\si{\second}$ & $\rho_{\text{Fl}}/\frac{\si{\kilogram}}{\si{\meter^3}}$ & $\eta/10^{-3}\si{\pascal}\cdot \si{\second}$\\
+    \midrule
+    296 & 36,84 & 997,54 & 1,276 \\
+    299 & 35,24 & 996,79 & 1,256 \\
+    302 & 32,70 & 995,95 & 1,267 \\
+    305 & 31,02 & 995,03 & 1,245 \\
+    308 & 29,25 & 994,03 & 1,214 \\
+    311 & 27,91 & 992,97 & 1,165 \\
+    314 & 26,28 & 991,83 & 1,182 \\
+    317 & 25,23 & 990,63 & 1,172 \\
+    320 & 23,89 & 989,37 & 1,140 \\
+    323 & 22,66 & 988,04 & 1,106 \\
+    \bottomrule
   \end{tabular}
 \end{table}
+
+Die Konstanten A und B aus der Andradeschen Gleichung \ref{} lassen sich durch Auftragen von $ln(\eta)$ gegen $\frac{1}{T}$ in \autoref{fig:} und einer linearen Regression bestimmen.
+\begin{align*}
+  \eta(T) &= A \, \exp{\left(\frac{B}{T}\right)} \\
+  \iff ln(\eta) &= ln(A) + ln(\frac{B}{T}) \\
+\end{align*}
+
+%plot
+
+Mit Hilfe der linearen Regression ergibt sich
+\begin{align*}
+  A &= () \cdot 10^{-6} \,\si{\pascal}\cdot\si{\second}\\
+  B &= () \,\si{\kelvin}
+\end{align*}
+
+Zuletzt muss geprüft werden, ob es sich im Viskosimeter um eine laminare oder eine turbolente Strömung handelt. Dies passiert, indem die Reynoldszahl für die große und die kleine Kugel bestimmt und
+anschließend mit der kritischen Reynoldszahl verglichen wird.
