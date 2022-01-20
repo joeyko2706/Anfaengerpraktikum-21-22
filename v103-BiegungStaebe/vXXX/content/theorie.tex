@@ -1,4 +1,48 @@
+\section{Zielsetzung}
+\label{sec:Zielsetzung}
+Ziel dieses Versuches ist es, den Elasitizitaetsmodul eines Metalles durch Biegen eines Metallstabes zu bestimmen. 
+
 \section{Theorie}
 \label{sec:Theorie}
-
-\cite{sample}
+Der Elastizitätsmodul $E$ ist eine Materialkonstante, die die Verformung eines Körpers unter einer Normalpannung $\sigma$ beschreibt.
+Aus der durch die Normalpannung resultierenden Längenänderung $\text{\Delta} L$ folgt mit dem Hookschen Gesetz der Zusammenhang
+\begin{align}
+    \label{eqn:Elasitizitaetsmodul}
+    \sigma = E \cdot \frac{\text{\Delta} L}{L}.
+\end{align}
+Um einen Metallstab zu verbiegen, muss an ihm ein äußeres Drehmoment wirken. Die Biegung bewirkt, dass sich die oberen Schichten im Metallstab außeinander strecken und die Unteren zusammen
+stauchen. Der Bereich in der Mitte des Stabes, der keine Veränderung seiner Länge erfährt, wird neutrale Faser genannt.
+Durch solch eine Deformation des Stabes entsteht ein inneres Drehmoment, dass dem Äußeren entgegengesetzt wirkt und den gleichen Betrag hat.
+Die Drehmomente sind gegeben durch
+\begin{align*}
+    M_{\text{F}} &= F(L-x) \\
+    M_{\text{\sigma}} &= \int_{Q} y\sigma(y)\text{dq}, \\
+\end{align*}
+wobei $Q$ dabei der Querschnitt des Stabes und $y$ der Abstand des Flächenelements $\text{dq}$ zur neutralen Faser ist.
+Für die Durchbiegung eines einseitig befestigten Stabes ergibt sich somit
+\begin{align}
+    \label{eqn:Durchbiegung}
+    D(x) = \frac{F}{2EI} \cdot\left(Lx^2 - \frac{x^3}{3}\right).
+\end{align}
+Hierbei beschreibt $I$ das Flächenträgheitsmoment, $L$ die Länge des Stabes und $x$ die Entfernung des Messpunktes zum Einspannpunkt.
+Ist der Stab beidseitig befestigt, sodass die Kraft auf ihn in seiner Mitte wirkt, ergibt sich für $0 \leq x \leq L/2$
+\begin{align}
+    \label{eqn:DurchbiegungL/2}
+    D(x) = \frac{F}{48EI}\cdot \left(3L^2 x - 4x^3\right).
+\end{align}
+Demnach ergibt sich für $L/2 \leq x \leq L$
+\begin{align}
+    \label{eqn:DurchbiegungL}
+    D(x) = \frac{F}{48EI}\cdot \left(4x^3 -12Lx^2 +9L^2 x - L^3\right).
+\end{align}
+Für einen Stab mit quadratischem Querschnitt und der Seitenlänge $a$ ist das Flächenträgheitsmoment gegeben durch
+\begin{align}
+    \label{eqn:quadrat}
+    I_{\text{\square}} = \frac{a^4}{12}.
+\end{align}
+Das Flächenträgheitsmoment eines Stabes mit kreisförmigem Querschnitt und Durchmesser $d$ ist durch
+\begin{align}
+    \label{eqn:kreis}
+    I_{\text{\bigcirc}} = \frac{\text{\pi}d^4}{64}
+\end{align}
+gegeben.
