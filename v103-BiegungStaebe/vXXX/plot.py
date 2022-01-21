@@ -44,32 +44,35 @@ plt.clf()
 ##########################################
 #Eckiger Stab beidseitig eingespannt
 
+#Werte
+
 L = 0.602
+X1 = np.linspace(0, 0.22, 100)
 x3, y3 = np.genfromtxt('../Dateien/bquadr1a.txt', unpack = True) #Quadratischer Stab beidseitig ohne Last, erste Hälfte
 x4, y4 = np.genfromtxt('../Dateien/bquadr2a.txt', unpack = True) #Quadratischer Stab beidseitig mit Last, erste Hälfte
 X2 = x3*10**(-2)
-
-Eta_1 = 3*L**2*X2-4*X2**3
-D1_X = (y3-y4)*10**(-3)
-
-m1_eckig_beidseitig , b1_eckig_beidseitig , r ,p ,std =stats.linregress(noms(Eta_1),noms(D1_X)) #Erster Fit
-M1_eckig_beidseitig=unp.uarray(m1_eckig_beidseitig,std) #M1 mit Fehler
-B1_eckig_beidseitig=unp.uarray(b1_eckig_beidseitig,std) #B1 mit Fehler
-X1 = np.linspace(0, 0.22, 100)
-
 
 x5, y5 = np.genfromtxt('../Dateien/bquadr1b.txt', unpack = True) #Quadratischer Stab beidseitig ohne Last, zweite Hälfte
 x6, y6 = np.genfromtxt('../Dateien/bquadr2b.txt', unpack = True) #Quadratischer Stab beidseitig mit Last, zweite Hälfte
 X3 = x5 *10**(-2)
 
+Eta_1 = 3*L**2*X2-4*X2**3
 Eta_2 = 4*X3**3 - 12*L*X3**2 + 9*L**2*X3 - L**3
+D1_X = (y3-y4)*10**(-3)
 D2_X = (y5-y6)*10**(-3)
-m2_eckig_beidseitig , b2_eckig_beidseitig , r ,p ,std =stats.linregress(noms(Eta_2),noms(D2_X)) #Zweiter Fit
 
+m1_eckig_beidseitig , b1_eckig_beidseitig , r ,p ,std =stats.linregress(noms(Eta_1),noms(D1_X)) #Erster Fit
+M1_eckig_beidseitig=unp.uarray(m1_eckig_beidseitig,std) #M1 mit Fehler
+B1_eckig_beidseitig=unp.uarray(b1_eckig_beidseitig,std) #B1 mit Fehler
+
+
+m2_eckig_beidseitig , b2_eckig_beidseitig , r ,p ,std =stats.linregress(noms(Eta_2),noms(D2_X)) #Zweiter Fit
 M2_eckig_beidseitig=unp.uarray(m2_eckig_beidseitig,std) #M2 mit Fehler
 B2_eckig_beidseitig=unp.uarray(b2_eckig_beidseitig,std) #B2 mit Fehler
 
-plt.subplot(1,2,1)
+#Plot
+
+plt.subplot(1,2,1)  #linker Plot
 plt.plot(noms(Eta_1), noms(D1_X), '.', color = 'crimson', label = 'Messdaten 1')
 plt.plot(X1,m1_eckig_beidseitig*X1+b1_eckig_beidseitig ,color = 'mediumblue', label = 'Fit 1')
 plt.xlabel(r'$\eta(x)$ / $\unit{\cubic\meter}$')
@@ -77,7 +80,7 @@ plt.ylabel(r'$D(x)$ / $\unit{\meter}$')
 plt.legend(loc='best')
 plt.grid()
 
-plt.subplot(1,2,2)
+plt.subplot(1,2,2)  #rechter Plot
 plt.plot(noms(Eta_2), noms(D2_X), '.', color = 'crimson' , label='Messdaten 2')
 plt.plot(X1,m2_eckig_beidseitig*X1+b2_eckig_beidseitig, color = 'mediumblue', label = 'Fit 2')  
 plt.xlabel(r'$\eta(x)$ / \unit{\cubic\meter}$')
