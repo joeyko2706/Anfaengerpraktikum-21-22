@@ -1,14 +1,50 @@
 \section{Auswertung}
 \label{sec:Auswertung}
 
+\subsection{Elastizitätsmodul des eckigen Stabes}
+\label{subsec:elastiEckig}
+Es wird das Elastizitätsmodul $E$ eines eckigen Stabes, dessen Abmaße \autoref{tab:eckigStab} zu entnehmen sind, berechnet.
+\begin{table}[H]
+  \centering
+  \caption{Abmaße des eckigen Stabes.}
+  \label{tab:eckigStab}
+  \begin{tabular}{c c c}
+    \toprule
+    m / g & l / mm & d / mm \\
+    \midrule
+    535.4 & 10.0 & 602.0 \\
+    536.2 & 10.0 & 602.0 \\
+    536.3 & 10.0 & 602.0 \\
+    535.7 & 10.0 & 602.0 \\
+    536.1 & 10.0 & 602.0 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+Aus (\ref{eqn:Durchbiegung}) folgt ein Zusammenhang zwischen dem Drehmoment $D(x)$ und dem Elastizitätsmodul $E$. Um letzteres zu bestimmen
+wird eine Hilfsvariable $\eta(x)$ eingeführt, mit 
+\begin{align*}
+  \eta(x) = Lx^2- \frac 13 x^3.
+\end{align*}
+Wird $\eta(x)$ in (\ref{eqn:Durchbiegung}) eingesetzt, folgt ein linearer Zusammenhang zwischen $D(x)$ und $\eta(x)$,
+\begin{align}
+  D(\eta) = \frac{F}{2EI}\eta.
+  \label{eqn:rel1}
+\end{align}
+Mithilfe einer linearen Regressionskurve wird ein Wert für die Steigung $m$ ermittelt, aus dem das Elastizitätsmodul und (\ref{eqn:rel1}) 
+bestimmt werden kann.
+
+Das Gewicht des Stabes ergibt sich mit \autoref{tab:eckigStab} zu $\bar m_{\text{quadr}} = \SI{535,7 (0,7)}{\gram}$, woraus die Gewichtskraft
+zu 
+
 
 \begin{table}[H]
   \centering
-  \caption{Messung eines quadratischen Stabes bei einseitger Einspannung.}
+  \caption{Messung eines quadratischen Stabes bei einseitger Einspannung ($\text G = \SI{750}{\gram}$).}
   \label{tab:werte1}
   \begin{tabular}{c c c}
     \toprule
-    Abstand / $\si{\centi\meter} $ & Auslenkung ohne Last / $\si{\centi\meter}$ & Auslenkung mit Last / $\si{\milli\meter}$ \\
+    x / $\si{\centi\meter} $ & $ D_0(x) / \si{\centi\meter}$ & $D_{\text G}(x) / \si{\milli\meter}$ \\
     \midrule
     3 & 7,79 & 7,76 \\
     6 & 7,79 & 7,70 \\
@@ -32,11 +68,11 @@
 
 \begin{table}[H]
   \centering
-  \caption{Messung eines zylindrischen Stabes bei einseitger Einspannung.}
+  \caption{Messung eines zylindrischen Stabes bei einseitger Einspannung ($\text G = \SI{750}{\gram}$).}
   \label{tab:werte2}
   \begin{tabular}{c c c}
     \toprule
-    Abstand / $\si{\centi\meter} $ & Auslenkung ohne Last / $\si{\centi\meter}$ & Auslenkung mit Last / $\si{\milli\meter}$ \\
+    x / $\si{\centi\meter} $ & $ D_0(x) / \si{\centi\meter}$ & $D_{\text G}(x) / \si{\milli\meter}$ \\
     \midrule
     3 & 8,13 & 8,07 \\
     6 & 8,21 & 8,00 \\
@@ -60,11 +96,11 @@
 
 \begin{table}[H]
   \centering
-  \caption{Messung eines quadratischen Stabes bei beidseitiger Einspannung.}
+  \caption{Messung eines quadratischen Stabes bei beidseitiger Einspannung ($\text G = \SI{1550}{\gram}$).}
   \label{tab:werte3}
   \begin{tabular}{c c c}
     \toprule
-    Abstand / $\si{\centi\meter} $ & Auslenkung ohne Last / $\si{\centi\meter}$ & Auslenkung mit Last / $\si{\milli\meter}$ \\
+    x / $\si{\centi\meter} $ & $ D_0(x) / \si{\centi\meter}$ & $D_{\text G}(x) / \si{\milli\meter}$ \\
     \midrule
     3 & 8,90 & 8,75 \\
     6 & 8,99 & 8,76 \\
@@ -90,11 +126,11 @@
 
 \begin{table}[H]
   \centering
-  \caption{Messung eines zylindrischen Stabes bei beidseitiger Einspannung.}
+  \caption{Messung eines zylindrischen Stabes bei beidseitiger Einspannung ($\text G = \SI{1550}{\gram}$).}
   \label{tab:werte4}
   \begin{tabular}{c c c}
     \toprule
-    Abstand / $\si{\centi\meter} $ & Auslenkung ohne Last / $\si{\centi\meter}$ & Auslenkung mit Last / $\si{\milli\meter}$ \\
+    x / $\si{\centi\meter} $ & $ D_0(x) / \si{\centi\meter}$ & $D_{\text G}(x) / \si{\milli\meter}$ \\
     \midrule
     3 & 9,93 & 8,67 \\
     6 & 9,95 & 8,59 \\
