@@ -3,24 +3,7 @@
 
 \subsection{Elastizitätsmodul des eckigen Stabes}
 \label{subsec:elastiEckig}
-Es wird das Elastizitätsmodul $E$ eines eckigen Stabes, dessen Abmaße \autoref{tab:eckigStab} zu entnehmen sind, berechnet.
-\begin{table}[H]
-  \centering
-  \caption{Abmaße des eckigen Stabes.}
-  \label{tab:eckigStab}
-  \begin{tabular}{c c c}
-    \toprule
-    m / g & l / mm & d / mm \\
-    \midrule
-    535.4 & 10.0 & 602.0 \\
-    536.2 & 10.0 & 602.0 \\
-    536.3 & 10.0 & 602.0 \\
-    535.7 & 10.0 & 602.0 \\
-    536.1 & 10.0 & 602.0 \\
-    \bottomrule
-  \end{tabular}
-\end{table}
-
+Es wird das Elastizitätsmodul $E$ eines eckigen Stabes berechnet.
 Aus (\ref{eqn:Durchbiegung}) folgt ein Zusammenhang zwischen dem Drehmoment $D(x)$ und dem Elastizitätsmodul $E$. Um letzteres zu bestimmen
 wird eine Hilfsvariable $\eta(x)$ eingeführt, mit 
 \begin{align*}
@@ -31,13 +14,18 @@ Wird $\eta(x)$ in (\ref{eqn:Durchbiegung}) eingesetzt, folgt ein linearer Zusamm
   D(\eta) = \frac{F}{2EI}\eta.
   \label{eqn:rel1}
 \end{align}
-Mithilfe einer linearen Regressionskurve wird ein Wert für die Steigung $m$ ermittelt, aus dem das Elastizitätsmodul und (\ref{eqn:rel1}) 
-bestimmt werden kann.
+Mithilfe einer linearen Regressionskurve wird ein Wert für die Steigung $\mu$ ermittelt, aus dem das Elastizitätsmodul bestimmt
+werden kann. Es wird (\ref{eqn:rel1}) umgestellt zu
+\begin{align}
+  E = \frac{F}{2I\mu}.
+  \label{eqn:linRegq}
+\end{align}
+In \autoref{fig:plot1} ist der Plot zu den Messwerten 
+aus \autoref{tab:werte1} zu entnehmen, wobei das Gewicht für die Messwerte von $D_{\text G}(x)$ eine Masse von 
+$m_{\text{Last}}=\SI{750}{\gram}$ hat und an der Position $x = \SI{27.5}{\centi\meter}$ positioniert wurde.  
 
-Das Gewicht des Stabes ergibt sich mit \autoref{tab:eckigStab} zu $\bar m_{\text{quadr}} = \SI{535,7 (0,7)}{\gram}$, woraus die Gewichtskraft
-zu 
 
-
+\sloppy
 \begin{table}[H]
   \centering
   \caption{Messung eines quadratischen Stabes bei einseitger Einspannung ($\text G = \SI{750}{\gram}$).}
@@ -66,6 +54,55 @@ zu
   \end{tabular}
 \end{table}
 
+\sloppy
+\begin{figure}
+  \centering
+  \includegraphics[width=0.75\textwidth]{build/plot1.pdf}
+  \caption{Messung eines quadratischen Stabes bei einseitger Einspannung ($\text G = \SI{750}{\gram}$).}
+  \label{fig:plot1}
+\end{figure}
+
+\sloppy
+\begin{table}[H]
+  \centering
+  \caption{Abmaße des eckigen Stabes.}
+  \label{tab:eckigStab}
+  \begin{tabular}{c c c}
+    \toprule
+    m / g & l / mm & a / mm \\
+    \midrule
+    535.4 & 10.0 & 602.0 \\
+    536.2 & 10.0 & 602.0 \\
+    536.3 & 10.0 & 602.0 \\
+    535.7 & 10.0 & 602.0 \\
+    536.1 & 10.0 & 602.0 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\sloppy
+Aus \autoref{tab:eckigStab} sind die Abmaße des eckigen Stabes zu entnehmen. Das Gewicht des Stabes ergibt sich mit \autoref{tab:eckigStab} zu 
+\begin{align*}
+  \bar m_{\text{quadr}} = \SI{535,7 (0,7)}{\gram},
+\end{align*}
+woraus die Gewichtskraft zu 
+\begin{align*}
+  F = \SI{5.255 (0.007)}{\newton}
+\end{align*} 
+folgt. Aus (\ref{eqn:quadrat}) wird das Flächenträgheitsmoment berechnet zu
+\begin{align*}
+  I_{\text{\square}} = \SI{0.83e-3}{\kilo\gram\meter^2}.
+\end{align*}
+Die lineare Regression wird mithilfe der Python-Erweiterungen \cite{numpy} und \cite{scipy} durchgeführt, während
+der Plot mit \cite{matplotlib} erstellt wird. Die Erweiterungen liefern eine Ausgleichsgerade vom Typ $D(x) = \mu\cdot\eta(x)+b$
+mit den Parametern
+\begin{align*}
+  \mu = 0.0297 \pm 0.0004, \\
+  b = 0.0001 \pm 0.0004.
+\end{align*}
+
+
+\sloppy
 \begin{table}[H]
   \centering
   \caption{Messung eines zylindrischen Stabes bei einseitger Einspannung ($\text G = \SI{750}{\gram}$).}
@@ -94,6 +131,7 @@ zu
   \end{tabular}
 \end{table}
 
+\sloppy
 \begin{table}[H]
   \centering
   \caption{Messung eines quadratischen Stabes bei beidseitiger Einspannung ($\text G = \SI{1550}{\gram}$).}
@@ -124,6 +162,7 @@ zu
   \end{tabular}
 \end{table}
 
+\sloppy
 \begin{table}[H]
   \centering
   \caption{Messung eines zylindrischen Stabes bei beidseitiger Einspannung ($\text G = \SI{1550}{\gram}$).}
