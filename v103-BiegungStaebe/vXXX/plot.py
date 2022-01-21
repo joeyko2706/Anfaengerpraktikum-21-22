@@ -70,6 +70,11 @@ m2_eckig_beidseitig , b2_eckig_beidseitig , r ,p ,std =stats.linregress(noms(Eta
 M2_eckig_beidseitig=unp.uarray(m2_eckig_beidseitig,std) #M2 mit Fehler
 B2_eckig_beidseitig=unp.uarray(b2_eckig_beidseitig,std) #B2 mit Fehler
 
+#print(f'M1_eckig_beidseitig: {M1_eckig_beidseitig}')
+#print(f'B1_eckig_beidseitig: {B1_eckig_beidseitig}')
+#print(f'M2_eckig_beidseitig: {M2_eckig_beidseitig}')
+#print(f'B2_eckig_beidseitig: {B2_eckig_beidseitig}')
+
 #Plot
 
 plt.subplot(1,2,1)  #linker Plot

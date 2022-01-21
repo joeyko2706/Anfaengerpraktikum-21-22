@@ -22,3 +22,15 @@ print('Gewichtskraft des eckigen Stabes:', g*m_e)
 a_mm = np.array([10.0, 10.0, 10.0, 10.0, 10.0])
 a = ufloat(np.round(np.mean(a_mm*10**(-3)), 4), np.round(np.std(a_mm*10**(-3)), 4))
 print('Trägheitsmoment eckiger Stab: ', 1/12*a)
+
+#Elasti 1
+steigung1 = ufloat(0.0297, 0.0004)
+gewichtskraft1 = ufloat(5.255 ,0.007)
+traegheit1 = ufloat(0.83, 0)
+print('Elasti eckig einseitig: ', gewichtskraft1/ (2*traegheit1*steigung1))
+
+#Elasti2
+steigung2 = ufloat(0.00266, 0.00012)
+steigung3 = ufloat(-0.001, 0.004)
+print('Elasti eckig beidseitig1', gewichtskraft1 / (48*traegheit1*steigung2) )
+print('Elasti eckig beidseitig2', gewichtskraft1 / (48*traegheit1*steigung3) )
