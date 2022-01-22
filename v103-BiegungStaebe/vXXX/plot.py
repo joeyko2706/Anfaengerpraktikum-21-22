@@ -24,8 +24,8 @@ M_eckig_einseitig=unp.uarray(m_eckig_einseitig,std) #M mit Fehler
 B_eckig_einseitig=unp.uarray(b_eckig_einseitig,std) #B mit Fehler
 X = np.linspace(0, 0.102, 100)
 
-#print(f'M rund einseitig: {M_eckig_einseitig}')
-#print(f'B rund einseitig: {B_eckig_einseitig}')
+#print(f'M eckig einseitig: {M_eckig_einseitig}')
+#print(f'B eckig einseitig: {B_eckig_einseitig}')
 #print(f'Eta: {Eta} \n D(x): {D_X}')
 
 plt.plot(X,m_eckig_einseitig*X+b_eckig_einseitig, color = 'mediumblue', label = 'Fit')
@@ -114,6 +114,9 @@ M_rund_einseitig=unp.uarray(m_rund_einseitig,std) #M mit Fehler
 B_rund_einseitig=unp.uarray(b_rund_einseitig,std) #B mit Fehler
 X = np.linspace(0, 0.102, 100)
 
+#print(f'M rund einseitig: {M_rund_einseitig}')
+#print(f'B rund einseitig: {B_rund_einseitig}')
+
 plt.plot(noms(Eta_r0), DR0_X, '.', color = 'crimson', label = 'Messdaten')
 plt.plot(X,m_rund_einseitig*X+b_rund_einseitig, color = 'mediumblue', label = 'Fit')
 
@@ -151,6 +154,11 @@ m2_rund_beidseitig , b2_rund_beidseitig , r ,p ,std =stats.linregress(noms(Eta_r
 M2_rund_beidseitig=unp.uarray(m2_rund_beidseitig,std) #M2 mit Fehler
 B2_rund_beidseitig=unp.uarray(b2_rund_beidseitig,std) #B2 mit Fehler
 XR = np.linspace(0, 0.22, 100)
+
+print(f'M1_rund_beidseitig {M1_rund_beidseitig}')
+print(f'B1_rund_beidseitig {B1_rund_beidseitig}')
+print(f'M2_rund_beidseitig {M2_rund_beidseitig}')
+print(f'B2_rund_beidseitig {B2_rund_beidseitig}')
 
 #Plot
 plt.subplot(1,2,1)
