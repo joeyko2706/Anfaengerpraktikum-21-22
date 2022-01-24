@@ -87,15 +87,15 @@ $m_{\text{Last}}=\SI{750}{\gram}$ hat und an der Position $x = \SI{27.5}{\centi\
 \sloppy
 Aus \autoref{tab:eckigStab} sind die Abmaße des eckigen Stabes zu entnehmen. Das Gewicht des Stabes ergibt sich mit \autoref{tab:eckigStab} zu 
 \begin{align*}
-  \bar m_{\text{quadr}} = \SI{535,7 (0,7)}{\gram},
+  \overline{m_{\text{quadr}}} = \SI{535,7 (0,7)}{\gram},
 \end{align*}
 woraus die Gewichtskraft zu 
 \begin{align*}
-  F = \SI{5.255 (0.007)}{\newton}
+  F_{\square} = \SI{5.255 (0.007)}{\newton}
 \end{align*} 
 folgt. Aus (\ref{eqn:quadrat}) wird das Flächenträgheitsmoment berechnet zu
 \begin{align*}
-  I_{\text{\square}} = \SI{0.83e-3}{\kilo\gram\meter^2}.
+  I_{\square} = \SI{0.83e-3}{\kilo\gram\meter^2}.
 \end{align*}
 Die lineare Regression wird mithilfe der Python-Erweiterungen numpy \cite{numpy} und scipy \cite{scipy} durchgeführt, während
 der Plot mit matplotlib \cite{matplotlib} erstellt wird. Die Erweiterungen liefern eine Ausgleichsgerade vom Typ $D(x) = \mu\cdot\eta(x)+b$
@@ -106,7 +106,7 @@ mit den Parametern
 \end{align*}
 Das Elastizitätsmodul berechnet sich mit (\ref{eqn:rel1}) zu
 \begin{align*}
-  E_{\text{einseitig,eckig}} = \SI{149.2(2.0)e9}{\Pa}.
+  E = \SI{149.2(2.0)e9}{\Pa}.
 \end{align*}
 
 \subsubsection{Beidseitige Einspannung}
@@ -177,7 +177,7 @@ linearen Regression bestimmt, folgen zwei Werte für das Elastizitätsmodul
 \end{align*}
 Der Mittelwert beträgt somit
 \begin{align*}
-  \overline{E_{eckig}} = \SI{230(50)e9}{\Pa}.
+  \overline{E_{\text{\square}}} = \SI{230(50)e9}{\Pa}.
 \end{align*}
 
 \subsection{Elastizitätsmodul eines runden Stabes}
@@ -261,8 +261,8 @@ Die Hilfsvariable $\eta(x)$ ergibt sich nach (\ref{eqn:Durchbiegung}) wieder zu 
 Nach (\ref{eqn:rel1}) ergibt sich analog zu dem eckigen Stab ein linearer Zusammenhang zwischen dem Elastizitätsmodul und
 der Variablen $\eta(x)$, wobei der runde Stab die folgenden Werte hat
 \begin{align*}
-  I_{\text{rund}} &= (\frac{1}{64} \pm 0.0) \si{\kilo\gram\meter^2}, \\
-  F_{\text{rund}} &= \SI{4.042 (0.002)}{\newton}. \\
+  I_{\bigcirc} &= (\frac{1}{64} \pm 0.0) \si{\kilo\gram\meter^2}, \\
+  F_{\bigcirc} &= \SI{4.042 (0.002)}{\newton}. \\
 \end{align*}
 Die lineare Regression des Types $D(x) = \mu\cdot\eta(x)+b$ liefert die Parameter
 \begin{align*}
@@ -333,5 +333,5 @@ folgen die Elastizitätsmodule
 \end{align*}
 Der Mittelwert beträgt somit
 \begin{align*}
-  \overline{E_{rund}} = \SI{467(130)e9}{\Pa}.
+  \overline{E_{\bigcirc}} = \SI{467(130)e9}{\Pa}.
 \end{align*}

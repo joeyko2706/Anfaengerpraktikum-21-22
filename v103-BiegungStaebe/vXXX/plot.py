@@ -155,10 +155,10 @@ M2_rund_beidseitig=unp.uarray(m2_rund_beidseitig,std) #M2 mit Fehler
 B2_rund_beidseitig=unp.uarray(b2_rund_beidseitig,std) #B2 mit Fehler
 XR = np.linspace(0, 0.22, 100)
 
-print(f'M1_rund_beidseitig {M1_rund_beidseitig}')
-print(f'B1_rund_beidseitig {B1_rund_beidseitig}')
-print(f'M2_rund_beidseitig {M2_rund_beidseitig}')
-print(f'B2_rund_beidseitig {B2_rund_beidseitig}')
+#print(f'M1_rund_beidseitig {M1_rund_beidseitig}')
+#print(f'B1_rund_beidseitig {B1_rund_beidseitig}')
+#print(f'M2_rund_beidseitig {M2_rund_beidseitig}')
+#print(f'B2_rund_beidseitig {B2_rund_beidseitig}')
 
 #Plot
 plt.subplot(1,2,1)
