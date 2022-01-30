@@ -48,7 +48,7 @@ print('Mittelwert Länge rund:', np.round(np.mean(laenge_rund), 4), '\n Abweichu
 #Elasti 1 rund
 steigung1_rund = ufloat(0.0455, 0.0007)
 gewichtskraft_rund = ufloat(4.0427 ,0.002)
-traegheit_rund = ufloat((1*10**(-2))**4 / 64 , 0.0)
+traegheit_rund = ufloat( ((1*10**(-2))**4 * np.pi )/ 64 , 0.0 )
 print('Elasti rund einseitig: ', gewichtsKr_eins/ (2*traegheit_rund*steigung1_rund))
 
 #Elastis rund
@@ -57,7 +57,7 @@ steigung3_rund = ufloat(0.00587, 0.00031)
 print('Elasti rund beidseitig 1: ', gewichtsKr_beids/ (48*traegheit_rund*steigung2_rund))
 print('Elasti rund beidseitig 2: ', gewichtsKr_beids/ (48*traegheit_rund*steigung3_rund))
 
-#ElastiMittel1
+#ElastiMittel1 ohne den doofen 1en Wert
 elasti_gesamt1 = 1/2 * (gewichtsKr_eins/ (2*traegheit1*steigung1) + gewichtsKr_beids / (48*traegheit1*steigung2))
 print('Mittelwert Elastizität eckig: ', elasti_gesamt1)
 
