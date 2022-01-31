@@ -31,7 +31,7 @@ print('Dichte eckiger Stab:', np.round(np.mean(dichte_eckig), 4), '+-', np.round
 
 a_mm = np.array([10.0, 10.0, 10.0, 10.0, 10.0])
 a_rund = ufloat(np.round(np.mean(a_mm*10**(-3)), 4), np.round(np.std(a_mm*10**(-3)), 4))
-print('Trägheitsmoment eckiger Stab: ', 1/12* a_rund)
+print('Trägheitsmoment eckiger Stab: ', 1/12* a_rund ** 4)
 
 #Elasti 1 eckig
 steigung1 = ufloat(0.0297, 0.0004)
@@ -56,7 +56,7 @@ print('Mittelwert Länge rund:', np.round(np.mean(laenge_rund), 4), '\n Abweichu
 
 #Dichte runder Stab
 
-flaeche_kreis = np.pi * (a_mm/1000) ** 2
+flaeche_kreis = np.pi * (a_mm/2000) ** 2
 volumen_rund= flaeche_kreis * laenge_rund
 dichte_rund = masse_rund / volumen_rund
 print('Dichte runder Stab: ', np.round(np.mean(dichte_rund), 4),'+-' , np.round(np.std(dichte_rund), 4) )

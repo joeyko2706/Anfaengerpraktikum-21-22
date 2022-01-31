@@ -62,13 +62,7 @@ $m_{\text{Last}}=\SI{750}{\gram}$ hat und an der Position $x = \SI{27.5}{\centi\
 \begin{figure}
   \centering
   \includegraphics[width=0.75\textwidth]{build/plot1.pdf}
-<<<<<<< HEAD
   \caption{Messung eines quadratischen Stabes bei einseitger Einspannung ($m_{\text{Last}} = \SI{750}{\gram}$).}
-||||||| 4e4ad4c
-  \caption{Messung eines quadratischen Stabes bei einseitger Einspannung ($\text G = \SI{750}{\gram}$).}
-=======
-  \caption{Messung eines quadratischen Stabes bei einseitger Einspannung ($ m_{\text{Last}} = \SI{750}{\gram}$).}
->>>>>>> d326651beef4fde1f054dde9da204cfeca12aa92
   \label{fig:plot1}
 \end{figure}
 
@@ -99,18 +93,12 @@ woraus die Gewichtskraft zu
 \begin{align*}
   F_{\text{Last 1}} = \SI{7,3575}{\newton}
 \end{align*} 
-<<<<<<< HEAD
 folgt. 
 Die Dichte des eckigen Stabes ergibt sich mithilfe \autoref{tab:eckigStab} zu
 \begin{align*}
   \overline{\rho_\square} = \SI{8902.66 (5.62)}{\kilo\gram\per\meter^3}.
 \end{align*}
 Aus (\ref{eqn:quadrat}) wird das Flächenträgheitsmoment berechnet zu
-||||||| 4e4ad4c
-folgt. Aus (\ref{eqn:quadrat}) wird das Flächenträgheitsmoment berechnet zu
-=======
-folgt. Aus Formel (\ref{eqn:quadrat}) wird das Flächenträgheitsmoment berechnet zu
->>>>>>> d326651beef4fde1f054dde9da204cfeca12aa92
 \begin{align*}
   I_{\square} = \SI{0.83e-3}{\kilo\gram\meter^2}.
 \end{align*}
@@ -118,12 +106,12 @@ Die lineare Regression wird mithilfe der Python-Erweiterungen numpy \cite{numpy}
 der Plot mit matplotlib \cite{matplotlib} erstellt wird. Die Erweiterungen liefern eine Ausgleichsgerade vom Typ $D(x) = \mu\cdot\eta(x)+b$
 mit den Parametern
 \begin{align*}
-  \mu = 0.0297 \pm 0.0004, \\
-  b = 0.0001 \pm 0.0004. \\
+  \mu = \SI{0.0297 (0.0004)}{\per\square\meter}, \\
+  b = \SI{0.0001 (0.0004)}{\meter}. \\
 \end{align*}
 Das Elastizitätsmodul berechnet sich mit (\ref{eqn:rel1}) zu
 \begin{align*}
-  E = \SI{149.2(2.0)e9}{\Pa}.
+  E_1 = \SI{149.2(2.0)e9}{\Pa}.
 \end{align*}
 
 \subsubsection{Beidseitige Einspannung}
@@ -188,9 +176,9 @@ Für die andere Hälfte für $x \in [L/2,L]$ wird $\eta(x)$ zu
 definiert. Werden die Formeln (\ref{eqn:rel2}) und (\ref{eqn:rel3}) analog zu (\ref{eqn:linRegq}) umgestellt und die Steigung $\mu$ mithilfe einer
 linearen Regression bestimmt, folgen zwei Werte für das Elastizitätsmodul
 \begin{align*}
-  \mu_1&= \SI{0.00266 (0.00012)}{\Pa}, & b_1 &= 0.00006 \pm 0.00012, \\
-  \mu_2 &= \SI{-0.001 (0.004)}{\Pa}, & b_2 &= 0, \\
-  E_1 &= \SI{143.0(6.0)e9}{\Pa}, & E_2 &= \SI{400 (1500)e9}{\Pa}.    
+  \mu_1&= \SI{0.00266 (0.00012)}{\per\square\meter}, & b_1 &= \SI{0.00006 (0.00012)}{\meter}, \\
+  \mu_2 &= \SI{-0.001 (0.004)}{\per\square\meter}, & b_2 &= \SI{0}{\meter}, \\
+  E_2 &= \SI{143.0(6.0)e9}{\Pa}, & E_3 &= \SI{400 (1500)e9}{\Pa}.    
 \end{align*}
 Der Mittelwert beträgt somit
 \begin{align*}
@@ -204,17 +192,9 @@ Der Mittelwert beträgt somit
 Mit dem runden Stab wird wie mit dem eckigen Stab verfahren. Aus den Maßen des runden Stabes, die aus \autoref{tab:stabRund}
 zu entnehmen sind, folgen die Mittelwerte für die Länge $l$, die Masse $m$ und die Dichte $\rho$ des Stabes
 \begin{align*}
-<<<<<<< HEAD
   \bar m &= \SI{412.2(0.2)}{\gram}, \\
   \bar l &= \SI{59.20(0.06)}{\cm}, \\
-  \overline{\rho_\bigcirc} &= \SI{2215.69 (3.09)}{\kilo\gram\per\meter^3}
-||||||| 4e4ad4c
-  m &= \SI{412.2(0.2)}{\gram}, \\
-  l &= \SI{59.20(0.06)}{\cm}. \\
-=======
-  m &= \SI{412.2(0.2)}{\gram}, \\
-  l &= \SI{592.0(0.06)}{\mm}. \\
->>>>>>> d326651beef4fde1f054dde9da204cfeca12aa92
+  \overline{\rho_\bigcirc} &= \SI{8862.79 (12.37)}{\kilo\gram\per\meter^3}
 \end{align*}
 
 \sloppy
@@ -292,12 +272,12 @@ der Variablen $\eta(x)$, wobei der runde Stab die folgenden Werte hat
 \end{align*}
 Die lineare Regression des Types $D(x) = \mu\cdot\eta(x)+b$ liefert die Parameter
 \begin{align*}
-  \mu &= \SI{0.0455 (0.0007)}{\Pa},\\
-  b &= 0.0002 \pm 0.0007, \\
+  \mu &= \SI{0.0455 (0.0007)}{\per\square\meter},\\
+  b &= \SI{0.0002 (0.0007)}{\meter}, \\
 \end{align*}
 woraus mit Formel (\ref{eqn:linRegq}) ein Elastizitäsmodul von
 \begin{align*}
-  E = \SI{164 (2.5)e9}{\Pa}
+  E_1 = \SI{164 (2.5)e9}{\Pa}
 \end{align*}
 folgt.
 
@@ -354,9 +334,9 @@ Analog der Berechnung der Elastizitätsmodule des eckigen Stabes bei einseitiger
 Hilfsvariablen mit Gleichung (\ref{eqn:rel2}) und Gleichung (\ref{eqn:rel3}) definiert. Aus der linearen Regression der Form $D(x) = \mu\cdot\eta(x)+b$
 folgen die Elastizitätsmodule
 \begin{align*}
-  \mu_1 &= \SI{0.00376 (0.00023)}{\Pa}, & b_1 &= 0.00115 \pm 0.00023, \\
-  \mu_2 &= \SI{0.00587 (0.00031)}{\Pa}, & b_2 &= -0.00037 \pm 0.00031, \\
-  E_1 &= \SI{172 (10)e9}{\Pa}, & E_2 &= \SI{110 (6)e9}{\Pa}.\\
+  \mu_1 &= \SI{0.00376 (0.00023)}{\per\square\meter}, & b_1 &= \SI{0.00115(0.00023)}{\meter}, \\
+  \mu_2 &= \SI{0.00587 (0.00031)}{\per\square\meter}, & b_2 &= \SI{-0.00037 (0.00031)}{\meter}, \\
+  E_2 &= \SI{172 (10)e9}{\Pa}, & E_3 &= \SI{110 (6)e9}{\Pa}.\\
 \end{align*}
 Der Mittelwert beträgt somit
 \begin{align*}
