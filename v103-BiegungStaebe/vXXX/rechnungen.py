@@ -31,7 +31,7 @@ print('Dichte eckiger Stab:', np.round(np.mean(dichte_eckig), 4), '+-', np.round
 
 a_mm = np.array([10.0, 10.0, 10.0, 10.0, 10.0])
 a_rund = ufloat(np.round(np.mean(a_mm*10**(-3)), 4), np.round(np.std(a_mm*10**(-3)), 4))
-print('Trägheitsmoment eckiger Stab: ', 1/12* a_rund ** 4)
+print('Trägheitsmoment eckiger Stab: ', 1/12* (a_rund ** 4))
 
 #Elasti 1 eckig
 steigung1 = ufloat(0.0297, 0.0004)
