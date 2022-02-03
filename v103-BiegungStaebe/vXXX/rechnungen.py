@@ -35,7 +35,7 @@ print('Trägheitsmoment eckiger Stab: ', 1/12* (a_rund ** 4))
 
 #Elasti 1 eckig
 steigung1 = ufloat(0.0297, 0.0004)
-traegheit1 = ufloat(0.83, 0)
+traegheit1 = ufloat(8.3*10**(-10), 0)
 print('Elasti eckig einseitig: ', gewichtsKr_eins/ (2*traegheit1*steigung1))
 
 #Elasti2 eckig

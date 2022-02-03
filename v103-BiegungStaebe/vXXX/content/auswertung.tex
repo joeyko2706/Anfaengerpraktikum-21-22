@@ -100,7 +100,7 @@ Die Dichte des eckigen Stabes ergibt sich mithilfe \autoref{tab:eckigStab} zu
 \end{align*}
 Aus (\ref{eqn:quadrat}) wird das Flächenträgheitsmoment berechnet zu
 \begin{align*}
-  I_{\square} = \SI{0.83e-3}{\meter^4}.
+  I_{\square} = \SI{8.3e-10}{\meter^4}.
 \end{align*}
 Die lineare Regression wird mithilfe der Python-Erweiterungen numpy \cite{numpy} und scipy \cite{scipy} durchgeführt, während
 der Plot mit matplotlib \cite{matplotlib} erstellt wird. Die Erweiterungen liefern eine Ausgleichsgerade vom Typ $D(x) = \mu\cdot\eta(x)+b$
@@ -271,7 +271,7 @@ Die Hilfsvariable $\eta(x)$ ergibt sich nach Gleichung (\ref{eqn:Durchbiegung}) 
 Nach Gleichung (\ref{eqn:rel1}) ergibt sich analog zu dem eckigen Stab ein linearer Zusammenhang zwischen dem Elastizitätsmodul und
 der Variablen $\eta(x)$, wobei der runde Stab die folgenden Werte hat
 \begin{align*}
-  I_{\bigcirc} &= (\frac{1}{64} \pm 0.0) \, \si{\meter^4}, \\
+  I_{\bigcirc} &= \SI{4.91e-10}{\meter^4}, \\
   F_{\text{Last 1}} &= \SI{7.3575}{\newton}. \\
 \end{align*}
 Die lineare Regression des Types $D(x) = \mu\cdot\eta(x)+b$ liefert die Parameter
@@ -281,7 +281,7 @@ Die lineare Regression des Types $D(x) = \mu\cdot\eta(x)+b$ liefert die Paramete
 \end{align*}
 woraus mit Formel (\ref{eqn:linRegq}) ein Elastizitäsmodul von
 \begin{align*}
-  E_1 = \SI{164 (2.5)e9}{\Pa}
+  E_1 = \SI{164.7 (2.5)e9}{\Pa}
 \end{align*}
 folgt.
 
