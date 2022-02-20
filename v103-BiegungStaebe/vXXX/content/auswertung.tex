@@ -100,7 +100,7 @@ Die Dichte des eckigen Stabes ergibt sich mithilfe \autoref{tab:eckigStab} zu
 \end{align*}
 Aus (\ref{eqn:quadrat}) wird das Flächenträgheitsmoment berechnet zu
 \begin{align*}
-  I_{\square} = \SI{0.83e-3}{\kilo\gram\meter^2}.
+  I_{\square} = \SI{8.3e-10}{\meter^4}.
 \end{align*}
 Die lineare Regression wird mithilfe der Python-Erweiterungen numpy \cite{numpy} und scipy \cite{scipy} durchgeführt, während
 der Plot mit matplotlib \cite{matplotlib} erstellt wird. Die Erweiterungen liefern eine Ausgleichsgerade vom Typ $D(x) = \mu\cdot\eta(x)+b$
@@ -118,6 +118,10 @@ Das Elastizitätsmodul berechnet sich mit (\ref{eqn:rel1}) zu
 \label{subsubsec:beidsEck}
 Aus \autoref{tab:werte3} sind die Messwerte der Biegung eines eckigen Stabes bei beidseitiger Einspannung unter einem Gewicht von
 $m_{\text{Last}} = \SI{1550}{\gram}$, welches an der Position $x= \SI{27.5}{\cm}$ positioniert wird, zu entnehmen.
+Somit folgt eine Gewichtskraft von 
+\begin{align*}
+  F_{\text{Last 2}} = \SI{15.2055}{\newton}.
+\end{align*}
 \autoref{fig:plot2} ist Plot zu den Messwerten aus \autoref{tab:werte3} und die lineare Regression zu entnehmen.
 
 
@@ -157,7 +161,7 @@ $m_{\text{Last}} = \SI{1550}{\gram}$, welches an der Position $x= \SI{27.5}{\cm}
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.75\textwidth]{build/plot2.pdf}
-  \caption{Messung eines quadratischen Stabes bei beidseiger Einspannung ($m_{\text{Last}} = \SI{1550}{\gram}$).}
+  \caption{Messung eines quadratischen Stabes bei beidseitiger Einspannung ($m_{\text{Last}} = \SI{1550}{\gram}$).}
   \label{fig:plot2}
 \end{figure}
 
@@ -255,7 +259,7 @@ einem Gewicht von $m_{\text{Last}} = \SI{750}{\gram}$, welches an der Stelle $x=
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.75\textwidth]{build/plot3.pdf}
-  \caption{Messung eines runden Stabes bei einseitiger Einspannung ($\text G = \SI{750}{\gram}$).}
+  \caption{Messung eines runden Stabes bei einseitiger Einspannung ($m_{\text{Last}} = \SI{750}{\gram}$).}
   \label{fig:plot3}
 \end{figure}
 
@@ -267,8 +271,8 @@ Die Hilfsvariable $\eta(x)$ ergibt sich nach Gleichung (\ref{eqn:Durchbiegung}) 
 Nach Gleichung (\ref{eqn:rel1}) ergibt sich analog zu dem eckigen Stab ein linearer Zusammenhang zwischen dem Elastizitätsmodul und
 der Variablen $\eta(x)$, wobei der runde Stab die folgenden Werte hat
 \begin{align*}
-  I_{\bigcirc} &= (\frac{1}{64} \pm 0.0) \si{\kilo\gram\meter^2}, \\
-  F_{\bigcirc} &= \SI{4.042 (0.002)}{\newton}. \\
+  I_{\bigcirc} &= \SI{4.91e-10}{\meter^4}, \\
+  F_{\text{Last 1}} &= \SI{7.3575}{\newton}. \\
 \end{align*}
 Die lineare Regression des Types $D(x) = \mu\cdot\eta(x)+b$ liefert die Parameter
 \begin{align*}
@@ -277,7 +281,7 @@ Die lineare Regression des Types $D(x) = \mu\cdot\eta(x)+b$ liefert die Paramete
 \end{align*}
 woraus mit Formel (\ref{eqn:linRegq}) ein Elastizitäsmodul von
 \begin{align*}
-  E_1 = \SI{164 (2.5)e9}{\Pa}
+  E_1 = \SI{164.7 (2.5)e9}{\Pa}
 \end{align*}
 folgt.
 
@@ -285,9 +289,13 @@ folgt.
 \subsubsection{Beidseitige Einspannung}
 \label{subsubsec:rundBeidEins}
 Aus \autoref{tab:werte4} sind die Messwerte für die Auslenkungen $D_0(x)$ und $D_{\text G}(x)$ zu entnehmen, wobei ein Gewicht von
-$m_{\text{Last}}=\SI{1550}{\gram}$ bei $x=\SI{27.5}{\cm}$ positioniert wird. \autoref{fig:plot4} ist die grapische Darstellung der Messwerte, die 
+$m_{\text{Last}}=\SI{1550}{\gram}$ bei $x=\SI{27.5}{\cm}$ positioniert wird, woraus eine Gewichtskraft von 
+\begin{align*}
+  F_{\text{Last 2}} = \SI{15.2055}{\newton}
+\end{align*}
+folgt. \autoref{fig:plot4} ist die grapische Darstellung der Messwerte, die 
 jeweils in Bereichen $x \in [0, L/2] $ und 
-$x \in [l/2,L]$ unterteilt werden. Es ist außerdem eine lineare Regression für beide Einteilungen
+$x \in [L/2,L]$ unterteilt werden. Es ist außerdem eine lineare Regression für beide Einteilungen
 aufzufinden.
 
 \sloppy
@@ -325,14 +333,15 @@ aufzufinden.
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.75\textwidth]{build/plot4.pdf}
-  \caption{Messung eines runden Stabes bei beidseitiger Einspannung ($\text G = \SI{1550}{\gram}$).}
+  \caption{Messung eines runden Stabes bei beidseitiger Einspannung ($m_{\text{Last}} = \SI{1550}{\gram}$).}
   \label{fig:plot4}
 \end{figure}
 
 
 Analog der Berechnung der Elastizitätsmodule des eckigen Stabes bei einseitiger Auflage werden für die lineare Regression die 
-Hilfsvariablen mit Gleichung (\ref{eqn:rel2}) und Gleichung (\ref{eqn:rel3}) definiert. Aus der linearen Regression der Form $D(x) = \mu\cdot\eta(x)+b$
-folgen die Elastizitätsmodule
+Hilfsvariablen mit Gleichung (\ref{eqn:rel2}) und Gleichung (\ref{eqn:rel3}) definiert und jeweils in die Gleichungen (\ref{eqn:DurchbiegungL/2})
+und (\ref{eqn:DurchbiegungL}) eingesetzt. Aus der linearen Regression der Form 
+$D(x) = \mu\cdot\eta(x)+b$ folgen die Elastizitätsmodule
 \begin{align*}
   \mu_1 &= \SI{0.00376 (0.00023)}{\per\square\meter}, & b_1 &= \SI{0.00115(0.00023)}{\meter}, \\
   \mu_2 &= \SI{0.00587 (0.00031)}{\per\square\meter}, & b_2 &= \SI{-0.00037 (0.00031)}{\meter}, \\
