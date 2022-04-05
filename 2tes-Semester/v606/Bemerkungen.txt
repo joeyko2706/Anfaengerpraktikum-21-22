@@ -1,0 +1,3 @@
+- Sowohl der Sinusspannungsgenerator, als auch das Millivoltmeter schwanken erheblich. 
+	Man stellt einen Wert am Sinussp. ein und ohne den Regler zu berühren, oszilliert der immer zwischen ein Paar 
+	Werten
