@@ -4,7 +4,7 @@ import numpy as np
 
 print(r'Plots werden durchgegangen')
 
-f, U = np.genfromtxt('a.txt', unpack = True)
+f, U = np.genfromtxt('data/a.txt', unpack = True)
 U *= 10**(-3)
 
 plt.plot(f, U, '.' ,color = 'mediumblue', label = 'Messwerte')
