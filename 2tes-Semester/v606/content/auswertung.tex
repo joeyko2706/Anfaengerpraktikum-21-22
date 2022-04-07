@@ -1,12 +1,85 @@
 \section{Auswertung}
 \label{sec:Auswertung}
 
-\begin{figure}
+\begin{table}[H]
   \centering
-  \includegraphics{plot.pdf}
-  \caption{Plot.}
-  \label{fig:plot}
-\end{figure}
+  \caption{Abmaße der drei Proben.}
+  \label{tab:abmProben}
+  \begin{tabular}{c c c c}
+    \toprule
+    Messgröße & Neodym & Gadolinium & Dysprosium \\
+    \midrule
+    Masse $m$ & $\SI{18.48}{\gram}$ & $\SI{14.08}{\gram}$ & $\SI{15.1}{\gram}$ \\
+    Länge $l$ & $\SI{18.2}{\centi\meter}$ & $\SI{17.1}{\centi\meter}$ & $\SI{16.6}{\centi\meter}$ \\ %Bei Dysprosium muss noch angegeben werden, dass die Luftblase bereits rausgerechnet wurde (mit Werten?)!
+    Durchmesser $d$ & $\SI{0.8}{\centi\meter}$ & $\SI{0.7}{\centi\meter}$ & $\SI{0.7}{\centi\meter}$ \\
+    \bottomrule
+  \end{tabular}
+\end{table}
 
 
-Siehe \autoref{fig:plot}!
+\begin{table}[H]
+  \centering
+  \caption{Messwerte der Widerstände und Spannungen der Brückenschaltung bei $\SI{35}{\kilo\hertz}$ und $\SI{60}{\milli\volt}$ bei Neodym.}
+  \label{tab:abmProben}
+  \begin{tabular}{c| c c c c}
+    \toprule
+    Durchlauf & $R_3 \si{\ohm}$ & $R_4 \si{\ohm}$ & $\upDelta R \si{\ohm}$ & $U_{\text{Br}} \si{\milli\volt}$ \\%Welche Brückenspannung ist hier gefragt? Ich bin von der Ausgegangen, die am Voltmeter angezeigt wird, wenn die Probe eingesteckt wird
+    \midrule
+    Erster & 0.925 & 4.075 & 0.175 & 49 \\
+    Zweiter & 0.925 & 4.075 & 0.20 & 49 \\
+    Dritter & 0.925 & 4.075 & 0.190 & 49 \\
+    Mittelwerte & 0.925 & 4.075 & 0.188 & 49\\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\begin{table}[H]
+  \centering
+  \caption{Messwerte der Widerstände und Spannungen der Brückenschaltung bei $\SI{35}{\kilo\hertz}$ und $\SI{60}{\milli\volt}$ bei Dysprosium.}
+  \label{tab:abmProben}
+  \begin{tabular}{c| c c c c}
+    \toprule
+    Durchlauf & $R_3 \si{\ohm}$ & $R_4 \si{\ohm}$ & $\upDelta R \si{\ohm}$ & $U_{\text{Br}} \si{\milli\volt}$ \\
+    \midrule
+    Erster & 0.925 & 4.075 & 1.675 & 30.75 \\
+    Zweiter & 0.925 & 4.075 & 1.675 & 30.75 \\
+    Dritter & 0.925 & 4.075 & 1.675 & 30.75 \\
+    Mittelwerte & 0.925 & 4.075 & 1.675 & 30.75 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\begin{table}[H]
+  \centering
+  \caption{Messwerte der Widerstände und Spannungen der Brückenschaltung bei $\SI{35}{\kilo\hertz}$ und $\SI{60}{\milli\volt}$ bei Gadolinium.}
+  \label{tab:abmProben}
+  \begin{tabular}{c| c c c c}
+    \toprule
+    Durchlauf & $R_3 \si{\ohm}$ & $R_4 \si{\ohm}$ & $\upDelta R \si{\ohm}$ & $U_{\text{Br}} \si{\milli\volt}$ \\
+    \midrule
+    Erster & 0.925 & 4.075 & 0.9 & 67 \\
+    Zweiter & 0.925 & 4.075 & 0.9 & 69 \\
+    Dritter & 0.925 & 4.075 & 0.8 & 69 \\
+    Mittelwerte & 0.925 & 4.075 & 0.87 & 68.3\\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+
+
+
+
+\begin{table}[H]
+  \centering
+  \caption{Messwerte der Widerstände und Spannungen der Brückenschaltung bei $\SI{35}{\kilo\hertz}$ und $\SI{60}{\milli\volt}$ in Abhängigkeit der Spulenfüllung.}
+  \label{tab:abmProben}
+  \begin{tabular}{c| c c c c}
+    \toprule
+    Füllung & $R_3 \si{\ohm}$ & $R_4 \si{\ohm}$ & $\upDelta R \si{\ohm}$ & $U_{\text{Br}} \si{\milli\volt}$ \\
+    \midrule
+    ohne Probe & 0.925 & 4.075 & 0.9 & 67 \\
+    Neodym \\
+    Gadolinium \\
+    \bottomrule
+  \end{tabular}
+\end{table}

@@ -1,3 +1,6 @@
 - Sowohl der Sinusspannungsgenerator, als auch das Millivoltmeter schwanken erheblich. 
 	Man stellt einen Wert am Sinussp. ein und ohne den Regler zu berühren, oszilliert der immer zwischen ein Paar 
 	Werten
+- Bei der Brückenspannung muss 5 Ohm - der eingestellte Widerstand, um beide Widerstände R_3 und R_4 zu haben
+	- R_3 ist 5 Ohm - X
+	- R_4 ist der Rest
