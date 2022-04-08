@@ -1,56 +1,101 @@
 \section{Auswertung}
 \label{sec:Auswertung}
-Es werden die drei Stoffe Neodym, Gadolinium und Dysprosium untersucht. Um die theoretischen Werte der magnetischen Suszeptibilität berechnen zu können, müssen zunächst die Quantenzahlen bestimmt werden.
-Dafür muss auf den Aufbau der drei Proben eingegangen werden. Wie Werte sind in \autoref{tab:quant} zusammengefasst.
+\subsection{Theoretische Werte}
+\label{subsec:theoW}
+Es werden die drei Stoffe Neodym, Gadolinium und Dysprosium untersucht. Um die theoretischen Werte der magnetischen Suszeptibilität $\chi$ berechnen zu können, müssen zunächst die Quantenzahlen bestimmt werden.
+Dafür muss auf den Aufbau der drei Proben eingegangen werden. Die Werte sind in \autoref{tab:quantZahl} zusammengefasst.
 Alle Stoffe sind Metalle der Seltenen Erden und haben damit eine komplette 5p-Schale und 2s-Elektronen, die aber für den Paramagnetismus unwichtig sind, da die Spins und Bahndrehimpulse abgesättigt sind
 und der resultierende Drehimpuls verschwindet. Da die Seltenen Erd Metalle alle ein 4f-Elektron mehr haben, als ihre Vorgänger, folgen die Anzahl der 4f-Elektronen jeweils für die drei Stoffe.
 Somit hat Neodym 4 Elektronen, Gadolinium hat 8  und Dysprosium hat dementsprechend 10 Elektronen auf der 4f-Schale.
 Wenn ein Atom Ionisiert wird, verliert es ein 6s- und ein 4f-Elektron.
 Gemäß der Hund'schen Regeln [hier Referenz einfügen] werden die Quantenzahlen berechnet.
-Der Landé-Faktor wird nach [Gleichung referenzieren] berechnet.
+Der Landé-Faktor $g_j$ wird nach [Gleichung referenzieren] berechnet.
 
-\begin{table}%Die Berechnung von S ist wahrscheinlich falsch und ich habe keine Ahnung, wie man L berechnet.
-  \centering
-  \caption{Bestimmung der Quantenzahlen.}
-  \label{tab:quant}
-  \begin{tabular}{l c c c c c c}
-      \toprule
-       & 
-      neutral & 
-      \multicolumn{4}{c}{ionisiert} \\
-      \cmidrule(lr){2-2} \cmidrule(lr){3-7}
-      Element &
-      4f & 
-      4f &
-      $S$ & 
-      $L$ & 
-      $J$ &
-      $g_J$ \\
-      \midrule
-      Nd &  4 & 3 & $3\cdot\sfrac{1}{2}=\sfrac{3}{2}$ & 6 & $\sfrac{9}{2}$  & 0.727 \\
-      Gd &  8 & 7 & $7\cdot\sfrac{1}{2}=\sfrac{7}{2}$ & 0 & $\sfrac{7}{2}$ & 2.000 \\
-      Dy & 10 & 9 & $9\cdot\sfrac{1}{2}=\sfrac{9}{2}$ & 5 & $\sfrac{45}{2}$ & 1.495 \\
-      \bottomrule
-  \end{tabular}
-\end{table}
-
-In \autoref{tab:abmProben} sind die Abmaße der drei in dem Versuch verwendeten Proben zu entnehmen.
 \begin{table}[H]
   \centering
-  \caption{Abmaße der drei Proben.}
-  \label{tab:abmProben}
-  \begin{tabular}{c c c c}
+  \caption{Bestimmung der Quantenzahlen.}
+  \label{tab:quantZahl}
+  \begin{tabular}{c| c c c c c c}
     \toprule
-    Messgröße & Neodym & Gadolinium & Dysprosium \\
+    Element & $4f_{\text{neutral}}$ & $4f_{\text{ionisiert}}$ & S & L & J & $g_j$\\
     \midrule
-    Masse $m$ & $\SI{18.48}{\gram}$ & $\SI{14.08}{\gram}$ & $\SI{15.10}{\gram}$ \\
-    Länge $l$ & $\SI{18.2}{\centi\meter}$ & $\SI{17.1}{\centi\meter}$ & $\SI{16.6}{\centi\meter}$ \\ %Bei Dysprosium muss noch angegeben werden, dass die Luftblase bereits rausgerechnet wurde (mit Werten?)!
-    Durchmesser $d$ & $\SI{0.8}{\centi\meter}$ & $\SI{0.7}{\centi\meter}$ & $\SI{0.7}{\centi\meter}$ \\
+    Neodym & 4 & 3 & $3\cdot\sfrac{1}{2}=\sfrac{3}{2}$ & 6 & $\sfrac{9}{2}$ & 0.727 \\
+    Gadolinium & 8 & 7 & $7\cdot\sfrac{1}{2}=\sfrac{7}{2}$ & 0 & $\sfrac{7}{2}$ & 2 \\
+    Dysprosium & 10 & 9 & $7\cdot\sfrac{1}{2}-2\sfrac{1}{2}=\sfrac{5}{2}$ & 5 & $\sfrac{15}{2}$ & 1,382 \\
     \bottomrule
   \end{tabular}
 \end{table}
 
-In \autoref{tab:NdMessw} sind die Messwerte zu den drei Durchläufen der Messung der Widerstände und Spannungen der Brückenschaltung bei Neodymfüllung zu entnehmen.
+\noindent
+Für die theoretische Suszeptibilität $\chi$ wird noch de Anzahl $N$ der der atomaren magnetischen Dipolmomente pro Volumeneinheit benötigt, der mithilfe der Gleichung 
+\begin{align*}
+  N = \frac{\rho}{m_{\text{mol}}} = \frac{\rho}{V_{\text{mol}} \cdot \rho} = \frac{1}{V_{\text{mol}}} %Masse *10**(-3) / (Volumenmol * 10**(-6) * u)
+\end{align*}
+berechnet wird.
+In \autoref{tab:abmProben} sind die Abmaße und die atomaren, magnetischen Dipolmomente der drei in dem Versuch verwendeten Proben zu entnehmen.
+\begin{table}[H]
+  \centering
+  \caption{Abmaße der drei Proben.}
+  \label{tab:abmProben}
+  \begin{tabular}{c| c c c c c}
+    \toprule
+    Stoff & $m$ \,/\, g & $V_{\text{mol}}$ \,/\, $\si{\micro\cubic\meter\per\mole}$ & $N$ \,/\, $\sfrac{10^{29}}{\si{\cubic\meter}}$ \\
+    \midrule
+    Neodym & 18,48  & 20,59 & 5,405 \\
+    Gadolinium & 14,08 & 19,90 & 4,261 \\
+    Dysprosium & 15,10 & 19,01 & 4,754 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\noindent
+Die magnetische Suszeptibilität ist von der Temperatur abhängig. Der Versuch wurde bei Raumtempereatur von ungefähr $\SI{22}{\degreeCelsius}$ durchgeführt, also einer Temperatur von $T = 273,15 + 22 = 295.15$ K.
+Es werden die magnetischen Suszeptibilitäten nach \autoref{eq:mariecurie} berechnet, zu den folgenden Werten
+\begin{align*}
+  \chi_{\text{Nd}} = 0,0625,  \\
+  \chi_{\text{Gd}} = 0,2374, \\
+  \chi_{\text{Dy}} = 0,4589. \\
+\end{align*}
+
+
+
+%-------- Das sind die praktischen Werte
+
+
+
+\subsection{Versuchswerte}
+\label{subsec:versuchsW}
+Die Messwerte, also die Ausgangsspannung $U_A$ der Brückenschaltung gegen die Frequenz $\nu$, des Versuches sind in \autoref{fig:plot} grafisch dargestellt.
+Es lässt sich ablesen, dass sich bei einer Frequenz von $\SI{33,9}{\kilo\hertz}$ ein Maximum von $\SI{5,5}{\volt}$ befindet. 
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.75\textwidth]{build/plot.pdf}
+  \caption{Filterkurve des Selektivverstärkers.}
+  \label{fig:plot}
+\end{figure}
+Aufgrund von hohen Schwankungen der Geräte, auf die in der Diskussion (\autoref{sec:Diskussion}) näher eingegangen wird, wurde für den weiteren Verlauf eine Frequenz von $\SI{35}{\kilo\hertz}$ verwendet.
+Die Kenngrößen der Brückenschaltung sind in {REFERENz}dargestellt. 
+
+\begin{table}[H]
+  \centering
+  \caption{Kenngrößen der Brückenschaltung.}
+  \label{tab:kennGrBr}
+  \begin{tabular}{c | c}
+    \toprule
+    Kenngröße & Wert \\
+    \midrule
+    Frequenz $\nu$ & $\SI{35}{\kilo\hertz}$ \\
+    Speisespannung $U_{\text{Sp}}$ & $\SI{1}{\volt}$ \\
+    Windungszahl $n$ & 250 \\
+    Querschnittsfläche Spule $F$ & $\SI{86,6}{\square\milli\meter}$ \\
+    Spulenlänge $l$ & $\SI{135}{\milli\meter}$ \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+In dem Versuch wurde keine Verstärkung in der Schaltung verwendet, weshalb auch keine eingerechnet werden muss.
+Die Messwerte sind in insgesamt vier Tabellen aufgeteilt. In \autoref{tab:NdMessw} sind die Messwerte für Neodym, in \autoref{tab:GdMessw} die Werte für Gadolinium und in \autoref{tab:DyMessw} die Daten für Dysprosium aufgelistet.
+Es ist darauf zu achten, dass der Lufteinschluss in der Probe, die eine Länge von $\SI{0,8}{\centi\meter}$ hat, bereits aus der Länge der Probe herausgerechnet wurde.
 \begin{table}[H]
   \centering
   \caption{Messwerte der Widerstände und Spannungen der Brückenschaltung bei $\SI{35}{\kilo\hertz}$ und $\SI{60}{\milli\volt}$ bei Neodym.}
@@ -59,16 +104,14 @@ In \autoref{tab:NdMessw} sind die Messwerte zu den drei Durchläufen der Messung
     \toprule
     Durchlauf & $R_3 \,/\, \si{\ohm}$ & $R_4 \,/\, \si{\ohm}$ & $\upDelta R \,/\, \si{\ohm}$ & $U_{\text{Br}} \,/\, \si{\milli\volt}$ \\%Welche Brückenspannung ist hier gefragt? Ich bin von der Ausgegangen, die am Voltmeter angezeigt wird, wenn die Probe eingesteckt wird
     \midrule
-    Erster & 0.925 & 4.075 & 0.175 & 49 \\
-    Zweiter & 0.925 & 4.075 & 0.200 & 49 \\
-    Dritter & 0.925 & 4.075 & 0.190 & 49 \\
-    Mittelwerte & 0.925 & 4.075 & 0.188 & 49\\
+    Erster & 0,925 & 4,075 & 0,175 & 49 \\
+    Zweiter & 0,925 & 4,075 & 0,200 & 49 \\
+    Dritter & 0,925 & 4,075 & 0,190 & 49 \\
+    Mittelwerte & 0,925 & 4,075 & 0,188 & 49\\
     \bottomrule
   \end{tabular}
 \end{table}
 
-
-In \autoref{tab:GdMessw} sind die Messwerte zu den drei Durchläufen der Messung der Brückenwiderstände und -Spannungen bei Gadoliniumfüllung zu entnehmen.
 \begin{table}[H]
   \centering
   \caption{Messwerte der Widerstände und Spannungen der Brückenschaltung bei $\SI{35}{\kilo\hertz}$ und $\SI{60}{\milli\volt}$ bei Gadolinium.}
@@ -77,17 +120,14 @@ In \autoref{tab:GdMessw} sind die Messwerte zu den drei Durchläufen der Messung
     \toprule
     Durchlauf & $R_3 \,/\, \si{\ohm}$ & $R_4 \,/\, \si{\ohm}$ & $\upDelta R \,/\, \si{\ohm}$ & $U_{\text{Br}} \,/\, \si{\milli\volt}$ \\
     \midrule
-    Erster & 0.925 & 4.075 & 0.90 & 67.0 \\
-    Zweiter & 0.925 & 4.075 & 0.90 & 69.0 \\
-    Dritter & 0.925 & 4.075 & 0.80 & 69.0 \\
-    Mittelwerte & 0.925 & 4.075 & 0.87 & 68.3\\
+    Erster & 0,925 & 4,075 & 0,90 & 67,0 \\
+    Zweiter & 0,925 & 4,075 & 0,90 & 69,0 \\
+    Dritter & 0,925 & 4,075 & 0,80 & 69,0 \\
+    Mittelwerte & 0,925 & 4,075 & 0,87 & 68,3\\
     \bottomrule
   \end{tabular}
 \end{table}
 
-
-In \autoref{tab:DyMessw} sind die Messwerte zu den drei Durchläufen der Messung der Widerstände und Spannungen der Brückenschaltung bei Dysprosiumfüllung zu entnehmen. Es ist darauf zu achten,
-dass der Lufteinschluss in der Probe, die eine Länge von $\SI{0.8}{\centi\meter}$ hat, bereits aus der Länge der Probe herausgerechnet wurde.
 \begin{table}[H]
   \centering
   \caption{Messwerte der Widerstände und Spannungen der Brückenschaltung bei $\SI{35}{\kilo\hertz}$ und $\SI{60}{\milli\volt}$ bei Dysprosium.}
@@ -96,16 +136,18 @@ dass der Lufteinschluss in der Probe, die eine Länge von $\SI{0.8}{\centi\meter
     \toprule
     Durchlauf & $R_3 \,/\, \si{\ohm}$ & $R_4 \,/\, \si{\ohm}$ & $\upDelta R \,/\, \si{\ohm}$ & $U_{\text{Br}} \,/\, \si{\milli\volt}$ \\
     \midrule
-    Erster & 0.925 & 4.075 & 1.675 & 30.75 \\
-    Zweiter & 0.925 & 4.075 & 1.675 & 30.75 \\
-    Dritter & 0.925 & 4.075 & 1.675 & 30.75 \\
-    Mittelwerte & 0.925 & 4.075 & 1.675 & 30.75 \\
+    Erster & 0,925 & 4,075 & 1,675 & 30,75 \\
+    Zweiter & 0,925 & 4,075 & 1,675 & 30,75 \\
+    Dritter & 0,925 & 4,075 & 1,675 & 30,75 \\
+    Mittelwerte & 0,925 & 4,075 & 1,675 & 30,75 \\
     \bottomrule
   \end{tabular}
 \end{table}
 
-In \autoref{tab:alleMessw} sind alle Mittelwerte der oben aufgeführten Messdaten der Brückenwiderstände und -Spannungen noch einmal aufgeführt. Zudem sind die Messwerte für einen Durchlauf ohne Füllung zu entnehmen.
-Es ist darauf zu achten, dass für die Messung der Dysprosiumfüllung das Millivoltmeter umskaliert wurde, weshalb Die Brückenschaltung noch ein zweites Mal ohne eine Probe vermessen werden musste.
+
+Die \autoref{tab:alleMessw} zeigt alle Mittelwerte übersichtlich auf einen Blick. Zudem sind die Messwerte für einen Durchlauf ohne Füllung zu entnehmen.
+Es ist dabei darauf zu achten, dass für die Messung der Dysprosiumfüllung das Millivoltmeter umskaliert wurde, weshalb die Brückenschaltung noch ein zweites Mal ohne eine Probe vermessen werden musste.
+Zu den beiden verstellbaren Widerständen kommen noch die $\SI{998}{\ohm}$ der vor und nach des Potentiometers geschalteten Widerstände hinzu.
 \begin{table}[H]
   \centering
   \caption{Mittlere Messwerte der Widerstände und Spannungen der Brückenschaltung bei $\SI{35}{\kilo\hertz}$ und $\SI{60}{\milli\volt}$ in Abhängigkeit der Spulenfüllung.}
@@ -114,11 +156,11 @@ Es ist darauf zu achten, dass für die Messung der Dysprosiumfüllung das Milliv
     \toprule
     Füllung & $R_3 \,/\, \si{\ohm}$ & $R_4 \,/\, \si{\ohm}$ & $\upDelta R \,/\, \si{\ohm}$ & $U_{\text{Br}} \,/\, \si{\milli\volt}$ \\
     \midrule
-    ohne Probe & 0.925 & 4.075 & 0.900 & 67.00 \\
-    Neodym & 0.925 & 4.075 & 0.188 & 49.00\\ 
-    Gadolinium & 0.925 & 4.075 & 0.870 & 68.30\\ \hline
-    ohne Probe & 0.925 & 4.075 & 0.900 & 13.50 \\
-    Dysprosium & 0.925 & 4.075 & 1.675 & 30.75 \\
+    ohne Probe & 998,925 & 1002,08 & 0,900 & 67,00 \\
+    Neodym & 998,925 & 1002,08 & 0,188 & 49,00\\ 
+    Gadolinium & 998,925 & 1002,08 & 0,870 & 68,30\\ \hline
+    ohne Probe & 998,925 & 1002,08 & 0,900 & 13,50 \\
+    Dysprosium & 998,925 & 1002,08 & 1,675 & 30,75 \\
     \bottomrule
   \end{tabular}
 \end{table}
