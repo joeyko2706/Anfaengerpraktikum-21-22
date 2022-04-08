@@ -1,21 +1,17 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-x = np.linspace(0, 10, 1000)
-y = x ** np.sin(x)
 
-plt.subplot(1, 2, 1)
-plt.plot(x, y, label='Kurve')
-plt.xlabel(r'$\alpha \mathbin{/} \unit{\ohm}$')
-plt.ylabel(r'$y \mathbin{/} \unit{\micro\joule}$')
-plt.legend(loc='best')
+print(r'Plots werden durchgegangen')
 
-plt.subplot(1, 2, 2)
-plt.plot(x, y, label='Kurve')
-plt.xlabel(r'$\alpha \mathbin{/} \unit{\ohm}$')
-plt.ylabel(r'$y \mathbin{/} \unit{\micro\joule}$')
-plt.legend(loc='best')
+f, U = np.genfromtxt('data/a.txt', unpack = True)
+U *= 10**(-3)
 
-# in matplotlibrc leider (noch) nicht möglich
+plt.plot(f, U, '.' ,color = 'mediumblue', label = 'Messwerte')
+plt.xlabel(r'$\nu$ / kHz')
+plt.ylabel(r'$U_A$ / mV')
+plt.legend(loc='upper left')
+
+
 plt.tight_layout(pad=0, h_pad=1.08, w_pad=1.08)
 plt.savefig('build/plot.pdf')
