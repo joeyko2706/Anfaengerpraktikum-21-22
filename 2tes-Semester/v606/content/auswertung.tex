@@ -27,7 +27,7 @@ Der Landé-Faktor $g_j$ wird nach Gleichung (\ref{eqn:landeF}) berechnet.
 \end{table}
 
 \noindent
-Für die theoretische Suszeptibilität $\chi$ wird noch de Anzahl $N$ der der atomaren magnetischen Dipolmomente pro Volumeneinheit benötigt, der mithilfe der Gleichung 
+Für die theoretische Suszeptibilität $\chi$ wird noch die Anzahl $N$ der der atomaren magnetischen Dipolmomente pro Volumeneinheit, hier pro Mol, benötigt, die mithilfe der Gleichung 
 \begin{align*}
   N = \frac{\rho}{m_{\text{mol}}} = \frac{\rho}{V_{\text{mol}} \cdot \rho} = \frac{1}{V_{\text{mol}}} %Masse *10**(-3) / (Volumenmol * 10**(-6) * u)
 \end{align*}
@@ -35,7 +35,7 @@ berechnet wird.
 In \autoref{tab:abmProben} sind die Volumina pro Mol und die atomaren, magnetischen Dipolmomente der drei in dem Versuch verwendeten Proben zu entnehmen.
 \begin{table}[H]
   \centering
-  \caption{Abmaße der drei Proben.}
+  \caption{Volumina und Dipolmomente der drei Proben.}
   \label{tab:abmProben}
   \begin{tabular}{c|c c}
     \toprule
@@ -49,8 +49,8 @@ In \autoref{tab:abmProben} sind die Volumina pro Mol und die atomaren, magnetisc
 \end{table}
 
 \noindent
-Die magnetische Suszeptibilität ist von der Temperatur abhängig. Der Versuch wurde bei Raumtempereatur von ungefähr $\SI{22}{\degreeCelsius}$ durchgeführt, also einer Temperatur von $T = 273,15 + 22 = 295.15$ K.
-Es werden die magnetischen Suszeptibilitäten nach \autoref{eq:mariecurie} berechnet, zu den folgenden Werten
+Die magnetische Suszeptibilität ist von der Temperatur abhängig. Der Versuch wurde bei Raumtemperatur durchgeführt und auf ungefähr $\SI{22}{\degreeCelsius}$ abgeschätzt, also einer Temperatur von $T = 273,15 + 22 = 295.15$ K.
+Es werden die magnetischen Suszeptibilitäten nach Gleichung (\ref{eq:mariecurie}) berechnet, zu den folgenden Werten
 \begin{align*}
   \chi_{\text{Nd}} = 0,0625,  \\
   \chi_{\text{Gd}} = 0,2374, \\
@@ -65,8 +65,8 @@ Es werden die magnetischen Suszeptibilitäten nach \autoref{eq:mariecurie} berec
 
 \subsection{Versuchswerte}
 \label{subsec:versuchsW}
-Die Messwerte, also die Ausgangsspannung $U_A$ der Brückenschaltung gegen die Frequenz $\nu$, des Versuches sind in \autoref{fig:plot} grafisch dargestellt.
-Es lässt sich ablesen, dass sich bei einer Frequenz von $\SI{33,9}{\kilo\hertz}$ ein Maximum von $\SI{5,5}{\volt}$ befindet. 
+Die Messwerte, also die Ausgangsspannung $U_{\text{Br}}$ der Brückenschaltung gegen die Frequenz $\nu$, des Versuches sind in \autoref{fig:plot} grafisch dargestellt.
+Es ist abzulesen, dass bei einer Frequenz von $\SI{33,9}{\kilo\hertz}$ ein Maximum von $\SI{5,5}{\volt}$ ist. 
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.75\textwidth]{build/plot.pdf}
@@ -81,7 +81,7 @@ Die Kenngrößen der Brückenschaltung sind in \autoref{tab:kennGrBr} dargestell
   \centering
   \caption{Kenngrößen der Brückenschaltung.}
   \label{tab:kennGrBr}
-  \begin{tabular}{c | c}
+  \begin{tabular}{c c}
     \toprule
     Kenngröße & Wert \\
     \midrule
@@ -169,7 +169,7 @@ Zu den beiden verstellbaren Widerständen kommen noch die $\SI{998}{\ohm}$ der v
 
 \noindent
 Die Suszeptibilität wird über zwei verschiedene Wege berechnet. Die erste Suszeptibilität $\chi_1$ wird über die Gleichung (\ref{eqn:susz1}) berechnet, die zweite $\chi_2$ mithilfe von Gleichung (\ref{eqn:susz2}).
-Die Querschnittsfläche $Q$ durch die effektive Querschnittsfläche $Q_{\text{eff}}$
+Die Querschnittsfläche $Q$ wird durch die effektive Querschnittsfläche $Q_{\text{eff}}$
 \begin{align*}
   Q_{\text{eff}} = Q\frac{\rho}{\rho_w} = \frac{m}{L\cdot\rho_w}
 \end{align*}
