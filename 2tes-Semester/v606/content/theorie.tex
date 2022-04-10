@@ -1,3 +1,8 @@
+\section{Zielsetzung}
+\label{sec:Zielsetzung}
+
+In diesem Versuch soll die Suszeptibilität von mehreren Seltenen Erden näher untersucht und anschließend die Ergebnisse mit den theoretischen Werten verglichen werden.
+
 \section{Theorie}
 \label{sec:Theorie}
 %%%%%
@@ -23,11 +28,11 @@ Fügt man dies nun zusammen in \autoref{eq:eq1} ein, erhält man final
 \vec{B} = \mu_0 \vec{H} + \mu_0 \chi \vec{H},
 \end{equation*}
 wobei $\chi$ die Suszeptibilität beschreibt. Die Suszeptibilität ist materialabhängig, jedoch keine Konstante, da sie von der Temperatur und der Feldstärke abhängig sein kann. 
-%%%%%
+\newline
 Das Phänomen des Paramagnetismus ist nicht bei jedem Material zu beobachten, sondern nur bei solchen, deren Drehimpuls nicht verschwinden kann.
 Es entsteht in Materialien deren Atome ein magnetisches Moment zu einem äußeren Feld besitzen. Weil die Orientierung der magnetischen Momente durch die thermische Bewegung
 der Atome dauerhaft geändert wird, sind die paramagnetischen Effekte temperaturabhängig.
-
+\newline
 Es soll nun der Zusammenhang zwischen dem magnetischen Moment und dem Drehimpuls betrachtet werden.
 Der Gesamtdrehimpuls $\vec{J}$ setzt sich aus dem Bahndrehimpuls der Elektronenhülle $\vec{L}$, dem Spin der Elektronen $\vec{S}$ und dem Kerndrehimpuls zusammen, wobei letzterer vernachlässigt
 werden kann
@@ -47,7 +52,7 @@ wobei $g_\text{S}$ das gyromagnetische Verhältnis und $\mu_\text{B}$ das Bohrsc
 	\caption{Vektordarstellung der Drehimpulse in einer Elektronenhülle und der magnetischen Momente.}
 	\label{fig:vektordarstellung}
 \end{figure}
-
+\noindent
 Mit Hilfe der Beziehung
 \begin{equation*}
 \left|\vec{J}\right| = \sqrt{J(J+1)}\hbar,
@@ -58,7 +63,7 @@ die analog für $\left|\vec{L}\right|$ und $\left|\vec{S}\right|$ gilt, ergeben 
 \left|\vec{\mu_\text{L}}\right| &= \mu_\text{B}\sqrt{L(L+1)} \\
 \left|\vec{\mu_\text{S}}\right| &= g_\text{S}\mu_\text{B}\sqrt{S(S+1)}.
 \end{align}
-Aus diesen Beziehungen und \autoref{ABBILDUNG} ergibt sich für $\left|\vec{\mu_\text{J}}\right|$:
+Aus diesen Beziehungen und \autoref{fig:vektordarstellung} ergibt sich für $\left|\vec{\mu_\text{J}}\right|$:
 \begin{equation}
 \left|\vec{\mu_\text{J}}\right| = \left|\vec{\mu_\text{S}}\right|\text{cos}\alpha + \left|\vec{\mu_\text{L}}\right|\text{cos}\beta.
 \end{equation}
@@ -73,7 +78,7 @@ vereinfachen. Aus dieser Gleichung wird der letzte Teilausdruck
 	g_\text{J} = \frac{3J(J+1)+S(S+1)-L(L+1)}{2J(J+1)}
 \end{equation}
 als Landé-Faktor zusammengefasst.
-
+\newline
 Ein weiteres relevantes Phänomen in der Quantenmechanik ist die Richtungsquantelung. Dieses besagt, dass nur Winkel zwischen der Richtung des äußeren Magnetfelds und der Lage von
 $\left|\vec{\mu_\text{J}}\right|$ möglich sind, bei denen die $z$-Komponente von $\vec{\mu_\text{J}}$ in Feldrichtung ein ganzahliges Vielfaches von $\mu_\text{B}g_\text{J}$ ist.
 Also gilt
@@ -83,13 +88,12 @@ Also gilt
 \end{equation}
 wobei $m$ die Orientierungsquantenzahl ist. Der Winkel hat somit nur $2J+1$ mögliche Einstellungsmöglichkeiten. Für jede dieser Einstellungen existiert eine potentielle Energie,
 die gegeben ist als
-\begin{equation*}
+\begin{equation}
 	\label{eq:Energie}
-E_\text{m} = - \vec{\mu_\text{J}}\vec{B} = \mu_\text{B}g_\text{J}mB.
-\end{equation*}
-
+	E_\text{m} = - \vec{\mu_\text{J}}\vec{B} = \mu_\text{B}g_\text{J}mB.
+\end{equation}
 Die Aufspaltung des Energieniveaus in $2J+1$ Unterniveaus unter dem Einfluss eines äußeren Magnetfeldes wird als $\mathit{Zeeman-Effekt}$ bezeichnet.
-
+\newline
 Um nun mit Hilfe von \autoref{eq:Energie} die Magnetisierung einer Probe zu bestimmen, muss die Häufigkeit, mit der eine bestimmte Orientierung der magnetischen Momente auftritt berechnet
 werden. Diese muss dann mit dem zugehörigen Betrag des Momentes nach \autoref{eq:eq5} multipliziert und anschließend über alle vorkommenden Orientierungen summiert werden:
 Mit Hilfe mehrerer quantenmechanischen Betrachtungen und Nährungen lässt sich ein Ausdruck für $\chi$, das sogenannte \textit{Curie-Gesetz}, herleiten.
@@ -100,15 +104,15 @@ Dieses lautet
 \end{equation}
 wobei $N$ die Anzahl der Momente pro Volumeneinheit, $k$ die Boltzmann-Konstante und $T$ die Temperatur sind.
 Für hinreichend hohe Temperaturen ist die Suszeptibilität $\chi$ also proportional zu $\frac{1}{T}$.
-
+\newline
 Das Phänomen des Paramagnetismus wird insbesondere bei Ionen Seltener Erden beobachtet und durch $4$f-Elektronen hervorgerufen. Daraus lässt sich schließen, dass die
 inneren Elektronen große Drehimpulse besitzen müssen. Die Anordnung der Elektronen in der $4$f-Schale und der sich daraus ergebende Gesamtdrehimpuls sind in den Hundschen Regeln
 festgelegt. 
-
+\newline \newline
 1. Der Gesamtspin $\vec{S}$ nimmt den maximal möglichen Wert an, der nach dem Pauli-Prinzip zulässig ist. 
-
+\newline
 2. Die Zusammensetzung der Bahndrehimpulse $\vec{l_\text{i}}$ bildet nach $\vec{L} = \sum \vec{l_\text{i}}$ den maximalen Drehimpuls der nach Regel 1 und dem Pauli-Prinzip möglich ist.
-
+\newline
 3. Ist eine Schale höchstens zur Hälfte gefüllt, ist der Gesamtdrehimpuls $\vec{J} = \vec{L} - \vec{S}$. Bei einer mehr als zur Hälfte gefüllten gilt hingegen
 $\vec{J} = \vec{L} + \vec{S}$.
 
@@ -121,14 +125,15 @@ $\vec{J} = \vec{L} + \vec{S}$.
 \end{figure}
 Für die Messung von $\chi$ wird eine Brückenschaltung wie in \autoref{fig:bruckenschaltung} mit zwei Induktivitäten verwendet. Mit Hilfe dieser Schaltung wird die
 Induktivität der Spule, in der die zu untersuchende Probe liegt, gemessen.
-
+\newline
 Aus der Induktivität kann dann die Suszeptibilität $\chi$ berechnet werden.
 \begin{equation}
 \label{eq:indu}
 L_\text{M} = \mu_0 \frac{n^2F}{l} + \chi \mu_0 \frac{n^2Q}{l}
 \end{equation}
-Hierbei ist $n$ die Windungszahl, $l$ die Länge, $F$ der Querschnitt der Spule und $Q$ die Querschnittfläche der Probe sind.
-Der zweite Summand aus \autoref{eq:indu} ist die Induktivitätsdifferenz $\Delta L$ zwischen materiegefüllten und vakuumgefüllten Spulen.
+Hierbei ist $n$ die Windungszahl, $l$ die Länge, $F$ der Querschnitt der Spule und $Q$ die Querschnittfläche der Probe.
+Der zweite Summand aus \autoref{eq:indu} ist die Induktivitätsdifferenz $\upDelta L$ zwischen materiegefüllten und vakuumgefüllten Spulen.
+\newline
 Für die Messung der Suszeptibilität $\chi$ gibt es zwei unterschiedliche Methoden.
 Bei der ersten wird die Brücke zunächst abgeglichen und anschließend eine der beiden Spulen mit dem zu untersuchenden
 Material gefüllt. Die Suszeptibilität $\chi$ des Materials kann so aus der nun zu messenden Brückenspannung $U_\text{Br}$ errechnet werden.
@@ -158,13 +163,13 @@ Bei der zweite Methode zur Bestimmung der Suszeptibilität $\chi$ wird erneut di
 abgeglichen und die Suszeptibilität aus den veränderten Werten der Abgleichelemente berechnet.
 Zum Abgleichen der Brücke muss also $R_3$ angepasst werden.
 \begin{equation*}
-R_3' = R_3 + \Delta R.
+R_3' = R_3 + \upDelta R.
 \end{equation*}
 Aus den angepassten Abgleichbedingungen folgt für die Suszeptibilität $\chi$
 \begin{equation}
 	\label{eqn:susz2}
-	\chi = 2 \frac{\Delta R}{R_3}\frac{F}{Q}
+	\chi = 2 \frac{\upDelta R}{R_3}\frac{F}{Q}
 \end{equation}
-wobei $R_3$ der Widerstand am Potentiometer ist und $\Delta R$ die Differenz zum Abgleich mit luftgefüllter Spule.
+wobei $R_3$ der Widerstand am Potentiometer ist und $\upDelta R$ die Differenz zum Abgleich mit luftgefüllter Spule.
 
 \cite{Anleitung606}
