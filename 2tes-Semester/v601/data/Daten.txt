@@ -1,0 +1,14 @@
+Aufgabe a)
+Raumtemperatur: 27,0°C mit einer Heizspannung von 6V.
+
+Bremsspannung U_A; Auffängerstrom I_A;
+0 V 0,32 * 10^ -6 A
+10 V 0 A^
+
+Bei 148,8°C: 0V, 4,5 A
+Bei 151,0°C: 0V 4,05 A
+
+Aufgabe b)
+
+Erste Franck-Hertz Kurve: 55 V; 6,75 nA
+Zweite Franck-Hertz Kurve: 55 V; 1,6 nA
