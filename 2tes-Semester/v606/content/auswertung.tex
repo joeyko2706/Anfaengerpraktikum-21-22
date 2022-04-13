@@ -31,19 +31,19 @@ Für die theoretische Suszeptibilität $\chi$ (\ref{eq:mariecurie}) wird noch di
 \begin{align*}
   N = z\cdot \frac{N_L \rho_w}{M}
 \end{align*}
-berechnet wird. Dabei ist $N_L = 6,02 \cdot 1^0^{23}$ $\si{\per\mole}$, $z$ die Anzahl der magnetisch aktiven Atome (hier $z=2$) und $M$ das Molekulargewicht.
+berechnet wird. Dabei ist $N_L = 6,02 \cdot 10^{23}$ $\si{\per\mole}$, $z$ die Anzahl der magnetisch aktiven Atome (hier $z=2$) und $M$ das Molekulargewicht.
 In \autoref{tab:abmProben} sind die Volumina pro Mol und die atomaren, magnetischen Dipolmomente der drei in dem Versuch verwendeten Proben zu entnehmen.
 \begin{table}[H]
   \centering
   \caption{Volumina und Dipolmomente der drei Proben.}
   \label{tab:abmProben}
-  \begin{tabular}{c|c c}
+  \begin{tabular}{c|c c c}
     \toprule
-    Stoff & $M_{\text{Mol}}$ \,/\, $\si{\gram\per\mole}$ & $N$ \,/\, $\sfrac{10^{29}}{\si{\cubic\meter}}$ \\
+    Stoff & $M_{\text{Mol}}$ \,/\, $\si{\gram\per\mole}$ & $\rho_w \, / \, \si{\gram\per\cubic\centi\meter}$ & $N$ \,/\, $\sfrac{10^{22}}{\si{\cubic\meter}}$ \\
     \midrule
-    Neodym & 336,47 & 5,405 \\
-    Gadolinium & 362,497 & 4,261 \\
-    Dysprosium & 462,851 & 4,754 \\
+    Neodym & 336,47 & 7,24 & 2,591 \\
+    Gadolinium & 362,497 & 7,40 & 2,458 \\
+    Dysprosium & 462,851 & 7,80 & 2,029 \\
     \bottomrule
   \end{tabular}
 \end{table}
@@ -52,9 +52,9 @@ In \autoref{tab:abmProben} sind die Volumina pro Mol und die atomaren, magnetisc
 Die magnetische Suszeptibilität ist von der Temperatur abhängig. Der Versuch wurde bei Raumtemperatur durchgeführt und auf ungefähr $\SI{22}{\degreeCelsius}$ abgeschätzt, also einer Temperatur von $T = 273,15 + 22 = 295.15$ K.
 Es werden die magnetischen Suszeptibilitäten nach Gleichung (\ref{eq:mariecurie}) berechnet, zu den folgenden Werten
 \begin{align*}
-  \chi_{\text{Nd}} = 0,0625,  \\
-  \chi_{\text{Gd}} = 0,2374, \\
-  \chi_{\text{Dy}} = 0,4589. \\
+  \chi_{\text{Nd}} = 0,299 \cdot 10^{-8},  \\
+  \chi_{\text{Gd}} = 1,369 \cdot 10^{-8}, \\
+  \chi_{\text{Dy}} = 2,033 \cdot 10^{-8}. \\
 \end{align*}
 
 
@@ -104,12 +104,12 @@ Es ist darauf zu achten, dass der Lufteinschluss in der Probe, die eine Länge v
   \label{tab:NdMessw}
   \begin{tabular}{c| c c c c}
     \toprule
-    Durchlauf & $R_3 \,/\, \si{\ohm}$ & $R_4 \,/\, \si{\ohm}$ & $\upDelta R \,/\, \si{\ohm}$ & $U_{\text{Br}} \,/\, \si{\milli\volt}$ \\%Welche Brückenspannung ist hier gefragt? Ich bin von der Ausgegangen, die am Voltmeter angezeigt wird, wenn die Probe eingesteckt wird
+    Durchlauf & $R_a \,/\, \si{\ohm}$ & $R_b \,/\, \si{\ohm}$ & $\upDelta R \,/\, \si{\ohm}$ & $U_{\text{Br}} \,/\, \si{\milli\volt}$ \\%Welche Brückenspannung ist hier gefragt? Ich bin von der Ausgegangen, die am Voltmeter angezeigt wird, wenn die Probe eingesteckt wird
     \midrule
     Erster & 0,925 & 4,075 & 0,175 & 49 \\
     Zweiter & 0,925 & 4,075 & 0,200 & 49 \\
     Dritter & 0,925 & 4,075 & 0,190 & 49 \\
-    Mittelwerte & 0,925 & 4,075 & 0,188 & 49\\
+    Mittelwerte & 0,925 & 4,075 & $0,1883 \pm 0,0103$ & 49\\
     \bottomrule
   \end{tabular}
 \end{table}
@@ -120,12 +120,12 @@ Es ist darauf zu achten, dass der Lufteinschluss in der Probe, die eine Länge v
   \label{tab:GdMessw}
   \begin{tabular}{c| c c c c}
     \toprule
-    Durchlauf & $R_3 \,/\, \si{\ohm}$ & $R_4 \,/\, \si{\ohm}$ & $\upDelta R \,/\, \si{\ohm}$ & $U_{\text{Br}} \,/\, \si{\milli\volt}$ \\
+    Durchlauf & $R_a \,/\, \si{\ohm}$ & $R_b \,/\, \si{\ohm}$ & $\upDelta R \,/\, \si{\ohm}$ & $U_{\text{Br}} \,/\, \si{\milli\volt}$ \\
     \midrule
     Erster & 0,925 & 4,075 & 0,90 & 67,0 \\
     Zweiter & 0,925 & 4,075 & 0,90 & 69,0 \\
     Dritter & 0,925 & 4,075 & 0,80 & 69,0 \\
-    Mittelwerte & 0,925 & 4,075 & 0,87 & 68,3\\
+    Mittelwerte & 0,925 & 4,075 & $0.8667 \pm 0.0471$ & 68,3\\
     \bottomrule
   \end{tabular}
 \end{table}
@@ -136,7 +136,7 @@ Es ist darauf zu achten, dass der Lufteinschluss in der Probe, die eine Länge v
   \label{tab:DyMessw}
   \begin{tabular}{c| c c c c}
     \toprule
-    Durchlauf & $R_3 \,/\, \si{\ohm}$ & $R_4 \,/\, \si{\ohm}$ & $\upDelta R \,/\, \si{\ohm}$ & $U_{\text{Br}} \,/\, \si{\milli\volt}$ \\
+    Durchlauf & $R_a \,/\, \si{\ohm}$ & $R_b \,/\, \si{\ohm}$ & $\upDelta R \,/\, \si{\ohm}$ & $U_{\text{Br}} \,/\, \si{\milli\volt}$ \\
     \midrule
     Erster & 0,925 & 4,075 & 1,675 & 30,75 \\
     Zweiter & 0,925 & 4,075 & 1,675 & 30,75 \\
@@ -156,13 +156,13 @@ Zu den beiden verstellbaren Widerständen kommen noch die $\SI{998}{\ohm}$ der v
   \label{tab:alleMessw}
   \begin{tabular}{c| c c c c}
     \toprule
-    Füllung & $\overline{R_3} \,/\, \si{\ohm}$ & $\overline{R_4} \,/\, \si{\ohm}$ & $\overline{\upDelta R} \,/\, \si{\ohm}$ & $\overline{U_{\text{Br}}} \,/\, \si{\milli\volt}$ \\
+    Füllung & $\overline{R_a} \,/\, \si{\ohm}$ & $\overline{R_b} \,/\, \si{\ohm}$ & $\overline{\upDelta R} \,/\, \si{\ohm}$ & $\overline{U_{\text{Br}}} \,/\, \si{\milli\volt}$ \\
     \midrule
     ohne Probe & 998,925 & 1002,08 & 0,900 & 67,00 \\
-    Neodym & 998,925 & 1002,08 & 0,188 & 49,00\\ 
-    Gadolinium & 998,925 & 1002,08 & 0,870 & 68,30\\ \hline
+    Neodym & 998,925 & 1002,08 & $0,1883 \pm 0,0103$ & $49,00 \pm 0$\\ 
+    Gadolinium & 998,925 & 1002,08 & $0.8667 \pm 0.0471$ & $68.33 \pm 0.94$\\ \hline
     ohne Probe & 998,925 & 1002,08 & 0,900 & 13,50 \\
-    Dysprosium & 998,925 & 1002,08 & 1,675 & 30,75 \\
+    Dysprosium & 998,925 & 1002,08 & $1,675 \pm 0$ & $30,75 \pm 0$ \\
     \bottomrule
   \end{tabular}
 \end{table}
@@ -173,7 +173,7 @@ Die Querschnittsfläche $Q$ wird durch die effektive Querschnittsfläche $Q_{\te
 \begin{align*}
   Q_{\text{eff}} = Q\frac{\rho}{\rho_w} = \frac{m}{L\cdot\rho_w}
 \end{align*}
-ersetzt. Dabei ist $\rho$ die Dichte des Pulvers, $\rho_w$ die Dichte eines Einkristalles, $m$ die Masse des Pulvers und $L$ die Länge der Probe.
+ersetzt. Dabei ist $\rho$ die Dichte des Pulvers, $\rho_w$ die Dichte eines Einkristalles, $m$ die Masse des Pulvers und $L$ die Länge der Probe, die \autoref{tab:kennGrBr} zu entnehmen ist.
 Die daraus resultierenden Werte sind in \autoref{tab:SuszWerte} mit der Masse $m$ und der Einkristalldichte $\rho_w$ der Proben tabelliert.
 \begin{table}[H]
   \centering
@@ -181,11 +181,11 @@ Die daraus resultierenden Werte sind in \autoref{tab:SuszWerte} mit der Masse $m
   \label{tab:SuszWerte}
   \begin{tabular}{c c c c c c}
     \toprule
-    Stoff & $m \,/\,$ g & $\rho_w \, / \, \si{\gram\per\cubic\centi\meter}$ & $Q_{\text{eff}}$ & $\chi_1$ & $\chi_2$ \\
+    Stoff & $m \,/\,$ g & $\rho_w \, / \, \si{\gram\per\cubic\centi\meter}$ & $Q_{\text{eff}} \,/\, \cdot 10^{-5} \si{\square\meter}$ & $\chi_1 \cdot 10^{-6}$ & $\chi_2$ \\
     \midrule
-    Neodym & 18,48 & 7,24 & 0,189 & 0,037 & $0,173 \cdot 10^{-6}$  \\
-    Gadolinium & 14,08 & 7,40 & 0,141 & 0,036 & $1,0691 \cdot 10^{-6}$ \\
-    Dysprosium & 15,10 & 7,80 & 0,143 & 0,079 & $2,030 \cdot 10^{-6}$ \\
+    Neodym & 8,48 & 7,24 & 0,868 & $1,956 \pm 0$ & $0.00376 \pm 0.00021$  \\
+    Gadolinium & 14,08 & 7,40 & 1,409 & $1,679 \pm 0,023$ & $0,0107 \pm 0.0006$\\
+    Dysprosium & 15,10 & 7,80 & 1,434 & $0,743 \pm 0$ & $0,0203 \pm 0$ \\
     \bottomrule
   \end{tabular}
 \end{table}
