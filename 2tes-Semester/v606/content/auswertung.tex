@@ -7,7 +7,7 @@ Dafür muss auf den Aufbau der drei Proben eingegangen werden. Die Werte sind in
 Alle Stoffe sind Metalle der Seltenen Erden und haben damit eine komplette 5p-Schale und 2s-Elektronen, die aber für den Paramagnetismus unwichtig sind, da die Spins und Bahndrehimpulse abgesättigt sind
 und der resultierende Drehimpuls verschwindet. Da die Seltenen Erd Metalle alle ein 4f-Elektron mehr haben, als ihre Vorgänger, folgen die Anzahl der 4f-Elektronen jeweils für die drei Stoffe.
 Somit hat Neodym 4 Elektronen, Gadolinium hat 8  und Dysprosium hat dementsprechend 10 Elektronen auf der 4f-Schale.
-Wenn ein Atom Ionisiert wird, verliert es ein 6s- und ein 4f-Elektron.
+Wenn ein Atom ionisiert wird, verliert es ein 6s- und ein 4f-Elektron.
 Gemäß der Hund'schen Regeln werden die Quantenzahlen berechnet.
 Der Landé-Faktor $g_j$ wird nach Gleichung (\ref{eqn:landeF}) berechnet.
 
@@ -21,17 +21,17 @@ Der Landé-Faktor $g_j$ wird nach Gleichung (\ref{eqn:landeF}) berechnet.
     \midrule
     Neodym & 4 & 3 & $3\cdot\sfrac{1}{2}=\sfrac{3}{2}$ & 6 & $\sfrac{9}{2}$ & 0.727 \\
     Gadolinium & 8 & 7 & $7\cdot\sfrac{1}{2}=\sfrac{7}{2}$ & 0 & $\sfrac{7}{2}$ & 2 \\
-    Dysprosium & 10 & 9 & $7\cdot\sfrac{1}{2}-2\sfrac{1}{2}=\sfrac{5}{2}$ & 5 & $\sfrac{15}{2}$ & 1,382 \\
+    Dysprosium & 10 & 9 & $7\cdot\sfrac{1}{2}-2\sfrac{1}{2}=\sfrac{5}{2}$ & 5 & $\sfrac{15}{2}$ & 1,333 \\
     \bottomrule
   \end{tabular}
 \end{table}
 
 \noindent
-Für die theoretische Suszeptibilität $\chi$ wird noch die Anzahl $N$ der der atomaren magnetischen Dipolmomente pro Volumeneinheit, hier pro Mol, benötigt, die mithilfe der Gleichung 
+Für die theoretische Suszeptibilität $\chi$ (\ref{eq:mariecurie}) wird noch die Anzahl $N$ der der atomaren magnetischen Dipolmomente pro Volumeneinheit, hier pro Mol, benötigt, die mithilfe der Gleichung 
 \begin{align*}
-  N = \frac{\rho}{m_{\text{mol}}} = \frac{\rho}{V_{\text{mol}} \cdot \rho} = \frac{1}{V_{\text{mol}}} %Masse *10**(-3) / (Volumenmol * 10**(-6) * u)
+  N = z\cdot \frac{N_L \rho_w}{M}
 \end{align*}
-berechnet wird.
+berechnet wird. Dabei ist $N_L = 6,02 \cdot 1^0^{23}$ $\si{\per\mole}$, $z$ die Anzahl der magnetisch aktiven Atome (hier $z=2$) und $M$ das Molekulargewicht.
 In \autoref{tab:abmProben} sind die Volumina pro Mol und die atomaren, magnetischen Dipolmomente der drei in dem Versuch verwendeten Proben zu entnehmen.
 \begin{table}[H]
   \centering
@@ -39,11 +39,11 @@ In \autoref{tab:abmProben} sind die Volumina pro Mol und die atomaren, magnetisc
   \label{tab:abmProben}
   \begin{tabular}{c|c c}
     \toprule
-    Stoff & $V_{\text{mol}}$ \,/\, $\si{\micro\cubic\meter\per\mole}$ & $N$ \,/\, $\sfrac{10^{29}}{\si{\cubic\meter}}$ \\
+    Stoff & $M_{\text{Mol}}$ \,/\, $\si{\gram\per\mole}$ & $N$ \,/\, $\sfrac{10^{29}}{\si{\cubic\meter}}$ \\
     \midrule
-    Neodym & 20,59 & 5,405 \\
-    Gadolinium & 19,90 & 4,261 \\
-    Dysprosium & 19,01 & 4,754 \\
+    Neodym & 336,47 & 5,405 \\
+    Gadolinium & 362,497 & 4,261 \\
+    Dysprosium & 462,851 & 4,754 \\
     \bottomrule
   \end{tabular}
 \end{table}
