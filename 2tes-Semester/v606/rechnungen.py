@@ -100,3 +100,22 @@ chi_zweiteDy = (2 * deltaRdy * F) / (R_a * Q_Dy)
 print(f'Zweite Suszeptibilität Neodym: ', chi_zweiteNd)
 print(f'Zweite Suszeptibilität Gadolinium: ', chi_zweiteGd)
 print(f'Zweite Suszeptibilität Dysprosium: ', chi_zweiteDy)
+print('---------')
+
+#------------------ Abweichungen
+
+abweichung1ND = chi_ersteNd/chi_NdTheo * 100    #Abweichung von der ersten Suszeptibilität
+abweichung1GD = chi_ersteGd/chi_GdTheo * 100
+abweichung1DY = chi_ersteDy/chi_DyTheo * 100
+
+abweichung2ND = chi_zweiteNd/chi_NdTheo * 100    #Abweichung von der zweiten Suszeptibilität
+abweichung2GD = chi_zweiteGd/chi_GdTheo * 100
+abweichung2DY = chi_zweiteDy/chi_DyTheo * 100
+
+print(f'Abweichung erste Susz Neodym: ', abweichung1ND, '%')
+print(f'Abweichung erste Susz Gadolinium: ', abweichung1GD, '%')
+print(f'Abweichung erste Susz Dysprosium: ', abweichung1DY, '%')
+
+print(f'Abweichung zweite Susz Neodym: ', abweichung2ND, '%')
+print(f'Abweichung zweite Susz Gadolinium: ', abweichung2GD, '%')
+print(f'Abweichung zweite Susz Dysprosium: ', abweichung2DY, '%')
