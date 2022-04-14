@@ -8,31 +8,45 @@ k = 1.380650 * 10**(-23) #Boltzmann Konstante
 T = 295.15 #Raumtemperatur (ungefähr)
 mu_b = 9.2740100784 * 10**(-24) #Bohr'sches Magneton
 faktor = (mu_0 * (mu_b)**2)/(3*k*T) #Faktor für den theoretischen Wert der Suszeptibilittät
-print(f'Faktor = ', faktor)
+#print(f'Faktor = ', faktor)
 
 #-------------- Theoretische magnetische Suszeptibilität
+
+rho_Nd = 7.24 *10**6 #Einkristalldichten in g/m^3
+rho_Gd = 7.4 *10**6
+rho_Dy = 7.8 *10**6
+
+rho_NdKg = 7.24 *1000 #Einkristalldichten in kg/m^3
+rho_GdKg = 7.4 *1000
+rho_DyKg = 7.8 *1000
 
 J_Nd = 9/2
 S_Nd = 3/2
 L_Nd = 6.0
 g_Nd = ( 3 * J_Nd * (J_Nd+1) + S_Nd * (S_Nd+1)-L_Nd* (L_Nd + 1) ) / (2* J_Nd * (J_Nd + 1))
-N_Nd = 2.591 * 10**(22)
-chi_NdTheo = faktor * N_Nd * J_Nd * (g_Nd)**2 * (J_Nd + 1)
+N_Nd = ( 2 * 6.02 * 10**(23) * rho_Nd) / (336.47)   #1/m^3
+#N_Nd = 2.591 * 10**(22)
+chi_NdTheo = faktor * N_Nd * (g_Nd)**2 * J_Nd* (J_Nd + 1)
 
 J_Gd = 7/2
 S_Gd = 7/2
 L_Gd = 0
 g_Gd = ( 3* J_Gd * (J_Gd+1) + S_Gd * (S_Gd+1)-L_Gd* (L_Gd+1) )/(2* J_Gd * (J_Gd + 1))
-N_Gd = 2.458 * 10**(22)
+#N_Gd = 2.458 * 10**(22)
+N_Gd = ( 2 * 6.02 * 10**(23) * rho_Gd) / (362.497)
 chi_GdTheo = faktor * N_Gd * J_Gd * (g_Gd)**2 * (J_Gd + 1)
 
 J_Dy = 15/2
 S_Dy = 5/2
 L_Dy = 5
 g_Dy = ( 3* J_Dy * (J_Dy+1) + S_Dy * (S_Dy+1)-L_Dy * (L_Dy+1) )/(2* J_Dy * (J_Dy + 1))
-N_Dy = 2.029 * 10**(22)
+N_Dy = ( 2 * 6.02 * 10**(23) * rho_Dy) / (462.851)
 chi_DyTheo = faktor * N_Dy * J_Dy * (g_Dy)**2  * (J_Dy + 1)
 
+
+print(f'Anzahl N für Neodym: ', N_Nd)
+print(f'Anzahl N für Gadolinium: ', N_Gd)
+print(f'Anzahl N für Dysprosium: ', N_Dy)
 print(f'Neodym g: ', g_Nd)  #Richtiger Wert
 print(f'Gadolinium g: ', g_Gd)  #Richtiger Wert
 print(f'Dysprosium g: ', g_Dy)  #Richtiger Wert
@@ -67,15 +81,11 @@ m_Nd = 8.48 *10**(-3)#Massen in kg
 m_Gd = 14.08 *10**(-3)
 m_Dy = 15.1 *10**(-3)
 
-rho_Nd = 7.24 *1000 #Einkristalldichten in kg/m^3
-rho_Gd = 7.4 *1000
-rho_Dy = 7.8 *1000
+Q_Nd = m_Nd/(L * rho_NdKg) #effektive Querschnittsfläche in m^2
+Q_Gd = m_Gd/(L * rho_GdKg)
+Q_Dy = m_Dy/(L * rho_DyKg)
 
-Q_Nd = m_Nd/(L * rho_Nd) #effektive Querschnittsfläche in m^2
-Q_Gd = m_Gd/(L * rho_Gd)
-Q_Dy = m_Dy/(L * rho_Dy)
-
-F = 86.6 * 10**(-6) #Querschnitt der Spule in m
+F = 86.6 * 10**(-6) #Querschnitt der Spule in m^2
 
 chi_ersteNd = (4 * F * 49 * 10**(-3)) / (Q_Nd)
 chi_ersteGd = (4 * F * BrueckenspGd * 10**(-3)) / (Q_Gd)
@@ -104,13 +114,13 @@ print('---------')
 
 #------------------ Abweichungen
 
-abweichung1ND = chi_ersteNd/chi_NdTheo * 100    #Abweichung von der ersten Suszeptibilität
-abweichung1GD = chi_ersteGd/chi_GdTheo * 100
-abweichung1DY = chi_ersteDy/chi_DyTheo * 100
+abweichung1ND = (chi_ersteNd - chi_NdTheo/chi_NdTheo) * 100 #Abweichung von der ersten Suszeptibilität
+abweichung1GD = (chi_ersteGd - chi_GdTheo/chi_GdTheo) * 100
+abweichung1DY = (chi_ersteDy - chi_DyTheo/chi_DyTheo) * 100
 
-abweichung2ND = chi_zweiteNd/chi_NdTheo * 100    #Abweichung von der zweiten Suszeptibilität
-abweichung2GD = chi_zweiteGd/chi_GdTheo * 100
-abweichung2DY = chi_zweiteDy/chi_DyTheo * 100
+abweichung2ND = (chi_zweiteNd - chi_NdTheo/chi_NdTheo) * 100    #Abweichung von der zweiten Suszeptibilität
+abweichung2GD = (chi_zweiteNd - chi_NdTheo/chi_NdTheo) * 100
+abweichung2DY = (chi_zweiteNd - chi_NdTheo/chi_NdTheo) * 100
 
 print(f'Abweichung erste Susz Neodym: ', abweichung1ND, '%')
 print(f'Abweichung erste Susz Gadolinium: ', abweichung1GD, '%')
