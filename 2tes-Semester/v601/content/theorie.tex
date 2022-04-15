@@ -17,7 +17,7 @@ Die Franck-Hertz Apparatur ist schematisch in der \autoref{fig:franckAufb} darge
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.75\textwidth]{data/FranckHertz.png}
-    \caption{Schematische Darstellung des Franck-Hertz Versuches.}
+    \caption{Schematische Darstellung des Franck-Hertz Versuches \cite{Anleitung601}.}
     \label{fig:franckAufb}
 \end{figure}
 
@@ -36,7 +36,7 @@ Dabei ist $e_0$ die Elementarladung, $m_0$ die Masse der Elektronen, $v_{\text v
 %Sicher, dass das vor der Beschleunigung die Geschwindigkeit ist? Wenn die Gleichung nur gültig ist wenn die 0 ist ist die gesamte Gleichung doch auch null. Außerdem ist die rechte Seite der Gleichung doch auch die Energie der Beschleunigungsanode??
 die Geschwindigkeit vor der Beschleunigungsphase und $U_{\text B}$ die Beschleunigungsspannung.
 Die Gleichung (\ref{eqn:beschlGl}) ist allerdings nur gültig, sofern die Geschwindigkeit der Elektronen zu Beginn der Beschleunigung null ist.
-Hinter der Beschleunigungsanode befindet sich die Auffängerelktrode, an der die auftreffenden Elektronen gemessen werden. Die Energiemessung geschieht über die Gegenfeldmethode, weshalb die Auffängerelktrode selbst auch eine geringe Gegenspannung $U_{\text A}$ besitzt.
+Hinter der Beschleunigungsanode befindet sich die Auffängerelektrode, an der die auftreffenden Elektronen gemessen werden. Die Energiemessung geschieht über die Gegenfeldmethode, weshalb die Auffängerelektrode selbst auch eine geringe Gegenspannung $U_{\text A}$ besitzt.
 Das dadurch entstehende Gegenfeld können nur die Elektronen durchlaufen, deren Geschwindigkeitskomponente in Feldrichtung $v_z$ die folgende Ungleichung erfüllt
 \begin{align}
     \label{eqn:gegnFeldV}
@@ -54,4 +54,61 @@ Das Hg-Atom ist nun in einem angeregten Zustand. Beim Übergang zurück in den G
 \begin{align*}
     hf = E_1 - E_0.
 \end{align*}
-Die Frequenz wird mit $f$ bezeichnet und $h$ ist das Planck'sche Wirkungsquantum.
+Die Frequenz wird mit $f$ bezeichnet und $h$ ist hierbei das Planck'sche Wirkungsquantum.
+Wird die Beschleunigungsspannung $U_{\text B}$ kontinuierlich erhöht, treten auch mehr Stöße auf und die Elektronen besitzen nicht mehr genügend Energie, um gegen das Bremsfeld anzukommen.
+Deshalb verringert sich der Auffängerstrom $I_{\text A}$ über den zeitlichen Verlauf gesehen immer wieder und es ergibt sich der Kurvenverlauf, der aus \autoref{fig:franckVerlauf} abzulesen ist.
+Die Abstände zwischen den einzelnen Peaks $U_n$ ist über die folgende Relation zu berechnen.
+\begin{align}
+    U_n = \frac{1}{e_0} (E_n - U_{n-1}).
+    \label{eqn:abstMaxima}
+\end{align}
+Dabei bezeichnet $U_n$ den Abstand zweier aufeinander folgender Maxima und analog dazu $E_n$ und $E_{n-1}$ die Anregungspotentiale der Elektronenhülle.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\textwidth]{data/VerlaufFH.png}
+    \caption{Kurvenverlauf des Auffängerstromes $I_{\text A}$ gegen die Bremsspannung $U_{\text B}$ \cite{Anleitung601}.}
+    \label{fig:franckVerlauf}
+\end{figure}
+
+\subsection{Fehlerquellen und Störungen}
+\label{subsec:fehlerStoerung}
+
+Die Ergebnisse aus dem Versuch werden allerdings nicht die ideale Franck-Hertz Kurve sein, wie sie in \autoref{fig:franckVerlauf} abgebildet ist. Die Gründe für mögliche Störungen und erwartbahre Fehlerquellen werden im folgenden dargestellt.
+Der erste Grund ist auf den Einfluss des Kontaktpotentials zurückzuführen. Das Beschleunigungspotential zwischen dem Glühdraht und der Beschleunigungsanode ist von der von außen angelegten Spannung verschieden, da die Elektroden aus unterschiedlichen Materialien bestehten.
+Durch die unterschiedlichen Materialien haben die Elektroden auch unterschiedliche Austrittsarbeiten für die Elektronen und das tatsächliche Beschleunigungspotential $U_{\text {B, eff}}$ ist definiert zu
+\begin{align}
+    U_{\text {B, eff}} = U_{\text B} - \frac{1}{e_0} (\phi_{\text B} - \phi_{\text G}).
+    \label{eqn:potentialGef}
+\end{align}
+Wobei der Ausdruck
+\begin{align}
+    K = \frac{1}{e_0} (\phi_{\text B} - \phi_{\text G})
+\end{align}
+das Kontaktpotential ist und $\phi_{\text G}$ die Austrittsarbeit aus dem Glühdraht und $\phi_{\text B}$ die Austrittsarbeit aus der Beschleunigungselektrode ist.
+Das Potentialgefälle ist außerdem durch die \autoref{fig:poteGef} verbildlicht.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\textwidth]{data/potentialgefälle.png}
+    \caption{Die Potentialverhätlnisse zwischen dem Glühdraht und der Beschleunigungsanode \cite{Anleitung601}.}
+    \label{fig:poteGef}
+\end{figure}
+
+\noindent
+Der zweite Grund für die Abweichungen zu der idealen Kurve ist das Energiespektrum der Elektronen. Beim Austreten der Elektronen aus dem Glühdraht durch den glühelektrischen Effekt haben die Elektronen nicht alle die gleiche Anfangsgeschwindigkeit.
+Nach der Beschleunigungsphase haben sie somit eine Energieverteilung, die bei $U_{\text{B, eff}}$ beginnt und kontinuierlich steigt. Somit setzen die unelastischen Stöße nicht bei einer genau definierten Beschleunigungsspannung ein und sind stattdessen über einen gewissen Bereich.
+Die Kurve fällt deshalb nach einem Maximum nicht unstetig auf den Wert null herab, sondern sinkt stetig auf ein gewisses Stromminimum herab.
+Außerdem ist der Einfluss der elastischen Zusammenstöße zwischen Elektronen und Atomen zu nennen. Diese führen, wie bereits erwähnt, zwar nicht zu merklichen Energieabnahmen, jedoch ändern sie die Richtung der Elektronen beträchtlich.
+Finden diese im Raum zwischen Kathode und Beschleunigungsanode statt, dann tragen sie nicht wesentlich zur Franck-Hertz Kurve bei. Im Raumbereich zwischen der Beschleunigungs- und der Auffängerelektrode führen sie dazu, dass die Verteilung der z-Komponente der Geschwindigkeiten und somit die Franck-Hertz Kurve abflacht und verbreitert.
+Da für die Beobachtung der Kurve Zusammenstöße zwischen Elektronen und Hg-Atomen notwendig sind, nimmt der Dampfdruck des zu untersuchenden Stoffes Einfluss auf ebendiese Kurve.
+Es wird die mittlere freie Weglänge $\overline w$ der Atome klein gegen den Abstand $a$ zwischen Kathode und Beschleunigungselektrode gewählt und somit die Wahrscheinlichkeit der Zusammenstöße erhöht. Die Weglänge $\overline w$ kann über den Druck $\p_{\text{sät}}$
+in der Glasglocke genau eingestellt werden und es folgt mit
+\begin{align*}
+    \overline w [\si{\centi\meter}] = \frac{0,0029}{\p_{\text{sät}}} [\si{\milli\bar}]
+\end{align*}
+ein Zusammenhang zwischen dem Sättigungsdampfdruck $\p_{\text{sät}}$ und der Temperatur $T$
+\begin{align}
+    \p_{\text{sät}}(T) = 5,5\cdot 10^{7} \text e^{\frac{-6876}{T}}.
+\end{align}
+Es muss $\overline w$ etwa um $1000$ bis $4000$ mal kleiner eingestellt werden, als $a$. In der verwendeten Apparatur beträgt $a$ etwa $\SI{1}{\centi\meter}$.
