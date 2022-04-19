@@ -17,13 +17,13 @@ wobei $\mu_0$ die magnetische Feldkonstante ist. Die Flussdichte ist außerdem a
 $\vec{M}$ wiederum ist auch von der magnetischen Feldstärke $\vec{H}$ abhängig. Somit gilt
 \begin{equation}
 \label{eq:eq2}
-\vec{B} = \mu_0 \vec{H} + \vec{M}.
+\vec{B} = \mu_0 \vec{H} + \vec{M}
 \end{equation}
 und
 \begin{equation}
-\vec{M} = \mu_0 \chi \vec{H}
+\vec{M} = \mu_0 \chi \vec{H}.
 \end{equation}
-Fügt man dies nun zusammen in \autoref{eq:eq1} ein, erhält man final
+Wird dies nun zusammen in \autoref{eq:eq1} eingefügt, folgt daraus
 \begin{equation*}
 \vec{B} = \mu_0 \vec{H} + \mu_0 \chi \vec{H},
 \end{equation*}
@@ -35,13 +35,16 @@ der Atome dauerhaft geändert wird, sind die paramagnetischen Effekte temperatur
 \newline
 Es soll nun der Zusammenhang zwischen dem magnetischen Moment und dem Drehimpuls betrachtet werden.
 Der Gesamtdrehimpuls $\vec{J}$ setzt sich aus dem Bahndrehimpuls der Elektronenhülle $\vec{L}$, dem Spin der Elektronen $\vec{S}$ und dem Kerndrehimpuls zusammen, wobei letzterer vernachlässigt
-werden kann
+werden kann. Es gilt
 \begin{equation*}
-\vec{J} = \vec{L} + \vec{S},
+\vec{J} = \vec{L} + \vec{S}.
 \end{equation*}
-Aus der Quantenmechanik folgt:
+Aus der Quantenmechanik folgt
 \begin{align*}
-\vec{\mu_\text{L}} &= -\frac{\mu_\text{B}}{\hbar}\vec{L} \\
+\vec{\mu_\text{L}} &= -\frac{\mu_\text{B}}{\hbar}\vec{L} 
+\end{align*}
+und
+\begin{align*}
 \vec{\mu_\text{S}} &= -g_\text{S}\frac{\mu_\text{B}}{\hbar}\vec{S},
 \end{align*}
 wobei $g_\text{S}$ das gyromagnetische Verhältnis und $\mu_\text{B}$ das Bohrsche Magneton sind.
@@ -49,7 +52,7 @@ wobei $g_\text{S}$ das gyromagnetische Verhältnis und $\mu_\text{B}$ das Bohrsc
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.6\linewidth]{data/vektordiagramm.jpeg}
-	\caption{Vektordarstellung der Drehimpulse in einer Elektronenhülle und der magnetischen Momente \cite{Anleitung606}.}
+	\caption{Vektordarstellung der Drehimpulse in einer Elektronenhülle und der magnetischen Momente.}
 	\label{fig:vektordarstellung}
 \end{figure}
 \noindent
@@ -60,10 +63,13 @@ Mit Hilfe der Beziehung
 die analog für $\left|\vec{L}\right|$ und $\left|\vec{S}\right|$ gilt, ergeben sich für die Beträge der magnetischen Momente die Ausdrücke
 \begin{align}
 \label{eq:eq3}
-\left|\vec{\mu_\text{L}}\right| &= \mu_\text{B}\sqrt{L(L+1)} \\
+\left|\vec{\mu_\text{L}}\right| &= \mu_\text{B}\sqrt{L(L+1)} 
+\end{align}
+und
+\begin{align}
 \left|\vec{\mu_\text{S}}\right| &= g_\text{S}\mu_\text{B}\sqrt{S(S+1)}.
 \end{align}
-Aus diesen Beziehungen und \autoref{fig:vektordarstellung} ergibt sich für $\left|\vec{\mu_\text{J}}\right|$:
+Aus diesen Beziehungen und \autoref{fig:vektordarstellung} ergibt sich
 \begin{equation}
 \left|\vec{\mu_\text{J}}\right| = \left|\vec{\mu_\text{S}}\right|\text{cos}\alpha + \left|\vec{\mu_\text{L}}\right|\text{cos}\beta.
 \end{equation}
@@ -107,7 +113,10 @@ Für hinreichend hohe Temperaturen ist die Suszeptibilität $\chi$ also proporti
 \newline
 Das Phänomen des Paramagnetismus wird insbesondere bei Ionen Seltener Erden beobachtet und durch $4$f-Elektronen hervorgerufen. Daraus lässt sich schließen, dass die
 inneren Elektronen große Drehimpulse besitzen müssen. Die Anordnung der Elektronen in der $4$f-Schale und der sich daraus ergebende Gesamtdrehimpuls sind in den Hundschen Regeln
-festgelegt. 
+festgelegt.
+\newpage
+\noindent
+Die Hundschen Regeln lauten:
 \newline \newline
 1. Der Gesamtspin $\vec{S}$ nimmt den maximal möglichen Wert an, der nach dem Pauli-Prinzip zulässig ist. 
 \newline
@@ -120,17 +129,18 @@ $\vec{J} = \vec{L} + \vec{S}$.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.7\linewidth]{data/brueckenschaltung.jpeg}
-	\caption{Brückenschaltung für die Messung der Suszeptibilität \cite{Anleitung606}.}
+	\caption{Brückenschaltung für die Messung der Suszeptibilität.}
 	\label{fig:bruckenschaltung}
 \end{figure}
 Für die Messung von $\chi$ wird eine Brückenschaltung wie in \autoref{fig:bruckenschaltung} mit zwei Induktivitäten verwendet. Mit Hilfe dieser Schaltung wird die
 Induktivität der Spule, in der die zu untersuchende Probe liegt, gemessen.
 \newline
-Aus der Induktivität kann dann die Suszeptibilität $\chi$ berechnet werden.
+Aus der Induktivität kann dann die Suszeptibilität $\chi$ durch
 \begin{equation}
 \label{eq:indu}
 L_\text{M} = \mu_0 \frac{n^2F}{l} + \chi \mu_0 \frac{n^2Q}{l}
 \end{equation}
+berechnet werden.
 Hierbei ist $n$ die Windungszahl, $l$ die Länge, $F$ der Querschnitt der Spule und $Q$ die Querschnittfläche der Probe.
 Der zweite Summand aus \autoref{eq:indu} ist die Induktivitätsdifferenz $\upDelta L$ zwischen materiegefüllten und vakuumgefüllten Spulen.
 \newline
@@ -170,4 +180,6 @@ Aus den angepassten Abgleichbedingungen folgt für die Suszeptibilität $\chi$
 	\label{eqn:susz2}
 	\chi = 2 \frac{\upDelta R}{R_3}\frac{F}{Q}
 \end{equation}
-wobei $R_3$ der Widerstand am Potentiometer ist und $\upDelta R$ die Differenz zum Abgleich mit luftgefüllter Spule. 
+wobei $R_3$ der Widerstand am Potentiometer ist und $\upDelta R$ die Differenz zum Abgleich mit luftgefüllter Spule.
+
+\cite{Anleitung606}
