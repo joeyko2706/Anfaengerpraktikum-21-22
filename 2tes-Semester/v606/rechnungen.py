@@ -114,18 +114,18 @@ print('---------')
 
 #------------------ Abweichungen
 
-abweichung1ND = (chi_ersteNd - chi_NdTheo/chi_NdTheo) * 100 #Abweichung von der ersten Suszeptibilität
-abweichung1GD = (chi_ersteGd - chi_GdTheo/chi_GdTheo) * 100
-abweichung1DY = (chi_ersteDy - chi_DyTheo/chi_DyTheo) * 100
+abweichung1ND = (chi_ersteNd - chi_NdTheo/chi_NdTheo) #Abweichung von der ersten Suszeptibilität
+abweichung1GD = (chi_ersteGd - chi_GdTheo/chi_GdTheo)
+abweichung1DY = (chi_ersteDy - chi_DyTheo/chi_DyTheo) 
 
-abweichung2ND = (chi_zweiteNd - chi_NdTheo/chi_NdTheo) * 100    #Abweichung von der zweiten Suszeptibilität
-abweichung2GD = (chi_zweiteNd - chi_NdTheo/chi_NdTheo) * 100
-abweichung2DY = (chi_zweiteNd - chi_NdTheo/chi_NdTheo) * 100
+abweichung2ND = ((chi_zweiteNd - chi_NdTheo)/chi_NdTheo)    #Abweichung von der zweiten Suszeptibilität
+abweichung2GD = ((chi_zweiteGd - chi_GdTheo)/chi_GdTheo)
+abweichung2DY = ((chi_zweiteDy - chi_DyTheo)/chi_DyTheo)
 
-print(f'Abweichung erste Susz Neodym: ', abweichung1ND, '%')
-print(f'Abweichung erste Susz Gadolinium: ', abweichung1GD, '%')
-print(f'Abweichung erste Susz Dysprosium: ', abweichung1DY, '%')
+print(f'Abweichung erste Susz Neodym: ', abweichung1ND)
+print(f'Abweichung erste Susz Gadolinium: ', abweichung1GD)
+print(f'Abweichung erste Susz Dysprosium: ', abweichung1DY)
 
-print(f'Abweichung zweite Susz Neodym: ', abweichung2ND, '%')
-print(f'Abweichung zweite Susz Gadolinium: ', abweichung2GD, '%')
-print(f'Abweichung zweite Susz Dysprosium: ', abweichung2DY, '%')
+print(f'Abweichung zweite Susz Neodym: ', abweichung2ND)
+print(f'Abweichung zweite Susz Gadolinium: ', abweichung2GD)
+print(f'Abweichung zweite Susz Dysprosium: ', abweichung2DY)
