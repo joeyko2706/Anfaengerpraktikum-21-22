@@ -24,41 +24,33 @@ print("Dopplerwinkel 45°: ", doppler45)
 
 
 def stroemi(
-    diff, fmean, x
-):  # Funktion, um die Strömungsgeschwindigkeit zu berechnen. diff ist die Frequenzdifferenz, fmean die gesendete Frequenz und x der Winkel
-    v = (c_L * diff) / (2 * fmean * np.cos(x))
+    diff, x
+):  # Funktion, um die Strömungsgeschwindigkeit zu berechnen. diff ist die Frequenzdifferenz, die gesendete Frequenz ist 2MHz und x der Winkel
+    v = (c_L * diff) / (2 * 2 * 10 ** 6 * np.cos(x))
     return v
 
 
 print(
     "Stroemi unter 15°: ",
-    np.round(stroemi(45, 49, doppler15), 4),
-    np.round(stroemi(62, 73, doppler15), 4),
-    np.round(stroemi(91, 110, doppler15), 4),
-    np.round(stroemi(175, 208, doppler15), 4),
-    np.round(stroemi(186, 208, doppler15), 4),
+    np.round(stroemi(45, doppler15), 4),
+    np.round(stroemi(62, doppler15), 4),
+    np.round(stroemi(91, doppler15), 4),
+    np.round(stroemi(175, doppler15), 4),
+    np.round(stroemi(186, doppler15), 4),
 )
 print(
     "Stroemi unter 30°: ",
-    np.round(stroemi(55, 73, doppler30), 4),
-    np.round(stroemi(102, 122, doppler30), 4),
-    np.round(stroemi(152, 183, doppler30), 4),
-    np.round(stroemi(1246, 287, doppler30), 4),
-    np.round(stroemi(355, 409, doppler30), 4),
+    np.round(stroemi(55, doppler30), 4),
+    np.round(stroemi(102, doppler30), 4),
+    np.round(stroemi(152, doppler30), 4),
+    np.round(stroemi(1246, doppler30), 4),
+    np.round(stroemi(355, doppler30), 4),
 )
 print(
     "Stroemi unter 45°: ",
-    np.round(stroemi(96, 122, doppler45), 4),
-    np.round(stroemi(184, 244, doppler45), 4),
-    np.round(stroemi(298, 391, doppler45), 4),
-    np.round(stroemi(461, 659, doppler45), 4),
-    np.round(stroemi(643, 897, doppler45), 4),
-)
-print(
-    "Stroemi unter 45°, die zweite: ",
-    np.round(stroemi(96, 218, doppler45), 4),
-    np.round(stroemi(184, 428, doppler45), 4),
-    np.round(stroemi(298, 689, doppler45), 4),
-    np.round(stroemi(461, 1120, doppler45), 4),
-    np.round(stroemi(643, 1540, doppler45), 4),
+    np.round(stroemi(96, doppler45), 4),
+    np.round(stroemi(184, doppler45), 4),
+    np.round(stroemi(298, doppler45), 4),
+    np.round(stroemi(461, doppler45), 4),
+    np.round(stroemi(643, doppler45), 4),
 )
