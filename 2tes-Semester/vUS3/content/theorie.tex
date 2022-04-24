@@ -1,4 +1,37 @@
+\section{Zielsetzung}
+\label{sec:Zielsetzung}
+
+Ziel dieses Versuches ist es, das Verhalten von Rohrströhmungen mit Hilfe von Ultraschall zu untersuchen.
+
 \section{Theorie}
 \label{sec:Theorie}
+
+Menschen können in einem Frequenzintervall von ca. $\SI{16}{\hertz}$ bis $\SI{20}{\kilo\hertz}$ hören. Der Frequenzbereich darüber bis $\SI{1}{\giga\hertz}$ wird als
+Ultraschall und der jenseits von $\SI{1}{\giga\hertz}$ als Hyperschall bezeichnet. Frequenzen unterhalb des für Menschen hörbaren Bereichs werden Infraschall gennant.
+\newline
+Zur Erzeugung des Schalls wird sich der reziproke piezo-elektrische-Effekt zu Nutzen gemacht. Hierfür wird ein geeigneter piezo-elektrischer Kristall in einem
+elektrischen Wechselfeld zu Schwingungen angeregt, wobei dieser Ultraschallwellen abstrahlt. Der Kristall kann ebenso genutzt werden, um Schallwellen zu empfangen,
+da diese ihn wiederum zu Schwingungen anregen.
+\newline
+In diesem Versuch wird der Doppler-Effekt ausgenutzt, um die Geschwindigkeit von Rohrströhmungen zu messen. Durch die Bewegungsgeschwindigkeit der Flüssigkeit wird
+die Frequenz der Schallwellen verändert. Aus der Differenz der Frequenzen lässt sich dann wiederum auf die Geschwindigkeit der Strömung schließen.
+Für die Differenz der Frequenzen gilt
+\begin{equation}
+    \upDelta \nu = 2\nu_0 \frac{v}{c} cos(\alpha),
+    \label{eqn:df}
+\end{equation}
+\noindent
+wobei $\nu_0$ die ursprüngliche Frequenz, $v$ die Geschwindigkeit der Strömung, $c$ die Schallgeschwindigkeit in der Flüssigkeit und $\alpha$ der Winkel unter dem die
+Schallwellen auf die Röhre treffen ist.
+\newline\newline
+Um die verwendete Ultraschallsonde besser an die Röhre koppeln zu können und dies vor allem auch unter einfach reproduzierbaren Winkeln, wird ein Doppler-Prisma aus
+Acryl verwendet. Auf Grund von Brechung innerhalb des Prismas entsprechen die Einstellwinkel des Prismas nicht den zu verwendenden Doppler-Winkeln. Aus dem
+Brechungsgesetz folgt für die zu verwendenden Winkel $\alpha$
+\begin{equation}
+    \alpha = 90^\circ - \arcsin(\sin(\varphi)\frac{c_\text{L}}{c_\text{P}}),
+    \label{eqn:alpha}
+\end{equation}
+\noindent
+wobei $c_\text{L}$ die Schallgeschwindigkeit in der Flüssigkeit, $c_\text{P}$ die Schallgeschwindigkeit im Prismenmaterial und $\varphi$ der Einstellwinkel des Prismas ist.
 
 \cite{AnleitungUS3}
