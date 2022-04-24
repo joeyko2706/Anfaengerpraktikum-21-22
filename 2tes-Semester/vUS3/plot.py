@@ -49,8 +49,8 @@ plt.plot(
     linewidth=0,
     label=r"$\theta = \qty{45}{\degree}$",
 )
-plt.xlabel(r"$v_\text{Fluss} \mathbin{/} \unit{\metre\per\second}$")
-plt.ylabel(r"$\frac{\symup{\Delta}\nu}{\text{cos}\,\alpha}\mathbin{/}\unit{\hertz}$")
+plt.xlabel(r"$v_\text{Fluss} \,/\, \si{\metre\per\second}$")
+plt.ylabel(r"$\upDelta \nu\,/\, \si{\hertz}$")
 plt.grid()
 plt.tight_layout(pad=0, h_pad=1.08, w_pad=1.08)
 plt.legend()
