@@ -51,9 +51,10 @@ Die Richtungsänderungen der Elektronen ist allerdings für die Ergebnisse von g
 Die zweite Stoßmöglichkeit zwischen Elektronen und Hg-Atomen ist unelastisch. Wenn die Energie der Elektronen durch die Beschleunigung größer oder gleich groß der Energiedifferenz des ersten angeregten Zustandes und des Grundzustandes des Hg-Atoms ist, dann regt das Elektron dieses an.
 Das Elektron gibt genau die Energie $\upDelta E = E_1 - E_0$ an die Atomhülle ab. Dabei bezeichnet $E_1$ die Energie des ersten Zustandes und $E_0$ die des Grundzustandes.
 Das Hg-Atom ist nun in einem angeregten Zustand. Beim Übergang zurück in den Grundzustand emittiert es ein Lichtquant, also ein Photon, mit der Energie
-\begin{align*}
+\begin{equation}
     hf = E_1 - E_0.
-\end{align*}
+    \label{eqn:hfu}
+\end{equation}
 Die Frequenz wird mit $f$ bezeichnet und $h$ ist hierbei das Planck'sche Wirkungsquantum.
 Wird die Beschleunigungsspannung $U_{\text B}$ kontinuierlich erhöht, treten auch mehr Stöße auf und die Elektronen besitzen nicht mehr genügend Energie, um gegen das Bremsfeld anzukommen.
 Deshalb verringert sich der Auffängerstrom $I_{\text A}$ über den zeitlichen Verlauf gesehen immer wieder und es ergibt sich der Kurvenverlauf, der aus \autoref{fig:franckVerlauf} abzulesen ist.
@@ -84,6 +85,7 @@ Durch die unterschiedlichen Materialien haben die Elektroden auch unterschiedlic
 Wobei der Ausdruck
 \begin{align}
     K = \frac{1}{e_0} (\phi_{\text B} - \phi_{\text G})
+    \label{eqn:kont}
 \end{align}
 das Kontaktpotential ist, $\phi_{\text G}$ die Austrittsarbeit aus dem Glühdraht und $\phi_{\text B}$ die Austrittsarbeit aus der Beschleunigungselektrode ist.
 Das Potentialgefälle ist außerdem durch die \autoref{fig:poteGef} verbildlicht.
@@ -104,11 +106,13 @@ Finden diese im Raum zwischen Kathode und Beschleunigungsanode statt, dann trage
 Da für die Beobachtung der Kurve Zusammenstöße zwischen Elektronen und Hg-Atomen notwendig sind, nimmt der Dampfdruck des zu untersuchenden Stoffes Einfluss auf ebendiese Kurve.
 Es wird die mittlere freie Weglänge $\overline w$ der Atome klein gegen den Abstand $a$ zwischen Kathode und Beschleunigungselektrode gewählt und somit die Wahrscheinlichkeit der Zusammenstöße erhöht. Die Weglänge $\overline w$ kann über den Druck $p_{\text{sät}}$
 in der Glasglocke genau eingestellt werden und es folgt mit
-\begin{align*}
+\begin{equation}
     \overline w \, [\si{\centi\meter}] = \frac{0,0029}{p_{\text{sät}}} \, [\si{\milli\bar}]
-\end{align*}
+    \label{eqn:w1}
+\end{equation}
 ein Zusammenhang zwischen dem Sättigungsdampfdruck $p_{\text{sät}}$ und der Temperatur $T$
-\begin{align}
+\begin{equation}
     p_{\text{sät}}(T) = 5,5\cdot 10^{7} \text e^{\frac{-6876}{T}}.
-\end{align}
+    \label{eqn:p1}
+\end{equation}
 Es muss $\overline w$ etwa um $1000$ bis $4000$ mal kleiner eingestellt werden, als $a$. In der verwendeten Apparatur beträgt $a$ etwa $\SI{1}{\centi\meter}$.
