@@ -31,7 +31,7 @@ plt.plot(
     color="b",
     marker="x",
     linewidth=0,
-    label=r"$\theta = \qty{15}{\degree}$",
+    label=r"$\varphi = \qty{15}{\degree}$",
 )
 plt.plot(
     v_fluss30,
@@ -39,7 +39,7 @@ plt.plot(
     color="darkmagenta",
     marker="+",
     linewidth=0,
-    label=r"$\theta = \qty{30}{\degree}$",
+    label=r"$\varphi = \qty{30}{\degree}$",
 )
 plt.plot(
     v_fluss45,
@@ -47,7 +47,7 @@ plt.plot(
     color="crimson",
     marker=".",
     linewidth=0,
-    label=r"$\theta = \qty{45}{\degree}$",
+    label=r"$\varphi = \qty{45}{\degree}$",
 )
 plt.xlabel(r"$v_\text{Fluss} \,/\, \si{\metre\per\second}$")
 plt.ylabel(r"$\upDelta \nu\,/\, \si{\hertz}$")

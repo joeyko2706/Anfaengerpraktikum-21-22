@@ -3,7 +3,7 @@
 
 \subsection{Auswertung der Strömungsgeschwindigkeit}
 \label{subsec:stroemi}
-Als erstes wird zu den jeweiligen Winkeln $\varphi$, die am Prisma eingestellt wurden, der zugehörige Dopplerwinkel $\alpha$ nach \autoref{eqn:alpha}
+Als erstes wird zu den jeweiligen Winkeln $\varphi$, die am Prisma eingestellt wurden, der zugehörige Dopplerwinkel $\alpha$ nach Gleichung (\ref{eqn:alpha})
 berechnet und in \autoref{tab:winkel} eingetragen.
 \begin{table}[H]
   \centering
@@ -24,7 +24,7 @@ berechnet und in \autoref{tab:winkel} eingetragen.
 Es wird die Strömungsgeschwindigkeit in Abhängigkeit des Dopplerwinkels $\alpha$ untersucht. Hierzu wird ein Rohr mit einem Außendurchmesser von $\SI{20}{\milli\meter}$
 und einem Innendurchmesser von $\SI{16}{\milli\meter}$ verwendet und an den drei verschiedenen Winkeln ausgewertet. Die Messwerte sind der \autoref{tab:AufgabeA} zu entnehmen.
 An der Zentrifugalpumpe, die die Strömungsgeschwindigkeit regelt, wurde in einem Bereich von $3000 \,\text{rpm}$ bis $7000 \,\text{rpm}$ in Schrittweiten von $1000 \,\text{rpm}$ gemessen. Dies entsricht den in der
-Tabelle verzeichneten Abweichungen von der maximalen Leistung ($8400\, \text{rpm}$). Sie sind gegenüber der Differenz der maximalen und minimalen Frequenz $\upDelta \nu$ dargestellt.
+Tabelle verzeichneten Abweichungen von der maximalen Leistung ($8400\, \text{rpm}$). Sie sind gegenüber der Differenz der maximalen und minimalen Frequenz $\upDelta \nu = f_{\text{max}} - f_{\text{mean}}$ dargestellt.
 \begin{table}[H]
   \centering
   \caption{Prisma- und Dopplewinkel.}
@@ -41,7 +41,6 @@ Tabelle verzeichneten Abweichungen von der maximalen Leistung ($8400\, \text{rpm
 \end{table}
 
 \noindent
-<<<<<<< HEAD
 Die Strömungsgeschwindigkeiten $v$ folgen nun, indem die \autoref{eqn:df} umgestellt wird. Die berechneten Strömungsgeschwindigkeiten sind in \autoref{tab:stroemungsgeschw} eingetragen.
 \begin{table}[H]
   \centering
@@ -59,32 +58,8 @@ Die Strömungsgeschwindigkeiten $v$ folgen nun, indem die \autoref{eqn:df} umges
 \end{table}
 
 \noindent
-In der folgenden \autoref{fig:plot} sind die Werte aus \autoref{tab:stroemungsgeschw} noch einmal visuell gegen den Quotient aus der Frequenzdifferenz $\upDelta \nu$ und $\cos(\alpha)$
-dargestellt.
-||||||| 4d37d09
-Die Strömungsgeschwindigkeiten $v$ folgen nun, indem die Formel [REFERENZ] umgestellt wird. Die berechneten Strömungsgeschwindigkeiten sind in \autoref{tab:stroemungsgeschw} eingetragen.
-\begin{table}[H]
-  \centering
-  \caption{Prisma- und Dopplewinkel.}
-  \label{tab:stroemungsgeschw}
-  \begin{tabular}{c c c c c c c}
-    \toprule
-    Prismawinkel $\varphi$ & $35,7 \%$ & $47,62 \%$ & $59,52 \%$ & $71,43 \%$ & $83,3 \%$\\
-    \midrule
-    $\SI{15}{\degree}$ & $\SI{855}{\meter\per\second}$ & $\SI{62}{\meter\per\second}$ & $\SI{91}{\meter\per\second}$ & $\SI{175}{\meter\per\second}$ & $\SI{186}{\meter\per\second}$ \\
-    $\SI{30}{\degree}$ & $\SI{55}{\meter\per\second}$ & $\SI{102}{\meter\per\second}$ & $\SI{152}{\meter\per\second}$ & $\SI{246}{\meter\per\second}$ & $\SI{355}{\meter\per\second}$ \\
-    $\SI{45}{\degree}$ & $\SI{96}{\meter\per\second}$ & $\SI{184}{\meter\per\second}$ & $\SI{298}{\meter\per\second}$ & $\SI{461}{\meter\per\second}$ & $\SI{643}{\meter\per\second}$ \\
-    \bottomrule
-  \end{tabular}
-\end{table}
-
-\noindent
-In der folgenden \autoref{fig:plot} sind die Werte aus \autoref{tab:stroemungsgeschw} noch einmal visuell gegen den Quotient aus der Frequenzdifferenz $\upDelta \nu$ und $\cos(\alpha)$
-dargestellt.
-=======
-Die Strömungsgeschwindigkeiten $v$ folgen nun, indem die Formel [REFERENZ] umgestellt wird. In der folgenden \autoref{fig:plot} sind die Werte aus der 
+Die Strömungsgeschwindigkeiten $v$ folgen nun, indem die Formel (\ref{eqn:df}) umgestellt wird. In der folgenden \autoref{fig:plot} sind die Werte aus der 
 berechneten Strömungsgeschwindigkeiten visuell gegen den Quotient aus der Frequenzdifferenz $\upDelta \nu$ und $\cos(\alpha)$ dargestellt.
->>>>>>> 579cefdfc295c939f38ec18e81537e5f969eacb6
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.75\textwidth]{build/plot.pdf}
