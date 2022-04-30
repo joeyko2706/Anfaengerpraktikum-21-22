@@ -1,6 +1,9 @@
 \section{Auswertung}
 \label{sec:Auswertung}
 
+Im folgenden wird sowohl die Strömungsgeschwindigkeit in Abhängigkeit des Prismawinkels $\varphi$ ausgewertet, als auch ein Strömungsprofil für den
+mittleren Schlauch angelegt. Die ausgewerteten Messwerte werden grafisch dargestellt.
+
 \subsection{Auswertung der Strömungsgeschwindigkeit}
 \label{subsec:stroemi}
 Als erstes wird zu den jeweiligen Winkeln $\varphi$, die am Prisma eingestellt wurden, der zugehörige Dopplerwinkel $\alpha$ nach Gleichung (\ref{eqn:alpha})
@@ -13,9 +16,9 @@ berechnet und in \autoref{tab:winkel} eingetragen.
     \toprule
     Prismawinkel $\varphi$ & Dopplerwinkel $\alpha$ \\
     \midrule
-    $\SI{15}{\degree}$ & $\SI{90,58}{\degree}$ \\
-    $\SI{30}{\degree}$ & $\SI{88,85}{\degree}$ \\
-    $\SI{45}{\degree}$ & $\SI{91,41}{\degree}$ \\
+    $\SI{15}{\degree}$ & $\SI{80,06}{\degree}$ \\
+    $\SI{30}{\degree}$ & $\SI{70,53}{\degree}$ \\
+    $\SI{45}{\degree}$ & $\SI{61,87}{\degree}$ \\
     \bottomrule
   \end{tabular}
 \end{table}
@@ -27,7 +30,7 @@ An der Zentrifugalpumpe, die die Strömungsgeschwindigkeit regelt, wurde in eine
 Tabelle verzeichneten Abweichungen von der maximalen Leistung ($8400\, \text{rpm}$). Sie sind gegenüber der Differenz der maximalen und minimalen Frequenz $\upDelta \nu = f_{\text{max}} - f_{\text{mean}}$ dargestellt.
 \begin{table}[H]
   \centering
-  \caption{Prisma- und Dopplewinkel.}
+  \caption{Frequenzdifferenz $\upDelta \nu$ in Abhängigkeit der Pumpleistung.}
   \label{tab:AufgabeA}
   \begin{tabular}{c c c c c c c}
     \toprule
@@ -44,7 +47,7 @@ Tabelle verzeichneten Abweichungen von der maximalen Leistung ($8400\, \text{rpm
 Die Strömungsgeschwindigkeiten $v$ folgen nun, indem die \autoref{eqn:df} umgestellt wird. Die berechneten Strömungsgeschwindigkeiten sind in \autoref{tab:stroemungsgeschw} eingetragen.
 \begin{table}[H]
   \centering
-  \caption{Prisma- und Dopplewinkel.}
+  \caption{Strömungsgeschwindigkeiten in Abhängigkeit der Pumpleistung.}
   \label{tab:stroemungsgeschw}
   \begin{tabular}{c c c c c c c}
     \toprule
@@ -69,10 +72,10 @@ berechneten Strömungsgeschwindigkeiten visuell gegen den Quotient aus der Frequ
 
 \subsection{Auswertung des Strömnugprofils}
 \label{subsec:StroemiProf}
-Im zweiten Teil des Versuches wird für einen Schlauch mit einem Außendurchmesser von $\SI{20}{\milli\meter}$ und einem Innendurchmesser von $\SI{16}{\milli\metre}$ ein
+Im zweiten Teil des Versuches wird für einen Schlauch mit einem Außendurchmesser von $\SI{15}{\milli\meter}$ und einem Innendurchmesser von $\SI{10}{\milli\metre}$ ein
 Strömungsprofil unter einem Einfallwinkel von $\SI{45}{\degree}$ angelegt. Die Messwerte für eine Leistung von $70\%$ sind in \autoref{tab:Werte1} und für $45\%$ in 
 \autoref{tab:Werte2} zu finden. Dargestellt sind die Messtiefe des Ultraschalls, die Signalstärke und die Fließgeschwindigkeit der Flüssigkeit.
-Eine grafische Darstellung ist in diesem Fall nicht angebracht, da die Messwerte, wie in \autoref{sec:Diskussion} näher erläutert wird, nicht repräsentant und sehr ungenau sind.
+Die Werte sind außerdem in \autoref{fig:plot2} für eine Pumpleistung von $45 \%$ und in \autoref{fig:plot3} für eine Pumpleistung von $70 \%$ eingetragen.
 \begin{table}[H]
   \centering
   \caption{Messwerte des zweiten Aufgabenteils bei 70 \% Leistung (6.000 rpm) des Gerätes.}
@@ -130,3 +133,17 @@ Eine grafische Darstellung ist in diesem Fall nicht angebracht, da die Messwerte
     \bottomrule
   \end{tabular}
 \end{table}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.75\textwidth]{build/plot2.pdf}
+  \caption{Grafische Darstellung der Signalintensität und der momentanen Fließgeschwindigkeit bei $45\%$ der Pumpleistung.}
+  \label{fig:plot2}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.75\textwidth]{build/plot3.pdf}
+  \caption{Grafische Darstellung der Signalintensität und der momentanen Fließgeschwindigkeit bei $70\%$ der Pumpleistung.}
+  \label{fig:plot3}
+\end{figure}

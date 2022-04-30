@@ -60,40 +60,77 @@ print("Plot 1/3")
 
 # Messaufgabe 2)
 
-# t, I, v = np.genfromtxt('data/Aufgabeb45per.txt', unpack = True)
+t, I, v = np.genfromtxt("data/Aufgabeb45per.txt", unpack=True)
 
 
-# def p2(x,a,b,c):    #Fit: Polynom 2ten Grades
-#     return a*x**2 + b*x + c
+def p2(x, a, b, c):  # Fit: Polynom 2ten Grades
+    return a * x ** 2 + b * x + c
 
+#45Prozent
 # Erster Plot links
 
-# params, pcov = op.curve_fit(p2, t, I)
-# x = np.linspace(13,17.5,1000)
-# plt.subplot(1,2,1)
-# plt.plot(t, I, marker = 'x' ,color = 'crimson', linewidth = 0, label = 'Messwerte')
-# plt.plot(x, p2(x, *params), color = 'mediumblue', label = 'Fit')
+params, pcov = op.curve_fit(p2, t, I)
+x = np.linspace(13, 17.5, 1000)
+plt.subplot(1, 2, 1)
+plt.plot(t, I, marker="x", color="crimson", linewidth=0, label="Messwerte")
+plt.plot(x, p2(x, *params), color="mediumblue", label="Fit")
 
-# plt.grid()
-# plt.legend(loc='best')
-# plt.xlabel(r'Messtiefe in $\unit{\micro\second}$')
-# plt.ylabel(r'$I \mathbin{/} \unit{\kilo\volt\squared\per\second}$')
-# plt.title('Signalintensität')
-# plt.tight_layout(pad=0, h_pad=1.08, w_pad=1.08)
+plt.grid()
+plt.legend(loc="best")
+plt.xlabel(r"Messtiefe in $\unit{\micro\second}$")
+plt.ylabel(r"$I \mathbin{/} \unit{\kilo\volt\squared\per\second}$")
+plt.title("Signalintensität")
+plt.tight_layout(pad=0, h_pad=1.08, w_pad=1.08)
 
 # Zweiter Plot rechts
 
-# params, pcov = op.curve_fit(p2, t, v)
-# plt.subplot(1,2,2)
-# plt.plot(t, v, marker = 'x' ,color = 'firebrick', linewidth = 0)
-# plt.plot(x, p2(x, *params), color = 'cornflowerblue', label = 'Fit')
+params, pcov = op.curve_fit(p2, t, v)
+plt.subplot(1, 2, 2)
+plt.plot(t, v, marker="x", color="firebrick", linewidth=0)
+plt.plot(x, p2(x, *params), color="cornflowerblue", label="Fit")
 
 
-# plt.xlabel(r'Messtiefe in $\unit{\micro\second}$')
-# plt.ylabel(r'$v \mathbin{/} \unit{\centi\metre\per\second}$')
-# plt.grid()
-# plt.title('momentane Fließgeschwindigkeit')
-# plt.tight_layout(pad=0, h_pad=1.08, w_pad=1.08)
-# plt.savefig('build/plot2_1.pdf')
-# plt.close()
-# print('Plot 2/3')
+plt.xlabel(r"Messtiefe in $\unit{\micro\second}$")
+plt.ylabel(r"$v \mathbin{/} \unit{\centi\metre\per\second}$")
+plt.grid()
+plt.title("mom. Fließgeschwindigkeit")
+plt.tight_layout(pad=0, h_pad=1.08, w_pad=1.08)
+plt.savefig("build/plot2.pdf")
+plt.close()
+print("Plot 2/3")
+
+#70Prozent
+# Erster Plot links
+
+t1, I1, v1 = np.genfromtxt("data/Aufgabeb70per.txt", unpack=True)
+
+
+params, pcov = op.curve_fit(p2, t1, I1)
+x1 = np.linspace(13, 17.5, 1000)
+plt.subplot(1, 2, 1)
+plt.plot(t1, I1, marker="x", color="crimson", linewidth=0, label="Messwerte")
+plt.plot(x1, p2(x1, *params), color="mediumblue", label="Fit")
+
+plt.grid()
+plt.legend(loc="best")
+plt.xlabel(r"Messtiefe in $\unit{\micro\second}$")
+plt.ylabel(r"$I \mathbin{/} \unit{\kilo\volt\squared\per\second}$")
+plt.title("Signalintensität")
+plt.tight_layout(pad=0, h_pad=1.08, w_pad=1.08)
+
+# Zweiter Plot rechts
+
+params, pcov = op.curve_fit(p2, t1, v1)
+plt.subplot(1, 2, 2)
+plt.plot(t1, v1, marker="x", color="firebrick", linewidth=0)
+plt.plot(x1, p2(x, *params), color="cornflowerblue", label="Fit")
+
+
+plt.xlabel(r"Messtiefe in $\unit{\micro\second}$")
+plt.ylabel(r"$v \mathbin{/} \unit{\centi\metre\per\second}$")
+plt.grid()
+plt.title("mom. Fließgeschwindigkeit")
+plt.tight_layout(pad=0, h_pad=1.08, w_pad=1.08)
+plt.savefig("build/plot3.pdf")
+plt.close()
+print("Plot 3/3")
