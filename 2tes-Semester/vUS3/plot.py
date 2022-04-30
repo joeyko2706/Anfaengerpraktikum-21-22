@@ -25,30 +25,75 @@ v_fluss30 = nu30 * c_L / (2 * nu_0 * np.cos(alpha[1]))
 v_fluss45 = nu45 * c_L / (2 * nu_0 * np.cos(alpha[2]))
 
 
+y1 = nu15 / np.cos(alpha[0])
+y2 = nu30 / np.cos(alpha[1])
+y3 = nu45 / np.cos(alpha[2])
+
+x1 = np.linspace(0, 0.5, 10)
+x2 = np.linspace(0, 0.5, 10)
+x3 = np.linspace(0, 0.7, 10)
+
+
+def p1(x, a, b):  # Fit: Polynom 1ten Grades
+    return a * x + b
+
+
+params1, pcov1 = op.curve_fit(p1, v_fluss15, y1)
+
+
+# Plot für 15 Grad
+
+plt.subplot(1, 3, 1)
 plt.plot(
     v_fluss15,
-    nu15 / np.cos(alpha[0]),
-    color="b",
-    marker="x",
+    y1,
+    color="r",
+    marker=".",
     linewidth=0,
     label=r"$\varphi = \qty{15}{\degree}$",
 )
+plt.plot(x1, p1(x1, *params1), color="b", label="Fit")
+plt.xlabel(r"$v_\text{Fluss} \,/\, \si{\metre\per\second}$")
+plt.ylabel(r"$\upDelta \nu\,/\, \si{\hertz}$")
+plt.grid()
+plt.tight_layout(pad=0, h_pad=1.08, w_pad=1.08)
+plt.legend()
+
+# Plot für 30 Grad
+
+plt.subplot(1, 3, 2)
+params2, pcov2 = op.curve_fit(p1, v_fluss30, y2)
 plt.plot(
     v_fluss30,
-    nu30 / np.cos(alpha[1]),
-    color="darkmagenta",
-    marker="+",
+    y2,
+    color="r",
+    marker=".",
     linewidth=0,
     label=r"$\varphi = \qty{30}{\degree}$",
 )
+plt.plot(x2, p1(x2, *params2), color="b", label="Fit")
+plt.xlabel(r"$v_\text{Fluss} \,/\, \si{\metre\per\second}$")
+plt.ylabel(r"$\upDelta \nu\,/\, \si{\hertz}$")
+plt.grid()
+plt.tight_layout(pad=0, h_pad=1.08, w_pad=1.08)
+plt.legend()
+
+
+# Plot für 45 Grad
+
+plt.subplot(1, 3, 3)
+params3, pcov3 = op.curve_fit(p1, v_fluss45, y3)
 plt.plot(
     v_fluss45,
-    nu45 / np.cos(alpha[2]),
-    color="crimson",
+    y3,
+    color="r",
     marker=".",
     linewidth=0,
     label=r"$\varphi = \qty{45}{\degree}$",
 )
+plt.plot(x3, p1(x3, *params3), color="b", label="Fit")
+
+
 plt.xlabel(r"$v_\text{Fluss} \,/\, \si{\metre\per\second}$")
 plt.ylabel(r"$\upDelta \nu\,/\, \si{\hertz}$")
 plt.grid()
@@ -66,14 +111,15 @@ t, I, v = np.genfromtxt("data/Aufgabeb45per.txt", unpack=True)
 def p2(x, a, b, c):  # Fit: Polynom 2ten Grades
     return a * x ** 2 + b * x + c
 
-#45Prozent
+
+# 45Prozent
 # Erster Plot links
 
-params, pcov = op.curve_fit(p2, t, I)
+params4, pcov4 = op.curve_fit(p2, t, I)
 x = np.linspace(13, 17.5, 1000)
 plt.subplot(1, 2, 1)
-plt.plot(t, I, marker="x", color="crimson", linewidth=0, label="Messwerte")
-plt.plot(x, p2(x, *params), color="mediumblue", label="Fit")
+plt.plot(t, I, marker="x", color="r", linewidth=0, label="Messwerte")
+plt.plot(x, p2(x, *params4), color="b", label="Fit")
 
 plt.grid()
 plt.legend(loc="best")
@@ -84,10 +130,10 @@ plt.tight_layout(pad=0, h_pad=1.08, w_pad=1.08)
 
 # Zweiter Plot rechts
 
-params, pcov = op.curve_fit(p2, t, v)
+params5, pcov5 = op.curve_fit(p2, t, v)
 plt.subplot(1, 2, 2)
-plt.plot(t, v, marker="x", color="firebrick", linewidth=0)
-plt.plot(x, p2(x, *params), color="cornflowerblue", label="Fit")
+plt.plot(t, v, marker="x", color="r", linewidth=0)
+plt.plot(x, p2(x, *params5), color="b", label="Fit")
 
 
 plt.xlabel(r"Messtiefe in $\unit{\micro\second}$")
@@ -99,7 +145,7 @@ plt.savefig("build/plot2.pdf")
 plt.close()
 print("Plot 2/3")
 
-#70Prozent
+# 70Prozent
 # Erster Plot links
 
 t1, I1, v1 = np.genfromtxt("data/Aufgabeb70per.txt", unpack=True)
@@ -108,8 +154,8 @@ t1, I1, v1 = np.genfromtxt("data/Aufgabeb70per.txt", unpack=True)
 params, pcov = op.curve_fit(p2, t1, I1)
 x1 = np.linspace(13, 17.5, 1000)
 plt.subplot(1, 2, 1)
-plt.plot(t1, I1, marker="x", color="crimson", linewidth=0, label="Messwerte")
-plt.plot(x1, p2(x1, *params), color="mediumblue", label="Fit")
+plt.plot(t1, I1, marker="x", color="r", linewidth=0, label="Messwerte")
+plt.plot(x1, p2(x1, *params), color="b", label="Fit")
 
 plt.grid()
 plt.legend(loc="best")
@@ -122,8 +168,8 @@ plt.tight_layout(pad=0, h_pad=1.08, w_pad=1.08)
 
 params, pcov = op.curve_fit(p2, t1, v1)
 plt.subplot(1, 2, 2)
-plt.plot(t1, v1, marker="x", color="firebrick", linewidth=0)
-plt.plot(x1, p2(x, *params), color="cornflowerblue", label="Fit")
+plt.plot(t1, v1, marker="x", color="r", linewidth=0)
+plt.plot(x1, p2(x, *params), color="b", label="Fit")
 
 
 plt.xlabel(r"Messtiefe in $\unit{\micro\second}$")
