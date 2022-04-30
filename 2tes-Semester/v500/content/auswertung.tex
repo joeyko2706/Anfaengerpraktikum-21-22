@@ -1,12 +1,97 @@
 \section{Auswertung}
 \label{sec:Auswertung}
 
-\begin{figure}
+Es werden jeweils für die fünf untersuchten Farben bzw. Wellenlängen die eingestellten Bremsspannungen $U_\text{B}$ gegen die Wurzel des gemessenen Photostromes $\sqrt{I_\text{P}}$
+geplottet. Die Darstellung der Messergebnisse für die rote Spektrallinie sind in \autoref{fig:rot}, die für die orangene in \autoref{fig:orange},
+die für die grüne in \autoref{fig:gruen}, die für die blaue in \autoref{fig:blau} und die für die violette in \autoref{fig:violett} zu finden.
+Für jede Messreihe wurde zusätzlich eine lineare Regression berechnet und eingezeichnet.
+
+\begin{figure}[H]
   \centering
-  \includegraphics{plot.pdf}
-  \caption{Plot.}
-  \label{fig:plot}
+  \includegraphics[width=\textwidth]{rot.pdf}
+  \caption{Wurzel des Photostroms in Relation zur Bremsspannung für die rote Spektrallinie.}
+  \label{fig:rot}
 \end{figure}
 
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{orange.pdf}
+  \caption{Wurzel des Photostroms in Relation zur Bremsspannung für die orangene Spektrallinie.}
+  \label{fig:orange}
+\end{figure}
 
-Siehe \autoref{fig:plot}!
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{gruen.pdf}
+  \caption{Wurzel des Photostroms in Relation zur Bremsspannung für die grüne Spektrallinie.}
+  \label{fig:gruen}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{blau.pdf}
+  \caption{Wurzel des Photostroms in Relation zur Bremsspannung für die blaue Spektrallinie.}
+  \label{fig:blau}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{violett.pdf}
+  \caption{Wurzel des Photostroms in Relation zur Bremsspannung für die violette Spektrallinie.}
+  \label{fig:violett}
+\end{figure}
+
+\noindent
+Mit Hilfe der linearen Regressionen, die der Form $y=a \cdot x+b$ entsprechen, lassen sich nun die verschiedenen Gegenspannungen $U_\text{G}$ bestimmen. Es werden hiefür
+$y=\sqrt{I_\text{P}}$, $x=U_\text{B}$ und $U_\text{G}=-\frac{b}{a}$ verwendet. Die jeweiligen Werte für $a$ und $b$ und die aus ihnen resultierenden Spannungen
+$U_\text{G}$ sind mit den zugehörigen Farben in \autoref{tab:ug} aufgeführt.
+
+\begin{table}[H]
+  \centering
+  \begin{tabular}{c c c c}
+      \toprule
+      Farbe & $a$ & $b$ & $U_\text{G} / \si{\volt}$\\
+      \midrule
+      Rot &  -1,77 $\pm$ 0,11 & 0,71 $\pm$ 0,03 & 0,40 $\pm$ 0,03 \\
+      Orange &  -2,91 $\pm$ 0,23 & 1,62 $\pm$ 0,07 & 0,56 $\pm$ 0,05 \\
+      Grün & -3,35 $\pm$ 0,12 & 2,31 $\pm$ 0,05 & 0,69 $\pm$ 0,03 \\
+      Blau &  -2,78 $\pm$ 0,08 & 3,26 $\pm$ 0,05 & 1,17 $\pm$ 0,04 \\
+      Violett &  -2,24 $\pm$ 0,07 & 3,08 $\pm$ 0,05 & 1,38 $\pm$ 0,05 \\
+      \bottomrule
+  \end{tabular}
+  \caption{Werte der linearen Regression.}
+  \label{tab:ug}
+\end{table}
+
+\noindent
+Die berechneten Gegenspannungen werden nun gegen die jeweilige Frequenz des Lichtes geplottet und erneut eine lineare Regression durchgeführt. Dies ist in \autoref{fig:gegen} dargestellt.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{gegenspannung.pdf}
+  \caption{Gegenspannungen mit jeweils zugehöriger Frequenz.}
+  \label{fig:gegen}
+\end{figure}
+
+\noindent
+Aus der linearen Regression folgt mit Gleichung \eqref{eqn:energieElektr} $a=\frac{h}{e_0}$ und $b=A_\text{K}$. Dies liefert die Werte
+\begin{align*}
+  \frac{h}{e_0} &= \SI{4,66 \pm 0,58}{\volt\second}, \\
+  A_\text{K} &= \SI{1,81 \pm 0,33}{\electronvolt}.
+\end{align*}
+
+\newpage
+\noindent
+In \autoref{fig:aufgb} sind die Messwerte des Photostroms der orangenen Spektrallinie für eine Beschleunigungsspannung von $0$ bis $\SI{19}{\volt}$ zu sehen.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{aufgb.pdf}
+  \caption{Photostrom in Abhängigkeit der Bremsspannung für die orangene Spektrallinie.}
+  \label{fig:aufgb}
+\end{figure}
+\noindent
+Die einzelnen Messwerte bilden den erwarteten Kurvenverlauf. Für höher werdende Beschleunigungsspannungen erreicht der Photostrom einen Sättigungswert, der nicht überschritten wird.
+Dies liegt daran, dass die Intensität des Lichtes unverändert bleibt und so die Anzahl an Elektronen, die aus dem Material gelöst werden, begrentzt ist.
+\newline
+Dass sich die Kurve schon bei Bremsspannungen kleiner der Gegenspannung Null nährt liegt daran, dass die Elektronen nicht monoenergetisch sind, sondern Energien auf einem
+Energieitervall besitzten, dessen obere Grenze durch die Gegenspannung definiert ist. Ein Größteil der Elektronen hat somit eine Energie darunter.
