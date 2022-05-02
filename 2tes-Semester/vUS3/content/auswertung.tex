@@ -53,21 +53,35 @@ Die Strömungsgeschwindigkeiten $v$ folgen nun, indem die \autoref{eqn:df} umges
     \toprule
     Prismawinkel $\varphi$ & $35,7 \%$ & $47,62 \%$ & $59,52 \%$ & $71,43 \%$ & $83,3 \%$\\
     \midrule
-    $\SI{15}{\degree}$ & $\SI{855}{\meter\per\second}$ & $\SI{62}{\meter\per\second}$ & $\SI{91}{\meter\per\second}$ & $\SI{175}{\meter\per\second}$ & $\SI{186}{\meter\per\second}$ \\
-    $\SI{30}{\degree}$ & $\SI{55}{\meter\per\second}$ & $\SI{102}{\meter\per\second}$ & $\SI{152}{\meter\per\second}$ & $\SI{246}{\meter\per\second}$ & $\SI{355}{\meter\per\second}$ \\
-    $\SI{45}{\degree}$ & $\SI{96}{\meter\per\second}$ & $\SI{184}{\meter\per\second}$ & $\SI{298}{\meter\per\second}$ & $\SI{461}{\meter\per\second}$ & $\SI{643}{\meter\per\second}$ \\
+    $\SI{15}{\degree}$ & $\SI{0,1174}{\meter\per\second}$ & $\SI{0,1617}{\meter\per\second}$ & $\SI{0,2373}{\meter\per\second}$ & $\SI{0,4564}{\meter\per\second}$ & $\SI{0,4851}{\meter\per\second}$ \\
+    $\SI{30}{\degree}$ & $\SI{0,0743}{\meter\per\second}$ & $\SI{0,1377}{\meter\per\second}$ & $\SI{0,2052}{\meter\per\second}$ & $\SI{0,3321}{\meter\per\second}$ & $\SI{0,4793}{\meter\per\second}$ \\
+    $\SI{45}{\degree}$ & $\SI{0,0916}{\meter\per\second}$ & $\SI{0,1756}{\meter\per\second}$ & $\SI{0,2845}{\meter\per\second}$ & $\SI{0,4401}{\meter\per\second}$ & $\SI{0,6138}{\meter\per\second}$ \\
     \bottomrule
   \end{tabular}
 \end{table}
 
 \noindent
-Die Strömungsgeschwindigkeiten $v$ folgen nun, indem die Formel \eqref{eqn:df} umgestellt wird. In der folgenden \autoref{fig:plot} sind die Werte aus der 
-berechneten Strömungsgeschwindigkeiten visuell gegen den Quotient aus der Frequenzdifferenz $\upDelta \nu$ und $\cos(\alpha)$ dargestellt.
+Die Strömungsgeschwindigkeiten $v$ folgen nun, indem die Formel \eqref{eqn:df} umgestellt wird. In der \autoref{fig:plota}, \autoref{fig:plotb} und \autoref{fig:plotc} sind die Werte aus der 
+berechneten Strömungsgeschwindigkeiten visuell gegen den Quotient aus der Frequenzdifferenz $\upDelta \nu$ und $\cos(\alpha)$ für den jeweiligen Winel dargestellt.
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.75\textwidth]{build/plot.pdf}
-  \caption{Messwerte für drei verschiedene Einstrahlwinkel gegen die berechnete Strömungsgeschwindigkeit $\frac{\upDelta\nu}{\cos(\alpha)}$.}
-  \label{fig:plot}
+  \includegraphics[width=0.75\textwidth]{build/plota.pdf}
+  \caption{Messwerte den Einstrahlwinkel von $\SI{15}{\degree}$ gegen die berechnete Strömungsgeschwindigkeit $\frac{\upDelta\nu}{\cos(\alpha)}$.}
+  \label{fig:plota}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.75\textwidth]{build/plotb.pdf}
+  \caption{Messwerte den Einstrahlwinkel von $\SI{30}{\degree}$ gegen die berechnete Strömungsgeschwindigkeit $\frac{\upDelta\nu}{\cos(\alpha)}$.}
+  \label{fig:plotb}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.75\textwidth]{build/plotc.pdf}
+  \caption{Messwerte den Einstrahlwinkel von $\SI{45}{\degree}$ gegen die berechnete Strömungsgeschwindigkeit $\frac{\upDelta\nu}{\cos(\alpha)}$.}
+  \label{fig:plotc}
 \end{figure}
 
 \subsection{Auswertung des Strömungprofils}

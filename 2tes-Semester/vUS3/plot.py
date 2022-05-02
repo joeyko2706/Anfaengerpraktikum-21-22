@@ -25,13 +25,20 @@ v_fluss30 = nu30 * c_L / (2 * nu_0 * np.cos(alpha[1]))
 v_fluss45 = nu45 * c_L / (2 * nu_0 * np.cos(alpha[2]))
 
 
+
 y1 = nu15 / np.cos(alpha[0])
 y2 = nu30 / np.cos(alpha[1])
 y3 = nu45 / np.cos(alpha[2])
 
+
+print('Stroumungsgeschwindigkeiten 15 Grad: ', np.round(v_fluss15,4) )
+print('Stroumungsgeschwindigkeiten 30 Grad: ', np.round(v_fluss30,4))
+print('Stroumungsgeschwindigkeiten 45 Grad: ', np.round(v_fluss45,4))
+
+
 x1 = np.linspace(0, 0.5, 10)
 x2 = np.linspace(0, 0.5, 10)
-x3 = np.linspace(0, 0.7, 10)
+x3 = np.linspace(0, 0.65, 10)
 
 
 def p1(x, a, b):  # Fit: Polynom 1ten Grades
@@ -43,7 +50,7 @@ params1, pcov1 = op.curve_fit(p1, v_fluss15, y1)
 
 # Plot für 15 Grad
 
-plt.subplot(1, 3, 1)
+
 plt.plot(
     v_fluss15,
     y1,
@@ -58,10 +65,13 @@ plt.ylabel(r"$\upDelta \nu\,/\, \si{\hertz}$")
 plt.grid()
 plt.tight_layout(pad=0, h_pad=1.08, w_pad=1.08)
 plt.legend()
+plt.savefig('build/plota.pdf')
+plt.close()
+print("Plot 1/5")
 
 # Plot für 30 Grad
 
-plt.subplot(1, 3, 2)
+
 params2, pcov2 = op.curve_fit(p1, v_fluss30, y2)
 plt.plot(
     v_fluss30,
@@ -77,11 +87,13 @@ plt.ylabel(r"$\upDelta \nu\,/\, \si{\hertz}$")
 plt.grid()
 plt.tight_layout(pad=0, h_pad=1.08, w_pad=1.08)
 plt.legend()
+plt.savefig('build/plotb.pdf')
+print("Plot 2/5")
+plt.close()
 
 
 # Plot für 45 Grad
 
-plt.subplot(1, 3, 3)
 params3, pcov3 = op.curve_fit(p1, v_fluss45, y3)
 plt.plot(
     v_fluss45,
@@ -99,9 +111,9 @@ plt.ylabel(r"$\upDelta \nu\,/\, \si{\hertz}$")
 plt.grid()
 plt.tight_layout(pad=0, h_pad=1.08, w_pad=1.08)
 plt.legend()
-plt.savefig("build/plot.pdf")
+plt.savefig("build/plotc.pdf")
 plt.close()
-print("Plot 1/3")
+print("Plot 3/5")
 
 # Messaufgabe 2)
 
@@ -143,7 +155,7 @@ plt.title("mom. Fließgeschwindigkeit")
 plt.tight_layout(pad=0, h_pad=1.08, w_pad=1.08)
 plt.savefig("build/plot2.pdf")
 plt.close()
-print("Plot 2/3")
+print("Plot 4/5")
 
 # 70Prozent
 # Erster Plot links
@@ -179,4 +191,4 @@ plt.title("mom. Fließgeschwindigkeit")
 plt.tight_layout(pad=0, h_pad=1.08, w_pad=1.08)
 plt.savefig("build/plot3.pdf")
 plt.close()
-print("Plot 3/3")
+print("Plot 5/5")
