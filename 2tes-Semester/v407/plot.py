@@ -58,12 +58,12 @@ def sPolTheorie(n, a, E):
 
 pBrechung = np.round(pPolarisation(alpha, I), 3)
 sBrechung = np.round(sPolarisation(alpha1, I1), 3)
-winkeltheo = np.linspace(10, 88, 1000)
+winkeltheo = np.linspace(10, 90, 1000)
 
 # Die folgenden 6 Zeilen sind nur Befehle, um die Mittelwerte und die Tabellen auszugeben
 
-# print("Mittelwert Brechung bei sPol: ", np.round(np.mean(sBrechung),4), "+/-" , np.round(np.std(sBrechung))) #Mittelwert des Brechungsindex bei sPolarisiertem Licht
-# print("Mittelwert Brechung bei pPol: ", np.round(np.mean(pBrechung),4), "+/-" , np.round(np.std(pBrechung))) #Mittelwert des Brechungsindex bei pPolarisiertem Licht
+print("Mittelwert Brechung bei sPol: ", np.round(np.mean(sBrechung),4), "+/-" , np.round(np.std(sBrechung),4)) #Mittelwert des Brechungsindex bei sPolarisiertem Licht
+print("Mittelwert Brechung bei pPol: ", np.round(np.mean(pBrechung),4), "+/-" , np.round(np.std(pBrechung),4)) #Mittelwert des Brechungsindex bei pPolarisiertem Licht
 # for i in range(n):
 #     print(alpha[i]," & ", I[i]," & ", pBrechung[i]," ;")    #Tabelle für parallele Polarisation
 #     print(alpha1[i]," & ", I1[i]," & ", sBrechung[i]," ;")  #Tabelle für senkrechte Polarisation
@@ -88,6 +88,7 @@ plt.plot(
 plt.xlabel(r"Winkel $\alpha$ / Grad")
 plt.ylabel(r"$\sqrt{\frac{I_r}{I_e}}$")
 
+plt.xlim(8,92)
 plt.grid()
 plt.legend()
-plt.savefig("build/plot1.pdf")
+plt.savefig("build/plot.pdf")
