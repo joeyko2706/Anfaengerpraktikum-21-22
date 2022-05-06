@@ -17,16 +17,23 @@ def pPolarisation(w, I):#Brechungsindex für pPolarisiertes Licht; w = winkel, I
     return (1+E)/(np.cos(w) * (1 - E)) * np.sqrt(1/2 * (1 + (np.sqrt(2 * w))**2 * ((1-E) **2 / (1+E) **2) ))
 
 
-pBrechung = np.zeros(n)
+def sPolarisation(w, I):#Brechungsindex für sPolarisiertes Licht; w = winkel, I = photostrom
+    E = E_e / np.sqrt(I*10**(-6))
+    return np.sqrt(1 + (4 * E * (np.cos(w))**2) / (E-1)**2 )
+
+
+pBrechung = np.round(pPolarisation(alpha, I), 3)
+sBrechung = np.round(sPolarisation(alpha1, I1), 3)
 
 
 for i in range(n):
-    pBrechung[i] = np.round(pPolarisation(alpha[i], I[i]),3)
-    # print(alpha[i]," & ", I[i]," & ", pBrechung[i]," ;")
+    # print(alpha[i]," & ", I[i]," & ", pBrechung[i]," ;")    #Tabelle für parallele Polarisation
+    print(alpha1[i]," & ", I1[i]," & ", sBrechung[i]," ;")  #Tabelle für senkrechte Polarisation
     i += 1
 
 
-# print("Mittelwert Brechung: ", np.round(np.mean(pBrechung),4), "+/-" , np.round(np.std(pBrechung))) #Mittelwert des Brechungsindex bei pPolarisiertem Licht
+# print("Mittelwert Brechung bei sPol: ", np.round(np.mean(sBrechung),4), "+/-" , np.round(np.std(sBrechung))) #Mittelwert des Brechungsindex bei sPolarisiertem Licht
+# print("Mittelwert Brechung bei pPol: ", np.round(np.mean(pBrechung),4), "+/-" , np.round(np.std(pBrechung))) #Mittelwert des Brechungsindex bei pPolarisiertem Licht
 
 plt.plot(alpha, pBrechung, ".", label = "Messwerte")
 plt.xlabel(r"Winkel $\alpha \mathbin{/} \unit{\degree}$")
