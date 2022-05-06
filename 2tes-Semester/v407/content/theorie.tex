@@ -1,4 +1,43 @@
+\section{Zielsetzung}
+\label{sec:Zielsetzung}
+
+Ziel des Versuches ist es, die Abhängigkeit der Intensität des, an einem Silizium-Spiegel reflektierten, Lichtes vom Eintrittswinkel und der Polarisation zu bestimmen. 
+
 \section{Theorie}
 \label{sec:Theorie}
+
+Beim Durchqueren von Grenzflächen zweier Medien mit verschiedenen Brechungsindexen, wird das sich ausbreitende Licht in den meisten Fällen sowohl reflektiert, als
+auch gebrochen. Um zu bestimmen, welchen Anteil der ursprünglichen Intensität des einfallenden Lichtes das reflektierte und das gebrochene Licht haben, wird
+zunächst ein allgemeiner Ausdruck für die Strahlungsleistung von Lichtwellen benötigt.
+\newline
+Aus den Maxwell Gleichungen und der Elektrizitätslehre folgt der Audruck 
+\begin{equation}
+    \vec{S} = \vec{E} \times \vec{H},
+\end{equation}
+wobei $\vec{E}$ die elektrische und $\vec{H}$ die magnetische Feldstärke einer elektromagnetischen Welle beschreiben. $\vec{S}$ wird als Poynting-Vektor bezeichnet
+und hat die Dimension $\frac{\text{Leistung}}{\text{Fläche}}$. Er beschreibt den Transport von Energie, da er in die Ausbreitungsrichtung der elektromagnetischen
+Welle zeigt und sein Betrag dem der Energie der Strahlung entspricht.
+
+\begin{equation}
+    S_\text{e} \cos(\alpha) = S_\text{r} \cos(\alpha) + S_\text{d} \cos(\alpha)
+\end{equation}
+
+\begin{equation}
+    n = \frac{c}{v}
+\end{equation}
+
+\begin{equation}
+    n = \frac{\sin(\alpha)}{\sin(\beta)}
+\end{equation}
+
+\begin{equation}
+    \vec{E_{\text{r}\perp}}(\alpha) = \vec{E_{\text{e}\perp}} \frac{(\sqrt{n^2 - \sin^2(\alpha)} - \cos(\alpha))^2}{n^2 - 1}
+    \label{eqn:fresnelsenk}
+\end{equation}
+
+\begin{equation}
+    \vec{E_{\text{r}\parallel}}(\alpha) = \vec{E_{\text{e}\parallel}} \frac{n^2 \cos(\alpha) + \sqrt{n^2} - \sin^2(\alpha)}{n^2 \cos(\alpha) - \sqrt{n^2} - \sin^2(\alpha)}
+    \label{eqn:fresnelpara}
+\end{equation}
 
 \cite{sample}
