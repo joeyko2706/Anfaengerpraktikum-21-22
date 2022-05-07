@@ -1,30 +1,11 @@
 \section{Auswertung}
 \label{sec:Auswertung}
 
-Für den Strom aus der einfallenden Intensität wurde $I_e = \SI{0,54}{\milli\ampere}$ gemessen. Die Messdaten für parallel polarisiertes Licht sind in
+Für den Strom aus der einfallenden Intensität wurden $I_e = \SI{0,54}{\milli\ampere}$ gemessen. Die Messdaten für parallel polarisiertes Licht sind in
 \autoref{tab:ppolMess}, die Daten für senkrecht polarisiertes Licht in \autoref{tab:spolMess} eingetragen. Der Brechungsindex für senkrecht und parallel
 polarisiertes Licht wurde durch umstellen der jeweiligen Fresnel'schen Formel \eqref{eqn:fresnelsenk} und \eqref{eqn:fresnelpara} berechnet. Die Werte sind ebenfalls in den beiden Tabellen eingetragen.
 Für die Energie $E$ wurde der Wert $\sqrt{\sfrac{I_r}{I_e}}$ eingesetzt.
-Die aus den Brechungsindex berechneten Mittelwerte lauten
-\begin{align*}
-    \overline{n_\parallel} &= 1,290 \pm 24,616, \\
-    \overline{n_\perp} &= 1.043 \pm 0,031.
-\end{align*}
 
-\noindent
-In \autoref{fig:plot} wurden die Messdaten mit den jeweiligen Theoriekurven grafisch dargestellt. Für die Theoriekurven wurde in die Gleichungen \eqref{eqn:fresnelsenk} und \eqref{eqn:fresnelpara}
-ein Literaturwert von
-\begin{align*}
-    n_{\text{Lit}} = 3,353
-\end{align*}
-eingesetzt \cite{BrechSilizium}. Die grafische Auswertung liefert einen Brewsterwinkel von  
-\begin{align*}
-    \alpha_{\text B} = \SI{78}{\degree},
-\end{align*}
-und daraus ein Brechungsindex von 
-\begin{align*}
-    \tan(\alpha_{\text B} = \SI{18}{\degree}) = 4,705.
-\end{align*}
 
 
 \begin{table}[H]
@@ -129,9 +110,32 @@ und daraus ein Brechungsindex von
 \end{table}
 
 
+\noindent
+Die aus den Brechungsindizes berechneten Mittelwerte lauten
+\begin{align*}
+    \overline{n_\parallel} &= 1,290 \pm 24,616 \ , \\
+    \overline{n_\perp} &= 1.043 \pm 0,031.
+\end{align*}
+
+
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{build/plot.pdf}
     \caption{Grafische Auswertung der Messdaten mit den jeweiligen Theoriekurven.}
     \label{fig:plot}
-  \end{figure}
+\end{figure}
+
+\noindent
+In \autoref{fig:plot} wurden die Messdaten mit den jeweiligen Theoriekurven grafisch dargestellt. Für die Theoriekurven wurde in die Gleichungen \eqref{eqn:fresnelsenk} und \eqref{eqn:fresnelpara}
+ein Literaturwert von
+\begin{align*}
+    n_{\text{Lit}} = 3,353
+\end{align*}
+eingesetzt \cite{BrechSilizium}. Die grafische Auswertung liefert näherungsweise einen Brewsterwinkel von  
+\begin{align*}
+    \alpha_{\text B} = \SI{78}{\degree},
+\end{align*}
+und daraus ein Brechungsindex von 
+\begin{align*}
+    \tan(\alpha_{\text B} = \SI{78}{\degree}) = 4,705.
+\end{align*}

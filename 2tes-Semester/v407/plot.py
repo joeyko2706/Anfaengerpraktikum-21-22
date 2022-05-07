@@ -62,8 +62,8 @@ winkeltheo = np.linspace(10, 90, 1000)
 
 # Die folgenden 6 Zeilen sind nur Befehle, um die Mittelwerte und die Tabellen auszugeben
 
-print("Mittelwert Brechung bei sPol: ", np.round(np.mean(sBrechung),4), "+/-" , np.round(np.std(sBrechung),4)) #Mittelwert des Brechungsindex bei sPolarisiertem Licht
-print("Mittelwert Brechung bei pPol: ", np.round(np.mean(pBrechung),4), "+/-" , np.round(np.std(pBrechung),4)) #Mittelwert des Brechungsindex bei pPolarisiertem Licht
+# print("Mittelwert Brechung bei sPol: ", np.round(np.mean(sBrechung),4), "+/-" , np.round(np.std(sBrechung),4)) #Mittelwert des Brechungsindex bei sPolarisiertem Licht
+# print("Mittelwert Brechung bei pPol: ", np.round(np.mean(pBrechung),4), "+/-" , np.round(np.std(pBrechung),4)) #Mittelwert des Brechungsindex bei pPolarisiertem Licht
 # for i in range(n):
 #     print(alpha[i]," & ", I[i]," & ", pBrechung[i]," ;")    #Tabelle für parallele Polarisation
 #     print(alpha1[i]," & ", I1[i]," & ", sBrechung[i]," ;")  #Tabelle für senkrechte Polarisation
