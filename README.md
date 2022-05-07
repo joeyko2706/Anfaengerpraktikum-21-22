@@ -1,6 +1,18 @@
 # Anfaengerpraktikum-20-21
 Protokolle und Dateien aus dem Anfängerpraktikum aus dem Winter- und Sommersemester 2021/2022
 ---
+## Git nutzen
+https://guides.github.com/introduction/flow/.
+
+1. Neuen Branch erstellen: `git branch <name>`.
+2. Auf den Branch wechseln: `git checkout <name>`.
+3. Änderungen vornehmen und commiten.
+4. Den Branch pushen: `git push -u origin <name>`.
+5. Pull Request oauf github erstellen.
+
+- Falls eine zu große Datei hochgeladen wurde und somit ein Fehler ausgegeben wird, oder wenn einfach der letzte 
+    lokale commit gelöscht werden soll: `# git reset --soft HEAD^`
+---
 
 ## Makefile nutzen
 
