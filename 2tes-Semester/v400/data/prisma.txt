@@ -1,0 +1,7 @@
+# Einfallswinkel & Reflexionswinkel rot & Reflexionswinkel grün
+60 38 39
+55 42 43
+50 47 48
+45 53 53
+40 49 60
+35 67 68

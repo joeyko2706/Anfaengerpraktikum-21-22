@@ -1,0 +1,8 @@
+#Einfallswinkel & Ausfallswinkel
+70  70
+60 55
+50 46
+45 41
+40 37
+30 27
+20 18
