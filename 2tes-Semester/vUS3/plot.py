@@ -31,9 +31,9 @@ y2 = nu30 / np.cos(alpha[1])
 y3 = nu45 / np.cos(alpha[2])
 
 
-print('Stroumungsgeschwindigkeiten 15 Grad: ', np.round(v_fluss15,4) )
-print('Stroumungsgeschwindigkeiten 30 Grad: ', np.round(v_fluss30,4))
-print('Stroumungsgeschwindigkeiten 45 Grad: ', np.round(v_fluss45,4))
+# print('Stroumungsgeschwindigkeiten 15 Grad: ', np.round(v_fluss15,4) )
+# print('Stroumungsgeschwindigkeiten 30 Grad: ', np.round(v_fluss30,4))
+# print('Stroumungsgeschwindigkeiten 45 Grad: ', np.round(v_fluss45,4))
 
 
 x1 = np.linspace(0, 0.5, 10)

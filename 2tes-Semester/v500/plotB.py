@@ -12,7 +12,7 @@ ab = ufloat(-2.78, 0.08)
 bb = ufloat(3.26, 0.05)
 av = ufloat(-2.24, 0.07)
 bv = ufloat(3.08, 0.05)
-print(-br/ar, -bo/ao, -bg/ag, -bb/ab, -bv/av)
+# print(-br/ar, -bo/ao, -bg/ag, -bb/ab, -bv/av)
 
 ub, ib = np.genfromtxt('data/AufgabeB.txt', unpack = True)
 

@@ -1,7 +1,7 @@
 all: build/v601.pdf
 
 # hier Python-Skripte:
-build/build/Differenz.pdf: plot.py ../matplotlibrc ../header-matplotlib.tex | build
+build/Differenz.pdf: plot.py ../matplotlibrc ../header-matplotlib.tex | build
 	# so that matplotlib can find the tex header when running
 	# LaTeX in the tmp directory
 	# and set the matplotlibrc
