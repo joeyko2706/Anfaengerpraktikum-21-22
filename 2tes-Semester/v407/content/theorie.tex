@@ -1,12 +1,12 @@
 \section{Zielsetzung}
 \label{sec:Zielsetzung}
 
-Ziel des Versuches ist es, die Abhängigkeit der Intensität des, an einem Silizium-Spiegel reflektierten, Lichtes vom Eintrittswinkel und der Polarisation zu bestimmen. 
+Ziel des Versuches ist es, die Abhängigkeit der Intensität des, an einem Silizium-Spiegel reflektierten, Lichtes vom Eintrittswinkel und der Polarisation zu bestimmen und somit den Brechungsindex von Silizium zu berechnen.. 
 
 \section{Theorie}
 \label{sec:Theorie}
 
-Beim Durchqueren von Grenzflächen zweier Medien mit verschiedenen Brechungsindexen, wird das sich ausbreitende Licht in den meisten Fällen sowohl reflektiert, als
+Beim Durchqueren von Grenzflächen zweier Medien mit verschiedenen Brechungsindizes, wird das sich ausbreitende Licht in den meisten Fällen sowohl reflektiert, als
 auch gebrochen. Um zu bestimmen, welchen Anteil der ursprünglichen Intensität des einfallenden Lichtes das reflektierte und das gebrochene Licht haben, wird
 zunächst ein allgemeiner Ausdruck für die Strahlungsleistung von Lichtwellen benötigt.
 \newline
@@ -46,7 +46,7 @@ Dieser Brechungsindex beschreibt außerdem das Verhältniss der Geschwindigkeit 
 \newline\newline
 Da das Verhältnis zwischen reflektiertem und gebrochenem Anteil der Strahlung stark vom Polarisationszustand dieser abhängig ist, müssen im Folgenden senkrecht und
 parallel zur Grenzfläche polarisierte Stahlungsanteile seperat betrachtet werden.
-Für senkrecht polarisierte Strahlung gilt durch vorheriege Überlegungen
+Für senkrecht polarisierte Strahlung gilt durch vorherige Überlegungen
 \begin{equation}
     \vec{E_{\text{r}\perp}}(\alpha) = \vec{E_{\text{e}\perp}} \frac{(\sqrt{n^2 - \sin^2(\alpha)} - \cos(\alpha))^2}{n^2 - 1}.
     \label{eqn:fresnelsenk}
@@ -64,4 +64,7 @@ Der Ausdruck für $\vec{E_{\text{r}\parallel}}(\alpha)$ lässt sich auch schreib
     \vec{E_{\text{r}\parallel}}(\alpha) = \vec{E_{\text{e}\parallel}} \frac{\tan(\alpha - \beta)}{\tan(\alpha + \beta)}.
 \end{equation}
 Daraus folgt, dass $\vec{E_{\text{r}\parallel}}(\alpha)$ Null werden kann, insofern die Voraussetzung $\alpha + \beta = 90°$ erfüllt ist. Es verschwindet somit für einen bestimmten
-Winkel von $\alpha$ der gesamte reflektierte Anteil und die gesamte Strahlung tritt in das brechende Medium ein. Dieser bestimmte Winkel wird Brewster Winkel gennant.
+Winkel von $\alpha$ der gesamte reflektierte Anteil und die gesamte Strahlung tritt in das brechende Medium ein. Dieser bestimmte Winkel wird Brewster Winkel gennant und durch die folgende Relation ausgedrückt
+\begin{align}
+    \arctan(n) = \alpha_{\text B}.
+\end{align}
