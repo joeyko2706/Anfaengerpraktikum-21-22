@@ -15,6 +15,11 @@ U4a, I4a = np.genfromtxt("data/Aufgabe1d.txt", unpack=True)
 U5a, I5a = np.genfromtxt("data/Aufgabe1e.txt", unpack=True)
 U2, I2 = np.genfromtxt("data/Aufgabe2.txt", unpack=True)
 
+print("Sättigungsstrom 10,35 Watt: ", I2a[-1])
+print("Sättigungsstrom 8,1 Watt: ", I3a[-1])
+print("Sättigungsstrom 7,0 Watt: ", I4a[-1])
+print("Sättigungsstrom 5,7 Watt: ", I5a[-1])
+
 #Plots für die erste Aufgabe erstellen
 
 
@@ -42,6 +47,7 @@ print("Plot 1/4")
 #Plot für die beiden höchsten Leistung, bei dem der Sättigungsstrom nicht erreicht wurde
 
 
+
 def g(x,a,b,c,d):
     return (a*x**3 +b*x**2+c*x+d)
 
@@ -57,7 +63,8 @@ x2 = np.linspace(0,180,1000)
 
 params, pcov = op.curve_fit(g, U1a, I1a)
 errors = np.sqrt(np.diag(pcov))
-print("Paramater Regression (a,b,c,d): ", params)
+
+print("Paramater Regression bei 13,75 Watt (a,b,c,d): ", params, errors)
 print("Wendepunkt 13,75 Watt: ", np.round(wendepunkt(*params),4), np.round(g(wendepunkt(*params), *params),4))
 print("Sättigungsstrom bei 13,75 Watt: ", 2*np.round(wendepunkt(*params),4), 2*np.round(g(wendepunkt(*params), *params),4))
 
@@ -69,7 +76,7 @@ plt.plot(wendepunkt(*params), g(wendepunkt(*params), *params), "kx")
 #Zweite Messwerte
 params, pcov = op.curve_fit(g, U2a, I2a)
 errors = np.sqrt(np.diag(pcov))
-print("Paramater Regression (a,b,c,d): ", params)
+print("Paramater Regression bei 10,35 Watt (a,b,c,d): ", params, errors)
 print("Wendepunkt 2: ", np.round(wendepunkt(*params),4), np.round(g(wendepunkt(*params), *params),4))
 print("Sättigungsstrom bei 10,35 Watt: ", 2*np.round(wendepunkt(*params),4), 2*np.round(g(wendepunkt(*params), *params),4))
 
@@ -101,7 +108,7 @@ x3 = np.linspace(1,6,1000)
 
 plt.plot(x3, f(x3, *params), color="r", label="Lineare Regression")
 plt.plot(U_log, I_log, "x", color="b" , alpha=0.7, label = r'Messwerte')
-print("Parameter Regression fuer Gueltigkeitsbereich (m,b): ", np.round(params,4))
+print("Parameter Regression fuer Gueltigkeitsbereich (m,b): ", np.round(params,4), errors)
 
 plt.legend()
 plt.xlim(1,6)
@@ -129,7 +136,7 @@ Ilog = np.log(I2)
 
 params, pcov = op.curve_fit(f, U2, Ilog)
 errors = np.sqrt(np.diag(pcov))
-print("Parameter Regression fuer Anlaufstromgebiet (m,b): ", np.round(params,4))
+print("Parameter Regression fuer Anlaufstromgebiet (m,b): ", np.round(params,4), errors)
 
 plt.plot(x4, f(x4, *params), color="r", label="Lineare Regression")
 plt.plot(U2, Ilog, 'b.', label="Messwerte")

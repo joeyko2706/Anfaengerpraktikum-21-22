@@ -1,26 +1,103 @@
 \section{Auswertung}
 \label{sec:Auswertung}
 
+Zu Beginn der Auswertung wird durch Variation eine Kennlinienschar der Hochvakuumdiode erstellt. Dazu werden die Messwerte grafisch dargestellt und mithilfe einer grafischen Auswertung der Sättigungsstrom bestimmt.
+Die Messwerte werden mit den Pythonerweiterungen Numpy \cite{numpy} und Matplotlib \cite{matplotlib} erstellt.
+In \autoref{fig:plot1} sind die Kennlinien der vier geringsten Leistungen abgebildet. Die originalen Messdaten sind dabei in \autoref{sec:anhang} zu finden.
+
 \begin{figure}
   \centering
   \includegraphics{plot1.pdf}
-  \caption{Plot.}
-  \label{fig:plot}
+  \caption{Grafische Auswertung der Messwerte für die vier geringsten Leistungen.}
+  \label{fig:plot1}
 \end{figure}
+
+\noindent
+Der Sättigungsstrom wurde in der \autoref{fig:plot1} durch eine horizontale Linie eingetragen. 
+Zu erkennen ist, dass eine grafische Auswertung der Kennlinie für eine Leistung von
+$\SI{10,35}{\watt}$ keine genauen Ergebnisse liefert. Deshalb wird, genauso wie für eine Leistung von $\SI{13,75}{\watt}$ verfahren.
+Es werden die Messwerte des Stromes $[\si{\milli\ampere}]$ gegenüber der Messwerte der Spannung $[\si{\volt}]$ dargestellt und eine Regression dritten Grades an die Messwerte mithilfe der Pythonerweiterung
+Scipy \cite{scipy} angelegt. Der Sättigungsstrom ergibt sich als den zweifachen Wert des Spannungswertes des Wendepunktes.
+Die grafische Auswertung durch eine Regression dritten Grades ist in \autoref{fig:plot2} zu finden.
 
 \begin{figure}
   \centering
   \includegraphics{plot2.pdf}
-  \caption{Plot.}
+  \caption{Grafische Auswertung der beiden größten Leistungen mithilfe einer Regression dritten Grades.}
   \label{fig:plot2}
 \end{figure}
+
+\noindent
+Die Regression dritten Grades der Form
+\begin{align*}
+  y = ax^3+bx^2+cx+d  
+\end{align*}
+liefert die in \autoref{tab:reg3} eingetragenen Parameter.
+
+\begin{table}[H]
+  \caption{Werte der Regression vom Grad drei.}
+  \label{tab:reg3}
+  \centering
+  \begin{tabular}{c c c}
+      \toprule
+      Parameter & $\SI{10,35}{\watt}$ & $\SI{13,75}{\watt}$ \\
+      \midrule
+      $a \cdot 10^{-7}$ & -2,4492 & -1,1691 \\
+      $b \cdot 10^{-5}$ & 6,3927 & 5,9830 \\
+      $c \cdot 10^{-3}$ & 2,9691 & 4,1352 \\
+      $d \cdot 10^{-3}$ & -9,1250 & -29,0294 \\
+      \bottomrule
+    \end{tabular}
+\end{table}
+
+\noindent
+Es ergeben sich somit die beiden Wendepunkte zu
+\begin{align*}
+  WP_{10,35} &= (87,0047 | 0,5718), \\
+  WP_{13,75} &= (170,593 | 1,8372). \\
+\end{align*}
+Somit folgen die Sättigungsströme zu den in \autoref{tab:saettis} eingetragenen Werten.
+
+\begin{table}[H]
+  \caption{Ausgemessene Sättigungsströme.}
+  \label{tab:saettis}
+  \centering
+  \begin{tabular}{c c}
+      \toprule
+      Heizleistung $W_{\text H}$ / $\si{\watt}$ & Sättigungsströme $I_{\text S}$ / $\si{\milli\ampere}$ \\
+      \midrule
+      $W_{\text H} = 5,7$ & $I_{\text S} = 0,047$, \\
+      $W_{\text H} = 7,0$ & $I_{\text S} = 0,11$, \\
+      $W_{\text H} = 8,1$ & $I_{\text S} = 0,284$, \\
+      $W_{\text H} = 10,35$ & $I_{\text S} = 1,1436$, \\
+      $W_{\text H} = 13,75$ & $I_{\text S} = 3,6744$, \\
+      \bottomrule
+    \end{tabular}
+\end{table}
+
+\subsection{Gültigkeitsbereich des Langmuir-Schotky'schen Raumladungsgesetz}
+\label{subsec:langmuirSchottky}
+
+Aus Gleichung [REFERENZ] folgt ein Zusammenhang zwischen dem Strom $I$ und der Spannung $U$ der Form $I=b\cdot U^m$, woraus nach umstellen ein linearer Zusammenhang der Form
+\begin{align}
+  \log\left(\frac{I}{I_0}\right) = m \cdot \log\left(\frac{U}{U_0}\right) +b.
+\end{align}
+Um die Gültigkeit des Langmuir-Schotky'schen Raumladungsgesetz zu überprüfen werden nun die Logarithmen des Stromes gegenüber dem der Spannung grafisch aufgetragen und
+eine lineare Regression der Form
+\begin{align*}
+  y=m\cdot x+b
+\end{align*}
+angelegt. Die grafische Auswertung ist \autoref{fig:plot3} zu entnehmen.
 
 \begin{figure}
   \centering
   \includegraphics{plot3.pdf}
-  \caption{Plot.}
+  \caption{Raumladungsbereich der $W_{\text H} = 13,75$ Kennlinie.}
   \label{fig:plot3}
 \end{figure}
+
+\noindent
+Es ergeben sich die folgenden Parameter
 
 \begin{figure}
   \centering
@@ -28,6 +105,3 @@
   \caption{Plot.}
   \label{fig:plot4}
 \end{figure}
-
-
-Siehe \autoref{fig:plot}!
