@@ -17,17 +17,24 @@ U2, I2 = np.genfromtxt("data/Aufgabe2.txt", unpack=True)
 
 #Plots für die erste Aufgabe erstellen
 
-plt.plot(U3a, I3a, "g.", markersize=3, label = r'$P=\SI{8,1}{\watt}$')#Plots der drei geringsten Leistungen
-plt.hlines(0.284, 90, 115, linestyle = "dashed", linewidth=1, color = "g")
-plt.plot(U4a, I4a, "r.", markersize=3, label = r'$P=\SI{7,0}{\watt}$')
-plt.hlines(0.110, 50, 70, linestyle = "dashed", linewidth=1, color = "r")
-plt.plot(U5a, I5a, "m.", markersize=3, label = r'$P=\SI{5,7}{\watt}$')
-plt.hlines(0.047, 26, 48, linestyle = "dashed", linewidth=1, color="m")
 
-plt.legend()
-plt.xlabel(r'$U \,/\, \si{\volt}$')
-plt.ylabel(r'$I \,/\, \si{\milli\ampere}')
-plt.tight_layout()
+def schoenerPlot():
+    plt.xlabel(r'$U \,/\, \si{\volt}$')
+    plt.ylabel(r'$I \,/\, \si{\milli\ampere}')
+    plt.grid()
+    plt.legend()
+    plt.tight_layout()
+
+
+plt.plot(U2a, I2a, ".", color="darkorange", markersize=3, label = r'$P=\SI{10,35}{\watt}$')
+plt.plot(U3a, I3a, "g.", markersize=3, label = r'$P=\SI{8,1}{\watt}$')#Plots der drei geringsten Leistungen
+plt.hlines(0.284, 90, 115, alpha=0.5, linewidth=1, color = "g")
+plt.plot(U4a, I4a, "r.", markersize=3, label = r'$P=\SI{7,0}{\watt}$')
+plt.hlines(0.110, 50, 70, alpha=0.5, linewidth=1, color = "r")
+plt.plot(U5a, I5a, "m.", markersize=3, label = r'$P=\SI{5,7}{\watt}$')
+plt.hlines(0.047, 26, 48, alpha=0.5, linewidth=1, color="m")
+
+schoenerPlot()
 plt.savefig("build/plot1.pdf")
 plt.clf()
 print("Plot 1/4")
@@ -39,54 +46,78 @@ def g(x,a,b,c,d):
     return (a*x**3 +b*x**2+c*x+d)
 
 
-params, pcov = op.curve_fit(g, U1a, I1a)
-errors = np.sqrt(np.diag(pcov))
+#Funktion, um den Wendepunkt zu berechnen. Man braucht zwar nur a und b. Wenn man aber alle übergibt, kann man einfach "*params" übergeben
+def wendepunkt(a,b,c,d): 
+    return (-(2*b)/(6*a))
+
+#Erste Messwerte
+
 x1 = np.linspace(0,250,1000)
 x2 = np.linspace(0,180,1000)
 
-plt.plot(x1, g(x1, *params), color="r", label="Fit")
+params, pcov = op.curve_fit(g, U1a, I1a)
+errors = np.sqrt(np.diag(pcov))
+print("Paramater Regression (a,b,c,d): ", params)
+print("Wendepunkt 13,75 Watt: ", np.round(wendepunkt(*params),4), np.round(g(wendepunkt(*params), *params),4))
+print("Sättigungsstrom bei 13,75 Watt: ", 2*np.round(wendepunkt(*params),4), 2*np.round(g(wendepunkt(*params), *params),4))
+
+plt.plot(x1, g(x1, *params), color="r", label="Regression 3.Grades")
 plt.plot(U1a, I1a, "b.", markersize=4, label = r'$P=\SI{13,75}{\watt}$') 
+plt.plot(wendepunkt(*params), g(wendepunkt(*params), *params), "kx")
 
 
+#Zweite Messwerte
 params, pcov = op.curve_fit(g, U2a, I2a)
 errors = np.sqrt(np.diag(pcov))
-plt.plot(x2, g(x2, *params), color="darkorange", label="Fit")
-plt.plot(U2a, I2a, "g.", markersize=4, label = r'$P=\SI{10,35}{\watt}$')
+print("Paramater Regression (a,b,c,d): ", params)
+print("Wendepunkt 2: ", np.round(wendepunkt(*params),4), np.round(g(wendepunkt(*params), *params),4))
+print("Sättigungsstrom bei 10,35 Watt: ", 2*np.round(wendepunkt(*params),4), 2*np.round(g(wendepunkt(*params), *params),4))
 
 
-plt.legend()
-plt.xlabel(r'$U \,/\, \si{\volt}$')
-plt.ylabel(r'$I \,/\, \si{\milli\ampere}')
-plt.tight_layout()
+plt.plot(x2, g(x2, *params), color="g", label="Regression 3.Grades")
+plt.plot(U2a, I2a, ".", color="darkorange", markersize=4, label = r'$P=\SI{10,35}{\watt}$')
+plt.hlines(1.178, 170, 190, alpha=0.5, linewidth=1, color="darkorange")
+plt.plot(wendepunkt(*params), g(wendepunkt(*params), *params), "kx", label="Wendepunkte")
+
+
+schoenerPlot()
 plt.savefig("build/plot2.pdf")
 plt.clf()
 print("Plot 2/4")
 
 #Plots für die zweite Aufgabe erstellen
+#Gültigkeitsbereich oder der shit der das war suchen ka
 
-plt.plot(U1a[:12], I1a[:12], ".", markersize=3, label = r'$P=\SI{13,75}{\watt}$')
-plt.plot(U2a[:12], I2a[:12], ".", markersize=3, label = r'$P=\SI{10,35}{\watt}$')
-plt.plot(U3a[:12], I3a[:12], ".", markersize=3, label = r'$P=\SI{8,1}{\watt}$')
-plt.plot(U4a[:12], I4a[:12], ".", markersize=3, label = r'$P=\SI{7,0}{\watt}$')
-plt.plot(U5a[:12], I5a[:12], "m.", markersize=3, label = r'$P=\SI{5,7}{\watt}$')
+
+def f(x, m, b):
+    return (m*x + b) 
+
+U_log = np.log(U1a[1:])
+I_log = np.log(I1a[1:])
+
+params, pcov = op.curve_fit(f, U_log, I_log)
+errors = np.sqrt(np.diag(pcov))
+x3 = np.linspace(1,6,1000)
+
+plt.plot(x3, f(x3, *params), color="r", label="Lineare Regression")
+plt.plot(U_log, I_log, "x", color="b" , alpha=0.7, label = r'Messwerte')
+print("Parameter Regression fuer Gueltigkeitsbereich (m,b): ", np.round(params,4))
 
 plt.legend()
-plt.xlabel(r'$U \,/\, \si{\volt}$')
-plt.ylabel(r'$I \,/\, \si{\milli\ampere}')
+plt.xlim(1,6)
+plt.ylim(f(1, *params), f(6, *params))
+plt.xlabel(r'$\log\left(\frac{U}{U_0}\right)')
+plt.ylabel(r'$\log\left(\frac{I}{I_0}\right)')
 plt.tight_layout()
 plt.savefig("build/plot3.pdf")
 plt.clf()
 print("Plot 3/4")
 
 # Aufgabenteil b)
-
-
-def f(x, m, b):
-    return (m*x + b) 
-
+#Anlaufstromgebiet halblogarithmisch darstellen
 
 U2 = U2 + 1000 * I2 *10**(-9)
-x3 = np.linspace(0,1,1000)
+x4 = np.linspace(0,1,1000)
 
 #Der Strom muss zunächst noch mit den richtigen Faktoren korrigiert werden
 
@@ -98,9 +129,10 @@ Ilog = np.log(I2)
 
 params, pcov = op.curve_fit(f, U2, Ilog)
 errors = np.sqrt(np.diag(pcov))
+print("Parameter Regression fuer Anlaufstromgebiet (m,b): ", np.round(params,4))
 
-plt.plot(x3, f(x3, *params), label="Lineare Regression")
-plt.plot(U2, Ilog, '.', label="Messwerte")
+plt.plot(x4, f(x4, *params), color="r", label="Lineare Regression")
+plt.plot(U2, Ilog, 'b.', label="Messwerte")
 
 plt.legend()
 plt.grid()
@@ -113,8 +145,13 @@ print("Plot 4/4")
 
 #Die Latex Tabellen mithilfe von Python ausgeben lassen
 
-I2 *= 10**9
-n = I2.size
-for i in range(n):
-    print(np.round(U2[i],4), " & ", np.round(I2[i]), ";")   #Aufgabe 2)
-    i +=1
+# I2 *= 10**9
+# n = I2.size
+# for i in range(n):
+    # print(n.round(U1a[i],4), " & ", np.round(I1a[i],4), ";")
+    # print(n.round(U2a[i],4), " & ", np.round(I2a[i],4), ";")
+    # print(n.round(U3a[i],4), " & ", np.round(I3a[i],4), ";")
+    # print(n.round(U4a[i],4), " & ", np.round(I4a[i],4), ";")
+    # print(n.round(U5a[i],4), " & ", np.round(I5a[i],4), ";")
+    # print(np.round(U2[i],4), " & ", np.round(I2[i]), ";")   #Aufgabe 2)
+    # i +=1

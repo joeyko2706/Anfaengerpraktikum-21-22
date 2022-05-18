@@ -1,4 +1,5 @@
 #Spannung in Volt & Strom in mA
+0 0.0
 4 0.011
 8 0.023
 12 0.038
