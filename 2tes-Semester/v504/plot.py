@@ -4,6 +4,8 @@ import scipy.constants as const
 import scipy.optimize as op
 import uncertainties.unumpy as unp
 from uncertainties import ufloat
+from uncertainties.unumpy import (nominal_values as noms,
+                                  std_devs as stds)
 
 print("Plots werden erstellt")
 #Daten aus Textdateien importieren
@@ -15,10 +17,10 @@ U4a, I4a = np.genfromtxt("data/Aufgabe1d.txt", unpack=True)
 U5a, I5a = np.genfromtxt("data/Aufgabe1e.txt", unpack=True)
 U2, I2 = np.genfromtxt("data/Aufgabe2.txt", unpack=True)
 
-print("Sättigungsstrom 10,35 Watt: ", I2a[-1])
-print("Sättigungsstrom 8,1 Watt: ", I3a[-1])
-print("Sättigungsstrom 7,0 Watt: ", I4a[-1])
-print("Sättigungsstrom 5,7 Watt: ", I5a[-1])
+# print("Sättigungsstrom 10,35 Watt: ", I2a[-1])
+# print("Sättigungsstrom 8,1 Watt: ", I3a[-1])
+# print("Sättigungsstrom 7,0 Watt: ", I4a[-1])
+# print("Sättigungsstrom 5,7 Watt: ", I5a[-1])
 
 #Plots für die erste Aufgabe erstellen
 
@@ -53,8 +55,9 @@ def g(x,a,b,c,d):
 
 
 #Funktion, um den Wendepunkt zu berechnen. Man braucht zwar nur a und b. Wenn man aber alle übergibt, kann man einfach "*params" übergeben
-def wendepunkt(a,b,c,d): 
-    return (-(2*b)/(6*a))
+def wendepunkt(a,b): 
+    wert =  (-(2*b)/(6*a))
+    return wert
 
 #Erste Messwerte
 
@@ -63,29 +66,44 @@ x2 = np.linspace(0,180,1000)
 
 params, pcov = op.curve_fit(g, U1a, I1a)
 errors = np.sqrt(np.diag(pcov))
+a1 = ufloat(params[0], errors[0])
+b1 = ufloat(params[1], errors[1])
+c1 = ufloat(params[2], errors[2])
+d1 = ufloat(params[3], errors[3])
 
-print("Paramater Regression bei 13,75 Watt (a,b,c,d): ", params, errors)
-print("Wendepunkt 13,75 Watt: ", np.round(wendepunkt(*params),4), np.round(g(wendepunkt(*params), *params),4))
-print("Sättigungsstrom bei 13,75 Watt: ", 2*np.round(wendepunkt(*params),4), 2*np.round(g(wendepunkt(*params), *params),4))
+wp1 = wendepunkt(a1,b1)
+y1 = g(wp1, a1, b1, c1, d1)
+
+# print("Paramater Regression bei 13,75 Watt (a,b,c,d): ", a1, b1, c1, d1)
+# print("Wendepunkt 13,75 Watt: ", wp1, y1)
+# print("Sättigungsstrom bei 13,75 Watt: ", 2*wp1, 2*y1)
 
 plt.plot(x1, g(x1, *params), color="r", label="Regression 3.Grades")
 plt.plot(U1a, I1a, "b.", markersize=4, label = r'$P=\SI{13,75}{\watt}$') 
-plt.plot(wendepunkt(*params), g(wendepunkt(*params), *params), "kx")
+# plt.errorbar(noms(wp1), noms(y1), xerr=stds(wp1), yerr=stds(y1), color="black")
+plt.plot(noms(wp1), noms(y1), "kx")
 
 
 #Zweite Messwerte
 params, pcov = op.curve_fit(g, U2a, I2a)
 errors = np.sqrt(np.diag(pcov))
-print("Paramater Regression bei 10,35 Watt (a,b,c,d): ", params, errors)
-print("Wendepunkt 2: ", np.round(wendepunkt(*params),4), np.round(g(wendepunkt(*params), *params),4))
-print("Sättigungsstrom bei 10,35 Watt: ", 2*np.round(wendepunkt(*params),4), 2*np.round(g(wendepunkt(*params), *params),4))
+a2 = ufloat(params[0], errors[0])
+b2 = ufloat(params[1], errors[1])
+c2 = ufloat(params[2], errors[2])
+d2 = ufloat(params[3], errors[3])
+wp2 = wendepunkt(a2,b2)
+y2 = g(wp2, a2, b2, c2, d2)
+
+# print("Paramater Regression bei 10,35 Watt (a,b,c,d): ", a2, b2, c2, d2)
+# print("Wendepunkt 10,35 Watt: ", wp2, y2)
+# print("Sättigungsstrom bei 10,35 Watt: ", 2*wp2, 2*y2)
 
 
 plt.plot(x2, g(x2, *params), color="g", label="Regression 3.Grades")
 plt.plot(U2a, I2a, ".", color="darkorange", markersize=4, label = r'$P=\SI{10,35}{\watt}$')
 plt.hlines(1.178, 170, 190, alpha=0.5, linewidth=1, color="darkorange")
-plt.plot(wendepunkt(*params), g(wendepunkt(*params), *params), "kx", label="Wendepunkte")
-
+# plt.errorbar(noms(wp2), noms(y2), xerr=stds(wp2), yerr=stds(y2), color="black", label="Wendepunkte")
+plt.plot(noms(wp2), noms(y2), "kx", label="Wendepunkte")
 
 schoenerPlot()
 plt.savefig("build/plot2.pdf")
@@ -108,7 +126,7 @@ x3 = np.linspace(1,6,1000)
 
 plt.plot(x3, f(x3, *params), color="r", label="Lineare Regression")
 plt.plot(U_log, I_log, "x", color="b" , alpha=0.7, label = r'Messwerte')
-print("Parameter Regression fuer Gueltigkeitsbereich (m,b): ", np.round(params,4), errors)
+# print("Parameter Regression fuer Gueltigkeitsbereich (m,b): ", np.round(params,4), errors)
 
 plt.legend()
 plt.xlim(1,6)
@@ -136,7 +154,9 @@ Ilog = np.log(I2)
 
 params, pcov = op.curve_fit(f, U2, Ilog)
 errors = np.sqrt(np.diag(pcov))
-print("Parameter Regression fuer Anlaufstromgebiet (m,b): ", np.round(params,4), errors)
+m = ufloat(params[0], errors[0])
+b = (params[1], errors[1])
+# print("Parameter Regression fuer Anlaufstromgebiet (m,b): ", np.round(params,4), errors)
 
 plt.plot(x4, f(x4, *params), color="r", label="Lineare Regression")
 plt.plot(U2, Ilog, 'b.', label="Messwerte")
@@ -150,15 +170,32 @@ plt.savefig("build/plot4.pdf")
 print("Plot 4/4")
 
 
-#Die Latex Tabellen mithilfe von Python ausgeben lassen
+# Kathodentemperatur bestimmen
+e = const.elementary_charge
+k = const.Boltzmann
+eta = 0.28
+f = 0.32 *10**(-4)
+n_wl = 0.95
+sigma = const.sigma
 
-# I2 *= 10**9
-# n = I2.size
-# for i in range(n):
-    # print(n.round(U1a[i],4), " & ", np.round(I1a[i],4), ";")
-    # print(n.round(U2a[i],4), " & ", np.round(I2a[i],4), ";")
-    # print(n.round(U3a[i],4), " & ", np.round(I3a[i],4), ";")
-    # print(n.round(U4a[i],4), " & ", np.round(I4a[i],4), ";")
-    # print(n.round(U5a[i],4), " & ", np.round(I5a[i],4), ";")
-    # print(np.round(U2[i],4), " & ", np.round(I2[i]), ";")   #Aufgabe 2)
-    # i +=1
+def kathodentemperatur(x):
+    return (-e/(k*x))
+
+kathodeAnlauf = kathodentemperatur(m)
+print('Kathode im Anlaufgebiet = (%.3f ± %.3f)' % (noms(kathodeAnlauf), stds(kathodeAnlauf)))
+
+def kathodenZwei(x):
+    return ((x-n_wl)/(f*eta*sigma))**(1/4)
+
+
+P1 = 13.5 #Heizleistungen implementieren und dann die zugehörigen Kathodentemperaturen ausgeben
+P2 = 10.35
+P3 = 8.1
+P4 = 7.0
+P5 = 5.7
+
+print("Kathodentemperaturen pro Leistung (abst.): ",kathodenZwei(P1))
+print("Kathodentemperaturen pro Leistung (abst.): ",kathodenZwei(P2))
+print("Kathodentemperaturen pro Leistung (abst.): ",kathodenZwei(P3))
+print("Kathodentemperaturen pro Leistung (abst.): ",kathodenZwei(P4))
+print("Kathodentemperaturen pro Leistung (abst.): ",kathodenZwei(P5))

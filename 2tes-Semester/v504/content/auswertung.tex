@@ -5,7 +5,7 @@ Zu Beginn der Auswertung wird durch Variation eine Kennlinienschar der Hochvakuu
 Die Messwerte werden mit den Pythonerweiterungen Numpy \cite{numpy} und Matplotlib \cite{matplotlib} erstellt.
 In \autoref{fig:plot1} sind die Kennlinien der vier geringsten Leistungen abgebildet. Die originalen Messdaten sind dabei in \autoref{sec:anhang} zu finden.
 
-\begin{figure}
+\begin{figure}[H]
   \centering
   \includegraphics{plot1.pdf}
   \caption{Grafische Auswertung der Messwerte für die vier geringsten Leistungen.}
@@ -20,7 +20,7 @@ Es werden die Messwerte des Stromes $[\si{\milli\ampere}]$ gegenüber der Messwe
 Scipy \cite{scipy} angelegt. Der Sättigungsstrom ergibt sich als den zweifachen Wert des Spannungswertes des Wendepunktes.
 Die grafische Auswertung durch eine Regression dritten Grades ist in \autoref{fig:plot2} zu finden.
 
-\begin{figure}
+\begin{figure}[H]
   \centering
   \includegraphics{plot2.pdf}
   \caption{Grafische Auswertung der beiden größten Leistungen mithilfe einer Regression dritten Grades.}
@@ -42,10 +42,10 @@ liefert die in \autoref{tab:reg3} eingetragenen Parameter.
       \toprule
       Parameter & $\SI{10,35}{\watt}$ & $\SI{13,75}{\watt}$ \\
       \midrule
-      $a \cdot 10^{-7}$ & -2,4492 & -1,1691 \\
-      $b \cdot 10^{-5}$ & 6,3927 & 5,9830 \\
-      $c \cdot 10^{-3}$ & 2,9691 & 4,1352 \\
-      $d \cdot 10^{-3}$ & -9,1250 & -29,0294 \\
+      $a \cdot 10^{-7}$ & $-2,45 \pm 0,09$ & $-1,17 \pm 0,09$ \\
+      $b \cdot 10^{-5}$ & $6,39 \pm 0,24$ & $5,98 \pm 0,34$ \\
+      $c \cdot 10^{-3}$ & $2,97 \pm -0,18$ & $4,1 \pm 0,4$ \\
+      $d$ & $-0,009 \pm 0,004$ & $-0,029 \pm 0,010$ \\
       \bottomrule
     \end{tabular}
 \end{table}
@@ -53,8 +53,8 @@ liefert die in \autoref{tab:reg3} eingetragenen Parameter.
 \noindent
 Es ergeben sich somit die beiden Wendepunkte zu
 \begin{align*}
-  WP_{10,35} &= (87,0047 | 0,5718), \\
-  WP_{13,75} &= (170,593 | 1,8372). \\
+  WP_{10,35} &= (87 \pm 4 | 0,57 \pm 0,06), \\
+  WP_{13,75} &= (171 \pm 16 | 1,84 \pm 0,34). \\
 \end{align*}
 Somit folgen die Sättigungsströme zu den in \autoref{tab:saettis} eingetragenen Werten.
 
@@ -64,13 +64,13 @@ Somit folgen die Sättigungsströme zu den in \autoref{tab:saettis} eingetragene
   \centering
   \begin{tabular}{c c}
       \toprule
-      Heizleistung $W_{\text H}$ / $\si{\watt}$ & Sättigungsströme $I_{\text S}$ / $\si{\milli\ampere}$ \\
+      Heizleistung $P_{\text H}$ / $\si{\watt}$ & Sättigungsströme $I_{\text S}$ / $\si{\milli\ampere}$ \\
       \midrule
-      $W_{\text H} = 5,7$ & $I_{\text S} = 0,047$, \\
-      $W_{\text H} = 7,0$ & $I_{\text S} = 0,11$, \\
-      $W_{\text H} = 8,1$ & $I_{\text S} = 0,284$, \\
-      $W_{\text H} = 10,35$ & $I_{\text S} = 1,1436$, \\
-      $W_{\text H} = 13,75$ & $I_{\text S} = 3,6744$, \\
+      $P_{\text H} = 5,7$ & $I_{\text S} = 0,047$, \\
+      $P_{\text H} = 7,0$ & $I_{\text S} = 0,11$, \\
+      $P_{\text H} = 8,1$ & $I_{\text S} = 0,284$, \\
+      $P_{\text H} = 10,35$ & $I_{\text S} = 1.14 \pm 0.12$, \\
+      $P_{\text H} = 13,75$ & $I_{\text S} = 3.7 \pm 0.7$, \\
       \bottomrule
     \end{tabular}
 \end{table}
@@ -80,28 +80,87 @@ Somit folgen die Sättigungsströme zu den in \autoref{tab:saettis} eingetragene
 
 Aus Gleichung [REFERENZ] folgt ein Zusammenhang zwischen dem Strom $I$ und der Spannung $U$ der Form $I=b\cdot U^m$, woraus nach umstellen ein linearer Zusammenhang der Form
 \begin{align}
+  \label{eqn:physLinReg}
   \log\left(\frac{I}{I_0}\right) = m \cdot \log\left(\frac{U}{U_0}\right) +b.
 \end{align}
 Um die Gültigkeit des Langmuir-Schotky'schen Raumladungsgesetz zu überprüfen werden nun die Logarithmen des Stromes gegenüber dem der Spannung grafisch aufgetragen und
 eine lineare Regression der Form
-\begin{align*}
+\begin{align}
+  \label{eqn:linReg}
   y=m\cdot x+b
-\end{align*}
+\end{align}
 angelegt. Die grafische Auswertung ist \autoref{fig:plot3} zu entnehmen.
 
-\begin{figure}
+\begin{figure}[H]
   \centering
-  \includegraphics{plot3.pdf}
+  \includegraphics[width=0.7\textwidth]{plot3.pdf}
   \caption{Raumladungsbereich der $W_{\text H} = 13,75$ Kennlinie.}
   \label{fig:plot3}
 \end{figure}
 
 \noindent
 Es ergeben sich die folgenden Parameter
+\begin{align*}
+  m = 1,1437 \pm 0,0146, \quad
+  b = -6,8027 \pm 0,0670.
+\end{align*}
 
-\begin{figure}
+\subsection{Auswertung des Anlaufstromgebietes}
+\label{subsec:anlaufstrom}
+
+Aus der Gleichung [REFERENZ] folgt ein exponentieller Zusammenhang zwischen der Heizspannung und des Anlaufstromes.
+Werden die Messwerte halblogarithmisch dargestellt, sollte sich ein linearer Zusammenhang zwischen der Spannung und dem Strom ergeben.
+Die halblogarithmische, grafische Auswertung ist \autoref{fig:plot4} zu entnehmen.
+
+\begin{figure}[H]
   \centering
-  \includegraphics{plot4.pdf}
-  \caption{Plot.}
+  \includegraphics[width=0.7\textwidth]{plot4.pdf}
+  \caption{Halblogarithmische Darstellung der Messwerte des Anlaufstromgebietes.}
   \label{fig:plot4}
 \end{figure}
+
+\noindent
+Die lineare Regression der Form analog zu Formel \eqref{eqn:linReg} ergibt sich analog zu der in \autoref{subsec:langmuirSchottky} aus der Gleichung [SELBE REFERENZ] zu einer Steigung von
+\begin{align}
+  \label{eqn:steigung}
+  m = -\frac{e}{kT}.
+\end{align}
+Die Parameter ergeben sich zu
+\begin{align*}
+  m =  \SI{-4,0503 \pm 0,4855}{\per\volt}, \quad
+  b = -15,0008 \pm 0,2698.
+\end{align*}
+
+Es folgt also eine Kathodentemperatur von
+\begin{align*}
+  \SI{2865.095 \pm 343.460}{\kelvin}.
+\end{align*}
+
+\subsection{Kathodentemperatur der Kennlinienschar}
+\label{subsec:kathodenTempSchar}
+
+Im nächsten Auswertungsschritt wird mithilfe der aufgenommenen Messwerte zur Kennlinienschar wird zuerst die Kathodentemperatur berechnet und damit
+die Austrittsarbeit bestimmt.
+Die Temperatur der Kathode folgt aus Gleichung [REFERENZ], wenn diese nach $T$ umgestellt wird zu 
+\begin{align}
+  T = \left(\frac{I_{\text H}\cdot U_{\text H} - N_{\text{WL}}}{f\eta\sigma}\right)^{\frac 14}.
+\end{align}
+Dabei ist die verwendete Wärmeleistung der Kathode $N_{\text{WL}} = \SI{0,95}{\watt}$, die emittierte Fläche $f=\SI{0,32}{\centi\meter\squared}$
+und der Emissionsgrad $\eta = 0,28$. Die Kathodentemperaturen zu den jeweiligen Heizleistungen sind in \autoref{tab:heizis} eingetragen.
+
+\begin{table}[H]
+  \caption{Ausgerechnete Kathodentemperaturen zu den jeweiligen Heizleistungen.}
+  \label{tab:heizis}
+  \centering
+  \begin{tabular}{c c}
+      \toprule
+      $P_{\text H}$ / $\si{\watt}$ & $T \,/\, \si{\kelvin}$\\
+      \midrule
+      $P_{\text H} = 13,75$ & $2229,3641$ \\
+      $P_{\text H} = 10,35$ & $2073,9679$ \\
+      $P_{\text H} = 8,1$ & $1936,8526$ \\
+      $P_{\text H} = 7,0$ & $1857,6287$ \\
+      $P_{\text H} = 5,7$ & $1748,6121$ \\
+      \bottomrule
+    \end{tabular}
+\end{table}
