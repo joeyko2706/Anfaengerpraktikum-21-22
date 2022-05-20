@@ -12,6 +12,7 @@ https://guides.github.com/introduction/flow/.
 
 - Falls eine zu große Datei hochgeladen wurde und somit ein Fehler ausgegeben wird, oder wenn einfach der letzte 
     lokale commit gelöscht werden soll: `# git reset --soft HEAD^`
+
 ---
 
 ## Makefile nutzen
