@@ -1,0 +1,32 @@
+Plots werden erstellt
+Sättigungsstrom 10,35 Watt:  1.178
+Sättigungsstrom 8,1 Watt:  0.284
+Sättigungsstrom 7,0 Watt:  0.11
+Sättigungsstrom 5,7 Watt:  0.047
+Plot 1/4
+Paramater Regression bei 13,75 Watt (a,b,c,d):  (-1.17+/-0.09)e-07 (5.98+/-0.34)e-05 0.0041+/-0.0004 -0.029+/-0.010
+Wendepunkt 13,75 Watt:  171+/-16 1.84+/-0.34
+Sättigungsstrom bei 13,75 Watt:  341+/-33 3.7+/-0.7
+Paramater Regression bei 10,35 Watt (a,b,c,d):  (-2.45+/-0.09)e-07 (6.39+/-0.24)e-05 0.00297+/-0.00018 -0.009+/-0.004
+Wendepunkt 10,35 Watt:  87+/-4 0.57+/-0.06
+Sättigungsstrom bei 10,35 Watt:  174+/-9 1.14+/-0.12
+Plot 2/4
+Parameter Regression fuer Gueltigkeitsbereich (m,b):  [ 1.437  -6.8027] [0.01457951 0.06698367]
+Plot 3/4
+Parameter Regression fuer Anlaufstromgebiet (m,b):  [ -4.0503 -15.0008] [0.48553963 0.26979392]
+Plot 4/4
+Kathode im Anlaufgebiet = (2865.095 ± 343.460)
+Kathodentemperaturen pro Leistung (abst.):  2229.364056804444
+Kathodentemperaturen pro Leistung (abst.):  2073.9678835246236
+Kathodentemperaturen pro Leistung (abst.):  1936.8526131524995
+Kathodentemperaturen pro Leistung (abst.):  1857.628678101687
+Kathodentemperaturen pro Leistung (abst.):  1748.612045855201
+Austrittsarbeit pro Leistung (abst.):  4.740+/-0.035
+Austrittsarbeit pro Leistung (abst.):  4.593+/-0.018
+Austrittsarbeit pro Leistung (abst.):  4.498704400249489
+Austrittsarbeit pro Leistung (abst.):  4.453154120704146
+Austrittsarbeit pro Leistung (abst.):  4.301721796890888
+Mittelwert Austrittsarbeiten:  4.517+/-0.008
+Abweichung vom LitWert  0.38+/-0.18
+Abweichung vom LitWert für m:  -4.2+/-1.0
+Abweichung Kathodentemperatur:  0.29+/-0.15

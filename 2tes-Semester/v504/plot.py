@@ -7,6 +7,7 @@ from uncertainties import ufloat
 from uncertainties.unumpy import (nominal_values as noms,
                                   std_devs as stds)
 
+
 print("Plots werden erstellt")
 #Daten aus Textdateien importieren
 
@@ -18,9 +19,9 @@ U5a, I5a = np.genfromtxt("data/Aufgabe1e.txt", unpack=True)
 U2, I2 = np.genfromtxt("data/Aufgabe2.txt", unpack=True)
 
 # print("Sättigungsstrom 10,35 Watt: ", I2a[-1])
-# print("Sättigungsstrom 8,1 Watt: ", I3a[-1])
-# print("Sättigungsstrom 7,0 Watt: ", I4a[-1])
-# print("Sättigungsstrom 5,7 Watt: ", I5a[-1])
+# print("Sättigungsstrom 8,1 Watt: ",   I3a[-1])
+# print("Sättigungsstrom 7,0 Watt: ",   I4a[-1])
+# print("Sättigungsstrom 5,7 Watt: ",   I5a[-1])
 
 #Plots für die erste Aufgabe erstellen
 
@@ -34,11 +35,11 @@ def schoenerPlot():
 
 
 plt.plot(U2a, I2a, ".", color="darkorange", markersize=3, label = r'$P=\SI{10,35}{\watt}$')
-plt.plot(U3a, I3a, "g.", markersize=3, label = r'$P=\SI{8,1}{\watt}$')#Plots der drei geringsten Leistungen
+plt.plot(U3a, I3a, "g.", markersize=3, label = r'$P_{\text H}=\SI{8,1}{\watt}$')#Plots der drei geringsten Leistungen
 plt.hlines(0.284, 90, 115, alpha=0.5, linewidth=1, color = "g")
-plt.plot(U4a, I4a, "r.", markersize=3, label = r'$P=\SI{7,0}{\watt}$')
+plt.plot(U4a, I4a, "r.", markersize=3, label = r'$P_{\text H}=\SI{7,0}{\watt}$')
 plt.hlines(0.110, 50, 70, alpha=0.5, linewidth=1, color = "r")
-plt.plot(U5a, I5a, "m.", markersize=3, label = r'$P=\SI{5,7}{\watt}$')
+plt.plot(U5a, I5a, "m.", markersize=3, label = r'$P_{\text H}=\SI{5,7}{\watt}$')
 plt.hlines(0.047, 26, 48, alpha=0.5, linewidth=1, color="m")
 
 schoenerPlot()
@@ -79,7 +80,7 @@ y1 = g(wp1, a1, b1, c1, d1)
 # print("Sättigungsstrom bei 13,75 Watt: ", 2*wp1, 2*y1)
 
 plt.plot(x1, g(x1, *params), color="r", label="Regression 3.Grades")
-plt.plot(U1a, I1a, "b.", markersize=4, label = r'$P=\SI{13,75}{\watt}$') 
+plt.plot(U1a, I1a, "b.", markersize=4, label = r'$P_{\text H}=\SI{13,75}{\watt}$') 
 # plt.errorbar(noms(wp1), noms(y1), xerr=stds(wp1), yerr=stds(y1), color="black")
 plt.plot(noms(wp1), noms(y1), "kx")
 
@@ -100,7 +101,7 @@ y2 = g(wp2, a2, b2, c2, d2)
 
 
 plt.plot(x2, g(x2, *params), color="g", label="Regression 3.Grades")
-plt.plot(U2a, I2a, ".", color="darkorange", markersize=4, label = r'$P=\SI{10,35}{\watt}$')
+plt.plot(U2a, I2a, ".", color="darkorange", markersize=4, label = r'$P_{\text H}=\SI{10,35}{\watt}$')
 plt.hlines(1.178, 170, 190, alpha=0.5, linewidth=1, color="darkorange")
 # plt.errorbar(noms(wp2), noms(y2), xerr=stds(wp2), yerr=stds(y2), color="black", label="Wendepunkte")
 plt.plot(noms(wp2), noms(y2), "kx", label="Wendepunkte")
@@ -111,7 +112,7 @@ plt.clf()
 print("Plot 2/4")
 
 #Plots für die zweite Aufgabe erstellen
-#Gültigkeitsbereich oder der shit der das war suchen ka
+#Gültigkeitsbereich oder der shit der da war ka
 
 
 def f(x, m, b):
@@ -160,6 +161,9 @@ b = (params[1], errors[1])
 
 plt.plot(x4, f(x4, *params), color="r", label="Lineare Regression")
 plt.plot(U2, Ilog, 'b.', label="Messwerte")
+plt.plot(U2[9], Ilog[9], ".",   color="limegreen")
+plt.plot(U2[15], Ilog[15], ".", color="limegreen")
+plt.plot(U2[18], Ilog[18], ".", color="limegreen")
 
 plt.legend()
 plt.grid()
@@ -169,14 +173,20 @@ plt.tight_layout()
 plt.savefig("build/plot4.pdf")
 print("Plot 4/4")
 
+"""
+# Im folgenden sind nur Rechnungen, die auskommentiert sind, um Rechenleistung zu sparen dazu einfach die drei Anführungszeichen
+# aus den Zeilen 176 und 261 entfernen
 
-# Kathodentemperatur bestimmen
+#Konstanten festlegen
 e = const.elementary_charge
 k = const.Boltzmann
 eta = 0.28
 f = 0.32 *10**(-4)
 n_wl = 0.95
 sigma = const.sigma
+m_0 = const.m_e
+h = const.h
+phi_lit = 4.55
 
 def kathodentemperatur(x):
     return (-e/(k*x))
@@ -194,8 +204,58 @@ P3 = 8.1
 P4 = 7.0
 P5 = 5.7
 
-print("Kathodentemperaturen pro Leistung (abst.): ",kathodenZwei(P1))
-print("Kathodentemperaturen pro Leistung (abst.): ",kathodenZwei(P2))
-print("Kathodentemperaturen pro Leistung (abst.): ",kathodenZwei(P3))
-print("Kathodentemperaturen pro Leistung (abst.): ",kathodenZwei(P4))
-print("Kathodentemperaturen pro Leistung (abst.): ",kathodenZwei(P5))
+IS1 = 2*y1*10**(-3)      #Sättigungsströme definieren
+IS2 = 2*y2*10**(-3)
+IS3 = I3a[-1]*10**(-3)
+IS4 = I4a[-1]*10**(-3)
+IS5 = I5a[-1] *10**(-3)
+
+ln1 = unp.log(y1)
+ln2 = unp.log(y2)
+
+k1 = kathodenZwei(P1)
+k2 = kathodenZwei(P2)
+k3 = kathodenZwei(P3)
+k4 = kathodenZwei(P4)
+k5 = kathodenZwei(P5)
+
+print("Kathodentemperaturen pro Leistung (abst.): ", k1)
+print("Kathodentemperaturen pro Leistung (abst.): ", k2)
+print("Kathodentemperaturen pro Leistung (abst.): ", k3)
+print("Kathodentemperaturen pro Leistung (abst.): ", k4)
+print("Kathodentemperaturen pro Leistung (abst.): ", k5)
+
+
+def austrittsArbeit(T, I_s):
+    return (-(k*T)/e * np.log((I_s * h**3)/(4 * np.pi*f*e*m_0*k**2*T**2)))
+
+
+def austrittsArbeit2(T, I_s):
+    return (-(k*T)/e * unp.log((I_s * h**3)/(4 * np.pi*f*e*m_0*k**2*T**2)))
+
+
+arbeit1 = austrittsArbeit2(k1,IS1)
+arbeit2 = austrittsArbeit2(k2,IS2)
+arbeit3 = austrittsArbeit(k3,IS3)
+arbeit4 = austrittsArbeit(k4,IS4)
+arbeit5 = austrittsArbeit(k5,IS5)
+wert = np.array([arbeit1, arbeit2, arbeit3, arbeit4, arbeit5])
+mittelArbeiten = sum(wert)/len(wert)
+
+
+print("Austrittsarbeit pro Leistung (abst.): ", arbeit1)
+print("Austrittsarbeit pro Leistung (abst.): ", arbeit2)
+print("Austrittsarbeit pro Leistung (abst.): ", arbeit3)
+print("Austrittsarbeit pro Leistung (abst.): ", arbeit4)
+print("Austrittsarbeit pro Leistung (abst.): ", arbeit5)
+print("Mittelwert Austrittsarbeiten: ", mittelArbeiten)
+print("Abweichung vom LitWert Austrtittsarbeit: ", abs((mittelArbeiten-phi_lit)/phi_lit)*100)
+
+m = ufloat(1.437, 0.0146)
+print("Abweichung vom LitWert für m: ", ((m-1.5)/1.5)*100)
+
+t1 = ufloat(2865.095, 343.460)
+t2 = 2229.3641
+
+print("Abweichung Kathodentemperatur: ", (t1-t2)/t2)
+"""

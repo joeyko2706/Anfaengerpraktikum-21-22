@@ -1,7 +1,11 @@
 \section{Auswertung}
 \label{sec:Auswertung}
 
-Zu Beginn der Auswertung wird durch Variation eine Kennlinienschar der Hochvakuumdiode erstellt. Dazu werden die Messwerte grafisch dargestellt und mithilfe einer grafischen Auswertung der Sättigungsstrom bestimmt.
+Die Messwerte des Versuches, wie er in \autoref{sec:Durchführung} beschrieben wurde, werden nun ausgewertet und mit den theoretischen und literarischen Werten verglichen.
+
+\subsection{Auswertung der Kennlinienschar einer Hochvakuumdiode}
+\label{subsec:kennL}
+Zu Beginn der Auswertung wird durch Variation der eingsetellten Heizleistung $P_{\text H}$ eine Kennlinienschar der Hochvakuumdiode erstellt. Dazu werden die Messwerte grafisch dargestellt und mithilfe einer grafischen Auswertung der Sättigungsstrom bestimmt.
 Die Messwerte werden mit den Pythonerweiterungen Numpy \cite{numpy} und Matplotlib \cite{matplotlib} erstellt.
 In \autoref{fig:plot1} sind die Kennlinien der vier geringsten Leistungen abgebildet. Die originalen Messdaten sind dabei in \autoref{sec:anhang} zu finden.
 
@@ -14,8 +18,7 @@ In \autoref{fig:plot1} sind die Kennlinien der vier geringsten Leistungen abgebi
 
 \noindent
 Der Sättigungsstrom wurde in der \autoref{fig:plot1} durch eine horizontale Linie eingetragen. 
-Zu erkennen ist, dass eine grafische Auswertung der Kennlinie für eine Leistung von
-$\SI{10,35}{\watt}$ keine genauen Ergebnisse liefert. Deshalb wird, genauso wie für eine Leistung von $\SI{13,75}{\watt}$ verfahren.
+Zu erkennen ist, dass eine grafische Auswertung für eine Leistung von $\SI{10,35}{\watt}$ keine genauen Ergebnisse liefert. Deshalb wird, genauso wie für eine Leistung von $\SI{13,75}{\watt}$ verfahren. \newline
 Es werden die Messwerte des Stromes $[\si{\milli\ampere}]$ gegenüber der Messwerte der Spannung $[\si{\volt}]$ dargestellt und eine Regression dritten Grades an die Messwerte mithilfe der Pythonerweiterung
 Scipy \cite{scipy} angelegt. Der Sättigungsstrom ergibt sich als den zweifachen Wert des Spannungswertes des Wendepunktes.
 Die grafische Auswertung durch eine Regression dritten Grades ist in \autoref{fig:plot2} zu finden.
@@ -66,11 +69,11 @@ Somit folgen die Sättigungsströme zu den in \autoref{tab:saettis} eingetragene
       \toprule
       Heizleistung $P_{\text H}$ / $\si{\watt}$ & Sättigungsströme $I_{\text S}$ / $\si{\milli\ampere}$ \\
       \midrule
-      $P_{\text H} = 5,7$ & $I_{\text S} = 0,047$, \\
-      $P_{\text H} = 7,0$ & $I_{\text S} = 0,11$, \\
-      $P_{\text H} = 8,1$ & $I_{\text S} = 0,284$, \\
-      $P_{\text H} = 10,35$ & $I_{\text S} = 1.14 \pm 0.12$, \\
-      $P_{\text H} = 13,75$ & $I_{\text S} = 3.7 \pm 0.7$, \\
+      $5,7$   & $0,047$, \\
+      $7,0$   & $0,11$, \\
+      $8,1$   & $0,284$, \\
+      $10,35$ & $1.14 \pm 0.12$, \\
+      $13,75$ & $3.7 \pm 0.7$, \\
       \bottomrule
     \end{tabular}
 \end{table}
@@ -78,12 +81,13 @@ Somit folgen die Sättigungsströme zu den in \autoref{tab:saettis} eingetragene
 \subsection{Gültigkeitsbereich des Langmuir-Schotky'schen Raumladungsgesetz}
 \label{subsec:langmuirSchottky}
 
+Es wird im folgenden der Gültigkeitsbereich der Langmuir-Schottky'schen Gleichung untersucht.
 Aus Gleichung [REFERENZ] folgt ein Zusammenhang zwischen dem Strom $I$ und der Spannung $U$ der Form $I=b\cdot U^m$, woraus nach umstellen ein linearer Zusammenhang der Form
 \begin{align}
   \label{eqn:physLinReg}
-  \log\left(\frac{I}{I_0}\right) = m \cdot \log\left(\frac{U}{U_0}\right) +b.
+  \log\left(\frac{I}{I_0}\right) = m \cdot \log\left(\frac{U}{U_0}\right) +b
 \end{align}
-Um die Gültigkeit des Langmuir-Schotky'schen Raumladungsgesetz zu überprüfen werden nun die Logarithmen des Stromes gegenüber dem der Spannung grafisch aufgetragen und
+wird. Um die Gültigkeit des Langmuir-Schotky'schen Raumladungsgesetzes zu überprüfen werden nun die Logarithmen des Stromes gegenüber denen der Spannung grafisch aufgetragen und
 eine lineare Regression der Form
 \begin{align}
   \label{eqn:linReg}
@@ -93,7 +97,7 @@ angelegt. Die grafische Auswertung ist \autoref{fig:plot3} zu entnehmen.
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.7\textwidth]{plot3.pdf}
+  \includegraphics{plot3.pdf}
   \caption{Raumladungsbereich der $W_{\text H} = 13,75$ Kennlinie.}
   \label{fig:plot3}
 \end{figure}
@@ -101,20 +105,22 @@ angelegt. Die grafische Auswertung ist \autoref{fig:plot3} zu entnehmen.
 \noindent
 Es ergeben sich die folgenden Parameter
 \begin{align*}
-  m = 1,1437 \pm 0,0146, \quad
+  m = 1,437 \pm 0,0146, \quad
   b = -6,8027 \pm 0,0670.
 \end{align*}
 
 \subsection{Auswertung des Anlaufstromgebietes}
 \label{subsec:anlaufstrom}
 
+Mithilfe einer Auswertung des Anlaufstromgebietes, ist es möglich die Kathodentemperatur zu bestimmen.
 Aus der Gleichung [REFERENZ] folgt ein exponentieller Zusammenhang zwischen der Heizspannung und des Anlaufstromes.
 Werden die Messwerte halblogarithmisch dargestellt, sollte sich ein linearer Zusammenhang zwischen der Spannung und dem Strom ergeben.
-Die halblogarithmische, grafische Auswertung ist \autoref{fig:plot4} zu entnehmen.
+Die halblogarithmische, grafische Auswertung ist \autoref{fig:plot4} zu entnehmen. Die grün markierten Messwerte sind dabei die Messwerte, bei denen der
+Messwertebereich am Amperemeter umgestellt wurde.
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.7\textwidth]{plot4.pdf}
+  \includegraphics{plot4.pdf}
   \caption{Halblogarithmische Darstellung der Messwerte des Anlaufstromgebietes.}
   \label{fig:plot4}
 \end{figure}
@@ -133,15 +139,14 @@ Die Parameter ergeben sich zu
 
 Es folgt also eine Kathodentemperatur von
 \begin{align*}
-  \SI{2865.095 \pm 343.460}{\kelvin}.
+  \SI{2865,095 \pm 343,460}{\kelvin}.
 \end{align*}
 
 \subsection{Kathodentemperatur der Kennlinienschar}
 \label{subsec:kathodenTempSchar}
 
-Im nächsten Auswertungsschritt wird mithilfe der aufgenommenen Messwerte zur Kennlinienschar wird zuerst die Kathodentemperatur berechnet und damit
-die Austrittsarbeit bestimmt.
-Die Temperatur der Kathode folgt aus Gleichung [REFERENZ], wenn diese nach $T$ umgestellt wird zu 
+Im nächsten Auswertungsschritt wird mithilfe der aufgenommenen Messwerte zur Kennlinienschar zuerst die Kathodentemperatur berechnet und damit
+die Austrittsarbeit bestimmt. Die Temperatur der Kathode folgt aus Gleichung [REFERENZ], wenn diese nach $T$ umgestellt wird zu 
 \begin{align}
   T = \left(\frac{I_{\text H}\cdot U_{\text H} - N_{\text{WL}}}{f\eta\sigma}\right)^{\frac 14}.
 \end{align}
@@ -149,18 +154,50 @@ Dabei ist die verwendete Wärmeleistung der Kathode $N_{\text{WL}} = \SI{0,95}{\
 und der Emissionsgrad $\eta = 0,28$. Die Kathodentemperaturen zu den jeweiligen Heizleistungen sind in \autoref{tab:heizis} eingetragen.
 
 \begin{table}[H]
-  \caption{Ausgerechnete Kathodentemperaturen zu den jeweiligen Heizleistungen.}
+  \caption{Ausgerechnete Kathodentemperaturen zu den jeweiligen Heizleistungen $P_{\text H}$.}
   \label{tab:heizis}
   \centering
   \begin{tabular}{c c}
       \toprule
       $P_{\text H}$ / $\si{\watt}$ & $T \,/\, \si{\kelvin}$\\
       \midrule
-      $P_{\text H} = 13,75$ & $2229,3641$ \\
-      $P_{\text H} = 10,35$ & $2073,9679$ \\
-      $P_{\text H} = 8,1$ & $1936,8526$ \\
-      $P_{\text H} = 7,0$ & $1857,6287$ \\
-      $P_{\text H} = 5,7$ & $1748,6121$ \\
+      $13,75$ & $2229,3641$ \\
+      $10,35$ & $2073,9679$ \\
+      $8,1$   & $1936,8526$ \\
+      $7,0$   & $1857,6287$ \\
+      $5,7$   & $1748,6121$ \\
       \bottomrule
     \end{tabular}
 \end{table}
+
+\subsection{Auswertung der Austrittsarbeit von Wolfram mithilfe der Richardson-Gleichung}
+\label{subsec:richard}
+
+Mit den ausgewerteten Sättigungsströmen $I_{\text S}$ wird nun die Austrittsarbeit $\phi$ für Wolfram berechnet. Mithilfe der Relation
+$j_S= \sfrac{I_{\text S}}{f}$ folgt aus Gleichung [REFERENZ] der folgene Ausdruck für die Austrittsarbeit $\phi$, dessen Werte in \autoref{tab:austrittis} eingetragen sind,
+\begin{align*}
+  \phi = -\frac ke T\cdot\ln\left(\frac{I_{\text S}\cdot h^3}{4\pi fem_0k^1T^1}\right).
+\end{align*}
+
+\begin{table}[H]
+  \caption{Ausgerechnete Austrittsarbeiten $\phi$ für die verschiedenen Heizleistungen $P_{\text H}$ mit den jeweiligen Sättigungsströmen $I_{\text S}$.}
+  \label{tab:austrittis}
+  \centering
+  \begin{tabular}{c c c}
+      \toprule
+      $P_{\text H} \,/\, \si{\watt}$ & $I_{\text S} \,/\, \si{\milli\ampere}$ & $\phi \,/\, \si{\eV}$\\
+      \midrule
+      $13,75$ & $3,7 \pm 0,7$   & $4,740 \pm 0,035$ \\
+      $10,35$ & $1,14 \pm 0,12$ & $4,593 \pm 0,018$ \\
+      $8,1$   & $0,284$         & $4,499$ \\
+      $7,0$   & $0,11$          & $4,453$ \\
+      $5,7$   & $0,047$         & $4,302$ \\
+      \bottomrule
+    \end{tabular}
+\end{table}
+
+\noindent
+Mit diesen Werten ergibt sich ein Mittelwert der Austrittsarbeit $\overline \phi$ zu
+\begin{align*}
+  \overline \phi = \SI{4,517 \pm 0,008}{\eV}.
+\end{align*}
