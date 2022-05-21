@@ -1,5 +1,78 @@
+\section{Zielsetzung}
+Ziel dieses Versuches ist die Untersuchung der Temperaturabhängigkeit des glühelektrischen Effektes und konkret die Bestimmung der Austrittsarbeit für Elektronen im
+hierfür verwendeten Material Wolfram.
+
 \section{Theorie}
 \label{sec:Theorie}
 
+Die meisten Metalle sind kristaline Festkörper, die eine hervorragende elektrische Leitfähigkeit vorweisen. Der Grund dafür ist eben diese kristaline Struktur, wegen
+der es im Metall freigesetzte Elektronen gibt, die zu keinem Atom zugehörig sind und als Leitungselektronen bezeichnet werden. Im Metallinneren gibt es somit ein
+einheitliches Potential, das sich jedoch um einen festen Betrag $\phi$ von Außenraum unterscheidet, weswegen keine Kräfte auf die Elektronen innerhalb wirken.
+\newline
+Gegen dieses Potential muss ein Elektron, dass das Metall verlassen soll, also ankommen. Die Arbeit, die es für diesen Übergang leisten muss wird als Austrittsarbeit
+bezeichnet. Wie wahrscheinlich es ist, dass ein Elektron im Metall genug Energie hat, um diese Austrittsarbeit zu erbringen, ist durch die Fermi-Diracsche
+Verteilungs-Funktion 
+\begin{equation}
+    \label{eqn:Fermi_Dirac}
+    f(E) = \frac{1}{\mathrm{exp}\left( \frac{\zeta - E}{kT} \right) + 1}
+\end{equation}
+gegeben. Da für den konkreten Versuch Wolfram als Kathodenmaterial verwendet wurde, kann diese Funktion vereinfacht als
+\begin{equation}
+    \label{eqn:Fermi_Dirac}
+    f(E) \approx \mathrm{exp}\left( \frac{\zeta - E}{kT} \right)
+\end{equation}
+angenommen werden.
+
+%\subsubsection{Sättigungsstrom}
+
+Wie viele Elektronen pro Zeit und pro Fläche abhängig von der Temperatur aus einer festen Metalloberfläche austreten, ist durch die Richardson-Gleichung 
+\begin{equation}
+    j_\text{S}(T) = 4 \symup{\pi}\frac{e m_0 k^2}{h^3}T^2 \cdot \symup{e}^{-\frac{e\phi}{kT}}
+    \label{eqn:J_S}
+\end{equation}
+gegeben. Dabei beschreibt $j_\text{S}(T)$ die Sättigungsstromdichte, $h$ das Plancksche Wirkungsquantum, $m_0$ die Ruhemasse eines Elektrons, $e_0$ die Elementarladung,
+$T$ die Temperatur und $\phi$ die Potentialdifferenz zwischen Außenraum und Metallinnerem.
+
+%\subsubsection{Raumladungsgebiet}
+
+Da die Elektronen im verwendeten Versuchsaufbau eine beschleunigte Bewegung von Kathode zu Anode durchführen, verliert das Ohmsche Gesetz seine Gültigkeit. Die Stromdichte $j$,
+die laut Kontinuitätsbedingung als $j = - \rho v$ gegeben ist, wobei $\rho$ die Raumladungsdichte und $v$ die Geschwindigkeit der Elektronen sind, muss laut dieser allerdings
+konstant sein. Daraus und aus der nicht-konstanten Geschwindigkeit folgt, dass $\rho$ abhängig vom Ort ist und zur Anode hin, also mit steigender Geschwindigkeit, sinkt.
+\newline
+Da das Ohmsche Gesetz hier nicht gültig ist, wächst die Stromdichte also nicht proportional zur Anodenspannung. Das tatsächliche Wachstum der Stromdichte kann stattdessen
+durch das Langmuir-Schottkysche Raumladungsgesetz 
+\begin{equation}
+    j = \frac{4}{9}\varepsilon_0 \sqrt{\frac{2e}{m_0}}\frac{V^{3/2}}{a^2}
+    \label{eqn:Raumladung}
+\end{equation}
+beschrieben werden, wobei $V$ die Anodenspannung und $a$ der Abstand von Kathode zu Anode sind.
+
+%\subsubsection{Anlaufstrom}
+Aus Gleichung \eqref{eqn:Raumladung} folgt, dass die Stromdichte $j$ für eine Anodenspannung $V = 0$ ebenfalls 0 sein müsste. Dies entspricht allerdings nicht der Realität,
+da auch ohne Anodenspannung und sogar mit einer kleinen entgegengesetzten Spannung, die die austretenden Elektronen verlangsamt, eine Stromdichte $j \neq 0$ vorhanden ist.
+Der Grund dafür ist, dass die austreten Elektronen eine Energie besitzen, die teilweise größer ist, als die, die zum Austritt benötigt wird. Ist dies der Fall, besitzen diese
+Elektronen nach dem Austritt eine kinetische Energie, mit der sie sich, trotz einer entgegengesetzte Spannung, hin zur Anode bewegen können. Ein Ausdruck für diese
+Stromdichte für Anodenspannungen $V \leq 0$ ist durch
+\begin{equation}
+    \label{eqn:j_Anlauf}
+    j(V) = j_0 \mathrm{exp}\left(-\frac{e\phi_\text{A} + e \cdot V}{kT} \right) = const \cdot \mathrm{e}^{-\frac{e \cdot V}{kT}}
+\end{equation}
+gegeben.
+
+%\subsection{Temperaturberechnung der Kathode}
+\label{subsec:Temperatur_Kathode}
+Aus dem Stefan-Boltzmannschen Gesetz folgt als Ausdruck für die Strahlungsleistung
+\begin{equation*}
+    N_\text{W} = f \eta \sigma T^4,
+\end{equation*}
+wobei $\sigma = \SI{5,7}{\watt\per\centi\metre\squared\kelvin^4}$ die Stefan-Boltzmannsche Strahlungskonstante, $f$ die emittierende Kathodenoberfläche und $\eta = 0,28$ der
+Emissionsgrad der Oberfläche sind. Ist die Wärmeleistung $N_\text{WL}$ der Kathode bekannt ergibt sich mit der zugeführten Leistung aus $I_\text{f}$ und $U_\text{f}$
+\begin{equation}
+    \label{eqn:Leistung}
+    I_\text{f} U_\text{f} = f \eta \sigma T^4 - N_\text{WL}.
+\end{equation}
+Mit diesem Ausdruck lässt sich dann die Temperatur $T$ der Kathode bestimmen.
 \cite{Anleitung504}
 
+% -z68 Wert bei SI ist falsch
+% -subsections
