@@ -22,9 +22,7 @@ gegeben. Da für den konkreten Versuch Wolfram als Kathodenmaterial verwendet wu
     f(E) \approx \mathrm{exp}\left( \frac{\zeta - E}{kT} \right)
 \end{equation}
 angenommen werden.
-
-%\subsubsection{Sättigungsstrom}
-
+\noindent
 Wie viele Elektronen pro Zeit und pro Fläche abhängig von der Temperatur aus einer festen Metalloberfläche austreten, ist durch die Richardson-Gleichung 
 \begin{equation}
     j_\text{S}(T) = 4 \symup{\pi}\frac{e m_0 k^2}{h^3}T^2 \cdot \symup{e}^{-\frac{e\phi}{kT}}
@@ -32,9 +30,7 @@ Wie viele Elektronen pro Zeit und pro Fläche abhängig von der Temperatur aus e
 \end{equation}
 gegeben. Dabei beschreibt $j_\text{S}(T)$ die Sättigungsstromdichte, $h$ das Plancksche Wirkungsquantum, $m_0$ die Ruhemasse eines Elektrons, $e_0$ die Elementarladung,
 $T$ die Temperatur und $\phi$ die Potentialdifferenz zwischen Außenraum und Metallinnerem.
-
-%\subsubsection{Raumladungsgebiet}
-
+\newline\newline
 Da die Elektronen im verwendeten Versuchsaufbau eine beschleunigte Bewegung von Kathode zu Anode durchführen, verliert das Ohmsche Gesetz seine Gültigkeit. Die Stromdichte $j$,
 die laut Kontinuitätsbedingung als $j = - \rho v$ gegeben ist, wobei $\rho$ die Raumladungsdichte und $v$ die Geschwindigkeit der Elektronen sind, muss laut dieser allerdings
 konstant sein. Daraus und aus der nicht-konstanten Geschwindigkeit folgt, dass $\rho$ abhängig vom Ort ist und zur Anode hin, also mit steigender Geschwindigkeit, sinkt.
@@ -46,33 +42,28 @@ durch das Langmuir-Schottkysche Raumladungsgesetz
     \label{eqn:Raumladung}
 \end{equation}
 beschrieben werden, wobei $V$ die Anodenspannung und $a$ der Abstand von Kathode zu Anode sind.
-
-%\subsubsection{Anlaufstrom}
+\newline\newline
 Aus Gleichung \eqref{eqn:Raumladung} folgt, dass die Stromdichte $j$ für eine Anodenspannung $V = 0$ ebenfalls 0 sein müsste. Dies entspricht allerdings nicht der Realität,
 da auch ohne Anodenspannung und sogar mit einer kleinen entgegengesetzten Spannung, die die austretenden Elektronen verlangsamt, eine Stromdichte $j \neq 0$ vorhanden ist.
 Der Grund dafür ist, dass die austreten Elektronen eine Energie besitzen, die teilweise größer ist, als die, die zum Austritt benötigt wird. Ist dies der Fall, besitzen diese
 Elektronen nach dem Austritt eine kinetische Energie, mit der sie sich, trotz einer entgegengesetzte Spannung, hin zur Anode bewegen können. Ein Ausdruck für diese
 Stromdichte für Anodenspannungen $V \leq 0$ ist durch
 \begin{equation}
-    \label{eqn:j_Anlauf}
     j(V) = j_0 \mathrm{exp}\left(-\frac{e\phi_\text{A} + e \cdot V}{kT} \right) = const \cdot \mathrm{e}^{-\frac{e \cdot V}{kT}}
+    \label{eqn:j_Anlauf}
 \end{equation}
 gegeben.
-
-%\subsection{Temperaturberechnung der Kathode}
+\newline\newline
 \label{subsec:Temperatur_Kathode}
 Aus dem Stefan-Boltzmannschen Gesetz folgt als Ausdruck für die Strahlungsleistung
 \begin{equation*}
     N_\text{W} = f \eta \sigma T^4,
 \end{equation*}
-wobei $\sigma = \SI{5,7}{\watt\per\centi\metre\squared\kelvin^4}$ die Stefan-Boltzmannsche Strahlungskonstante, $f$ die emittierende Kathodenoberfläche und $\eta = 0,28$ der
+wobei $\sigma = 5,7 \cdot 10^{-12} \si{\watt\per\centi\metre\squared\kelvin^4}$ die Stefan-Boltzmannsche Strahlungskonstante, $f$ die emittierende Kathodenoberfläche und $\eta = 0,28$ der
 Emissionsgrad der Oberfläche sind. Ist die Wärmeleistung $N_\text{WL}$ der Kathode bekannt ergibt sich mit der zugeführten Leistung aus $I_\text{f}$ und $U_\text{f}$
 \begin{equation}
-    \label{eqn:Leistung}
     I_\text{f} U_\text{f} = f \eta \sigma T^4 - N_\text{WL}.
+    \label{eqn:Leistung}
 \end{equation}
 Mit diesem Ausdruck lässt sich dann die Temperatur $T$ der Kathode bestimmen.
 \cite{Anleitung504}
-
-% -z68 Wert bei SI ist falsch
-% -subsections

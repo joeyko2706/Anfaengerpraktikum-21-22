@@ -82,7 +82,7 @@ Somit folgen die Sättigungsströme zu den in \autoref{tab:saettis} eingetragene
 \label{subsec:langmuirSchottky}
 
 Es wird im folgenden der Gültigkeitsbereich der Langmuir-Schottky'schen Gleichung untersucht.
-Aus Gleichung [REFERENZ] folgt ein Zusammenhang zwischen dem Strom $I$ und der Spannung $U$ der Form $I=b\cdot U^m$, woraus nach umstellen ein linearer Zusammenhang der Form
+Aus Gleichung \eqref{eqn:Raumladung} folgt ein Zusammenhang zwischen dem Strom $I$ und der Spannung $U$ der Form $I=b\cdot U^m$, woraus nach umstellen ein linearer Zusammenhang der Form
 \begin{align}
   \label{eqn:physLinReg}
   \log\left(\frac{I}{I_0}\right) = m \cdot \log\left(\frac{U}{U_0}\right) +b
@@ -113,7 +113,7 @@ Es ergeben sich die folgenden Parameter
 \label{subsec:anlaufstrom}
 
 Mithilfe einer Auswertung des Anlaufstromgebietes, ist es möglich die Kathodentemperatur zu bestimmen.
-Aus der Gleichung [REFERENZ] folgt ein exponentieller Zusammenhang zwischen der Heizspannung und des Anlaufstromes.
+Aus der Gleichung \eqref{eqn:j_Anlauf} folgt ein exponentieller Zusammenhang zwischen der Heizspannung und des Anlaufstromes.
 Werden die Messwerte halblogarithmisch dargestellt, sollte sich ein linearer Zusammenhang zwischen der Spannung und dem Strom ergeben.
 Die halblogarithmische, grafische Auswertung ist \autoref{fig:plot4} zu entnehmen. Die grün markierten Messwerte sind dabei die Messwerte, bei denen der
 Messwertebereich am Amperemeter umgestellt wurde.
@@ -126,7 +126,7 @@ Messwertebereich am Amperemeter umgestellt wurde.
 \end{figure}
 
 \noindent
-Die lineare Regression der Form analog zu Formel \eqref{eqn:linReg} ergibt sich analog zu der in \autoref{subsec:langmuirSchottky} aus der Gleichung [SELBE REFERENZ] zu einer Steigung von
+Die lineare Regression der Form analog zu Formel \eqref{eqn:linReg} ergibt sich analog zu der in \autoref{subsec:langmuirSchottky} aus der Gleichung \eqref{eqn:j_Anlauf} zu einer Steigung von
 \begin{align}
   \label{eqn:steigung}
   m = -\frac{e}{kT}.
@@ -136,7 +136,7 @@ Die Parameter ergeben sich zu
   m =  \SI{-4,0503 \pm 0,4855}{\per\volt}, \quad
   b = -15,0008 \pm 0,2698.
 \end{align*}
-
+\noindent
 Es folgt also eine Kathodentemperatur von
 \begin{align*}
   \SI{2865,095 \pm 343,460}{\kelvin}.
@@ -146,7 +146,7 @@ Es folgt also eine Kathodentemperatur von
 \label{subsec:kathodenTempSchar}
 
 Im nächsten Auswertungsschritt wird mithilfe der aufgenommenen Messwerte zur Kennlinienschar zuerst die Kathodentemperatur berechnet und damit
-die Austrittsarbeit bestimmt. Die Temperatur der Kathode folgt aus Gleichung [REFERENZ], wenn diese nach $T$ umgestellt wird zu 
+die Austrittsarbeit bestimmt. Die Temperatur der Kathode folgt aus Gleichung \eqref{eqn:Leistung}, wenn diese nach $T$ umgestellt wird zu 
 \begin{align}
   T = \left(\frac{I_{\text H}\cdot U_{\text H} - N_{\text{WL}}}{f\eta\sigma}\right)^{\frac 14}.
 \end{align}
@@ -174,7 +174,7 @@ und der Emissionsgrad $\eta = 0,28$. Die Kathodentemperaturen zu den jeweiligen 
 \label{subsec:richard}
 
 Mit den ausgewerteten Sättigungsströmen $I_{\text S}$ wird nun die Austrittsarbeit $\phi$ für Wolfram berechnet. Mithilfe der Relation
-$j_S= \sfrac{I_{\text S}}{f}$ folgt aus Gleichung [REFERENZ] der folgene Ausdruck für die Austrittsarbeit $\phi$, dessen Werte in \autoref{tab:austrittis} eingetragen sind,
+$j_S= \sfrac{I_{\text S}}{f}$ folgt aus Gleichung \eqref{eqn:J_S} der folgene Ausdruck für die Austrittsarbeit $\phi$, dessen Werte in \autoref{tab:austrittis} eingetragen sind,
 \begin{align*}
   \phi = -\frac ke T\cdot\ln\left(\frac{I_{\text S}\cdot h^3}{4\pi fem_0k^1T^1}\right).
 \end{align*}
