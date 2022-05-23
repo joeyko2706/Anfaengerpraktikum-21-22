@@ -58,6 +58,96 @@ zu bestimmende Index ist. Die Ergebnisse der 7 Messungen sind zusammen mit dem d
 Als Mittelwert folgt daraus für den Brechungsindex $n = 1,48 \pm 0,017$. Mit Gleichung \eqref{eqn:geschw} folgt daraus für die Lichtgeschwindigkeit in Plexiglas
 $v = (2,026 \pm 0,023) \cdot 10^8 \si{\meter\per\second}$. Die Unsicherheiten wurden erneut mit Hilfe von Python berechnet.
 
+\subsection{Planparallele Platten}
+
+Im dritten Teil des Versuches soll der Strahlenversatz eines Lichtstrahles an planparallelen Platten untersucht werden. Dafür muss zunächst eine Formel für den Strahlenversatz
+$s$ anhand der \autoref{fig:ppplatten} bestimmt werden.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.5\textwidth]{data/ppplatten.jpeg}
+  \caption{Brechung eines Lichtstrahles an Planparallelen Platten\cite{Anleitung400}.}
+  \label{fig:ppplatten}
+\end{figure}
+
+\noindent
+Zunächst wird ein Ausdruck für die Länge der Strecke $a$, die der Lichtstrahl im Medium zurücklegt, gesucht. Mit der Länge $d$ und dem Winkel $\beta$ ergibt sich 
+\begin{align*}
+  \cos(\beta) = \frac{d}{a} \Leftrightarrow a = \frac{d}{\cos(\beta)}.
+\end{align*}
+Anschließend kann durch Betrachten des Winkels $\alpha - \beta$ ein Ausdruck für $s$ gefunden werden.
+\begin{align*}
+  \sin(\alpha - \beta) = \frac{s}{a} \Leftrightarrow s = a \sin(\alpha - \beta)
+\end{align*}
+Der finale Ausdruck für $s$ wird nun erhalten, indem der erste Ausdruck in den zweiten eingesetzt wird.
+\begin{align}
+  s = d \frac{\sin(\alpha - \beta)}{\cos(\beta)}
+  \label{eqn:svers}
+\end{align}
+
+\noindent
+Der Strahlenversatz $s$ kann nun anhand von Gleichung \eqref{eqn:svers} bestimmt werden. Dafür werden zunächst fünf der Messwerte aus \autoref{tab:brech} verwendet.
+Die berechneten Werte sind zusammen mit den verwendet Winkeln in \autoref{tab:svers1} zu finden.
+
+\begin{table}[H]
+  \centering
+  \caption{Berechnete Werte für den Strahlenversatz.}
+  \label{tab:svers1}
+  \begin{tabular}{c c c}
+    \toprule
+    Einfallswinkel / $^{\circ}$ & Ausfallswinkel / $^{\circ}$ & Strahlenversatz / \si{\centi\meter} \\
+    \midrule
+    70 & 38$\pm 0,5$ & 3,93$\pm 0,5$\\
+    60 & 36$\pm 0,5$ & 2,94$\pm 0,5$\\
+    50 & 31$\pm 0,5$ & 2,22$\pm 0,5$\\
+    45 & 28,5$\pm 0,5$ & 1,89$\pm 0,6$\\
+    40 & 26$\pm 0,5$ & 1,57$\pm 0,6$\\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\noindent
+Die Werte für den Strahlenversatz werden nun erneut bestimmt, wobei dieses Mal für $\beta$ nicht die tatsächlich gemessenen Werte verwendet werden. Stattdessen werden
+Werte für $\beta$ anhand von Gleichung \eqref{eqn:snellius} bestimmt, wobei $n_1 = 0$ angenommen wird und für $n_2$ der zuvor berechnete Wert $n = 1,48 \pm 0,017$
+verwendet wird. Die so berechneten Werte sind in \autoref{tab:svers2} aufgeführt.
+
+\begin{table}[H]
+  \centering
+  \caption{Berechnete Werte für den Strahlenversatz.}
+  \label{tab:svers2}
+  \begin{tabular}{c c c}
+    \toprule
+    Einfallswinkel / $^{\circ}$ & Ausfallswinkel / $^{\circ}$ & Strahlenversatz / \si{\centi\meter} \\
+    \midrule
+    70 & 39,41$\pm 0,019$ & 3,85$\pm 0,6$\\
+    60 & 35,81$\pm 0,018$ & 2,96$\pm 0,4$\\
+    50 & 31,17$\pm 0,016$ & 2,21$\pm 0,5$\\
+    45 & 28,54$\pm 0,016$ & 1,89$\pm 0,4$\\
+    40 & 25,74$\pm 0,015$ & 1,60$\pm 0,7$\\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\noindent
+Die Differenzen der jeweiligen Werte für den Strahlenversatz aus beiden Berechnungsmethoden sind in \autoref{tab:svers3} mit den zugehörigen Einfallswinkeln aufgetragen. 
+
+\begin{table}[H]
+  \centering
+  \caption{Differenzen der verschieden berechneten Werte für den Strahlenversatz.}
+  \label{tab:svers3}
+  \begin{tabular}{c c}
+    \toprule
+    Einfallswinkel & Differenz Strahlenversatz\\
+    \midrule
+    70 & 0,08$\pm 0,5$\\
+    60 & 0,02$\pm 0,5$\\
+    50 & 0,01$\pm 0,5$\\
+    45 & 0,00$\pm 0,5$\\
+    40 & 0,03$\pm 0,6$\\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
 \subsection{Prisma}
 
 Im nächsten Teil des Versuches soll die Ablenkung eines Prismas untersucht werden. Dazu wird ein Prisma aus Kronglas, ein grüner und roter Laser und die Messvorlage C
@@ -134,8 +224,8 @@ Die Wellenlängen lassen sich nun anhand von Gleichung \eqref{eqn:lambda} bestim
 \end{table}
 
 \noindent
-Für das Gitter mit 100 Linien pro Millimeter ergibt sich $\lambda_\text{Rot} = (4,86 \pm 0,15) \cdot 10^9 \si{\meter}$ und
-$\lambda_\text{Grün} = (3,99 \pm 0,15) \cdot 10^9 \si{\meter}$.
+Für das Gitter mit 100 Linien pro Millimeter ergibt sich $\lambda_\text{Rot} = (4,86 \pm 0,15) \cdot 10^{-7} \si{\meter}$ und
+$\lambda_\text{Grün} = (3,99 \pm 0,15) \cdot 10^{-7} \si{\meter}$.
 
 \begin{table}[H]
   \centering
@@ -153,8 +243,8 @@ $\lambda_\text{Grün} = (3,99 \pm 0,15) \cdot 10^9 \si{\meter}$.
 \end{table}
 
 \noindent
-Für das Gitter mit 300 Linien pro Millimeter ergibt sich $\lambda_\text{Rot} = (1,416 \pm 0,034) \cdot 10^8 \si{\meter}$ und
-$\lambda_\text{Grün} = (1,165 \pm 0,15) \cdot 10^8 \si{\meter}$.
+Für das Gitter mit 300 Linien pro Millimeter ergibt sich $\lambda_\text{Rot} = (4,72 \pm 0,034) \cdot 10^{-7} \si{\meter}$ und
+$\lambda_\text{Grün} = (3,88 \pm 0,15) \cdot 10^{-7} \si{\meter}$.
 
 \begin{table}[H]
   \centering
@@ -171,8 +261,8 @@ $\lambda_\text{Grün} = (1,165 \pm 0,15) \cdot 10^8 \si{\meter}$.
 \end{table}
 
 \noindent
-Für das Gitter mit 600 Linien pro Millimeter ergibt sich $\lambda_\text{Rot} = (2,40 \pm 0,05) \cdot 10^8 \si{\meter}$ und
-$\lambda_\text{Grün} = (2,84 \pm 0,09) \cdot 10^8 \si{\meter}$.
+Für das Gitter mit 600 Linien pro Millimeter ergibt sich $\lambda_\text{Rot} = (4,73 \pm 0,05) \cdot 10^{-7} \si{\meter}$ und
+$\lambda_\text{Grün} = (4,00 \pm 0,09) \cdot 10^{-7} \si{\meter}$.
 \newline \newline
-Aus allen drei Messreihen ergibt sich so als Mittelwert $\lambda_\text{Rot} = (1,434 \pm 0,021) \cdot 10^8 \si{\meter}$ für den roten und
-$\lambda_\text{Grün} = (1,47 \pm 0,06) \cdot 10^8 \si{\meter}$ für den grünen Laser.
+Aus allen drei Messreihen ergibt sich so als Mittelwert $\lambda_\text{Rot} = (4,77 \pm 0,021) \cdot 10^{-7} \si{\meter}$ für den roten und
+$\lambda_\text{Grün} = (3,95 \pm 0,06) \cdot 10^{-7} \si{\meter}$ für den grünen Laser.
