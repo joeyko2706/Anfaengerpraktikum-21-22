@@ -7,7 +7,7 @@ https://guides.github.com/introduction/flow/.
 1. Neuen Branch erstellen: `git branch <name>`.
 2. Auf den Branch wechseln: `git checkout <name>`.
 3. Änderungen vornehmen und commiten.
-4. Den Branch pushen: `git push -u origin <name>`.
+4. Den Branch pushen: `git push -u <name>`.
 5. Pull Request oauf github erstellen.
 
 - Falls eine zu große Datei hochgeladen wurde und somit ein Fehler ausgegeben wird, oder wenn einfach der letzte 
