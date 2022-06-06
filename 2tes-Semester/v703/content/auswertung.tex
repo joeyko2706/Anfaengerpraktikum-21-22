@@ -1,7 +1,45 @@
 \section{Auswertung}
 \label{sec:Auswertung}
 
-\begin{figure}
+\subsection{Zählrohr-Charakteristik}
+
+Die gemessenen Werte zur Bestimmung der Charakteristik sind in \autoref{tab:messw} zu finden.
+\begin{table}[H]
+  \caption{Messwerte zur Zählrohr-Charakteristik.}
+  \label{tab:messw}
+  \centering
+  \begin{tabular}{c c c c}
+      \toprule
+      U [$\si{\volt}$] & N [Imp/$\SI{120}{\second}$] & U [$\si{\volt}$] & N [Imp/$\SI{120}{\second}$] \\
+      \midrule
+      320 & $ 11680 \pm 108 $ & 520 & $ 12344 \pm 111$ \\
+      330 & $ 11939 \pm 109 $ & 530 & $ 12406 \pm 111$ \\
+      340 & $ 11946 \pm 109 $ & 540 & $ 12626 \pm 112$ \\
+      350 & $ 12320 \pm 111 $ & 550 & $ 12504 \pm 112$ \\
+      360 & $ 12291 \pm 111 $ & 560 & $ 12545 \pm 112$ \\
+      370 & $ 12371 \pm 111 $ & 570 & $ 12832 \pm 113$ \\
+      380 & $ 12393 \pm 111 $ & 580 & $ 12695 \pm 113$ \\
+      390 & $ 12433 \pm 112 $ & 590 & $ 12612 \pm 112$ \\
+      400 & $ 12259 \pm 111 $ & 600 & $ 12620 \pm 112$ \\
+      410 & $ 12157 \pm 110 $ & 610 & $ 12574 \pm 112$ \\
+      420 & $ 12428 \pm 111 $ & 620 & $ 12907 \pm 114$ \\
+      430 & $ 12475 \pm 112 $ & 630 & $ 12812 \pm 113$ \\
+      440 & $ 12566 \pm 112 $ & 640 & $ 12769 \pm 113$ \\
+      450 & $ 12440 \pm 112 $ & 650 & $ 12848 \pm 113$ \\
+      460 & $ 12645 \pm 112 $ & 660 & $ 12977 \pm 114$ \\
+      470 & $ 12446 \pm 112 $ & 670 & $ 13033 \pm 114$ \\
+      480 & $ 12625 \pm 112 $ & 680 & $ 13026.\pm 114$ \\
+      490 & $ 12516 \pm 112 $ & 690 & $ 13363.\pm 116$ \\
+      500 & $ 12415 \pm 111 $ & 700 & $ 13219.\pm 115$ \\
+      510 & $ 12632 \pm 112 $ &       &                \\
+      \bottomrule
+    \end{tabular}
+\end{table}
+
+Die Charakteristik ist zusammen mit einer Ausgleichsgeraden für die Werte des Plateau-Bereichs in \autoref{fig:plot} dargestellt. Der Plateau-Bereich wurde hierfür
+von $\SI{420}{\volt}$ bis $\SI{560}{\volt}$ gewählt.
+
+\begin{figure}[H]
   \centering
   \includegraphics{plot.pdf}
   \caption{Plot.}
@@ -9,4 +47,74 @@
 \end{figure}
 
 
-Siehe \autoref{fig:plot}!
+Für die Ausgleichsgerade der Form $y = a \cdot x + b$ ergeben sich die Werte
+\begin{align*}
+  a &= (0,14 \pm 0,5927) \frac{1}{\si{\volt}} \\
+  b &= (12434 \pm 291,53)
+\end{align*}
+
+Daraus ergibt sich eine Plateau-Steigerung von
+\begin{align*}
+  \upDelta N_\text{rel} &= \SI{1,12+-0,22}{\percent\per100\volt}
+\end{align*}
+
+
+\subsection{Totzeit}
+
+Zur Bestimmung der Totzeit wurde, wie im vorherigen Abschnitt erwähnt, ein Oszilloskop verwendet. Das Ergebniss ist in \autoref{fig:osz} zu sehen.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.7\textwidth]{data/zkurve.jpg}
+  \caption{Ergebnisse der Messung mit dem Oszilloskop.}
+  \label{fig:osz}
+\end{figure}
+
+Die Totzeit kann durch Ablesen bestimmt werden zu
+\begin{align*}
+  T &= (150 \pm 25) \si{\micro\second}. \\
+\end{align*}
+
+Die Totzeit wurde ebenfalls mittels der Zwei-Quellen-Methode bestimmt. Die Ergebnisse der Messungen mit dem ersten Präparat $N_1$, die mit beiden Präparaten
+$N_{1+2}$ und die nur mit dem zweiten $N_2$ sind im Folgenden aufgeführt.
+
+\begin{align*}
+  N_1 &= 19.344 \pm 139 \\
+  N_{1+2} &= 34.387 \pm 185 \\
+  N_2 &= 15.440 \pm 124 \\
+\end{align*}
+
+Mit Hilfe von Gleichung \eqref{eqn:tot} kann nun die Totzeit zu
+\begin{align*}
+  T \approx (66,46 \pm 4,1)\si{\micro\second} \\
+\end{align*}
+
+bestimmt werden.
+Der Fehler wurde dabei mit der Gleichung
+\begin{align*}
+  \upDelta T = \sqrt{\left(\frac{\partial T}{\partial N_1}\right)^2 \upDelta N_1^2 + \left(\frac{\partial T}{\partial N_{1+2}}\right)^2 \upDelta N_{1+2}^2 + \left(\frac{\partial T}{\partial N_2}\right)^2 \upDelta N_2^2   } \\
+\end{align*}
+berechnet.
+
+\subsection{Freigesetzte Ladung pro Teilchen}
+
+Beim Aufnehmen der Messwerte für die Bestimmung der Charakteristik wurden nebenher die jeweils zu den Spannungen zugehörigen Zählrohrströme gemessen. Mit Hilfe von
+Gleichung \eqref{eqn:ener} lässt sich daraus die pro Teilchen freigesetze Ladungsmenge $Z$ berechnen. Die Messwerte sind zusammen mit den errechneten Ladugsmengen in
+\autoref{tab:lad} aufgeführt.
+
+\begin{table}[H]
+  \caption{Werte der Regression vom Grad drei.}
+  \label{tab:lad}
+  \centering
+  \begin{tabular}{c c c}
+      \toprule
+      N [Imp/$\si{\second}$] & I [$\si{\micro\ampere}$] & Z [$10^{10}$] \\
+      \midrule
+      $ 12320 \pm 111 $ & $ 0,2 \pm 0,05 $ & $ 1,22 \pm 0,30 $ \\
+      $ 12440 \pm 112 $ & $ 0,3 \pm 0,05 $ & $ 1,81 \pm 0,30 $ \\
+      $ 12626 \pm 112 $ & $ 0,4 \pm 0,05 $ & $ 2,37 \pm 0,30 $ \\
+      $ 12695 \pm 113 $ & $ 0,5 \pm 0,05 $ & $ 2,95 \pm 0,30 $ \\
+      $ 13033 \pm 114 $ & $ 0,6 \pm 0,05 $ & $ 3,45 \pm 0,29 $ \\
+      $ 13219 \pm 115 $ & $ 0,7 \pm 0,05 $ & $ 3,97 \pm 0,29 $ \\
+      \bottomrule
+    \end{tabular}
+\end{table}
