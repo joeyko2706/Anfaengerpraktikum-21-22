@@ -8,35 +8,35 @@ from uncertainties.unumpy import (nominal_values as noms,
                                   std_devs as stds)
 
 
-# U, I, z = np.genfromtxt("data/ersterStoff.txt", unpack = True)
+U, I, z = np.genfromtxt("data/ersterStoff.txt", unpack = True)
 
-# n = np.sqrt(z)
-# # n = np.round_(n)
+n = np.sqrt(z)
+# n = np.round_(n)
 
-# def linregress(x, y):
-#     N = len(y)
-#     Delta = N * np.sum(x**2) - (np.sum(x))**2
-#     A = (N * np.sum(x * y) - np.sum(x) * np.sum(y)) / Delta
-#     B = (np.sum(x**2) * np.sum(y) - np.sum(x) * np.sum(x * y)) / Delta
-#     sigma_y = np.sqrt(np.sum((y - A * x - B)**2) / (N - 2))
-#     A_error = sigma_y * np.sqrt(N / Delta)
-#     B_error = sigma_y * np.sqrt(np.sum(x**2) / Delta)
-#     print(A, A_error, B, B_error)
+def linregress(x, y):
+    N = len(y)
+    Delta = N * np.sum(x**2) - (np.sum(x))**2
+    A = (N * np.sum(x * y) - np.sum(x) * np.sum(y)) / Delta
+    B = (np.sum(x**2) * np.sum(y) - np.sum(x) * np.sum(x * y)) / Delta
+    sigma_y = np.sqrt(np.sum((y - A * x - B)**2) / (N - 2))
+    A_error = sigma_y * np.sqrt(N / Delta)
+    B_error = sigma_y * np.sqrt(np.sum(x**2) / Delta)
+    # print(A, A_error, B, B_error)
 
-#     return A*x + B
+    return A*x + B
 
-# # print(z[10], z[24])
+# print(z[10], z[24])
 
-# plt.errorbar(U, z, yerr = n, fmt = "gx", label = 'Messwerte')
-# plt.plot(U[10:25], linregress(U[10:25], z[10:25]), 'r', color = "k" , label = 'lineare Regression')
-# plt.xlabel(r'U $[V]$')
-# plt.ylabel(r'N [Imp$/120s$]')
-# plt.grid()
-# plt.legend()
-# plt.tight_layout()
-# #plt.show()
+plt.errorbar(U, z, yerr = n, fmt = "gx", label = 'Messwerte')
+plt.plot(U[10:25], linregress(U[10:25], z[10:25]), color = "k" , label = 'lineare Regression')
+plt.xlabel(r'U $[V]$')
+plt.ylabel(r'N [Imp$/120s$]')
+plt.grid()
+plt.legend()
+plt.tight_layout()
+#plt.show()
 
-# plt.savefig("build/plot.pdf")
+plt.savefig("build/plot.pdf")
 #print(U[19], '& $', z[19], '\pm', n[19], '$', '\\', '\\')
 # i = 0
 # while i < 19:
@@ -65,8 +65,8 @@ from uncertainties.unumpy import (nominal_values as noms,
 # print(i5 * 10 ** (-6) / (e * (n5 / 120)))
 # print(i6 * 10 ** (-6) / (e * (n6 / 120)))
 
-n1 = ufloat(19344, 139)
-n12 = ufloat(34387, 185)
-n2 = ufloat(15400, 124)
-x = (n1 + n2 - n12) / (2 * n1 * n2)
-print(x)
+# n1 = ufloat(19344, 139)
+# n12 = ufloat(34387, 185)
+# n2 = ufloat(15400, 124)
+# x = (n1 + n2 - n12) / (2 * n1 * n2)
+# print(x)
