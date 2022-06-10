@@ -165,21 +165,65 @@ Ein Mittelwert für die Schallgeschwindigkeit beim Durchschallungs-Verfahren erf
 \label{subsec:daempfung}
 
 Es wird nun mithilfe der Impuls-Echo-Methode und einem A-Scan die Dämpfung des Acrylzylinders ausgewertet.
-Es werden dabei die Amplituden der reflektierten Impulse gemessen und ausgewertet. Die Daten sind in \autoref{tab:amplis} eingetragen und in \autoref{fig:plot}
-grafisch ausgewertet.
+Es werden dabei die Amplituden der reflektierten Impulse gemessen und ausgewertet.
+Weil die Amplituden mit Verstärkungen versehen sind, müssen sie erst korrigiert werden. Dazu wird die unverstärkte Amplitude $$V_1$$
+mit dem folgenden Faktor multipliziert, um die tatsächliche Amplitude $V_2$ zu erhalten,
+\begin{align*}
+  Q \text dB &= 10\log\left(\frac{V_2}{V_1}\right) \text dB,\\
+  V_2 &= V_1e^{\frac{Q}{10} }.
+\end{align*}
+Die Daten sind in \autoref{tab:amplis} eingetragen und in \autoref{fig:plot} grafisch ausgewertet.
 
-% \begin{table}
-%   \centering
-%   \caption{Auswertung der aufgenommenen Laufzeiten.}
-%   \label{tab:amplis}
-%   \begin{tabular}{c c c c c}
-%     \toprule
-%     Zylinder $Z_i$ &  Amplitude / $\si{\volt}$ \\
-%     \midrule
-%     $Z_1$ & 0,78 \\
-%     $Z_2$ & 
-%     $Z_3$ & 59,34
-%     $Z_4$ & 88,28
-%     \bottomrule
-%   \end{tabular}
-% \end{table}
+\begin{table}
+  \centering
+  \caption{Auswertung der aufgenommenen Laufzeiten.}
+  \label{tab:amplis}
+  \begin{tabular}{c c c c c}
+    \toprule
+    Zylinder $Z_i$ &  Amplitude / $\si{\volt}$ \\
+    \midrule
+    $Z_1$ & 0,78 \\
+    $Z_2$ & 2.11 \\
+    $Z_3$ & 21.63 \\
+    $Z_4$ & 3.72 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width = \textwidth]{plot.pdf}
+  \caption{Grafische Auswertung.}
+  \label{fig:plot}
+\end{figure}
+
+Mithilfe der Python-Erweiterungen numpy \cite{numpy}, matplotlib \cite{matplotlib} und scipy \cite{scipy} wird eine lineare Ausgleichsgerade
+der Form
+\begin{align*}
+  y = m\cdot x + b,
+\end{align*}
+in die Grafik \ref{fig:plot} eingebaut. Die Parameter ergeben sich zu
+\begin{align*}
+  m = 0,0348 \pm 0.0072 \left[\si{\volt\per\meter}\right], \quad b = -0,4139 \pm 0,59 \left[\si{\volt}\right].
+\end{align*}
+
+\section{Biometrische Auswertung eines Augenmodells}
+\label{sec:auge}
+
+Im folgenden werden die Abstände der Augapfelbestandteile eines Modellauges mithilfe von Ultraschall bestimmt werden. 
+Dazu wird mit einem A-Scan und der Impuls-Echo Methode der in \autoref{fig:augePlot} dargestellte Verlauf aufgestellt.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width = \textwidth]{data/Auge.png}
+  \caption{Grafische Darstellung der Messwerte eines Augapfelmodells.}
+  \label{fig:augePlot}
+\end{figure}
+
+Die Peaks stellen die verschiedenen Bestandteile des Auges dar und lauten wie folgt,
+\begin{align*}
+  s_{\text{Iris}} &= \SI{14,9}{\mm}, \\
+  s_{\text{Linse}} &= \SI{23,5}{\mm}, \\
+  s_{\text{Retina}} &= \SI{43,7}{\mm}.
+\end{align*}
+Der dritte Peak ist die Relfexion der Linse, die wieder an der Ultraschallsonde des Gerätes detektiert wird.

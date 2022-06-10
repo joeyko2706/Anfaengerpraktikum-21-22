@@ -71,3 +71,22 @@ schallZylinder2[3] *= schalli4
 
 mittelWertSchallZyl2 = ufloat(np.mean(schallZylinder2), np.std(schallZylinder2))
 print("Mittelwert Schallgeschwindigkeit Zylnder: ", mittelWertSchallZyl2)
+
+#   Amplituden berechen
+"""
+Um die Amplitude zu berechnen, müssen alle Werte mit e^(Q/10) multipliziert werden, wobei Q
+die Verstärkung ist. Die Rechnungen sind ebendiese Rechnungen.
+Die Zahl hinter der Variable ist immer die Kennzeichnung des Zylinders!
+"""
+
+Amplitude2 = 0.48 * np.exp(14.8/10)
+Amplitude3 = 1.22 * np.exp(28.75/10)
+Amplitude4 = 0.21 * np.exp(28.75/10)
+
+np.round(Amplitude2, 3)
+np.round(Amplitude3, 3)
+np.round(Amplitude4, 3)
+
+print("Amplitude 2: ",Amplitude2)
+print("Amplitude 3: ",Amplitude3)
+print("Amplitude 4: ",Amplitude4)
