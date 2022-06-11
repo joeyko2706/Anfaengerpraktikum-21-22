@@ -90,3 +90,15 @@ np.round(Amplitude4, 3)
 print("Amplitude 2: ",Amplitude2)
 print("Amplitude 3: ",Amplitude3)
 print("Amplitude 4: ",Amplitude4)
+
+# Abweichungen von den Literaturewerten bestimmen
+
+periodenlänge = ufloat(0.546, 0.028)
+abweichung1 = (periodenlänge-0.5)/(0.5)
+print("Abweichung der Periodenlänge: ", abweichung1*100,"%")
+
+schallTheo = 2750
+abweichung2 = (mittelWertSchallZyl1-schallTheo)/(schallTheo)
+abweichung3 = (mittelWertSchallZyl2-schallTheo)/(schallTheo)
+print("Abweichung der Schallgeschw. Impuls-Echo: ", abweichung2*100, "%")
+print("Abweichung der Schallgeschw. Durchschall: ", abweichung3*100, "%")
