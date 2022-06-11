@@ -1,4 +1,80 @@
+\section{Zielsetzung}
+\label{sec:Zielsetzung}
+
+In diesem Versuch sollen die grundlegenden Eigenschaften der Ultraschallechographie untersucht und angewendet werden.
+
 \section{Theorie}
 \label{sec:Theorie}
+Menschen können in einem Frequenzintervall von ca. $\SI{16}{\hertz}$ bis $\SI{20}{\kilo\hertz}$ hören. Der Frequenzbereich darüber bis $\SI{1}{\giga\hertz}$ wird als
+Ultraschall und der jenseits von $\SI{1}{\giga\hertz}$ als Hyperschall bezeichnet. Frequenzen unterhalb des für Menschen hörbaren Bereichs werden Infraschall gennant.
+\newline
+Zur Erzeugung des Schalls wird sich der reziproke piezo-elektrische-Effekt zu Nutzen gemacht. Hierfür wird ein geeigneter piezo-elektrischer Kristall in einem
+elektrischen Wechselfeld zu Schwingungen angeregt, wobei dieser Ultraschallwellen abstrahlt. Der Kristall kann ebenso genutzt werden, um Schallwellen zu empfangen,
+da diese ihn wiederum zu Schwingungen anregen.
+
+\subsection{Ausbreitung von Schallwellen}
+\label{sec:Schallwellen}
+Bei Schallwellen handelt es sich in Gasen und Flüssigkeiten um longitudinale Wellen, die sich in Form von Druckschwankungen fortbewegt.
+Eine Schallwelle mit Ausbreitung in x-Richtung lässt sich durch
+\begin{equation}
+    p(x, t) = p_0 + v_0 Z \cos{(\omega t - kx)}
+\end{equation}
+beschreiben. Dabei ist $p_0$ der Normaldruck, $v_0$ die Schallschnelle, und $Z=\rho c$ die Akustische
+Impedanz mit der Schallgeschwindigkeit $c$ und der Dichte $\rho$ des durchschallten Materials.
+Die Schallgeschwindigkeit in Flüssigkeiten lässt sich in Abhängigkeit ihrer Kompressibilität $\kappa$ und ihrer
+Dichte $\rho$ durch
+\begin{equation}
+    c_{\mathrm{Fl}} = \sqrt{\frac{1}{\kappa \cdot \rho}}
+\end{equation}
+ausdrücken. \\
+In Festkörpern können Schallwellen aufgrund von Schubspannungen auch als Transversalwellen auftreten. In diesem Fall wird 
+$\kappa$ durch den Zusammenhang zum Elastizitätsmodul $E$ ersetzt. Es folgt also
+\begin{equation}
+    c_{\mathrm{Fe}} = \sqrt{\frac{E}{\rho}}.
+\end{equation}
+Ein gewisser Teil der Energie des Schalls geht bei der Ausbreitung durch Absorption verloren. Für seine Intensität gilt dabei
+\begin{equation}
+    \label{eqn:Dämpfung}
+    I(x) = I_0 \cdot e^{-\alpha x},
+\end{equation}
+wobei $\alpha$ der Absorptionskoeffizient der Schallamplitude und $I_0$ die Intensität des ausgehenden 
+Schallimpulses ist.\\
+\\
+Wenn eine Schallwelle auf eine Grenzfläche trifft, wird ein Teil von ihr reflektiert. Um welchen Anteil von der ursprünglichen Welle es sich bei der
+reflektierten Welle handelt, ist durch den Reflexionskoeffizienten $R$ bestimmt. Ein Ausdruch für eben diesen ist gegeben durch
+\begin{equation}
+    R = \left(\frac{Z_{\symup{1}}- Z_{\symup{2}}}{Z_{\symup{1}}+Z_{\symup{2}}}\right)^2.
+\end{equation}
+Hierbei sind $Z_{\symup{1}}$ und $Z_{\symup{2}}$ die jeweiligen akustischen Impedanzen der beiden Materialien. \\
+Für den Transmissionskoeffizienten, der den transmittierten Anteil der Welle angibt, gilt somit offensichtlich
+\begin{equation}
+    T = 1 - R.
+\end{equation}
+
+
+\subsection{Ultraschallverfahren}
+\label{sec:Ultraschallverfahren}
+In dem Versuch werden zwei Verfahren der Ultraschalltechnik angewendet.\\ \\
+Beim ersten handelt es sich um das Durchschallungsverfahren. Hierbei werden sowohl ein Sender, als auch ein Empfänger verwendet. Diese werden an unterschiedliche
+Seiten der Probe angelegt. Es wird anschließend ein Schallimpuls durch die Probe gesendet. Anhand des Intensitätsabfalls kann dann bestimmt werden, ob die Probe eine
+Fehlstelle enthält. Dabei kann die Position dieser jedoch nicht bestimmt werden.\\ \\
+Das zweite Verfahren ist das Impuls-Echo-Verfahren. Hierbei wird nur ein Sender verwendet, der ebenfalls als Empfänger fungiert. Der ausgesendete Schallimpulls wird dabei
+an einer Grenzfläche reflektiet und kann so wieder vom Empfänger aufgenommen werden. Die Höhe des Echos kann dabei zur Bestimmung der Größe einer Fehlstelle verwendet
+werden. Bei bekannter Geschwindigkeit des Schalls im Medium kann durch
+\begin{equation}
+    \label{eqn:Strecke}
+    s = \frac{ct}{2}
+\end{equation}
+die Position der Fehlstelle über die Laufzeit $t$ des Echos bestimmt werden.
+
+
+\subsection{Scan-Methoden}
+\label{sec:Scan}
+Es werden drei unterschiedliche Methoden verwendet, um die Messungen aus den zwei Ultraschalltechniken darzustellen.
+\begin{enumerate}
+    \item A-Scan - Es wird nur die Amplitude angezeigt, so dass auch Abschwächungen messbar sind.
+    \item B-Scan - In einem zweidimensionalen Graubild lässt sich die Intensität der zurücklaufenden Welle bestimmen.
+    \item TM-Scan - Mit Hilfe einer hohen Wiederholungsfrequenz kann ein Video ähnliches Bild erzeugt werden.
+\end{enumerate}
 
 \cite{sample}
