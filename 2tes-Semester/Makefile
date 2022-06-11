@@ -4,8 +4,8 @@ all:
 	make -C v500
 	make -C v504
 	make -C v601
+	make -C v602
 	make -C v606
-	make -C v702
 	make -C v703
 	make -C v704
 	make -C vUS1
@@ -18,8 +18,8 @@ clean:
 	make -C v500 clean
 	make -C v504 clean
 	make -C v601 clean
+	make -C v602 clean
 	make -C v606 clean
-	make -C v702 clean
 	make -C v703 clean
 	make -C v704 clean
 	make -C vUS1 clean
