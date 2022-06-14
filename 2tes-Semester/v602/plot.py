@@ -1,21 +1,26 @@
 import matplotlib.pyplot as plt
 import numpy as np
+import scipy.constants as const
+import scipy.optimize as op
+import uncertainties.unumpy as unp
+from uncertainties import ufloat
+from uncertainties.unumpy import (nominal_values as noms,
+                                  std_devs as stds)
 
-x = np.linspace(0, 10, 1000)
-y = x ** np.sin(x)
+c = const.c
+h = const.h
+d = 201.4 * 10**(-12) 
+e = const.e
 
-plt.subplot(1, 2, 1)
-plt.plot(x, y, label='Kurve')
-plt.xlabel(r'$\alpha \mathbin{/} \unit{\ohm}$')
-plt.ylabel(r'$y \mathbin{/} \unit{\micro\joule}$')
-plt.legend(loc='best')
 
-plt.subplot(1, 2, 2)
-plt.plot(x, y, label='Kurve')
-plt.xlabel(r'$\alpha \mathbin{/} \unit{\ohm}$')
-plt.ylabel(r'$y \mathbin{/} \unit{\micro\joule}$')
-plt.legend(loc='best')
+def f(E):
+    a = np.arcsin((h*c)/(2 * d * E * e))
+    return np.rad2deg(a)
 
-# in matplotlibrc leider (noch) nicht möglich
-plt.tight_layout(pad=0, h_pad=1.08, w_pad=1.08)
-plt.savefig('build/plot.pdf')
+
+print("Winkel Germanium:", f(11114)) #bereits in eV
+print("Winkel Brom:", f(13484))
+print("Winkel Rubidium :", f(15208))
+print("Winkel Strontium :", f(16115))
+print("Winkel Zirconium:", f(18008))
+print("Winkel Gallium:", f(10368))
