@@ -1,12 +1,55 @@
 \section{Auswertung}
 \label{sec:Auswertung}
 
-\begin{figure}
+Im folgenden werden die in \autoref{sec:Durchführung} aufgeführten Schritte ausgewertet und mit den Theoriewerten verglichen.
+
+\subsection{Auswrtung des Emissionsspektrums der Kupfer-Röntgenröhre}
+In \autoref{fig:plot1} ist das aufgezeichnete Emissionsspektrum der Kupfer-Röntgenröhre aufgezeichnet. Es sind außerdem die $K_\alpha$- und die $K_\beta$-Linien
+eingezeichnet. Der Bremsberg ist dabei das gesamte Spektrum, mit Ausnahme der beiden Peaks, die jeweils die Absoptionskanten darstellen. 
+
+\begin{figure}[H]
   \centering
-  \includegraphics{plot.pdf}
-  \caption{Plot.}
-  \label{fig:plot}
+  \includegraphics{build/plot1.pdf}
+  \caption{Grafische Darstellung des Emissionsspektrums.}
+  \label{fig:plot1}
 \end{figure}
 
+Die Halbwertsbreite wird optisch aus einer grafischen Darstellung abgelesen, da das mit \autoref{fig:plot1} jedoch nur schwer zu erreichen ist, wird der Bildbereich
+der beiden Absorptionskanten etwas vergrößert und in \autoref{fig:plot2} nocheinmal dargestellt. Die vertikal eingezeichneten Linien sind dabei die Halbwertsbreiten.
 
-Siehe \autoref{fig:plot}!
+\begin{figure}[H]
+  \centering
+  \includegraphics{build/plot2.pdf}
+  \caption{Grafische Darstellung der beiden Absorptionskanten.}
+  \label{fig:plot2}
+\end{figure}
+
+Die abgelesenen Winkel der beiden Absoptionskanten werden nun mithilfe der Bragg-Bedingung \eqref{eqn:bragg} die minimale Wellenlänge und daraus die maximale Energie
+berechnet. Die resultierenden Werte sind in \autoref{tab:werte1} eingetragen.
+\begin{table}[H]
+  \caption{Theoretische und experimentell bestimmte Werte des absorptionsspektrums.}
+  \label{tab:werte1}
+  \centering
+  \begin{tabular}{c c c}
+      \toprule
+       & $K_\alpha$ & $K_\beta$\\
+      \midrule
+      Maximum & $22,5 ~ 2\vartheta$ & $20,2 ~ 2\vartheta$ \\
+      theoretische Energie & $\SI{8047,823}{\eV}$ & $\SI{8905,413}{\eV}$ \\
+      gemessene Energie & $\SI{8043,355}{\eV}$ & $\SI{8914,204}{\eV}$ \\
+      Abweichung & $0,056 \%$ & $0,0987 \%$ \\
+      Halbwertsbreite & $\SI{0,42}{\degree}$ & $\SI{0,451}{\degree}$ \\
+      \bottomrule
+    \end{tabular}
+\end{table}
+
+Das Auflösevermögen $A$ der Apparatur wird durch die Gleichung
+\begin{align*}
+  A = \frac{E_{\text K}}{\upDelta E_{\text{FWHM}}},
+\end{align*}
+wobei $E_{\text K}$ die Energie der Absorptionskanten und $\upDelta E_{\text{FWHM}}$ die Energie der Halbwertsbreite beschreibt.
+Es ergeben sich damit die folgenden Werte,
+\begin{align*}
+  A_{K_\alpha} &= ,\\
+  A_{K_\beta} &= .
+\end{align*}
