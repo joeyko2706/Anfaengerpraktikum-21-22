@@ -1,33 +1,34 @@
 \section{Auswertung}
 \label{sec:Auswertung}
 
-Im folgenden werden die in \autoref{sec:Durchführung} aufgeführten Schritte ausgewertet und mit den Theoriewerten verglichen.
+Im folgenden werden die in der Durchführung (\autoref{sec:Durchführung}) aufgeführten Schritte ausgewertet.
 
-\subsection{Auswrtung des Emissionsspektrums der Kupfer-Röntgenröhre}
-In \autoref{fig:plot1} ist das aufgezeichnete Emissionsspektrum der Kupfer-Röntgenröhre aufgezeichnet. Es sind außerdem die $K_\alpha$- und die $K_\beta$-Linien
-eingezeichnet. Der Bremsberg ist dabei das gesamte Spektrum, mit Ausnahme der beiden Peaks, die jeweils die Absoptionskanten darstellen. 
+\subsection{Auswertung des Emissionsspektrums der Kupfer-Röntgenröhre}
+\label{subsec:emissionsspektrum}
+In \autoref{fig:plot1} ist das aufgezeichnete Emissionsspektrum der Kupfer-Röntgenröhre mithilfe der Pythonerweiterungen \textit{Numpy} \cite{numpy} und \textit{matplotlib} \cite{matplotlib} aufgezeichnet. Es sind außerdem die $K_\alpha$- und die $K_\beta$-Linien
+eingezeichnet. Der Bremsberg ist dabei das gesamte Spektrum, mit Ausnahme der beiden Peaks, die jeweils die Absoptionskanten darstellen und an ihren jeweilgen Positionen das Bremsspektrum überlagern. 
 
 \begin{figure}[H]
   \centering
-  \includegraphics{build/plot1.pdf}
+  \includegraphics[width = \textwidth]{build/plot1.pdf}
   \caption{Grafische Darstellung des Emissionsspektrums.}
   \label{fig:plot1}
 \end{figure}
 
-Die Halbwertsbreite wird optisch aus einer grafischen Darstellung abgelesen, da das mit \autoref{fig:plot1} jedoch nur schwer zu erreichen ist, wird der Bildbereich
+Die Halbwertsbreite wird optisch aus einer grafischen Darstellung abgelesen. Da das mit \autoref{fig:plot1} jedoch nur schwer zu erreichen ist, wird der Bildbereich
 der beiden Absorptionskanten etwas vergrößert und in \autoref{fig:plot2} nocheinmal dargestellt. Die vertikal eingezeichneten Linien sind dabei die Halbwertsbreiten.
 
 \begin{figure}[H]
   \centering
-  \includegraphics{build/plot2.pdf}
+  \includegraphics[width = \textwidth]{build/plot2.pdf}
   \caption{Grafische Darstellung der beiden Absorptionskanten.}
   \label{fig:plot2}
 \end{figure}
 
-Die abgelesenen Winkel der beiden Absoptionskanten werden nun mithilfe der Bragg-Bedingung \eqref{eqn:bragg} die minimale Wellenlänge und daraus die maximale Energie
+Die minimale Wellenlänge und daraus die maximale Energie werden nun mithilfe der Bragg-Bedingung \eqref{eqn:bragg} der abgelesenen Winkel der beiden Absoptionskanten
 berechnet. Die resultierenden Werte sind in \autoref{tab:werte1} eingetragen.
 \begin{table}[H]
-  \caption{Theoretische und experimentell bestimmte Werte des absorptionsspektrums.}
+  \caption{Theoretische und experimentell bestimmte Werte des Absorptionsspektrums.}
   \label{tab:werte1}
   \centering
   \begin{tabular}{c c c}
@@ -37,19 +38,111 @@ berechnet. Die resultierenden Werte sind in \autoref{tab:werte1} eingetragen.
       Maximum & $22,5 ~ 2\vartheta$ & $20,2 ~ 2\vartheta$ \\
       theoretische Energie & $\SI{8047,823}{\eV}$ & $\SI{8905,413}{\eV}$ \\
       gemessene Energie & $\SI{8043,355}{\eV}$ & $\SI{8914,204}{\eV}$ \\
-      Abweichung & $0,056 \%$ & $0,0987 \%$ \\
+      %Abweichung & $0,056 \%$ & $0,0987 \%$ \\
       Halbwertsbreite & $\SI{0,42}{\degree}$ & $\SI{0,451}{\degree}$ \\
       \bottomrule
     \end{tabular}
 \end{table}
 
-Das Auflösevermögen $A$ der Apparatur wird durch die Gleichung
+Das Auflösevermögen $A$ der Apparatur wird durch die folgende Gleichung bestimmt
 \begin{align*}
   A = \frac{E_{\text K}}{\upDelta E_{\text{FWHM}}},
 \end{align*}
 wobei $E_{\text K}$ die Energie der Absorptionskanten und $\upDelta E_{\text{FWHM}}$ die Energie der Halbwertsbreite beschreibt.
 Es ergeben sich damit die folgenden Werte,
 \begin{align*}
-  A_{K_\alpha} &= ,\\
-  A_{K_\beta} &= .
+  A_{K_\alpha} &= 17,877, \\
+  A_{K_\beta} &= 21,203.
+\end{align*}
+Aus den Gleichungen \eqref{eqn:verrEnergie}, \eqref{eqn:ersteEnergie} und \eqref{eqn:zweiteEnergie} folgen die Absorptionskoeffizienten zu
+\begin{align*}
+  \sigma_1 &= 3,3, \\
+  \sigma_2 &= 13,35, \\
+  \sigma_3 &= 2246. 
+\end{align*}
+
+\subsection{Auswertung der Absorptionsspektren}
+\label{subsec:absorbis}
+
+Im folgenden werden die Absorptionsspektren von Brom, Gallium, Strontium, Zink und Zirkonium ausgewertet.
+Es werden die Position der $K$-Kante in dem jeweiligen Absorptionssprektrum und die Abschirmkonstante bestimmt.
+In den folgenden Abbildungen sind die grafischen Auswertungen der verwendeten Stoffe abgebildet.
+Die gemessenen Werte der $K$-Kanten und der Abschirmkonstanten sind in \autoref{tab:werte2} eingetragen.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width = \textwidth]{build/plot3.pdf}
+  \caption{Grafische Darstellung des Absorptionsspektrums von Brom.}
+  \label{fig:plot3}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width = \textwidth]{build/plot4.pdf}
+  \caption{Grafische Darstellung des Absorptionsspektrums von Gallium.}
+  \label{fig:plot4}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width = \textwidth]{build/plot5.pdf}
+  \caption{Grafische Darstellung des Absorptionsspektrums von Strontium.}
+  \label{fig:plot5}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width = \textwidth]{build/plot6.pdf}
+  \caption{Grafische Darstellung des Absorptionsspektrums von Zink.}
+  \label{fig:plot6}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width = \textwidth]{build/plot7.pdf}
+  \caption{Grafische Darstellung des Absorptionsspektrums von Zirkonium.}
+  \label{fig:plot7}
+\end{figure}
+
+
+\begin{table}[H]
+  \caption{Theoretische und experimentell bestimmte Werte der Absorptionsspektren.}
+  \centering
+  \label{tab:werte2}
+  \begin{tabular}{c| c c c c}
+      \toprule
+      Element  & $E$ / keV & $E_{\text{Theorie}}$ / keV & $\sigma$ & $\sigma_{\text{Theorie}}$ \\
+      \midrule
+      Brom      & $13,185$  & $13,470$  & $3,84$ & $3,55$ \\
+      Gallium   & $10,179$  & $10,368$  & $3,61$ & $3,41$ \\
+      Strontium & $15,709$  & $16,107$  & $3,99$ & $3,61$ \\
+      Zink      & $9,551$   & $9,660$   & $3,55$ & $3,37$ \\
+      Zirkonium & $17,215$  & $17,995$  & $4,09$ & $3,65$ \\
+      \bottomrule
+  \end{tabular}
+\end{table}
+
+\subsection{Moseley'sches Gesetz}
+\label{subsec:moseley}
+
+Das Moseley-Gesetz sagt aus, dass die Absorptionsenergie $E_{\text K}$ proportional zu dem Quadrat der Kernladungszahl $Z^2$ ist. Im folgenden soll diese
+Proportionalität mit den Daten aus dem Versuch der Absorptionsspektren ausgewertet werden.
+Dazu wird eine $\sqrt{E_{\text K}}Z$-Diagramm angefertigt, was in \autoref{fig:plot8} abgebildet ist. Mithilfe der Pythonerweiterungen scipy \cite{scipy} und uncertainties \cite{uncertainties} wird
+eine lineare Regression der Form $y=m \cdot x +b$ zu den Messwerten angelegt und mit der Steigung die Rydberg-Energie $E_{\text{Ryd}}$ bestimmt.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width = \textwidth]{build/plot8.pdf}
+  \caption{Grafische Auswertung des Moseley-Gesetzes zu den Daten der Absorptionsspektren.}
+  \label{fig:plot8}
+\end{figure}
+
+Die Parameter der linearen Regression lauten damit
+\begin{align*}
+  m &= 0,2789 \pm 0,0007 \left[\frac{1}{\sqrt{\text{eV}}}\right], \\
+  b &= 2,6017 \pm 0,0007 \left[\sqrt{\text{eV}}\right].
+\end{align*}
+Nach dem Moseley'schen Gesetz ergibt sich die Rydberg-Energie zu,
+\begin{align*}
+  E_\infty = \frac{1}{m^2} \Rightarrow ~ \SI{12,86(0,06)}{\eV}.
 \end{align*}

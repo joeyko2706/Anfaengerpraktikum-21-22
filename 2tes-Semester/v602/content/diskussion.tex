@@ -1,8 +1,166 @@
 \section{Diskussion}
 \label{sec:Diskussion}
+In \autoref{subsec:emissionsspektrum} wurde die Kupfer-Röntgenröhre hinsichtlich des Emissionsspektrums ausgewertet. Dabei kamen die in \autoref{tab:Disk1} eingetragenen Werte heraus.
 
+\begin{table}[H]
+    \caption{Theoretische und experimentell bestimmte Werte des Absorptionsspektrums.}
+    \label{tab:Disk1}
+    \centering
+    \begin{tabular}{c c c}
+        \toprule
+         & $K_\alpha$ & $K_\beta$\\
+        \midrule
+        Maximum & $22,5 ~ 2\vartheta$ & $20,2 ~ 2\vartheta$ \\
+        theoretische Energie & $\SI{8047,823}{\eV}$ & $\SI{8905,413}{\eV}$ \\
+        gemessene Energie & $\SI{8043,355}{\eV}$ & $\SI{8914,204}{\eV}$ \\
+        Abweichung & $0,056 \%$ & $0,0987 \%$ \\
+        Halbwertsbreite & $\SI{0,42}{\degree}$ & $\SI{0,451}{\degree}$ \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+Da die Abweichungen der experimentell bestimmten Werte von den theoretischen Werten \cite{NistXray} \cite{Abschirmkonstanten} sehr gering sind, ist die Theorie damit verifiziert worden.\newline
+Die Emissionsspektren der verschiedenen Stoffe sind in \autoref{subsec:absorbis} ausgewertet worden, wobei die in \autoref{tab:Disk2} eingetragenen Werte bestimmt wurden.
+\begin{table}[H]
+    \caption{Theoretische und experimentell bestimmte Werte der Absorptionsspektren.}
+    \centering
+    \label{tab:Disk2}
+    \begin{tabular}{c| c c c c c c}
+        \toprule
+        Element  & $E$ / keV & $E_{\text{Theorie}}$ / keV & $\upDelta E$ & $\sigma$ & $\sigma_{\text{Theorie}}$ & $\upDelta \sigma$ \\
+        \midrule
+        Brom      & $13,185$  & $13,470$  & $2,12 \%$ & $3,84$ & $3,55$ & $8,37   ~\%$ \\
+        Gallium   & $10,179$  & $10,368$  & $1,82 \%$ & $3,61$ & $3,41$ & $5,94  ~\%$ \\
+        Strontium & $15,709$  & $16,107$  & $2,47 \%$ & $3,99$ & $3,61$ & $10,56 ~\%$ \\
+        Zink      & $9,551$   & $9,660$   & $1,13 \%$ & $3,55$ & $3,37$ & $5,36  ~\%$ \\
+        Zirkonium & $17,215$  & $17,995$  & $4,34 \%$ & $4,09$ & $3,65$ & $12,20 ~\%$ \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+Auch hier sind die Abweichungen sehr gering und es kann gesagt werden, dass die Theorie bestätigt wurde. Die Abweichung für Strontium und Zirkonium sind die einzigen, die $10 \%$ übersteigen. Um
+dieser Abweichung entgegenzuwirken, können mehr Messwerte in einem kleineren Winkelabstand gemessen werden, sofern das mit der Apparatur möglich ist. Es könnte außerdem die
+Messzeit von $\SI{20}{\second}$ erhöht werden, um genauere Messwerte zu bekommen.\newline
+Die in \autoref{subsec:moseley} mit den Messwerten bestimmte Rydberg-Energie hat die folgenden Werte,
+\begin{align*}
+    R_\infty &= \SI{12,86(0,06)}{\eV}, \\
+    R_{\infty, \text{Theorie}} &= \SI{13,6}{\eV}, \\
+    \text{Abweichung} &= (5,5 \pm 0,5) ~\%.
+\end{align*}
+Auch diese Abweichungen sind als gering einzuschätzen und die Theorie wurde auch hier bestätigt. Die Abweichung kann mit mehr Proben, mit denen das Moseley'sche Gesetz
+überprüft werden kann, und mit den oben bereits genannten Methoden herabgesetzt werden.
 
 \printbibliography{}
 
 \section*{Anhang}
 \label{sec:anhang}
+
+\begin{table}[H]
+    \caption{Originale Messdaten des Bromabsorbers.}
+    \centering
+    \label{tab:origDaten2}
+    \begin{tabular}{c c}
+        \toprule
+        $2~\vartheta$ & $R(\SI{35}{\kilo\volt})$ Imp/s \\
+        \midrule
+        12.7  &  8.0  \\
+        12.8  &  10.0  \\
+        12.9  &  11.0  \\
+        13.0  &  9.0  \\
+        13.1  &  13.0  \\
+        13.2  &  17.0  \\
+        13.3  &  19.0  \\
+        13.4  &  20.0  \\
+        13.5  &  24.0  \\
+        13.6  &  20.0  \\
+        13.7  &  21.0  \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\begin{table}[H]
+    \caption{Originale Messdaten des Galliumabsorbers.}
+    \centering
+    \label{tab:origDaten3}
+    \begin{tabular}{c c}
+        \toprule
+        $2~\vartheta$ & $R(\SI{35}{\kilo\volt})$ Imp/s \\
+        \midrule
+        16.7  &  40.0  \\
+        16.8  &  41.0  \\
+        16.9  &  41.0  \\
+        17.0  &  41.0  \\
+        17.1  &  46.0  \\
+        17.2  &  57.0  \\
+        17.3  &  64.0  \\
+        17.4  &  71.0  \\
+        17.5  &  77.0  \\
+        17.6  &  78.0  \\
+        17.7  &  77.0  \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\begin{table}[H]
+    \caption{Originale Messdaten des Strontiumabsorbers.}
+    \centering
+    \label{tab:origDaten4}
+    \begin{tabular}{c c}
+        \toprule
+        $2~\vartheta$ & $R(\SI{35}{\kilo\volt})$ Imp/s \\
+        \midrule
+        10.5  &  34.0  \\
+        10.6  &  36.0  \\
+        10.7  &  35.0  \\
+        10.8  &  35.0  \\
+        10.9  &  43.0  \\
+        11.0  &  60.0  \\
+        11.1  &  79.0  \\
+        11.2  &  91.0  \\
+        11.3  &  101.0  \\
+        11.4  &  100.0  \\
+        11.5  &  107.0  \\
+    \end{tabular}
+\end{table}
+
+\begin{table}[H]
+    \caption{Originale Messdaten des Zinkabsorbers.}
+    \centering
+    \label{tab:origDaten5}
+    \begin{tabular}{c c}
+        \toprule
+        $2~\vartheta$ & $R(\SI{35}{\kilo\volt})$ Imp/s \\
+        \midrule
+        18.1  &  49.0  \\
+        18.2  &  49.0  \\
+        18.3  &  48.0  \\
+        18.4  &  53.0  \\
+        18.5  &  65.0  \\
+        18.6  &  73.0  \\
+        18.7  &  84.0  \\
+        18.8  &  93.0  \\
+        18.9  &  93.0  \\
+        19.0  &  90.0  \\
+        19.1  &  92.0  \\
+    \end{tabular}
+\end{table}
+
+\begin{table}[H]
+    \caption{Originale Messdaten des Zirkoniumabsorbers.}
+    \centering
+    \label{tab:origDaten6}
+    \begin{tabular}{c c}
+        \toprule
+        $2~\vartheta$ & $R(\SI{35}{\kilo\volt})$ Imp/s \\
+        \midrule
+        9.3  &  57.0  \\
+        9.4  &  63.0  \\
+        9.5  &  68.0  \\
+        9.6  &  69.0  \\
+        9.7  &  70.0  \\
+        9.8  &  82.0  \\
+        9.9  &  87.0  \\
+        10.0  &  111.0  \\
+        10.1  &  127.0  \\
+        10.2  &  133.0  \\
+        10.3  &  137.0  \\
+    \end{tabular}
+\end{table}

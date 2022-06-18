@@ -1,8 +1,7 @@
 all: build/v602.pdf
 
 # hier Python-Skripte:
-build/plot1.pdf build/plot2.pdf build/plot3.pdf build/plot4.pdf build/plot5.pdf build/plot6.pdf build/plot7.pdf: 
-	plot.py ../matplotlibrc ../header-matplotlib.tex | build
+build/plot1.pdf build/plot2.pdf build/plot3.pdf build/plot4.pdf build/plot5.pdf build/plot6.pdf build/plot7.pdf: plot.py ../matplotlibrc ../header-matplotlib.tex | build
 	# so that matplotlib can find the tex header when running
 	# LaTeX in the tmp directory
 	# and set the matplotlibrc
