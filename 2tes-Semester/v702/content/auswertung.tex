@@ -1,12 +1,207 @@
 \section{Auswertung}
 \label{sec:Auswertung}
 
-\begin{figure}
+
+\subsection{Nulleffekt}
+\label{sec:Nulleffekt}
+
+Bevor die eigentliche Messung starten kann, müssen zunächst die potentiellen Einflüsse des Nulleffekts bestimmt werden. Hierfür wird eine Mesung ohne eine
+Probe durchgeführt. Um statistische Schwankungen möglichst auszuklammern, wird eine vergleichsweise hohe Messzeit von $t = \SI{600}{\second}$ angesetzt.
+Die Messung ergibt eine Zählrate von $N = 182$. Es werden deswegen sämtliche Messwerte der Zählrate bei der ersten Messung um $9$ und bei der zweiten
+Messung um $2$ reduziert.
+
+
+\subsection{Halbwertszeit von Vanadium}
+\label{sec:Vanadium}
+
+Mit der ersten Messreihe soll die Halbwertszeit von Vanadium bestimmt werden. Die hierfür gemessenen Werte sind zusammen mit ihren $\sqrt{N}$-Fehlern
+in \autoref{tab:vanadium} aufgeführt. Dabei wurden die Korrekturen des Nulleffekts bereits berücksichtigt. 
+
+\begin{table}[H]
   \centering
-  \includegraphics{plot.pdf}
-  \caption{Plot.}
-  \label{fig:plot}
+  \begin{tabular}{c c}
+    \toprule
+    Messzeit $t/\unit{\second}$ & Zählrate $N$\\
+    \midrule
+    30  &  167  $ \pm $  13  \\
+    60  &  148  $ \pm $  12  \\
+    90  &  148  $ \pm $  12  \\
+    120  &  136  $ \pm $  12  \\
+    150  &  128  $ \pm $  11  \\
+    180  &  109  $ \pm $  10  \\
+    210  &  75  $ \pm $  9  \\
+    240  &  96  $ \pm $  10  \\
+    270  &  85  $ \pm $  9  \\
+    300  &  73  $ \pm $  9  \\
+    330  &  70  $ \pm $  8  \\
+    360  &  58  $ \pm $  8  \\
+    390  &  72  $ \pm $  8  \\
+    420  &  52  $ \pm $  7  \\
+    450  &  51  $ \pm $  7  \\
+    480  &  56  $ \pm $  7  \\
+    510  &  40  $ \pm $  6  \\
+    540  &  41  $ \pm $  6  \\
+    570  &  34  $ \pm $  6  \\
+    600  &  40  $ \pm $  6  \\
+    630  &  29  $ \pm $  5  \\
+    660  &  42  $ \pm $  6  \\
+    690  &  19  $ \pm $  4  \\
+    720  &  15  $ \pm $  4  \\
+    750  &  15  $ \pm $  4  \\
+    780  &  22  $ \pm $  5  \\
+    810  &  13  $ \pm $  4  \\
+    840  &  28  $ \pm $  5  \\
+    870  &  20  $ \pm $  4  \\
+    900  &  13  $ \pm $  4  \\
+    \bottomrule
+  \end{tabular}
+  \caption{Messwerte der Zählrate für Vanadium.}
+  \label{tab:vanadium}
+\end{table}
+
+Zur Bestimmung der Halbwertszeit wird die Zälrate halblogarithmisch gegen die Zeit aufgetragen und eine Ausgleichsgerade eingezeichnet.
+Dies ist in \autoref{fig:vanadium} dargestellt.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics{plot1.pdf}
+  \caption{Messwerte und lineare Regression für Vanadium.}
+  \label{fig:vanadium}
+\end{figure}
+
+Mit Hilfe von Scipy wurde eine Ausgleichsrechnung durchgeführt. Diese liefert zusammen mit Gleichung \eqref{eqn:Zerfallsgesetz} die Werte
+
+\begin{align*}
+  \lambda &= (-2,830 \pm 0,151) \cdot 10^{-3} \frac{1}{\si{\second}} \\
+  ln(N_0) &= 5,193 \pm 0,0804 .
+\end{align*}
+
+Es kann anschließend über Gleichung \eqref{eqn:T} die Halbwertszeit $T$ zu
+
+\begin{align*}
+  T &= (245 \pm 13) \si{\second}
+\end{align*}
+
+bestimmt werden.
+
+
+\subsection{Halbwertszeit von Silber}
+\label{sec:Silber}
+
+Im zweiten Teil der Messung soll nun die Halbwertszeit von Silber bestimmt werden. Die hierfür gemessenen Werte sind zusammen mit ihren $\sqrt{N}$-Fehlern
+in \autoref{tab:silber} aufgeführt. Es sind erneut die Korrekturen bezüglich des Nulleffekts bereits berücksichtigt.
+
+\begin{table}[H]
+  \centering
+  \begin{tabular}{c c}
+    \toprule
+    Messzeit $t/\unit{\second}$ & Zählrate $N$\\
+    \midrule
+    8  &  134  $ \pm $  12  \\
+    16  &  95  $ \pm $  10  \\
+    24  &  118  $ \pm $  11  \\
+    32  &  91  $ \pm $  10  \\
+    40  &  75  $ \pm $  9  \\
+    48  &  67  $ \pm $  8  \\
+    56  &  58  $ \pm $  8  \\
+    64  &  48  $ \pm $  7  \\
+    72  &  32  $ \pm $  6  \\
+    80  &  28  $ \pm $  5  \\
+    88  &  21  $ \pm $  5  \\
+    96  &  33  $ \pm $  6  \\
+    104  &  27  $ \pm $  5  \\
+    112  &  29  $ \pm $  5  \\
+    120  &  19  $ \pm $  4  \\
+    128  &  18  $ \pm $  4  \\
+    136  &  17  $ \pm $  4  \\
+    144  &  25  $ \pm $  5  \\
+    152  &  13  $ \pm $  4  \\
+    160  &  20  $ \pm $  4  \\
+    168  &  11  $ \pm $  3  \\
+    176  &  10  $ \pm $  3  \\
+    184  &  15  $ \pm $  4  \\
+    192  &  14  $ \pm $  4  \\
+    200  &  5  $ \pm $  2  \\
+    208  &  11  $ \pm $  3  \\
+    216  &  20  $ \pm $  4  \\
+    224  &  12  $ \pm $  3  \\
+    232  &  6  $ \pm $  2  \\
+    240  &  12  $ \pm $  3  \\
+    248  &  19  $ \pm $  4  \\
+    256  &  5  $ \pm $  2  \\
+    264  &  15  $ \pm $  4  \\
+    272  &  4  $ \pm $  2  \\
+    280  &  3  $ \pm $  2  \\
+    288  &  4  $ \pm $  2  \\
+    296  &  12  $ \pm $  3  \\
+    304  &  9  $ \pm $  3  \\
+    312  &  5  $ \pm $  2  \\
+    320  &  6  $ \pm $  2  \\
+    328  &  10  $ \pm $  3  \\
+    336  &  5  $ \pm $  2  \\
+    344  &  8  $ \pm $  3  \\
+    352  &  12  $ \pm $  3  \\
+    360  &  5  $ \pm $  2  \\
+    368  &  5  $ \pm $  2  \\
+    376  &  2  $ \pm $  1  \\
+    384  &  1  $ \pm $  1  \\
+    392  &  9  $ \pm $  3  \\
+    400  &  8  $ \pm $  3  \\
+    408  &  6  $ \pm $  2  \\
+    416  &  7  $ \pm $  3  \\
+    424  &  4  $ \pm $  2  \\
+    \bottomrule
+  \end{tabular}
+  \caption{Messwerte der Zählrate für Silber.}
+  \label{tab:silber}
+\end{table}
+
+Da Silber natürlicherweise zu 52,3\% in Form des Isotops $\ce{^108 Ag}$ und zu 47,7\% in Form von $\ce{^110 Ag}$ vorkommt,
+muss für beide Isotope seperat die Halbwertszeit bestimmt werden. Um die beiden Zerfälle zu trennen, wurden die Messwerte an der Stelle $t = \SI{96}{\second}$
+in zwei Bereiche aufgeteilt. Auf der linken Seite sind beide Zerfälle vorhanden, auf der rechten dann nur noch der langlebige Zerfall von $\ce{^108 Ag}$.
+Die Messwerte sind graphisch in \autoref{fig:silber} aufgetragen.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics{plot2.pdf}
+  \caption{Messwerte und lineare Regression für Silber.}
+  \label{fig:silber}
 \end{figure}
 
 
-Siehe \autoref{fig:plot}!
+
+\subsubsection{Halbwertszeit von $\ce{^108 Ag}$}
+
+Zur Bestimmung der Halbwertszeit von $\ce{^108 Ag}$ kann, wie im ersten Teil des Versuches, eine einfache Ausgleichsrechnung durgeführt werden. Zusammen mit
+Gleichung \eqref{eqn:Zerfallsgesetz} kann dann $\lambda_{108}$ bestimmt werden. Die Berechnungen liefern die Werte
+\begin{align*}
+  \lambda_{108} &= (-5,190 \pm 0,883) \cdot 10^{-3} \frac{1}{\si{\second}} \\
+  ln(N_0)_{108} &=  3,539 \pm 0,248.
+\end{align*}
+
+Anschließend kann über Gleichung \eqref{eqn:T} die Halbwertszeit $T$ zu
+
+\begin{align*}
+  T_{108} &= (134 \pm 23) \si{\second}
+\end{align*}
+
+bestimmt werden.
+
+
+\subsubsection{Halbwertszeit von $\ce{^110 Ag}$}
+
+Da der Zerfall von $\ce{^110 Ag}$ schneller passiert, als der von $\ce{^108 Ag}$, muss die theoretische Zählrate des langsamen Zerfalls von der gesamten Zählrate
+subtrahiert werden.\\
+Die resultierende Zählrate kann so erneut über eine Ausgleichsrechnung und Gleichung \eqref{eqn:lnDelta} bestimmt werden. Die Berechnungen resultieren in de Werten
+\begin{align*}
+  \lambda_{110} &= (-24,2487 \pm 1,982) \cdot 10^{-3} \frac{1}{\si{\second}} \\
+  ln(N_0)_{110} &=  5,153 \pm 0,108.
+\end{align*}
+
+Es kann anschließend über Gleichung \eqref{eqn:T} die Halbwertszeit $T$ zu
+
+\begin{align*}
+  T_{110} &= (28,6 \pm 2,3) \si{\second}
+\end{align*}
+
+bestimmt werden.
