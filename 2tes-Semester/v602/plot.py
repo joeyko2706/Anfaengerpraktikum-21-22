@@ -105,7 +105,7 @@ plt.clf()
 plt.plot(thetaBr, RateBr, "b", alpha=0.5)
 plt.plot(thetaBr, RateBr, "r.", label="Messwerte des Bromabsorbers")
 # plt.vlines(thetaBr[8], RateBr[0], RateBr[8], color="limegreen", label=r"K-Kante")
-plt.axvline(thetaBr[8], color="limegreen", label=r"K-Kante")
+plt.axvline(thetaBr[5], color="limegreen", label=r"K-Kante")
 schoenerPlot()
 plt.savefig("build/plot3.pdf")
 plt.clf()
@@ -115,7 +115,7 @@ plt.clf()
 plt.plot(thetaGa, RateGa, "b", alpha=0.5)
 plt.plot(thetaGa, RateGa, "r.", label="Messwerte des Galliumabsorbers")
 # plt.vlines(thetaGa[6], RateGa[0], RateGa[6], color="limegreen", label=r"K-Kante")
-plt.axvline(thetaGa[9], color="limegreen", label=r"K-Kante")
+plt.axvline(thetaGa[6], color="limegreen", label=r"K-Kante")
 schoenerPlot()
 plt.savefig("build/plot4.pdf")
 plt.clf()
@@ -125,7 +125,7 @@ plt.clf()
 plt.plot(thetaSr, RateSr, "b", alpha=0.5)
 plt.plot(thetaSr, RateSr, "r.", label="Messwerte des Strontiumabsorbers")
 # plt.vlines(thetaSr[6], RateSr[0], RateSr[6], color="limegreen", label=r"K-Kante")
-plt.axvline(thetaSr[8], color="limegreen", label=r"K-Kante")
+plt.axvline(thetaSr[6], color="limegreen", label=r"K-Kante")
 schoenerPlot()
 plt.savefig("build/plot5.pdf")
 plt.clf()
@@ -135,7 +135,7 @@ plt.clf()
 plt.plot(thetaZn, RateZn, "b", alpha=0.5)
 plt.plot(thetaZn, RateZn, "r.", label="Messwerte des Zinkabsorbers")
 # plt.vlines(thetaZn[5], RateZn[0], RateZn[5], color="limegreen", label=r"K-Kante")
-plt.axvline(thetaZn[7], color="limegreen", label=r"K-Kante")
+plt.axvline(thetaZn[5], color="limegreen", label=r"K-Kante")
 schoenerPlot()
 plt.savefig("build/plot6.pdf")
 plt.clf()
@@ -145,7 +145,7 @@ plt.clf()
 plt.plot(thetaZr, RateZr, "b", alpha=0.5)
 plt.plot(thetaZr, RateZr, "r.", label="Messwerte des Zirkoniumabsorbers")
 # plt.vlines(thetaZr[5], RateZr[0], RateZr[5], color="limegreen", label=r"K-Kante")
-plt.axvline(thetaZr[-1], color="limegreen", label=r"K-Kante")
+plt.axvline(thetaZr[6], color="limegreen", label=r"K-Kante")
 schoenerPlot()
 plt.savefig("build/plot7.pdf")
 plt.clf()
@@ -155,11 +155,11 @@ plt.clf()
 
 # Moseley Gesetz:
 # Kommen aus den Berechnungen unten, ich wollte aber alle Berchnungen auf einmal ausklammern können, weshalb ich das hier schon implementiert habe
-EnergieBrom = 13470.5       
-EnergieGallium = 10368.1
-EnergieStrontium = 16107.2
-EnergieZink =   9660.755
-EnergieZirkonium =  17995.872
+EnergieBrom = 13479.5    
+EnergieGallium = 10350.8
+EnergieStrontium = 15988.1
+EnergieZink =   9650.3
+EnergieZirkonium =  17903.1
 Ryd = 13.6
 
 E_absorp = np.array([EnergieBrom, EnergieGallium, EnergieStrontium, EnergieZink, EnergieZirkonium])
@@ -190,19 +190,21 @@ plt.clf()
 m = ufloat(np.round(params[0], 4), np.round(errors[0],4))
 b = ufloat(np.round(params[1], 4), np.round(errors[0],4))
 
+# Berechnungen
+"""
 
-print(np.sqrt(E_absorp), kernladungen)
+print("Moseley-Gesetz:")
+# print(np.sqrt(E_absorp), kernladungen)
 print("Parameter linReg (m,b): ", m, b)
 E_ryd = 1/(m**2)
 print("E_Ryd gemessen: ", E_ryd, "E_Ryd: ", Ryd)
 print("Abweichung RydberEnergie: ", (E_ryd-Ryd)/Ryd*100, "%")
 
-# Berechnungen
-"""
 
 EnergieAlphaGemessen = 8043.355
 EnergieBetaGemessen = 8914.204
 
+print("-----------------")
 print("Maximum Beta: ",theta[152],betaMax,"Halbwertsbreite (y): ",1 / 2 * betaMax,"Breite (x): ",breiteBeta,)
 print("Maximum Alpha: ",theta[175],alphaMax,"Halbwertsbreite (y): ",1 / 2 * alphaMax,"Breite (x): ",breiteAlpha,)
 
@@ -213,19 +215,24 @@ print("Abweichung von Beta: ", (EnergieBetaGemessen - EnergieBeta) / EnergieBeta
 print("Auflösevermögen Alpha: ", h(EnergieAlpha, breiteAlpha*10**3))
 print("Auflösevermögen Beta: ", h(EnergieBeta, breiteBeta*10**3))
 
+k_Br = thetaBr[5]
+k_Ga = thetaGa[6]
+k_Sr = thetaSr[6]
+k_Zn = thetaZn[5]
+k_Zr = thetaZr[6]
 
 print("-----------------")
-print("K-Kante Brom: ",     "\t", "\t", thetaBr[8])
-print("K-Kante Gallium: ","\t", thetaGa[9])
-print("K-Kante Strontium: ", "\t", thetaSr[8])
-print("K-Kante Zink: ", "\t", "\t", thetaZn[7])
-print("K-Kante Zirkonium: ", "\t", thetaZr[-1])
+print("K-Kante Brom: ",     "\t", "\t", k_Br)
+print("K-Kante Gallium: ","\t", k_Ga)
+print("K-Kante Strontium: ", "\t", k_Sr)
+print("K-Kante Zink: ", "\t", "\t", k_Zn)
+print("K-Kante Zirkonium: ", "\t", k_Zr)
 print("-----------------")
-print("Energie Brom: ", "\t", y(13.5)/1000)
-print("Energie Gallium: ","\t", y(17.6)/1000)
-print("Energie Strontium: ", "\t", y(11.3)/1000)
-print("Energie Zink: ", "\t", "\t", y(18.8)/1000)
-print("Energie Zirkonium: ", "\t", y(10.3)/1000)
+print("Energie Brom: ", "\t", y(k_Br)/1000)
+print("Energie Gallium: ","\t", y(k_Ga)/1000)
+print("Energie Strontium: ", "\t", y(k_Sr)/1000)
+print("Energie Zink: ", "\t", "\t", y(k_Zn)/1000)
+print("Energie Zirkonium: ", "\t", y(k_Zr)/1000)
 print("-----------------")
 
 
