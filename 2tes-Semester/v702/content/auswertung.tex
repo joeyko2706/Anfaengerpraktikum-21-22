@@ -192,7 +192,32 @@ bestimmt werden.
 
 Da der Zerfall von $\ce{^110 Ag}$ schneller passiert, als der von $\ce{^108 Ag}$, muss die theoretische Zählrate des langsamen Zerfalls von der gesamten Zählrate
 subtrahiert werden.\\
-Die resultierende Zählrate kann so erneut über eine Ausgleichsrechnung und Gleichung \eqref{eqn:lnDelta} bestimmt werden. Die Berechnungen resultieren in de Werten
+Die resultierende Zählrate kann so erneut über eine Ausgleichsrechnung und Gleichung \eqref{eqn:lnDelta} bestimmt werden.
+
+
+
+Die korrigierten Werte für die lineare Regression ergeben sich aus
+\begin{align*}
+  N_{\symup{110}}(t) &= N_{\symup{Ges}}(t) - N_{\symup{108}}(t) \\
+                      &= N_{\symup{Ges}}(t) - e^{-mt + b}
+\end{align*}
+Aus der Gaußschen Fehlerforpflanzung ergibt sich
+\begin{align*}
+  \Delta N_{\symup{110}}(t) &= \sqrt{
+    \left(\frac{\partial N_{\symup{110}}}{\partial N_{\symup{Ges}}}\right)^2 (\Delta N_{\symup{Ges}})^2 +
+    \left(\frac{\partial N_{\symup{110}}}{\partial m}\right)^2 (\Delta m)^2 + 
+    \left(\frac{\partial N_{\symup{110}}}{\partial b}\right)^2 (\Delta b)^2} \\
+  \Delta N_{\symup{110}}(t) &= \sqrt{
+    (\Delta N_{\symup{Ges}})^2 +
+    \left(te^{-mt+b}\right)^2 (\Delta m)^2 +
+    \left(e^{-mt+b}\right)^2 (\Delta b)^2
+  }\,. \\
+\end{align*}
+
+
+
+
+Die Berechnungen resultieren in den Werten
 \begin{align*}
   \lambda_{110} &= (-24,2487 \pm 1,982) \cdot 10^{-3} \frac{1}{\si{\second}} \\
   ln(N_0)_{110} &=  5,153 \pm 0,108.

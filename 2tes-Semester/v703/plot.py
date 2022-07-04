@@ -8,10 +8,10 @@ from uncertainties.unumpy import (nominal_values as noms,
                                   std_devs as stds)
 
 
-U, I, z = np.genfromtxt("data/ersterStoff.txt", unpack = True)
+# U, I, z = np.genfromtxt("data/ersterStoff.txt", unpack = True)
 
-n = np.sqrt(z)
-# n = np.round_(n)
+# n = np.sqrt(z)
+# # n = np.round_(n)
 
 def linregress(x, y):
     N = len(y)
@@ -21,22 +21,26 @@ def linregress(x, y):
     sigma_y = np.sqrt(np.sum((y - A * x - B)**2) / (N - 2))
     A_error = sigma_y * np.sqrt(N / Delta)
     B_error = sigma_y * np.sqrt(np.sum(x**2) / Delta)
-    # print(A, A_error, B, B_error)
+    print(A, A_error, B, B_error)
 
     return A*x + B
 
-# print(z[10], z[24])
+# # print(z[10], z[24])
+U = np.array([350, 450, 540, 580, 670, 700])
+Z = np.array([1.95, 2.89, 3.80, 4.73, 5.52, 6.35])
+ez = np.array([0.487, 0.483, 0.476, 0.474, 0.463, 0.457])
 
-plt.errorbar(U, z, yerr = n, fmt = "gx", label = 'Messwerte')
-plt.plot(U[10:25], linregress(U[10:25], z[10:25]), color = "k" , label = 'lineare Regression')
-plt.xlabel(r'U $[V]$')
-plt.ylabel(r'N [Imp$/120s$]')
+
+plt.errorbar(U, Z, ez, fmt = "gx", label = 'Messwerte')
+plt.plot(U, linregress(U, Z), label = 'lineare Regression')
+plt.xlabel(r'$U \,/\, \si{\volt}$')
+plt.ylabel(r'$\upDelta Q \,/\, 10^9 \si{\coulomb}$')
 plt.grid()
 plt.legend()
 plt.tight_layout()
-#plt.show()
+plt.show()
+plt.savefig("build/plot2.pdf")
 
-plt.savefig("build/plot.pdf")
 #print(U[19], '& $', z[19], '\pm', n[19], '$', '\\', '\\')
 # i = 0
 # while i < 19:
@@ -70,3 +74,11 @@ plt.savefig("build/plot.pdf")
 # n2 = ufloat(15400, 124)
 # x = (n1 + n2 - n12) / (2 * n1 * n2)
 # print(x)
+
+# n1 = ufloat(193.44, 1.39)
+# n12 = ufloat(343.87, 1.85)
+# n2 = ufloat(154.00, 1.24)
+
+# x = (n1 + n2 - n12) / (2 * n1 * n2)
+
+# print (x * 120)

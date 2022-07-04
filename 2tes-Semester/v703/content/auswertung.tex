@@ -37,12 +37,13 @@ Die gemessenen Werte zur Bestimmung der Charakteristik sind in \autoref{tab:mess
 \end{table}
 
 Die Charakteristik ist zusammen mit einer Ausgleichsgeraden für die Werte des Plateau-Bereichs in \autoref{fig:plot} dargestellt. Der Plateau-Bereich wurde hierfür
-von $\SI{420}{\volt}$ bis $\SI{560}{\volt}$ gewählt.
+von $\SI{420}{\volt}$ bis $\SI{560}{\volt}$ gewählt.\\
+Da die Werte der Zählrate Poison-verteilt sind, ist ihr Fehler $\Delta N$ als $\sqrt{N}$ anzunehmen.
 
 \begin{figure}[H]
   \centering
   \includegraphics{plot.pdf}
-  \caption{Plot.}
+  \caption{Teilchenanzahl in Abhängigkeit der Spannung.}
   \label{fig:plot}
 \end{figure}
 
@@ -53,9 +54,30 @@ Für die Ausgleichsgerade der Form $y = a \cdot x + b$ ergeben sich die Werte
   b &= (12434 \pm 291,53)
 \end{align*}
 
+
+
+
+
+Die Plateausteigung ist durch
+\begin{equation*}
+  N_\text{rel} = \frac{100a}{N(U_\text{m})}
+\end{equation*}
+gegeben, wobei $U_\text{m}$ als mittlerer Plateauwert gewählt wird.
+
+Der Fehler der Plateausteigung kann über die Gauß'sche Fehlerfortpflanzug zu
+\begin{equation*}
+  \Delta N_\text{rel} = \sqrt{\left(\frac{100}{N}\symup{\Delta}a\right)^2 + \left(\frac{100a}{N^2} \symup{\Delta}N\right)^2}
+\end{equation*}
+bestimmt werden.
+
+
+
+
+
+
 Daraus ergibt sich eine Plateau-Steigerung von
 \begin{align*}
-  \upDelta N_\text{rel} &= \SI{1,12+-0,22}{\percent\per100\volt}
+  N_\text{rel} &= \SI{0,11+-0,47}{\percent\per100\volt}
 \end{align*}
 
 
@@ -71,8 +93,14 @@ Zur Bestimmung der Totzeit wurde, wie im vorherigen Abschnitt erwähnt, ein Oszi
 
 Die Totzeit kann durch Ablesen bestimmt werden zu
 \begin{align*}
-  T &= (150 \pm 25) \si{\micro\second}. \\
+  T_\text{t} &= (110 \pm 10) \si{\micro\second}, \\
 \end{align*}
+die Nachladung zu
+\begin{align*}
+  T_{n} &= (130 \pm 10) \si{\micro\second}, \\
+\end{align*}
+
+
 
 Die Totzeit wurde ebenfalls mittels der Zwei-Quellen-Methode bestimmt. Die Ergebnisse der Messungen mit dem ersten Präparat $N_1$, die mit beiden Präparaten
 $N_{1+2}$ und die nur mit dem zweiten $N_2$ sind im Folgenden aufgeführt.
@@ -85,36 +113,57 @@ $N_{1+2}$ und die nur mit dem zweiten $N_2$ sind im Folgenden aufgeführt.
 
 Mit Hilfe von Gleichung \eqref{eqn:tot} kann nun die Totzeit zu
 \begin{align*}
-  T \approx (66,46 \pm 4,1)\si{\micro\second} \\
+  T \approx (79,75 \pm 0,30)\si{\micro\second} \\
 \end{align*}
 
 bestimmt werden.
 Der Fehler wurde dabei mit der Gleichung
-\begin{align*}
-  \upDelta T = \sqrt{\left(\frac{\partial T}{\partial N_1}\right)^2 \upDelta N_1^2 + \left(\frac{\partial T}{\partial N_{1+2}}\right)^2 \upDelta N_{1+2}^2 + \left(\frac{\partial T}{\partial N_2}\right)^2 \upDelta N_2^2   } \\
-\end{align*}
+\begin{equation*}
+  \symup{\Delta}T = \sqrt{\left(\frac{N_1 - N_{1+2}}{2N_2 N_1^2} \cdot \symup{\Delta}N_1 \right)^2 + \left(\frac{N_{1+2} - N_{1}}{2N_1 N_2^2} \cdot \symup{\Delta}N_2 \right)^2
+  + \left( \frac{\symup{\Delta}N_{1+2}}{2N_1 N_2}\right)^2} 
+\end{equation*}
 berechnet.
 
 \subsection{Freigesetzte Ladung pro Teilchen}
 
 Beim Aufnehmen der Messwerte für die Bestimmung der Charakteristik wurden nebenher die jeweils zu den Spannungen zugehörigen Zählrohrströme gemessen. Mit Hilfe von
-Gleichung \eqref{eqn:ener} lässt sich daraus die pro Teilchen freigesetze Ladungsmenge $Z$ berechnen. Die Messwerte sind zusammen mit den errechneten Ladugsmengen in
+Gleichung \eqref{eqn:ener} lässt sich daraus die pro Teilchen freigesetze Ladungsmenge $\Delta Q$ berechnen. Die Messwerte sind zusammen mit den errechneten Ladugsmengen in
 \autoref{tab:lad} aufgeführt.
+\newline
+Der Fehler von $\Delta Q$ ist dabei gegene durch
+\begin{equation*}
+  \Delta (\Delta Q) = \sqrt{\left(\frac{t}{N} \cdot \Delta I \right)^2 + \left(\frac{I \cdot t}{N^2} \cdot \Delta Z\right)^2}.
+\end{equation*}
 
 \begin{table}[H]
   \caption{Werte der Regression vom Grad drei.}
   \label{tab:lad}
   \centering
-  \begin{tabular}{c c c}
+  \begin{tabular}{c c c c c}
       \toprule
-      N [Imp/$\si{\second}$] & I [$\si{\micro\ampere}$] & Z [$10^{10}$] \\
+      U [$\si{\volt}$] & N [Imp/$\si{\second}$] & I [$\si{\micro\ampere}$] & $\Delta Q$ [$10^9 \si{\coulomb}$] & $10^{10} \frac{\Delta Q}{e}$ \\
       \midrule
-      $ 12320 \pm 111 $ & $ 0,2 \pm 0,05 $ & $ 1,22 \pm 0,30 $ \\
-      $ 12440 \pm 112 $ & $ 0,3 \pm 0,05 $ & $ 1,81 \pm 0,30 $ \\
-      $ 12626 \pm 112 $ & $ 0,4 \pm 0,05 $ & $ 2,37 \pm 0,30 $ \\
-      $ 12695 \pm 113 $ & $ 0,5 \pm 0,05 $ & $ 2,95 \pm 0,30 $ \\
-      $ 13033 \pm 114 $ & $ 0,6 \pm 0,05 $ & $ 3,45 \pm 0,29 $ \\
-      $ 13219 \pm 115 $ & $ 0,7 \pm 0,05 $ & $ 3,97 \pm 0,29 $ \\
+      350 & $ 12320 \pm 111 $ & $ 0,2 \pm 0,05 $ & $ 1,95 \pm 0,487 $ & $ 1,22 $ \\
+      450 & $ 12440 \pm 112 $ & $ 0,3 \pm 0,05 $ & $ 2,89 \pm 0,483 $ & $ 1,80 $ \\
+      540 & $ 12626 \pm 112 $ & $ 0,4 \pm 0,05 $ & $ 3,80 \pm 0,476 $ & $ 2,37 $ \\
+      580 & $ 12695 \pm 113 $ & $ 0,5 \pm 0,05 $ & $ 4,73 \pm 0,474 $ & $ 2,95 $ \\
+      670 & $ 13033 \pm 114 $ & $ 0,6 \pm 0,05 $ & $ 5,52 \pm 0,463 $ & $ 3,45 $ \\
+      700 & $ 13219 \pm 115 $ & $ 0,7 \pm 0,05 $ & $ 6,35 \pm 0,457 $ & $ 3,96 $ \\
       \bottomrule
     \end{tabular}
 \end{table}
+
+Nun kann die Ladungsmenge gegen die zugehörige Spannung aufgetragen werden.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics{plot2.pdf}
+  \caption{Ladungsmenge in Abhängigkeit der Spannung.}
+  \label{fig:plot}
+\end{figure}
+
+Die lineare Regression der Form $y = m \cdot x + b$ liefert die Werte
+\begin{align*}
+  a &= (12,31 \pm 0,87) \cdot 10^{-3} \si{\coulomb\per\volt} \\
+  b &= (-2,54 \pm 0,49) \si{\coulomb}.
+\end{align*}
