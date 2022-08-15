@@ -22,3 +22,10 @@ Wenn mehrere Plots oder andere Grafiken von einer Python Datei erstellt werden, 
 build/orange.pdf build/gruen.pdf build/blau.pdf: plotA.py ../matplotlibrc ../header-matplotlib.tex | build
 	TEXINPUTS=$$(pwd)/..: MATPLOTLIBRC=../matplotlibrc python plot.py
   
+--- 
+
+### Klausur
+
+Ich habe mit dem folgende Notion Dokument gelernt. Ich bin die ganzen Protokolle durchgegangen und habe dabei das wichtigste rausgeschrieben.
+
+https://joelkoch.notion.site/Praktikum-77b5f862999f42f3859922f2ed441d72
