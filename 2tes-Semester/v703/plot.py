@@ -38,7 +38,13 @@ plt.ylabel(r'$\upDelta Q \,/\, 10^9 \si{\coulomb}$')
 plt.grid()
 plt.legend()
 plt.tight_layout()
+<<<<<<< HEAD
 # plt.show()
+||||||| 41e6332
+plt.show()
+=======
+#plt.show()
+>>>>>>> 8be7bc774ef18ed5067802a77fcc155fa2b0fb08
 plt.savefig("build/plot2.pdf")
 
 #print(U[19], '& $', z[19], '\pm', n[19], '$', '\\', '\\')
