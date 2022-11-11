@@ -33,8 +33,8 @@ plt.plot(H_Spule[10:11],B_Magnetisierung[10:11],'m*',label='Sättigung')
 plt.plot(H_Spule[30:31],B_Magnetisierung[30:31],'m*')
 
 #Koerzitivkraft:
-#plt.plot(H_Spule[20:21],B_Magnetisierung[20:21],'y*',label='Koerzitivkraft')
-#print(H_Spule[20:21], B_Magnetisierung[220:21])
+plt.plot(H_Spule[20:21],B_Magnetisierung[20:21],'y*',label='Koerzitivkraft')
+# print(H_Spule[20:21], B_Magnetisierung[220:21])
 
 #Neukurve:
 plt.plot(H_Spule[0:10], B_Magnetisierung[0:10], 'b.', label = 'Neukurve')
@@ -50,4 +50,4 @@ plt.xlabel(r'$H\,/\,\si{\ampere\per\meter}$')
 plt.ylabel(r'$B\,/\,$ mT')
 plt.grid()
 plt.legend()
-plt.savefig('build/hysterese.pdf')
+plt.savefig('hysterese.pdf')
