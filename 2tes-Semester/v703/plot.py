@@ -21,7 +21,7 @@ def linregress(x, y):
     sigma_y = np.sqrt(np.sum((y - A * x - B)**2) / (N - 2))
     A_error = sigma_y * np.sqrt(N / Delta)
     B_error = sigma_y * np.sqrt(np.sum(x**2) / Delta)
-    print(A, A_error, B, B_error)
+    #print(A, A_error, B, B_error)
 
     return A*x + B
 
@@ -38,13 +38,7 @@ plt.ylabel(r'$\upDelta Q \,/\, 10^9 \si{\coulomb}$')
 plt.grid()
 plt.legend()
 plt.tight_layout()
-<<<<<<< HEAD
 # plt.show()
-||||||| 41e6332
-plt.show()
-=======
-#plt.show()
->>>>>>> 8be7bc774ef18ed5067802a77fcc155fa2b0fb08
 plt.savefig("build/plot2.pdf")
 
 #print(U[19], '& $', z[19], '\pm', n[19], '$', '\\', '\\')
